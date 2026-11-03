@@ -248,7 +248,7 @@ footer .copy{font-size:14px;color:var(--ink);margin-bottom:4px}
 .msg{max-width:92%;font-size:14px;line-height:1.5;padding:10px 12px;border-radius:14px;overflow-wrap:anywhere}
 .msg p{margin:0 0 6px}.msg p:last-child{margin:0}
 .msg.me{align-self:flex-end;background:#5546D6;color:#fff;border-bottom-right-radius:4px}
-.msg.bot{align-self:flex-start;background:#fff;border:1px solid #E6E0F7;border-bottom-left-radius:4px;display:grid;gap:8px}
+.msg.bmsg{align-self:flex-start;background:#fff;border:1px solid #E6E0F7;border-bottom-left-radius:4px;display:grid;gap:8px}
 .b-starts{display:flex;flex-wrap:wrap;gap:6px}
 .b-starts button{border:1px solid #D9D0F5;background:#F3F0FF;color:#4337B8;border-radius:99px;padding:5px 10px;font-size:12.5px;font-weight:600;cursor:pointer}
 .b-rec{display:flex;gap:10px;align-items:flex-start;background:color-mix(in oklab,var(--c) 10%,white);border-radius:10px;padding:9px 10px}
@@ -443,7 +443,7 @@ footer .copy{font-size:14px;color:var(--ink);margin-bottom:4px}
 <section class="bot" id="bot" hidden aria-label="Ask the notes">
   <div class="bot-h"><div><b>Ask the notes</b><small>Answers from these notes. Copilot for anything else.</small></div><button id="bot-x" aria-label="Close">✕</button></div>
   <div class="bot-log" id="bot-log">
-    <div class="msg bot"><p>Hi! Ask me how to do something, or which tool to use. I'll point you to the right card and steps.</p>
+    <div class="msg bmsg"><p>Hi! Ask me how to do something, or which tool to use. I'll point you to the right card and steps.</p>
       <div class="b-starts">
         <button data-ask="Combine monthly SAP files">Combine monthly SAP files</button>
         <button data-ask="Bank reconciliation">Bank reconciliation</button>
@@ -734,7 +734,7 @@ const tabName = {sharing:"Sharing & old versions", it:"IT blocks & licences", le
 
 function botAdd(html, who){
   const d = document.createElement("div");
-  d.className = "msg " + who; d.innerHTML = html;
+  d.className = "msg " + (who === "bot" ? "bmsg" : "me"); d.innerHTML = html;
   $("bot-log").appendChild(d); $("bot-log").scrollTop = $("bot-log").scrollHeight;
   return d;
 }
