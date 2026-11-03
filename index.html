@@ -517,6 +517,33 @@ footer .copy{font-size:14px;color:var(--ink);margin-bottom:4px}
 .chan a{display:grid;gap:3px;background:#fff;border:1px solid #F3C4C2;border-left:5px solid #E62117;border-radius:12px;padding:10px 12px;text-decoration:none;color:var(--ink)}
 .chan a b{color:#C4302B}
 .chan a span{font-size:13px;color:var(--muted)}
+
+/* v6: tab colours, version picker, file types */
+.vtab[data-view="notes"]{--vc:#2B5BD7}.vtab[data-view="basics"]{--vc:#1A8754}.vtab[data-view="formulas"]{--vc:#0F7B5F}.vtab[data-view="files"]{--vc:#B05A00}
+.vtab[data-view="tools"]{--vc:#CC4F25}.vtab[data-view="sharing"]{--vc:#C13471}.vtab[data-view="it"]{--vc:#8A3BA6}.vtab[data-view="learn"]{--vc:#6A4CE0}.vtab[data-view="updates"]{--vc:#0E78B8}
+.vpick{display:inline-flex;align-items:center;gap:8px;background:#fff;border:2px solid #5546D6;border-radius:12px;padding:6px 10px;font-weight:700;font-size:13.5px;color:#4337B8}
+.vpick select{border:1px solid #D9D0F5;border-radius:8px;padding:5px 8px;font-size:13.5px;font-weight:600;background:#F7F5FF}
+.vhelp{font-size:12.5px;color:var(--muted)}
+.vhelp summary{cursor:pointer;font-weight:600;color:#4337B8}
+.pill.na{background:#EEF0F4;color:#6B7280}
+.card.na{opacity:.55}
+.card.na:hover{opacity:.9}
+.vnote{font-size:13px;border-radius:10px;padding:7px 10px;font-weight:600}
+.vnote.ok{background:#E9F7EF;color:#14653F}.vnote.no{background:#FFF1F1;color:#9C1C1C}.vnote.cloud{background:#EEF4FF;color:#1E4FA8}
+.nab{display:inline-block;margin-left:6px;font-style:normal;font-size:10.5px;font-weight:800;background:#FFE3E3;color:#9C1C1C;border-radius:6px;padding:1px 6px}
+.bot-verbtn{display:block;margin-top:4px;background:rgba(255,255,255,.2)!important;border:0;color:#fff;border-radius:8px!important;padding:2px 8px;font-size:11.5px;cursor:pointer;width:auto!important;height:auto!important}
+.b-how{font-size:12.5px;color:var(--muted)}.b-how summary{cursor:pointer;font-weight:600;color:#4337B8}
+.bot-f input:disabled{background:#F4F4F7}
+.fxm{border:1px solid #CDEBD8;background:#F4FBF6;border-radius:10px;padding:7px 9px;display:grid;gap:2px;font-size:13px}
+.fxm b{font-family:var(--f-mono);color:#0F5E39}
+.ftt{min-width:1100px}
+.ftt td.ext{font-family:var(--f-mono);font-weight:700;white-space:nowrap;color:color-mix(in oklab,var(--c) 75%,black)}
+.ftt td.pro{color:#14653F}.ftt td.con{color:#9C1C1C}
+.ftt tr.star td{background:#FFFBEA}
+.ftt tr.flash td{animation:fl 1.6s ease}
+.picker{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr));gap:8px}
+.pk{display:grid;gap:2px;text-align:left;border:1px solid color-mix(in oklab,var(--c) 30%,white);background:color-mix(in oklab,var(--c) 6%,white);border-radius:12px;padding:9px 11px;cursor:pointer}
+.pk span{font-size:13px;color:var(--muted)}.pk b{font-size:14px;color:color-mix(in oklab,var(--c) 75%,black)}
 </style>
 </head>
 <body>
@@ -536,6 +563,8 @@ footer .copy{font-size:14px;color:var(--ink);margin-bottom:4px}
     <span>Tried <b id="cnt-done">0</b></span>
     <div class="bar" aria-hidden="true"><i id="bar"></i></div>
     <span id="pct" style="font-variant-numeric:tabular-nums">0%</span>
+    <label class="vpick">My Microsoft version <select id="myver" aria-label="My Microsoft version"><option value="">Show everything</option><option value="365">Microsoft 365 (subscription)</option><option value="2024">Office 2024</option><option value="2021">Office 2021</option><option value="2019">Office 2019</option><option value="2016">Office 2016</option></select></label>
+    <details class="vhelp"><summary>How do I check?</summary>Open Excel or Word › File › Account. Under Product Information: "Microsoft 365 Apps…" = Microsoft 365. "Office LTSC 2021" or "Office Professional Plus 2021" = Office 2021.</details>
   </div>
   <div class="legend" aria-label="Legend">
     <span class="sw"><span class="lvl" style="--lc:var(--basic)">Basic</span></span>
@@ -555,6 +584,7 @@ footer .copy{font-size:14px;color:var(--ink);margin-bottom:4px}
     <button class="vtab" role="tab" data-view="notes" aria-selected="true">Feature notes</button>
     <button class="vtab" role="tab" data-view="basics" aria-selected="false">Start here: basics</button>
     <button class="vtab" role="tab" data-view="formulas" aria-selected="false">Excel formulas</button>
+    <button class="vtab" role="tab" data-view="files" aria-selected="false">Save as types</button>
     <button class="vtab" role="tab" data-view="tools" aria-selected="false">Which tool for the job?</button>
     <button class="vtab" role="tab" data-view="sharing" aria-selected="false">Sharing &amp; old versions</button>
     <button class="vtab" role="tab" data-view="it" aria-selected="false">IT blocks &amp; licences</button>
@@ -574,6 +604,7 @@ footer .copy{font-size:14px;color:var(--ink);margin-bottom:4px}
       <label class="toggle"><input type="checkbox" id="f-safe"> Safe to share with old Office</label>
       <label class="toggle"><input type="checkbox" id="f-free"> No extra licence</label>
       <label class="toggle"><input type="checkbox" id="f-todo"> Not tried yet</label>
+      <label class="toggle" id="f-mine-wrap" hidden><input type="checkbox" id="f-mine"> Only what my version has</label>
     </div>
     <div class="apps" id="apps" aria-label="Filter by app"></div>
     <details class="morefilters">
@@ -607,7 +638,7 @@ footer .copy{font-size:14px;color:var(--ink);margin-bottom:4px}
       <p>Newer Excel has functions that replace old, longer ways. Pick your Excel version: anything your version can't use is faded, so you know to keep the old way for that file.</p></div>
     <div class="findbox"><h3>Filter</h3>
       <div class="fx-controls"><label class="search" style="flex:1 1 200px"><span aria-hidden="true" style="color:var(--muted)">⌕</span><input id="fx-q" type="search" placeholder="Search: lookup, split, unique…" aria-label="Search formulas"></label>
-      <select id="fx-ver" aria-label="My Excel version"><option value="all">All versions</option><option value="365">Microsoft 365</option><option value="2024">Excel 2024</option><option value="2021">Excel 2021</option><option value="2019">Excel 2019</option></select></div>
+      <select id="fx-ver" aria-label="My Excel version"><option value="all">All versions</option><option value="365">Microsoft 365</option><option value="2024">Excel 2024</option><option value="2021">Excel 2021</option><option value="2019">Excel 2019</option><option value="2016">Excel 2016</option></select></div>
       <div class="lvlrow" id="fx-fams" style="margin:0"></div></div>
   </div>
   <p id="fx-loading" class="empty">Loading formulas…</p>
@@ -617,6 +648,18 @@ footer .copy{font-size:14px;color:var(--ink);margin-bottom:4px}
   <h2 class="sec-title">New functions and what they do</h2>
   <div class="fns" id="fx-fns"></div>
   <div class="box" style="margin-top:14px"><h3>Version information from</h3><ul id="fx-src"></ul></div>
+</section>
+
+<section class="panel" id="v-files" hidden>
+  <div class="bx-hero" style="background:linear-gradient(135deg,#FFF6E8,#F1F6FF)"><h2>Save as: which file type?</h2>
+    <p id="ft-how"></p><p class="muted small">The old "97-2003" types (.xls, .doc, .ppt) are for Office 2003 and older. Use them only when someone really needs them.</p></div>
+  <h2 class="sec-title">I want to…</h2>
+  <div class="picker" id="ft-pick"></div>
+  <h2 class="sec-title">Every Save-as type, explained</h2>
+  <div class="apps" id="ft-apps" style="margin-bottom:10px"></div>
+  <p id="ft-loading" class="empty">Loading file types…</p>
+  <div class="tblwrap" id="ft-table"></div>
+  <p class="muted small" style="margin-top:8px">★ = the types most people need. Rows scroll sideways on small screens.</p>
 </section>
 
 <section class="panel" id="v-tools" hidden>
@@ -726,7 +769,7 @@ footer .copy{font-size:14px;color:var(--ink);margin-bottom:4px}
 
 <button class="bot-fab" id="bot-fab" aria-expanded="false" aria-controls="bot"><span class="dot">?</span><span class="lbl">Ask the notes</span></button>
 <section class="bot" id="bot" hidden aria-label="Ask the notes">
-  <div class="bot-h"><div><b>Ask the notes</b><small>Answers from these notes. Copilot for anything else.</small></div><button id="bot-x" aria-label="Close">✕</button></div>
+  <div class="bot-h"><div><b>Ask the notes</b><small>Answers from these notes. Copilot for anything else.</small><button class="bot-verbtn" id="bot-ver" type="button">Set your version</button></div><button id="bot-x" aria-label="Close">✕</button></div>
   <div class="bot-log" id="bot-log">
     <div class="msg bmsg"><p>Hi! Ask me how to do something, or which tool to use. I'll point you to the right card and steps.</p>
       <div class="b-starts">
@@ -764,7 +807,7 @@ const esc = s => String(s==null?"":s).replace(/[&<>"]/g, c=>({"&":"&amp;","<":"&
 const fmtDate = d => { try{ return new Date(d+"T00:00:00").toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"}); }catch(e){ return d; } };
 const $ = id => document.getElementById(id);
 let DATA, items, appById, LV;
-const S = { app:"all", q:"", lv:new Set(), core:false, safe:false, free:false, todo:false, tried:new Set(store.get("m365-tried",[])), size:"All" };
+const S = { app:"all", q:"", lv:new Set(), core:false, safe:false, free:false, todo:false, tried:new Set(store.get("m365-tried",[])), size:"All", ver:store.get("m365-ver",""), mine:false };
 const tile = a => `<span class="tile" style="--c:var(${a.c})">${esc(a.t)}</span>`;
 
 function match(it){
@@ -774,6 +817,7 @@ function match(it){
   if (S.safe && it.oldVersion) return false;
   if (S.free && it.licence) return false;
   if (S.todo && S.tried.has(it.name)) return false;
+  if (S.mine && !verOk(it)) return false;
   if (S.q){
     const hay = [it.name,it.plain,it.what,it.use,it.where,(it.steps||[]).join(" "),appById[it.app].name,it.it,it.licence].join(" ").toLowerCase();
     return S.q.toLowerCase().split(/\s+/).every(w=>hay.includes(w));
@@ -801,8 +845,8 @@ function notesHtml(it){
 }
 function card(it, idx){
   const a = appById[it.app], [ln,lc] = LV[it.level], done = S.tried.has(it.name);
-  const flags = [it.it?'<span class="pill it">IT</span>':"", it.licence?'<span class="pill lic">Licence</span>':"", it.oldVersion?'<span class="pill old">Old ver.</span>':""].join("");
-  return `<article class="card${done?" done":""}" style="--c:var(${a.c})" data-idx="${idx}" tabindex="0" role="button" aria-label="Open how-to for ${esc(it.name)}">
+  const flags = [!verOk(it)?`<span class="pill na">Not in ${esc(verShort(S.ver))}</span>`:"", it.it?'<span class="pill it">IT</span>':"", it.licence?'<span class="pill lic">Licence</span>':"", it.oldVersion?'<span class="pill old">Old ver.</span>':""].join("");
+  return `<article class="card${done?" done":""}${verOk(it)?"":" na"}" style="--c:var(${a.c})" data-idx="${idx}" tabindex="0" role="button" aria-label="Open how-to for ${esc(it.name)}">
     <div class="chead"><h3>${esc(it.name)}${it.core?'<span class="star" title="Core, must know">★</span>':""}</h3>
       <span class="lvl${it.level==="C"?" code":""}" style="--lc:var(${lc})">${ln}</span></div>
     <p>${esc(it.what)}</p>
@@ -853,7 +897,7 @@ function openDrawer(idx){
     ${it.example?`<div class="d-sec"><div class="d-k">Example</div><div class="d-ex">${esc(it.example)}</div></div>`:""}
     ${it.watch?`<div class="d-watch"><span class="d-k">Watch out</span>${esc(it.watch)}</div>`:""}
     <div class="d-sec"><div class="d-k">F&amp;A use</div><div class="use">${esc(it.use)}</div></div>
-    <div class="d-sec"><div class="d-k">Version</div><div class="ver">${esc(it.version)}</div></div>
+    <div class="d-sec"><div class="d-k">Version</div><div class="ver">${esc(it.version)}</div>${verNote(it)}</div>
     ${notesHtml(it)?`<div class="d-sec notes">${notesHtml(it)}</div>`:""}
     <div class="d-sec">${ytLink(appById[it.app].name+" "+it.name.split(" (")[0]+" tutorial")}</div>
     <label class="tried big"><input type="checkbox" data-tried="${esc(it.name)}" ${S.tried.has(it.name)?"checked":""}> I've tried this</label>`;
@@ -921,7 +965,7 @@ function loadComments(){
 }
 
 // views
-const VIEWS = ["notes","basics","formulas","tools","sharing","it","learn","updates"];
+const VIEWS = ["notes","basics","formulas","files","tools","sharing","it","learn","updates"];
 function showView(v){
   if (!VIEWS.includes(v)) v = "notes";
   VIEWS.forEach(x=>{ $("v-"+x).hidden = x!==v; });
@@ -929,6 +973,7 @@ function showView(v){
   if (v==="updates") loadComments();
   if (v==="basics") initBasics();
   if (v==="formulas") initFormulas();
+  if (v==="files") initFiles();
 }
 
 function wire(){
@@ -940,7 +985,7 @@ function wire(){
   $("apps").addEventListener("click",e=>{ const b = e.target.closest("[data-app]"); if(!b) return; S.app = b.dataset.app; renderApps(); renderNotes(); });
   $("lvls").addEventListener("click",e=>{ const b = e.target.closest("[data-lv]"); if(!b) return; const k=b.dataset.lv; S.lv.has(k)?S.lv.delete(k):S.lv.add(k); renderLv(); renderNotes(); });
   $("q").addEventListener("input",e=>{ S.q = e.target.value.trim(); renderNotes(); });
-  [["f-core","core"],["f-safe","safe"],["f-free","free"],["f-todo","todo"]].forEach(([id,k])=>$(id).addEventListener("change",e=>{ S[k]=e.target.checked; renderNotes(); }));
+  [["f-core","core"],["f-safe","safe"],["f-free","free"],["f-todo","todo"],["f-mine","mine"]].forEach(([id,k])=>$(id).addEventListener("change",e=>{ S[k]=e.target.checked; renderNotes(); }));
   $("notes").addEventListener("click",e=>{
     if (e.target.closest(".tried")) return;
     const c = e.target.closest(".card"); if (c) openDrawer(+c.dataset.idx);
@@ -1050,12 +1095,16 @@ function answer(q){
   if (good.length){
     parts.push(`<p>${strongTask ? "Related cards" : "These cards cover it"}. Tap one for the steps:</p><div class="b-cards">` + good.map(x=>{
       const it = items[x.i], a = appById[it.app];
-      return `<button class="b-card" data-open="${x.i}" style="--c:var(${a.c})">${tile(a)}<span><b>${esc(it.name)}</b><em>${esc(it.where||it.version)}</em></span></button>`;
+      return `<button class="b-card" data-open="${x.i}" style="--c:var(${a.c})">${tile(a)}<span><b>${esc(it.name)}${verOk(it)?"":`<i class="nab">Not in ${esc(verShort(S.ver))}</i>`}</b><em>${esc(it.where||it.version)}</em></span></button>`;
     }).join("") + `</div>`);
+    const blocked = good.map(x=>items[x.i]).filter(it=>!verOk(it));
+    if (blocked.length) parts.push(`<p class="b-quick" style="background:#FFF1F1"><b>Your version (${esc(verShort(S.ver))}):</b> ${blocked.map(it=>esc(it.name)+": "+esc(it.oldVersion||"not available")).join(" ")}</p>`);
     const first = items[good[0].i];
     if (first.steps && first.steps.length && !strongTask) parts.push(`<p class="b-quick"><b>Quick start:</b> ${esc(first.steps[0])}</p>`);
   }
   if (intent) parts.push(`<p>${esc(intent[2])} <button class="b-link" data-tab="${intent[1]}">Open ${esc(tabName[intent[1]])} ›</button></p>`);
+  if (FX){ const qw = norm(q).split(/\s+/).filter(Boolean); const fm = FX.fns.filter(f=>f[0].toLowerCase().split(/[^a-z.]+/).some(n=>n.length>2 && qw.includes(n))).slice(0,3);
+    if (fm.length) parts.push(`<p>Excel functions:</p>` + fm.map(f=>{ const ok = !S.ver || VRANK[f[2]] <= VRANK[S.ver]; return `<div class="fxm"><b>${esc(f[0])}</b><span>${esc(f[4])}</span><code style="font-size:11.5px">${esc(f[5])} → ${esc(f[6])}</code>${S.ver?`<span style="font-weight:700;color:${ok?'#14653F':'#9C1C1C'}">${ok?'✓ Works in ':'✗ Not in '}${esc(verShort(S.ver))}</span>`:""}</div>`; }).join("") + `<p><button class="b-link" data-tab="formulas">Open Excel formulas ›</button></p>`); }
   const rbx = RB ? rbSearch(q, 3) : [];
   if (rbx.length) parts.push(`<p>On the ribbon:</p><div class="b-btns">` + rbx.map(x=>{ const ap = appById[x.a]; return `<button class="fd" style="--c:var(${ap.c})" data-go="${x.a}|${x.ti}|${x.gi}|${x.bi}">${tile(ap)}<span><b>${esc(x.b.n)}</b><em>${esc(x.app)} › ${esc(x.tab)} › ${esc(x.group)}</em><small>${esc(x.b.d)}</small></span></button>`; }).join("") + `</div>`);
   const found = parts.length > 0;
@@ -1081,11 +1130,14 @@ async function askAI(q, btn){
   }catch(e){ botAdd(`<p>${esc(e.message || "The AI service didn't respond.")} You can still use Copilot.</p>`, "bot"); btn.textContent = "Ask AI here"; btn.disabled = false; }
 }
 function wireBot(){
-  const open = on => { $("bot").hidden = !on; $("bot-fab").setAttribute("aria-expanded", on); if (on) $("bot-in").focus(); };
+  let asked = false;
+  const askVersion = () => { asked = true; botAdd(`<p><b>First, which Microsoft version do you use?</b> I'll only suggest what works for you.</p><div class="b-starts">${VOPTS.map(o=>`<button data-setver="${o[0]}">${esc(o[1])}</button>`).join("")}</div><details class="b-how"><summary>How do I check?</summary>Open Excel or Word › File › Account. Under Product Information: "Microsoft 365 Apps…" = Microsoft 365. "Office LTSC 2021" or "Professional Plus 2021" = Office 2021.</details>`, "bot"); };
+  const open = on => { $("bot").hidden = !on; $("bot-fab").setAttribute("aria-expanded", on); if (on){ if (!S.ver && !asked) askVersion(); if (S.ver) $("bot-in").focus(); } };
+  $("bot-ver").addEventListener("click", askVersion);
   $("bot-fab").addEventListener("click", ()=>open($("bot").hidden));
   $("bot-x").addEventListener("click", ()=>open(false));
   $("bot-form").addEventListener("submit", e=>{
-    e.preventDefault(); const q = $("bot-in").value.trim(); if (!q) return;
+    e.preventDefault(); if (!S.ver){ askVersion(); return; } const q = $("bot-in").value.trim(); if (!q) return;
     botAdd(esc(q), "me"); $("bot-in").value = ""; setTimeout(()=>answer(q), 180);
   });
   $("bot").addEventListener("click", e=>{
@@ -1094,7 +1146,8 @@ function wireBot(){
     const t = e.target.closest("[data-tab]"); if (t){ location.hash = t.dataset.tab; return; }
     const c = e.target.closest(".b-copilot"); if (c){ askCopilot(c.dataset.q, c); return; }
     const a = e.target.closest(".b-ai"); if (a){ askAI(a.dataset.q, a); return; }
-    const s = e.target.closest("[data-ask]"); if (s){ $("bot-in").value = s.dataset.ask; $("bot-form").requestSubmit(); }
+    const sv = e.target.closest("[data-setver]"); if (sv){ setVersion(sv.dataset.setver); botAdd(`<p>Got it: <b>${esc(verName(S.ver))}</b>. I'll mark anything your version can't use. Ask your question below.</p>`, "bot"); $("bot-in").focus(); return; }
+    const s = e.target.closest("[data-ask]"); if (s){ if (!S.ver){ askVersion(); return; } $("bot-in").value = s.dataset.ask; $("bot-form").requestSubmit(); }
   });
 }
 
@@ -1299,7 +1352,7 @@ function openTask(i){
 
 // ---------- Excel formulas view ----------
 let FX = null, FXs = {fam:"All", ver:"all", q:""};
-const VRANK = {"2019":1,"2021":2,"2024":3,"365":4,"365c":5};
+const VRANK = {"2016":0,"2019":1,"2021":2,"2024":3,"365":4,"365c":5};
 function renderFormulas(){
   if (!FX) return;
   const vlabel = v => ({"2019":"2019+","2021":"2021+","2024":"2024+","365":"365 only","365c":"365 + Copilot"}[v]);
@@ -1329,15 +1382,64 @@ function initFormulas(){
   fetch("formulas.json?v=" + Date.now(), {cache:"no-store"}).then(r=>r.json()).then(d=>{ FX = d; $("fx-loading").hidden = true; renderFormulas(); })
     .catch(()=>{ $("fx-loading").textContent = "Couldn't load formulas.json."; });
   $("fx-fams").addEventListener("click", e=>{ const b = e.target.closest("[data-fam]"); if(!b) return; FXs.fam = b.dataset.fam; renderFormulas(); });
-  $("fx-ver").addEventListener("change", e=>{ FXs.ver = e.target.value; renderFormulas(); });
+  $("fx-ver").addEventListener("change", e=>{ setVersion(e.target.value==="all" ? "" : e.target.value); });
+  if (S.ver){ FXs.ver = S.ver; $("fx-ver").value = S.ver; }
   $("fx-q").addEventListener("input", e=>{ FXs.q = e.target.value.trim(); renderFormulas(); });
+}
+
+
+// ---------- My Microsoft version ----------
+const VOPTS = [["365","Microsoft 365 (subscription)"],["2024","Office 2024"],["2021","Office 2021"],["2019","Office 2019"],["2016","Office 2016"]];
+const VR = {all:0,"2016":1,"2019":2,"2021":3,"2024":4,"365":5};
+const verName = v => (VOPTS.find(o=>o[0]===v)||[,"all versions"])[1];
+const verShort = v => v==="365" ? "Microsoft 365" : "Office "+v;
+function verOk(it){ if (!S.ver || it.minv==="cloud" || !it.minv) return true; return VR[it.minv] <= VR[S.ver]; }
+function verNote(it){
+  if (!S.ver) return "";
+  if (it.minv==="cloud") return `<div class="vnote cloud">Works with a Microsoft 365 work account (online), whatever your Office version.</div>`;
+  return verOk(it) ? `<div class="vnote ok">✓ Works in ${esc(verShort(S.ver))}</div>` : `<div class="vnote no">✗ Not in ${esc(verShort(S.ver))}. ${esc(it.oldVersion||"Use the older way for this version.")}</div>`;
+}
+function setVersion(v){
+  S.ver = v || ""; store.set("m365-ver", S.ver);
+  $("myver").value = S.ver;
+  if (typeof FXs !== "undefined"){ FXs.ver = S.ver || "all"; if ($("fx-ver")) $("fx-ver").value = FXs.ver; renderFormulas(); }
+  $("f-mine-wrap").hidden = !S.ver;
+  if ($("bot-ver")) $("bot-ver").textContent = S.ver ? "Version: " + verShort(S.ver) + " · change" : "Set your version";
+  if ($("bot-in")){ $("bot-in").disabled = !S.ver; $("bot-in").placeholder = S.ver ? "e.g. how to send letters to all customers" : "Choose your version first ↑"; }
+  renderNotes();
+}
+
+// ---------- Save as types ----------
+let FT = null, FTapp = "x";
+const FTAPPS = [["x","Excel"],["w","Word"],["pp","PowerPoint"],["o","Outlook"],["b","Power BI"],["n","OneNote"]];
+function renderFiles(){
+  if (!FT) return;
+  $("ft-apps").innerHTML = FTAPPS.map(([id,n])=>{ const ap = appById[id]; return `<button class="appbtn" style="--c:var(${ap.c})" data-ftapp="${id}" aria-pressed="${FTapp===id}">${tile(ap)}${n}</button>`; }).join("");
+  $("ft-pick").innerHTML = FT.picker.map((p,i)=>{ const ap = appById[p[1]]; return `<button class="pk" style="--c:var(${ap.c})" data-pick="${i}"><span>${esc(p[0])}</span><b>${esc(p[2])}</b></button>`; }).join("");
+  const rows = FT.apps[FTapp] || [];
+  $("ft-table").style.setProperty("--c", `var(${appById[FTapp].c})`);
+  $("ft-table").innerHTML = `<table class="ftt"><thead><tr><th>Save as type</th><th>Ext.</th><th>What it is</th><th>When to use it</th><th>Pros</th><th>Cons</th><th>Opens in</th></tr></thead><tbody>${rows.map((r,i)=>`<tr id="ft-${FTapp}-${i}" class="${/★/.test(r[0])?'star':''}"><td><b>${esc(r[0])}</b></td><td class="ext">${esc(r[1])}</td><td>${esc(r[2])}</td><td>${esc(r[3])}</td><td class="pro">${esc(r[4])}</td><td class="con">${esc(r[5])}</td><td>${esc(r[6])}</td></tr>`).join("")}</tbody></table>`;
+}
+let ftReady = false;
+function initFiles(){
+  if (ftReady) return; ftReady = true;
+  fetch("filetypes.json?v=" + Date.now(), {cache:"no-store"}).then(r=>r.json()).then(d=>{ FT = d; $("ft-loading").hidden = true; $("ft-how").textContent = d.how; renderFiles(); })
+    .catch(()=>{ $("ft-loading").textContent = "Couldn't load filetypes.json."; });
+  $("ft-apps").addEventListener("click", e=>{ const b = e.target.closest("[data-ftapp]"); if(!b) return; FTapp = b.dataset.ftapp; renderFiles(); });
+  $("ft-pick").addEventListener("click", e=>{ const b = e.target.closest("[data-pick]"); if(!b) return;
+    const p = FT.picker[+b.dataset.pick]; FTapp = p[1]; renderFiles();
+    const key = p[2].split(" (")[0].toLowerCase(); const ext = (p[2].match(/\((\.[a-z0-9]+)\)/)||[])[1];
+    const i = FT.apps[FTapp].findIndex(r=>r[0].toLowerCase().replace(" ★","").startsWith(key) || (ext && r[1]===ext && r[0].toLowerCase().includes(key.split(" ")[0])));
+    const el = document.getElementById(`ft-${FTapp}-${i}`); if (el){ el.scrollIntoView({behavior:"smooth", block:"center"}); el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash"); } });
 }
 
 function start(data){
   DATA = data; LV = data.levels; items = data.features;
   appById = Object.fromEntries(data.apps.map(a=>[a.id,a]));
   $("loading").hidden = true;
-  wire(); wireBot(); initBasics();
+  wire(); wireBot(); initBasics(); initFormulas();
+  $("myver").addEventListener("change", e=>setVersion(e.target.value));
+  setVersion(S.ver);
   renderApps(); renderLv(); renderNotes(); renderProgress(); renderSizes(); renderTasks(); renderStatic();
   showView(location.hash.slice(1));
 }
