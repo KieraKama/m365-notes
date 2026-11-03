@@ -29,7 +29,7 @@
 body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.55;
   background-image:radial-gradient(var(--dot) 1px, transparent 1.2px);background-size:22px 22px}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
-.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1680px;margin:0 auto;padding-left:max(clamp(16px,3vw,40px),env(safe-area-inset-left,0px));padding-right:max(clamp(16px,3vw,40px),env(safe-area-inset-right,0px))}
 h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;letter-spacing:-.01em}
 a{color:var(--accent)}
 button,input,select{font:inherit;color:inherit}
@@ -82,7 +82,7 @@ main{padding-block:20px 60px}
 .apphead .tile{width:40px;height:40px;border-radius:12px;font-size:15px}
 .apphead h2{font-size:24px}
 .apphead p{margin:0;color:var(--muted);font-size:13px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(290px,100%),1fr));gap:12px}
 .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:14px 15px 12px;display:flex;flex-direction:column;gap:8px;min-width:0;position:relative}
 .card::before{content:"";position:absolute;left:14px;right:14px;top:0;height:3px;border-radius:0 0 3px 3px;background:var(--c)}
 .card.done{background:color-mix(in oklab,var(--c) 6%, var(--paper))}
