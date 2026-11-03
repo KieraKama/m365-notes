@@ -1,0 +1,3890 @@
+{
+ "title": "M365 Field Notes",
+ "owner": "KieraKama",
+ "lastChecked": "2026-11-03",
+ "cusdisAppId": "",
+ "changes": [
+  {
+   "date": "2026-11-03",
+   "items": [
+    "First public version: 166 features, 30 tasks.",
+    "Copilot inside Word/Excel/PowerPoint/OneNote now needs the paid Microsoft 365 Copilot licence (change rolled out April–May 2026).",
+    "Power BI: Copilot needs Fabric F64+ or a Copilot capacity; Pro alone doesn't include it."
+   ]
+  }
+ ],
+ "sources": [
+  [
+   "Microsoft 365 Copilot Chat changes (Tech Community)",
+   "https://techcommunity.microsoft.com/discussions/microsoft-copilot/removal-of-copilot-chat-availability-in-m365-apps/4502990"
+  ],
+  [
+   "Power Automate licensing FAQ (Microsoft Learn)",
+   "https://learn.microsoft.com/power-platform/admin/power-automate-licensing/faqs"
+  ],
+  [
+   "Power BI pricing (Microsoft)",
+   "https://www.microsoft.com/power-platform/products/power-bi/pricing"
+  ]
+ ],
+ "apps": [
+  {
+   "id": "w",
+   "name": "Word",
+   "t": "W",
+   "c": "--a-w",
+   "sub": "Letters, SOPs, mail merge, formal documents"
+  },
+  {
+   "id": "x",
+   "name": "Excel",
+   "t": "X",
+   "c": "--a-x",
+   "sub": "Schedules, models, reconciliations, quick dashboards"
+  },
+  {
+   "id": "q",
+   "name": "Power Query",
+   "t": "PQ",
+   "c": "--a-q",
+   "sub": "Inside Excel (Data › Get Data) and Power BI. Clean and combine data with clicks"
+  },
+  {
+   "id": "pp",
+   "name": "PowerPoint",
+   "t": "P",
+   "c": "--a-pp",
+   "sub": "Forecast & closing presentations, training decks"
+  },
+  {
+   "id": "o",
+   "name": "Outlook",
+   "t": "O",
+   "c": "--a-o",
+   "sub": "Email, calendar, shared mailboxes"
+  },
+  {
+   "id": "b",
+   "name": "Power BI",
+   "t": "BI",
+   "c": "--a-b",
+   "sub": "Interactive dashboards for management. Pro licence needed to share"
+  },
+  {
+   "id": "a",
+   "name": "Power Automate",
+   "t": "PA",
+   "c": "--a-a",
+   "sub": "Cloud flows and desktop (RPA) automation"
+  },
+  {
+   "id": "p",
+   "name": "Power Apps",
+   "t": "Ap",
+   "c": "--a-p",
+   "sub": "Simple phone/PC forms and apps on top of your data"
+  },
+  {
+   "id": "t",
+   "name": "Teams",
+   "t": "T",
+   "c": "--a-t",
+   "sub": "Chat, meetings, team files"
+  },
+  {
+   "id": "s",
+   "name": "OneDrive & SharePoint",
+   "t": "S",
+   "c": "--a-s",
+   "sub": "Where files live, versions, permissions"
+  },
+  {
+   "id": "n",
+   "name": "OneNote",
+   "t": "N",
+   "c": "--a-n",
+   "sub": "Personal notebook, meeting notes"
+  },
+  {
+   "id": "f",
+   "name": "Forms",
+   "t": "F",
+   "c": "--a-f",
+   "sub": "Surveys, quizzes, request forms"
+  },
+  {
+   "id": "l",
+   "name": "Lists",
+   "t": "L",
+   "c": "--a-l",
+   "sub": "Trackers and logs with audit trail"
+  },
+  {
+   "id": "pl",
+   "name": "Planner & To Do",
+   "t": "Pl",
+   "c": "--a-pl",
+   "sub": "Tasks, owners, due dates"
+  },
+  {
+   "id": "lp",
+   "name": "Loop",
+   "t": "Lp",
+   "c": "--a-lp",
+   "sub": "Live tables and lists inside chats and emails"
+  },
+  {
+   "id": "c",
+   "name": "Copilot",
+   "t": "Cp",
+   "c": "--a-c",
+   "sub": "AI assistant. Free Chat vs paid in-app Copilot"
+  }
+ ],
+ "levels": {
+  "B": [
+   "Basic",
+   "--basic"
+  ],
+  "I": [
+   "Intermediate",
+   "--inter"
+  ],
+  "A": [
+   "Advanced",
+   "--adv"
+  ],
+  "C": [
+   "Coding",
+   "--code"
+  ]
+ },
+ "features": [
+  {
+   "app": "w",
+   "name": "Styles + Navigation pane",
+   "level": "B",
+   "core": true,
+   "what": "Apply Heading 1/2 styles instead of manual bold. The Navigation pane (Ctrl+F) then becomes a clickable outline, and you restyle the whole document in one click.",
+   "use": "Month-end closing SOP or accounting policy manual you can jump around in.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Home › Styles · View › Navigation Pane (Ctrl+F)",
+   "steps": [
+    "Click a heading line › Home › Heading 1",
+    "Subheadings › Heading 2",
+    "Ctrl+F opens the Navigation pane; drag headings to reorder sections",
+    "Right-click Heading 1 › Modify to change every heading at once"
+   ]
+  },
+  {
+   "app": "w",
+   "name": "Auto table of contents, captions & cross-references",
+   "level": "I",
+   "core": false,
+   "what": "References › Table of Contents builds from your headings. Captions number tables/figures; cross-references update when numbering changes.",
+   "use": "Audit pack index; board paper that says 'see Table 3' and stays right after edits.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "References › Table of Contents · Insert Caption · Cross-reference",
+   "steps": [
+    "Apply heading styles first",
+    "References › Table of Contents › Automatic Table 1",
+    "Select a table › References › Insert Caption › Label: Table",
+    "Where you mention it: References › Cross-reference › Table › Only label and number",
+    "Before printing: Ctrl+A, then F9 to update everything"
+   ]
+  },
+  {
+   "app": "w",
+   "name": "Mail Merge from Excel",
+   "level": "I",
+   "core": true,
+   "what": "Mailings › Start Mail Merge. One letter template + Excel list = one letter (or email) per row with its own name and amount.",
+   "use": "Debtor balance confirmation letters for all customers; overdue reminders; supplier statements. Format amounts with the field switch \\# \"#,##0.00\".",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Mailings › Start Mail Merge › Letters",
+   "steps": [
+    "In Excel, put headers in row 1 (Name, Address, Balance), one customer per row",
+    "Word › Mailings › Select Recipients › Use an Existing List › pick the sheet",
+    "Insert Merge Field wherever each value goes",
+    "Preview Results and check a few letters",
+    "Finish & Merge › Edit Individual Documents, or Send Email Messages"
+   ]
+  },
+  {
+   "app": "w",
+   "name": "Templates (.dotx) & Quick Parts",
+   "level": "B",
+   "core": false,
+   "what": "Save a letterhead as a template; save signature blocks, standard clauses and addresses as Quick Parts to insert with two keystrokes.",
+   "use": "Standard supplier letter, payment voucher cover, bank instruction letter layout.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "File › Save As › Word Template · Insert › Quick Parts",
+   "steps": [
+    "Build the letterhead once › Save As › Word Template (.dotx)",
+    "File › New › Personal to start a letter from it",
+    "Select a signature block › Insert › Quick Parts › Save Selection to Quick Part Gallery",
+    "Next time type the Quick Part name and press F3"
+   ]
+  },
+  {
+   "app": "w",
+   "name": "Track Changes & Compare Documents",
+   "level": "B",
+   "core": true,
+   "what": "Review › Track Changes records every edit. Review › Compare shows differences between two versions even if nobody tracked.",
+   "use": "Review service agreement with legal; compare policy v3 vs v4 before approval.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Review › Track Changes · Review › Compare",
+   "steps": [
+    "Turn on Track Changes (Ctrl+Shift+E) before sending for review",
+    "Edits show in colour; Accept or Reject one by one",
+    "No tracking used? Review › Compare › Compare › pick Original and Revised › OK"
+   ]
+  },
+  {
+   "app": "w",
+   "name": "Fill-in forms (content controls + Restrict Editing)",
+   "level": "I",
+   "core": false,
+   "what": "Developer tab › drop-downs, date pickers, check boxes. Restrict Editing so people can only type in the blanks.",
+   "use": "Vendor registration form, petty cash claim form, new GL account request.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "Content controls look like plain text in very old Word (2007 and before).",
+   "where": "File › Options › Customize Ribbon › tick Developer · Developer › Controls",
+   "steps": [
+    "Show the Developer tab",
+    "Insert Drop-Down List, Date Picker or Check Box where the blanks go",
+    "Properties › add the choices",
+    "Review › Restrict Editing › Filling in forms › Yes, Start Enforcing Protection"
+   ]
+  },
+  {
+   "app": "w",
+   "name": "Sections, landscape pages & different headers",
+   "level": "I",
+   "core": false,
+   "what": "Layout › Breaks › Next Page lets one page be landscape and gives each part its own header/footer and page numbering.",
+   "use": "Report with a wide landscape schedule in the middle; appendix numbered A-1, A-2.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Layout › Breaks › Next Page · Layout › Orientation",
+   "steps": [
+    "Cursor before the wide table › Breaks › Next Page",
+    "Do the same after the table",
+    "Click in the middle section › Orientation › Landscape",
+    "Double-click the header › untick Link to Previous to give it its own header"
+   ]
+  },
+  {
+   "app": "w",
+   "name": "Paste Link from Excel",
+   "level": "I",
+   "core": false,
+   "what": "Copy in Excel › Paste Special › Paste link. Numbers in Word update when the Excel file changes.",
+   "use": "Monthly management commentary where the numbers come from the forecast workbook.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "Links break if the file moves or goes to someone else. Break links on the copy you send.",
+   "where": "Excel: Copy · Word: Home › Paste › Paste Special › Paste link",
+   "steps": [
+    "Copy the range or chart in Excel",
+    "Word › Paste Special › Paste link › Microsoft Excel Worksheet Object",
+    "After Excel changes: right-click › Update Link",
+    "Before sending: File › Info › Edit Links to Files › Break Link"
+   ]
+  },
+  {
+   "app": "w",
+   "name": "Open & edit PDF in Word",
+   "level": "B",
+   "core": false,
+   "what": "Open a PDF directly in Word and it converts to editable text (layout may shift).",
+   "use": "Re-use wording from a bank or auditor letter that only came as PDF.",
+   "version": "2013+",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "File › Open › choose the PDF",
+   "steps": [
+    "Open the PDF from Word and click OK on the conversion message",
+    "Check the layout and copy what you need",
+    "Keep the original PDF as the record"
+   ]
+  },
+  {
+   "app": "w",
+   "name": "Dictate & Transcribe",
+   "level": "B",
+   "core": false,
+   "what": "Home › Dictate types as you speak. Transcribe (Word for web) turns a recording into text with speakers.",
+   "use": "Draft meeting minutes quickly; dictate long explanations for variance notes.",
+   "version": "365 only",
+   "it": "Uses Microsoft cloud speech service ('connected experiences'); IT can turn it off for privacy.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Home › Dictate · Word for web: Home › Dictate ▾ › Transcribe",
+   "steps": [
+    "Click Dictate and allow the microphone",
+    "Say punctuation out loud: 'comma', 'full stop', 'new line'",
+    "For a recording: Word for web › Transcribe › Upload audio › Add to document"
+   ]
+  },
+  {
+   "app": "w",
+   "name": "Editor & Translate",
+   "level": "B",
+   "core": false,
+   "what": "Grammar/clarity checks and Review › Translate for a selection or whole document.",
+   "use": "Rough translation to read a memo in another language; polish English for management reviewers. Always get a human check for formal use.",
+   "version": "2019+ / 365",
+   "it": "Text is sent to Microsoft translation service; IT may disable for confidential documents.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Home › Editor · Review › Translate",
+   "steps": [
+    "Home › Editor shows a score and suggestions",
+    "Select text › Review › Translate › Translate Selection",
+    "Choose the language › Insert",
+    "Ask a fluent person to check before formal use"
+   ]
+  },
+  {
+   "app": "w",
+   "name": "Sensitivity labels",
+   "level": "B",
+   "core": false,
+   "what": "Mark a document Confidential/Internal; some labels also encrypt and add a watermark.",
+   "use": "Salary review, payroll summary, board minutes.",
+   "version": "365 (if IT set it up)",
+   "it": "Configured only by IT (Microsoft Purview). If you don't see it, the company hasn't enabled it.",
+   "licence": "",
+   "oldVersion": "Encrypted files may not open in old Office or outside the company.",
+   "where": "Home › Sensitivity (or File › Info › Protect Document)",
+   "steps": [
+    "Look for the Sensitivity button on the Home tab",
+    "Pick a label such as Confidential",
+    "The label may add a header, watermark and encryption automatically"
+   ]
+  },
+  {
+   "app": "w",
+   "name": "Word table formulas & fields",
+   "level": "A",
+   "core": false,
+   "what": "Insert › Quick Parts › Field, or Layout › Formula in a table (=SUM(ABOVE)). Press F9 to update.",
+   "use": "Simple totals in a Word quotation or claim form without Excel.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Table Layout › Formula · Insert › Quick Parts › Field",
+   "steps": [
+    "Click the total cell in a Word table",
+    "Layout › Formula › =SUM(ABOVE)",
+    "Number format: #,##0.00",
+    "After changing numbers: Ctrl+A, then F9"
+   ]
+  },
+  {
+   "app": "w",
+   "name": "Word macros (VBA)",
+   "level": "C",
+   "core": false,
+   "what": "Record or write VBA to repeat formatting or loop files.",
+   "use": "Batch convert a folder of letters to PDF; clean up SAP text exports pasted into Word.",
+   "version": "Desktop only (not web)",
+   "it": "Macros in files from email/internet are blocked by default; IT may allow only signed macros or trusted folders.",
+   "licence": "",
+   "oldVersion": "Must save as .docm; Word for web and mobile can't run them.",
+   "where": "View › Macros › Record Macro · Alt+F11 to see code",
+   "steps": [
+    "Record the steps once",
+    "Alt+F11 and read the recorded code",
+    "Save as .docm",
+    "Run with Alt+F8"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Excel Tables (Ctrl+T)",
+   "level": "B",
+   "core": true,
+   "what": "Turns a range into a Table: auto-expands, keeps formulas consistent, gives names like Sales[Amount]. Pivots and Power Query love Tables.",
+   "use": "AP invoice listing or accrual schedule that grows every month without fixing ranges.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Insert › Table (Ctrl+T)",
+   "steps": [
+    "Click any cell in your data › Ctrl+T › tick My table has headers",
+    "Table Design › Table Name › rename, e.g. tblAP",
+    "Type a new row under the table: it joins and formulas copy down",
+    "Use the name in formulas: =SUM(tblAP[Amount])"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Custom number formats",
+   "level": "B",
+   "core": true,
+   "what": "Ctrl+1 › Custom. #,##0;(#,##0);\"-\" shows negatives in brackets and zero as dash. #,##0, shows thousands without dividing.",
+   "use": "P&L in RM'000 with brackets, ready for management reviewers, while the cell still holds the full number.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Ctrl+1 › Number › Custom",
+   "steps": [
+    "Select the amounts › Ctrl+1 › Custom",
+    "Type #,##0;(#,##0);\"-\"",
+    "For thousands: #,##0,;(#,##0,);\"-\"",
+    "The cell keeps the full number; only the display changes"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Paste Special tricks",
+   "level": "B",
+   "core": true,
+   "what": "Values only, Transpose, Skip blanks, and Multiply: type -1, copy, Paste Special › Multiply to flip signs.",
+   "use": "Flip SAP credit-side signs in one go; freeze a forecast as values before sending.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Home › Paste ▾ › Paste Special (Ctrl+Alt+V)",
+   "steps": [
+    "Type -1 in a blank cell and copy it",
+    "Select the amounts › Ctrl+Alt+V › Multiply › OK",
+    "Values only: Ctrl+Alt+V › Values",
+    "Turn rows into columns: tick Transpose"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Go To Special: fill the blanks",
+   "level": "B",
+   "core": false,
+   "what": "Ctrl+G › Special › Blanks, type = and the cell above, Ctrl+Enter. Then paste as values.",
+   "use": "SAP reports that print company code only once per group; fill it down for every row.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Home › Find & Select › Go To Special",
+   "steps": [
+    "Select the column › Ctrl+G › Special › Blanks",
+    "Type = then press the ↑ arrow key",
+    "Press Ctrl+Enter to fill every blank",
+    "Copy the column › Paste values"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Text to Columns & Flash Fill",
+   "level": "B",
+   "core": false,
+   "what": "Split one column by delimiter; fix text dates. Flash Fill (Ctrl+E) copies a pattern you type once.",
+   "use": "SAP dates exported as 31.10.2026 text; split 'GL - Description'; extract invoice number.",
+   "version": "Flash Fill 2013+",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Data › Text to Columns · Data › Flash Fill (Ctrl+E)",
+   "steps": [
+    "Select the column › Text to Columns › Delimited › choose the separator",
+    "For text dates: last step › Column data format › Date › DMY",
+    "Flash Fill: type the result for row 1, move down, press Ctrl+E"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Data validation drop-downs",
+   "level": "B",
+   "core": false,
+   "what": "Data › Data Validation › List. Restricts input to your list.",
+   "use": "Cost centre, company code, status (Open/Pending HOD/Closed) in shared templates.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Data › Data Validation",
+   "steps": [
+    "Keep the list in a Table on a 'Lists' sheet",
+    "Select input cells › Data Validation › Allow: List",
+    "Source: select the list range",
+    "Error Alert tab › Style: Stop"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Conditional formatting",
+   "level": "B",
+   "core": true,
+   "what": "Colour cells by rules, data bars, icon sets, or a formula.",
+   "use": "Highlight AR > 90 days, variances > 10%, duplicates in invoice numbers.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Format visual › Cell elements › fx",
+   "steps": [
+    "Turn on Background color › fx",
+    "Choose Rules, or Field value with a colour measure",
+    "Example: Colour = IF([DSO] > 60, \"#C0392B\", \"#1E8E5A\")"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "SUMIFS / COUNTIFS / AVERAGEIFS",
+   "level": "B",
+   "core": true,
+   "what": "Sum or count with several conditions.",
+   "use": "Sum GL amount by company code + account + fiscal month from a raw SAP dump.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Formulas › Math & Trig › SUMIFS",
+   "steps": [
+    "Pattern: =SUMIFS(sum_range, criteria_range1, criteria1, …)",
+    "Example: =SUMIFS(tblGL[Amount], tblGL[CoCode], $A2, tblGL[Period], B$1)",
+    "Lock with $ so it copies across a grid"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "XLOOKUP",
+   "level": "I",
+   "core": true,
+   "what": "Modern lookup: any direction, built-in 'if not found', exact by default, can return several columns.",
+   "use": "Pull vendor name from vendor master; last match by date; exchange rate by date with approximate match.",
+   "version": "2021+ / 365",
+   "it": "",
+   "licence": "",
+   "oldVersion": "Excel 2019 and older show #NAME? when they recalculate. Use INDEX+MATCH for files going to old Excel.",
+   "where": "Formulas › Lookup & Reference › XLOOKUP",
+   "steps": [
+    "=XLOOKUP(lookup_value, lookup_array, return_array, \"Not found\")",
+    "Return several columns: select them all as return_array",
+    "Last match: add match mode 0 and search mode -1"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "INDEX + MATCH",
+   "level": "I",
+   "core": false,
+   "what": "The classic two-way lookup. Works in every version.",
+   "use": "Files sent to external auditors or subsidiaries with unknown Excel versions.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Type directly",
+   "steps": [
+    "=INDEX(return_column, MATCH(lookup_value, lookup_column, 0))",
+    "Two-way: =INDEX(table, MATCH(row_value, row_list, 0), MATCH(col_value, col_list, 0))",
+    "Always keep the 0 for exact match"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Fiscal-year date formulas",
+   "level": "I",
+   "core": true,
+   "what": "EOMONTH, EDATE, TODAY. Fiscal period for Apr–Mar: =MOD(MONTH(A2)-4,12)+1. FY start year: =YEAR(A2)-(MONTH(A2)<4).",
+   "use": "Map SAP posting dates to P1–P12; ageing days =TODAY()-DueDate; month-end accrual dates.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Type directly · Formulas › Date & Time",
+   "steps": [
+    "Fiscal period (April = 1): =MOD(MONTH(A2)-4,12)+1",
+    "Fiscal year label: =\"FY\"&(YEAR(A2)-(MONTH(A2)<4))",
+    "Month-end: =EOMONTH(A2,0)",
+    "Ageing days: =TODAY()-DueDate"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "ROUND & precision control",
+   "level": "B",
+   "core": true,
+   "what": "ROUND(x,2) at the right step so totals match. Avoid 'Set precision as displayed' (it changes data permanently).",
+   "use": "Stop RM0.01 differences between your schedule and SAP.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Formulas › Math & Trig › ROUND",
+   "steps": [
+    "Round at line level: =ROUND(A2*rate,2)",
+    "Decide: sum of rounded lines or rounded total, whichever matches the system",
+    "Check: =SUM(range)-SystemTotal should be 0"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "IFERROR, IFS, SWITCH",
+   "level": "I",
+   "core": false,
+   "what": "Cleaner logic. IFS checks several conditions; SWITCH maps codes to labels.",
+   "use": "Map company codes to company names; ageing buckets 0-30/31-60/61-90/>90.",
+   "version": "IFS/SWITCH 2019+",
+   "it": "",
+   "licence": "",
+   "oldVersion": "IFS/SWITCH show #NAME? in 2016.",
+   "where": "Formulas › Logical",
+   "steps": [
+    "=IFERROR(XLOOKUP(…),0)",
+    "=IFS(D2<=30,\"0-30\",D2<=60,\"31-60\",D2<=90,\"61-90\",TRUE,\">90\")",
+    "=SWITCH(A2,\"1000\",\"Company A\",\"2000\",\"Company B\",\"Other\")"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Dynamic arrays: FILTER, SORT, UNIQUE, SEQUENCE",
+   "level": "I",
+   "core": false,
+   "what": "One formula spills a whole list that updates itself.",
+   "use": "Live list of unpaid invoices for the vendor typed in a cell; unique customer list for a dropdown.",
+   "version": "2021+ / 365",
+   "it": "",
+   "licence": "",
+   "oldVersion": "2019 and older: #NAME? or a frozen legacy array.",
+   "where": "Type in one cell; it spills",
+   "steps": [
+    "=FILTER(tblAP, (tblAP[Vendor]=H1)*(tblAP[Status]=\"Open\"))",
+    "=SORT(UNIQUE(tblAR[Customer]))",
+    "Leave empty cells below; #SPILL! means something is in the way"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "LET",
+   "level": "A",
+   "core": false,
+   "what": "Name parts of a long formula inside it. Easier to read and faster.",
+   "use": "Forecast formulas that reuse the same lookup several times.",
+   "version": "2021+ / 365",
+   "it": "",
+   "licence": "",
+   "oldVersion": "#NAME? in 2019 and older.",
+   "where": "Type directly",
+   "steps": [
+    "=LET(sales, SUMIFS(…), cost, SUMIFS(…), sales-cost)",
+    "Name each part once; the last argument is the result"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "LAMBDA (make your own function)",
+   "level": "A",
+   "core": false,
+   "what": "Write a formula once, save it as a name (Name Manager), use it like a built-in function.",
+   "use": "=FYPERIOD(date) or =AGEBUCKET(days) used across every workbook the same way.",
+   "version": "2024 / 365",
+   "it": "",
+   "licence": "",
+   "oldVersion": "#NAME? in 2021 and older.",
+   "where": "Formulas › Name Manager › New",
+   "steps": [
+    "Test first: =LAMBDA(d, MOD(MONTH(d)-4,12)+1)(A2)",
+    "Name Manager › New › Name: FYPERIOD",
+    "Refers to: =LAMBDA(d, MOD(MONTH(d)-4,12)+1)",
+    "Now use =FYPERIOD(A2) anywhere in the workbook"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "GROUPBY & PIVOTBY",
+   "level": "I",
+   "core": false,
+   "what": "Pivot-style summary with a formula. Refreshes itself, no Refresh button.",
+   "use": "Sales by customer by month that updates as soon as new rows land in the Table.",
+   "version": "365 only",
+   "it": "",
+   "licence": "",
+   "oldVersion": "Not in any perpetual version, 2024 included.",
+   "where": "Type directly",
+   "steps": [
+    "=GROUPBY(tblSales[Customer], tblSales[Amount], SUM)",
+    "=PIVOTBY(tblSales[Customer], tblSales[Month], tblSales[Amount], SUM)",
+    "Extra arguments control totals and sorting"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "VSTACK, HSTACK, TEXTSPLIT, TAKE, DROP, CHOOSECOLS",
+   "level": "A",
+   "core": false,
+   "what": "Stack sheets, split text, take top N rows, pick columns. All with formulas.",
+   "use": "Stack several company sheets into one list; top 10 customers by AR.",
+   "version": "2024 / 365",
+   "it": "",
+   "licence": "",
+   "oldVersion": "#NAME? in 2021 and older.",
+   "where": "Type directly",
+   "steps": [
+    "Stack sheets: =VSTACK(CoA!A2:F500, CoB!A2:F500)",
+    "Top 10: =TAKE(SORT(tbl,3,-1),10)",
+    "Split text: =TEXTSPLIT(A2,\" - \")"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "REGEX functions",
+   "level": "A",
+   "core": false,
+   "what": "REGEXTEST, REGEXEXTRACT, REGEXREPLACE find patterns in text.",
+   "use": "Extract invoice number from messy bank transaction descriptions for matching.",
+   "version": "365 only",
+   "it": "",
+   "licence": "",
+   "oldVersion": "Not in perpetual versions.",
+   "where": "Type directly",
+   "steps": [
+    "=REGEXEXTRACT(A2,\"INV\\d+\") pulls INV12345 out of text",
+    "=REGEXTEST(A2,\"^\\d{10}$\") checks for exactly 10 digits",
+    "Feed the result into XLOOKUP to match"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "PivotTable",
+   "level": "B",
+   "core": true,
+   "what": "Drag fields to summarise thousands of rows in seconds.",
+   "use": "Trial balance by company and account group; expenses by cost centre by month.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Insert › PivotTable",
+   "steps": [
+    "Click inside your Table › Insert › PivotTable › New Worksheet",
+    "Drag Account to Rows, Company to Columns, Amount to Values",
+    "Right-click › Refresh after the data changes",
+    "PivotTable Design › Report Layout › Show in Tabular Form"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Pivot 'Show Values As' & calculated fields",
+   "level": "I",
+   "core": false,
+   "what": "Right-click › Show Values As: % of total, difference from previous month, running total.",
+   "use": "Variance vs last month without extra columns; % of sales per product.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Right-click a value › Show Values As",
+   "steps": [
+    "% of Grand Total, or Difference From › Base field: Month › (previous)",
+    "Calculated field: PivotTable Analyze › Fields, Items & Sets › Calculated Field"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Slicers & Timeline",
+   "level": "B",
+   "core": false,
+   "what": "Clickable filter buttons for Tables and Pivots; Timeline filters by date range.",
+   "use": "Simple Excel dashboard filtered by company and fiscal month.",
+   "version": "2013+",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "PivotTable Analyze › Insert Slicer / Insert Timeline",
+   "steps": [
+    "Click the pivot › Insert Slicer › Company",
+    "Insert Timeline › Posting Date",
+    "Right-click slicer › Report Connections to control several pivots"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "GETPIVOTDATA",
+   "level": "I",
+   "core": false,
+   "what": "Pulls one number out of a Pivot by its labels, so a fixed-layout report can read from a Pivot.",
+   "use": "Fixed-format P&L template fed by a pivot of the SAP dump.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Type = then click a pivot value",
+   "steps": [
+    "Excel writes the GETPIVOTDATA formula for you",
+    "Replace the typed labels with cell references",
+    "To stop it: PivotTable Analyze › Options ▾ › untick Generate GetPivotData"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Data Model & Power Pivot (DAX in Excel)",
+   "level": "A",
+   "core": false,
+   "what": "Load several tables, relate them, write DAX measures, then pivot. Same engine as Power BI.",
+   "use": "GL lines + account master + cost centre master related, measures for Actual vs Forecast.",
+   "version": "2013+ (Windows)",
+   "it": "",
+   "licence": "",
+   "oldVersion": "Not on Excel for Mac; Excel for web can view but not edit the model.",
+   "where": "Insert › PivotTable › Add this data to the Data Model · Data › Manage Data Model",
+   "steps": [
+    "Load each table with 'Add this data to the Data Model'",
+    "Data › Relationships › New: GL[Account] → Accounts[Account]",
+    "Power Pivot › Measures › New: Total := SUM(GL[Amount])",
+    "Insert a PivotTable from the Data Model"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Charts: waterfall, combo & sparklines",
+   "level": "I",
+   "core": true,
+   "what": "Waterfall for bridges, combo for bars + line, sparklines as tiny charts inside cells.",
+   "use": "Profit bridge Budget → Actual; sales bars with GP% line; 12-month trend per customer.",
+   "version": "Waterfall 2016+",
+   "it": "",
+   "licence": "",
+   "oldVersion": "Waterfall shows blank in 2013 and older.",
+   "where": "Insert › Charts · Insert › Sparklines",
+   "steps": [
+    "Waterfall: list Budget, each driver, Actual › Insert › Waterfall",
+    "Right-click first and last bars › Set as total",
+    "Combo: Insert › Combo › line on secondary axis",
+    "Sparklines: select cells › Insert › Line › data range"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Linked picture (Camera)",
+   "level": "I",
+   "core": false,
+   "what": "Copy › Paste Special › Linked Picture. A live image of another range you can place anywhere.",
+   "use": "Dashboard sheet that shows KPI boxes built on other sheets.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Home › Paste ▾ › Linked Picture",
+   "steps": [
+    "Copy a range",
+    "Go to the dashboard sheet › Paste ▾ › Linked Picture",
+    "Move and resize; it updates live"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "What-If: Goal Seek, Scenario Manager, Data Table",
+   "level": "I",
+   "core": false,
+   "what": "Goal Seek finds the input for a target. Data Table shows results for many inputs at once.",
+   "use": "Sales needed to hit target PBT; sensitivity of PBT to FX rate and resin price.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Data › What-If Analysis",
+   "steps": [
+    "Goal Seek: Set cell = PBT, To value = target, By changing = sales",
+    "Data Table: inputs down a column, formula at the top › Data Table › Column input cell",
+    "Scenario Manager: save Best, Base and Worst inputs"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Forecast Sheet & FORECAST.ETS",
+   "level": "I",
+   "core": false,
+   "what": "Data › Forecast Sheet projects a time series with seasonality and a confidence band.",
+   "use": "Quick trend for utilities or freight cost as a starting point (always sense-check).",
+   "version": "2016+",
+   "it": "",
+   "licence": "",
+   "oldVersion": "FORECAST.ETS shows #NAME? in 2013.",
+   "where": "Data › Forecast Sheet",
+   "steps": [
+    "Select dates and values (monthly, no gaps)",
+    "Data › Forecast Sheet › choose end date",
+    "Options: seasonality and confidence interval",
+    "Excel makes a new sheet with FORECAST.ETS formulas"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Solver",
+   "level": "A",
+   "core": false,
+   "what": "Add-in that finds the best combination of inputs under constraints.",
+   "use": "Optimise allocation of shared costs or production mix.",
+   "version": "All versions (add-in)",
+   "it": "Add-ins can be disabled by policy; ask IT to enable Solver.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "File › Options › Add-ins › Manage Excel Add-ins › Solver · Data › Solver",
+   "steps": [
+    "Enable the Solver add-in",
+    "Set Objective cell, Max or Min",
+    "By Changing Variable Cells; Add constraints",
+    "Solve › Keep Solver Solution"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Formula auditing & Evaluate Formula",
+   "level": "B",
+   "core": true,
+   "what": "Trace Precedents/Dependents arrows; Evaluate Formula steps through a formula; Watch Window keeps key cells visible.",
+   "use": "Review a workbook handed over by the junior; find why a total is off.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Formulas › Formula Auditing",
+   "steps": [
+    "Click a cell › Trace Precedents shows arrows to its sources",
+    "Evaluate Formula › click Evaluate step by step",
+    "Watch Window › Add Watch for key totals",
+    "Ctrl+[ jumps to the source cells"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Protect sheet & Allow Edit Ranges",
+   "level": "B",
+   "core": false,
+   "what": "Lock formulas and let users type only in input cells.",
+   "use": "Forecast template sent to HODs where only the yellow cells can be changed. Not real security.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Review › Protect Sheet · Allow Edit Ranges",
+   "steps": [
+    "Select input cells › Ctrl+1 › Protection › untick Locked",
+    "Colour them yellow",
+    "Review › Protect Sheet › set a password and keep it safe",
+    "Users can now type only in the yellow cells"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Co-authoring, Version History & Show Changes",
+   "level": "B",
+   "core": true,
+   "what": "File on OneDrive/SharePoint: several people edit at once. Show Changes lists who changed which cell.",
+   "use": "Budget file filled by department heads at the same time; trace who changed an accrual.",
+   "version": "365 (file in cloud)",
+   "it": "",
+   "licence": "",
+   "oldVersion": "Co-authoring doesn't work in perpetual 2016/2019 or for files on a local drive or email.",
+   "where": "Save to OneDrive/SharePoint · Review › Show Changes · File › Info › Version History",
+   "steps": [
+    "Save the file in OneDrive or SharePoint and share the link",
+    "Others open it in Excel desktop or web; you see their cursors",
+    "Review › Show Changes lists who changed what",
+    "Version History restores an older copy"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Sheet View",
+   "level": "I",
+   "core": false,
+   "what": "View › Sheet View. Sort and filter for yourself without disturbing others co-authoring.",
+   "use": "Filter your company while others work in the same shared file.",
+   "version": "365 only",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "View › Sheet View › New",
+   "steps": [
+    "While co-authoring, View › New",
+    "Sort and filter freely; others don't see it",
+    "Exit to go back to the default view"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Checkboxes in cells",
+   "level": "B",
+   "core": false,
+   "what": "Insert › Checkbox. A real tick box that holds TRUE/FALSE.",
+   "use": "Closing checklist; documents-received list.",
+   "version": "365 only",
+   "it": "",
+   "licence": "",
+   "oldVersion": "Older versions show TRUE/FALSE instead of a box.",
+   "where": "Insert › Checkbox",
+   "steps": [
+    "Select the cells › Insert › Checkbox",
+    "Click to tick (TRUE)",
+    "Count done items: =COUNTIF(range,TRUE)"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Data types: Currencies & Stocks",
+   "level": "I",
+   "core": false,
+   "what": "Type MYR/JPY, convert to Currency data type, and pull the latest rate into cells.",
+   "use": "Indicative FX for quick estimates. Use official BNM/bank rates for books.",
+   "version": "365 only",
+   "it": "Needs connected experiences (internet data); IT may disable.",
+   "licence": "",
+   "oldVersion": "Older versions show the last stored value as text only.",
+   "where": "Data › Data Types › Currencies",
+   "steps": [
+    "Type a pair like MYR/JPY in a cell",
+    "Data › Currencies",
+    "Click the card icon › add field Price",
+    "Data › Refresh All to update"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Analyze Data",
+   "level": "B",
+   "core": false,
+   "what": "Home › Analyze Data suggests charts and patterns, and answers plain-English questions.",
+   "use": "First look at a new expense dataset.",
+   "version": "365 only",
+   "it": "Sends data to Microsoft cloud to analyse; IT may turn it off.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Home › Analyze Data",
+   "steps": [
+    "Click inside a Table › Analyze Data",
+    "Ask a question, e.g. 'total amount by vendor'",
+    "Insert the suggested chart or pivot"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Check Performance & Workbook Statistics",
+   "level": "B",
+   "core": false,
+   "what": "Review › Check Performance cleans unused formatting; Workbook Statistics counts sheets, formulas, tables.",
+   "use": "Slow, bloated forecast file that keeps crashing.",
+   "version": "365 only",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Review › Check Performance · Review › Workbook Statistics",
+   "steps": [
+    "Review › Check Performance › Optimize all",
+    "Workbook Statistics shows what each sheet holds"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Spreadsheet Compare / Inquire",
+   "level": "I",
+   "core": false,
+   "what": "Compares two workbooks cell by cell, formulas included, and maps links.",
+   "use": "Compare forecast v1 vs v2; check what the junior changed.",
+   "version": "Enterprise editions",
+   "it": "",
+   "licence": "Only in Microsoft 365 Apps for enterprise / Office Professional Plus. Not in Business plans.",
+   "oldVersion": "",
+   "where": "Windows Start › search 'Spreadsheet Compare'",
+   "steps": [
+    "Open Spreadsheet Compare › Compare Files › choose v1 and v2",
+    "Coloured grid shows changed values and formulas",
+    "Export Results to Excel"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Check Compatibility & Inspect Document",
+   "level": "B",
+   "core": true,
+   "what": "File › Info › Check for Issues. Lists features that break in older Excel; removes hidden data.",
+   "use": "Before sending to external auditors, overseas HQ or subsidiaries.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "File › Info › Check for Issues",
+   "steps": [
+    "Check Compatibility › Select versions to show › read the list",
+    "Inspect Document › Inspect › Remove All for hidden items",
+    "Do this on a copy"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Alt key tips",
+   "level": "B",
+   "core": true,
+   "what": "Press Alt and letters appear on the ribbon. Alt H O I autofits columns, Alt A T toggles filter.",
+   "use": "Speed up daily SAP-export cleanup without the mouse.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Press and release Alt",
+   "steps": [
+    "Letters appear on the ribbon; type them in order",
+    "Alt H O I autofits a column; Alt A T toggles filters; Alt H V V pastes values",
+    "Learn one new sequence each week"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "VBA macros",
+   "level": "C",
+   "core": false,
+   "what": "Record or write code to automate anything in desktop Excel.",
+   "use": "Clean and format SAP exports, loop several company files, save each as PDF, run SAP GUI scripts.",
+   "version": "Desktop only",
+   "it": "Macros from internet/email are blocked by default; IT may allow only trusted folders or signed macros. SAP GUI scripting must be enabled by SAP Basis.",
+   "licence": "",
+   "oldVersion": "Save as .xlsm; doesn't run in Excel for web or mobile.",
+   "where": "View › Macros › Record Macro · Alt+F11",
+   "steps": [
+    "Record a macro while cleaning one export",
+    "Alt+F11 › read Module1",
+    "Replace fixed ranges with Range(\"A1\").CurrentRegion",
+    "Save as .xlsm; run with Alt+F8"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Office Scripts",
+   "level": "C",
+   "core": false,
+   "what": "Automate tab › Record Actions writes TypeScript code. Runs in Excel for web and desktop, and can be called from Power Automate.",
+   "use": "Scheduled flow runs a script to format the daily SAP export and email it.",
+   "version": "365 business plans",
+   "it": "Admin can switch Office Scripts off for the tenant.",
+   "licence": "Needs a business/enterprise Microsoft 365 plan, not personal.",
+   "oldVersion": "",
+   "where": "Automate › Record Actions / New Script",
+   "steps": [
+    "Automate › Record Actions › do the steps › Stop",
+    "Open the script and read the code",
+    "Save; in Power Automate use Excel Online (Business) › Run script"
+   ]
+  },
+  {
+   "app": "x",
+   "name": "Python in Excel",
+   "level": "C",
+   "core": false,
+   "what": "Type =PY( to run Python on Excel ranges, with pandas and charts.",
+   "use": "Outlier test on journal entries; statistical sampling for audit.",
+   "version": "365 only",
+   "it": "Code runs in Microsoft cloud; IT may disable it for data reasons.",
+   "licence": "Standard compute included in business/enterprise 365; faster 'premium compute' is a paid add-on.",
+   "oldVersion": "Other versions only see the last values; they can't recalculate.",
+   "where": "Formulas › Insert Python, or type =PY(",
+   "steps": [
+    "Type =PY( then xl(\"tblGL[#All]\", headers=True) to load the table",
+    "Write pandas, e.g. df.groupby(\"Account\")[\"Amount\"].sum()",
+    "Ctrl+Enter to run; choose Excel value as output"
+   ]
+  },
+  {
+   "app": "q",
+   "name": "Get Data from Folder (combine files)",
+   "level": "I",
+   "core": true,
+   "what": "Point at a folder; Power Query stacks every file inside with the same steps. New month's file in the folder = Refresh.",
+   "use": "12 monthly SAP FBL3N/FBL5N exports become one table automatically.",
+   "version": "Excel 2016+ / Power BI",
+   "it": "",
+   "licence": "",
+   "oldVersion": "Excel 2010/2013 need the free add-in; refresh breaks if the folder is on your C: drive.",
+   "where": "Data › Get Data › From File › From Folder (or From SharePoint Folder)",
+   "steps": [
+    "Put all monthly files (same layout) in one folder",
+    "Get Data › From Folder › Combine & Transform Data",
+    "Clean the 'Transform Sample File' query once; all files follow",
+    "Next month: drop the new file in the folder › Data › Refresh All"
+   ]
+  },
+  {
+   "app": "q",
+   "name": "Unpivot columns",
+   "level": "I",
+   "core": true,
+   "what": "Turns months-across-columns into rows (Date, Amount). The shape Pivots and Power BI need.",
+   "use": "Budget file with Apr–Mar across → long table to compare with actuals.",
+   "version": "Excel 2016+ / Power BI",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Power Query › Transform › Unpivot Columns",
+   "steps": [
+    "Select the non-month columns (Account, Company)",
+    "Transform › Unpivot Other Columns",
+    "Rename Attribute → Month, Value → Amount",
+    "Change Month's type to Date"
+   ]
+  },
+  {
+   "app": "q",
+   "name": "Merge queries (joins), incl. anti join",
+   "level": "I",
+   "core": true,
+   "what": "Like a lookup, but for whole tables. Left Anti join shows rows that have no match.",
+   "use": "Bank rec: bank statement vs SAP bank GL. Anti join instantly lists unmatched items each side.",
+   "version": "Excel 2016+ / Power BI",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Power Query › Home › Merge Queries",
+   "steps": [
+    "Merge Bank with System on Amount (plus Date or Reference)",
+    "Join Kind: Left Anti › shows bank items not in the books",
+    "Do it again System → Bank for the other side",
+    "Load both lists as your reconciling items"
+   ]
+  },
+  {
+   "app": "q",
+   "name": "Append queries",
+   "level": "B",
+   "core": false,
+   "what": "Stack tables with the same columns.",
+   "use": "Combine several company-code extracts or several bank accounts into one list.",
+   "version": "Excel 2016+ / Power BI",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Power Query › Home › Append Queries",
+   "steps": [
+    "Make sure column names match",
+    "Append › Three or more tables › add them all",
+    "Add a 'Source' column first if you need to know where each row came from"
+   ]
+  },
+  {
+   "app": "q",
+   "name": "Change type with Locale",
+   "level": "B",
+   "core": true,
+   "what": "Right-click column › Change Type › Using Locale, e.g. English (Malaysia) or German for dd.mm.yyyy.",
+   "use": "Stop SAP dates and amounts with dots/commas from turning into errors or wrong months.",
+   "version": "Excel 2016+ / Power BI",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Right-click column header › Change Type › Using Locale",
+   "steps": [
+    "Data type: Date, Locale: English (United Kingdom) for 31/10/2026",
+    "Dates like 31.10.2026 or amounts like 1.234,56: use German locale",
+    "Do this before any other type change"
+   ]
+  },
+  {
+   "app": "q",
+   "name": "Clean basics: Fill Down, Split, Trim, Replace",
+   "level": "B",
+   "core": true,
+   "what": "Point-and-click fixes that repeat on every refresh.",
+   "use": "Fill blank company codes, split 'Vendor - Name', strip spaces from SAP text.",
+   "version": "Excel 2016+ / Power BI",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Power Query › Transform tab",
+   "steps": [
+    "Transform › Fill › Down",
+    "Split Column › By Delimiter",
+    "Format › Trim and Clean",
+    "Replace Values for known bad text"
+   ]
+  },
+  {
+   "app": "q",
+   "name": "Group By",
+   "level": "I",
+   "core": false,
+   "what": "Summarise before loading: sum, count, min, max per group.",
+   "use": "Total per vendor per month before loading to Excel, keeping the file small.",
+   "version": "Excel 2016+ / Power BI",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Power Query › Home › Group By",
+   "steps": [
+    "Advanced › group by Vendor and Month",
+    "New column Total = Sum of Amount; Count = Count Rows"
+   ]
+  },
+  {
+   "app": "q",
+   "name": "Parameters (file path, period)",
+   "level": "A",
+   "core": false,
+   "what": "Store a folder path or month in one parameter used by all queries.",
+   "use": "Switch the reporting month in one place; move source to SharePoint without editing every query.",
+   "version": "Excel 2016+ / Power BI",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Power Query › Home › Manage Parameters › New Parameter",
+   "steps": [
+    "Create a parameter named FolderPath",
+    "Advanced Editor › replace the typed path with FolderPath",
+    "Change the parameter value to switch the source"
+   ]
+  },
+  {
+   "app": "q",
+   "name": "Fuzzy merge",
+   "level": "A",
+   "core": false,
+   "what": "Join on 'similar' text with a similarity threshold.",
+   "use": "Match vendor names spelled differently between bank file and SAP.",
+   "version": "365 / Power BI",
+   "it": "",
+   "licence": "",
+   "oldVersion": "Older Excel can't edit or refresh the fuzzy step.",
+   "where": "Merge Queries › tick Use fuzzy matching",
+   "steps": [
+    "Set Similarity threshold, e.g. 0.8",
+    "Check the matched pairs by eye before trusting them"
+   ]
+  },
+  {
+   "app": "q",
+   "name": "Column quality & profile",
+   "level": "B",
+   "core": false,
+   "what": "View › Column quality / distribution shows errors, blanks and unique counts per column.",
+   "use": "Spot bad rows in a new SAP extract before they reach the report.",
+   "version": "365 / Power BI",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Power Query › View › Column quality / distribution / profile",
+   "steps": [
+    "Turn the three options on",
+    "Status bar › Column profiling based on entire data set (default is first 1,000 rows)"
+   ]
+  },
+  {
+   "app": "q",
+   "name": "Custom column & Advanced Editor (M code)",
+   "level": "C",
+   "core": false,
+   "what": "Every click is written as M code. Read it, edit it, write your own if-then logic.",
+   "use": "Custom fiscal period, expense categorisation rules, error-proof steps.",
+   "version": "Excel 2016+ / Power BI",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Add Column › Custom Column · Home › Advanced Editor",
+   "steps": [
+    "Custom Column: if [Amount] < 0 then \"Credit\" else \"Debit\"",
+    "Open Advanced Editor to see the full M code",
+    "Each line equals one Applied Step"
+   ]
+  },
+  {
+   "app": "q",
+   "name": "Query Dependencies & refresh settings",
+   "level": "B",
+   "core": false,
+   "what": "See how queries feed each other; set refresh on open, disable background refresh.",
+   "use": "Make sure the forecast always opens with fresh numbers.",
+   "version": "Excel 2016+ / Power BI",
+   "it": "Database/SAP HANA/ODBC sources need drivers installed by IT and approved credentials.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Power Query › View › Query Dependencies · Data › Queries & Connections › Properties",
+   "steps": [
+    "See the diagram of how queries feed each other",
+    "Right-click a query › Properties › Refresh data when opening the file",
+    "Untick background refresh if formulas depend on the result"
+   ]
+  },
+  {
+   "app": "pp",
+   "name": "Slide Master & layouts",
+   "level": "I",
+   "core": true,
+   "what": "View › Slide Master. Set fonts, colours, logo, footer 'Confidential' once for every slide.",
+   "use": "Standard forecast/closing deck template every month and every company.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "View › Slide Master",
+   "steps": [
+    "Edit the top master: fonts, colours, logo",
+    "Add footer text, e.g. 'Confidential'",
+    "Adjust layouts for Title, Two Content, Chart",
+    "File › Save As › PowerPoint Template (.potx)"
+   ]
+  },
+  {
+   "app": "pp",
+   "name": "Paste-link Excel charts & tables",
+   "level": "I",
+   "core": true,
+   "what": "Paste Special › Paste link. Charts update from the Excel file.",
+   "use": "Closing deck refreshes when the closing workbook changes. No re-pasting.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "Receiver gets an 'Update links' prompt or broken links. Break links on the copy you send.",
+   "where": "Paste ▾ › Paste Special › Paste link",
+   "steps": [
+    "Copy the chart in Excel",
+    "PowerPoint › Paste Special › Paste link",
+    "File › Info › Edit Links to Files › Update Now",
+    "Break Link on the copy you send"
+   ]
+  },
+  {
+   "app": "pp",
+   "name": "Designer (Design Ideas)",
+   "level": "B",
+   "core": false,
+   "what": "Suggests layouts when you add pictures, lists or numbers.",
+   "use": "Make a plain bullet slide look presentable in seconds.",
+   "version": "365 only",
+   "it": "Uses connected experiences (cloud); IT may disable.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Home › Designer (or Design › Designer)",
+   "steps": [
+    "Add a picture or bullet list",
+    "Open Designer › pick an idea"
+   ]
+  },
+  {
+   "app": "pp",
+   "name": "Morph transition",
+   "level": "B",
+   "core": false,
+   "what": "Moves and resizes objects smoothly between two similar slides.",
+   "use": "Zoom into one company's number from the group summary.",
+   "version": "2019+ / 365",
+   "it": "",
+   "licence": "",
+   "oldVersion": "Plays as a simple fade in 2016 and older.",
+   "where": "Transitions › Morph",
+   "steps": [
+    "Duplicate a slide",
+    "Move or resize objects on the second slide",
+    "Transitions › Morph on the second slide"
+   ]
+  },
+  {
+   "app": "pp",
+   "name": "Zoom (summary / section / slide)",
+   "level": "I",
+   "core": false,
+   "what": "Insert › Zoom. Clickable thumbnails that jump to sections and come back.",
+   "use": "One summary slide with several company tiles; click a tile to go to that company's slides.",
+   "version": "2019+ / 365",
+   "it": "",
+   "licence": "",
+   "oldVersion": "Static pictures in 2016 and older.",
+   "where": "Insert › Zoom",
+   "steps": [
+    "Create sections first (right-click slide › Add Section)",
+    "Insert › Zoom › Summary Zoom › tick sections",
+    "In the show, click a tile; it returns to the summary"
+   ]
+  },
+  {
+   "app": "pp",
+   "name": "Presenter view, Rehearse & Speaker Coach",
+   "level": "B",
+   "core": false,
+   "what": "Notes only you see; timings; Speaker Coach gives feedback on pace and filler words.",
+   "use": "Practise the closing presentation before the management review.",
+   "version": "Speaker Coach 365",
+   "it": "Speaker Coach uses cloud speech; IT may disable.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Slide Show › Rehearse with Coach / Rehearse Timings",
+   "steps": [
+    "Write notes under each slide",
+    "Slide Show › Use Presenter View",
+    "Rehearse with Coach for a feedback report"
+   ]
+  },
+  {
+   "app": "pp",
+   "name": "Record slide show / Export to video",
+   "level": "B",
+   "core": false,
+   "what": "Record narration and pen, export as MP4.",
+   "use": "Training video for the intern or junior on SAP steps or how to read the dashboard.",
+   "version": "2016+",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Record › From current slide · File › Export › Create a Video",
+   "steps": [
+    "Record and talk through the slides, use the pen",
+    "Stop and review",
+    "Export › Create a Video › MP4"
+   ]
+  },
+  {
+   "app": "pp",
+   "name": "Live subtitles & translation",
+   "level": "B",
+   "core": false,
+   "what": "Slide Show › Subtitles shows live captions, can translate into another language.",
+   "use": "Present in English with subtitles in the audience's language.",
+   "version": "365 only",
+   "it": "Cloud speech service; IT may disable.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Slide Show › Subtitle Settings",
+   "steps": [
+    "Spoken language: English",
+    "Subtitle language: the audience's language",
+    "Always Use Subtitles › start the show"
+   ]
+  },
+  {
+   "app": "pp",
+   "name": "Reuse slides & sections",
+   "level": "B",
+   "core": false,
+   "what": "Home › Reuse Slides pulls slides from other decks; Sections group slides.",
+   "use": "Build the quarterly deck from three monthly decks in minutes.",
+   "version": "2013+",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Home › New Slide ▾ › Reuse Slides",
+   "steps": [
+    "Browse to the old deck",
+    "Click slides to insert; tick Keep source formatting if needed",
+    "Right-click › Add Section to group them"
+   ]
+  },
+  {
+   "app": "pp",
+   "name": "Selection pane, align & distribute",
+   "level": "B",
+   "core": true,
+   "what": "Alt+F10 shows all objects; align and distribute for neat layouts.",
+   "use": "Neat KPI boxes; hide/show overlapping objects in busy slides.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Home › Arrange › Selection Pane (Alt+F10) · Shape Format › Align",
+   "steps": [
+    "Alt+F10 lists every object; eye icon hides",
+    "Select several › Align Middle › Distribute Horizontally",
+    "Ctrl+Shift+C then Ctrl+Shift+V copies formatting"
+   ]
+  },
+  {
+   "app": "o",
+   "name": "Rules",
+   "level": "B",
+   "core": true,
+   "what": "Automatically move, flag or categorise emails by sender, subject or words.",
+   "use": "Bank credit advices into a 'Bank' folder; vendor statements into 'AP'.",
+   "version": "All versions",
+   "it": "Auto-forwarding to external addresses is usually blocked to stop data leaks.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Home › Rules › Create Rule / Manage Rules",
+   "steps": [
+    "Right-click an email › Rules › Create Rule",
+    "From sender + subject contains › Move to folder",
+    "Advanced Options for more conditions",
+    "Run Rules Now for existing emails"
+   ]
+  },
+  {
+   "app": "o",
+   "name": "Quick Steps",
+   "level": "B",
+   "core": false,
+   "what": "One click does several actions: forward to someone + flag + move.",
+   "use": "'Send to AP junior' button that forwards, categorises and files.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Home › Quick Steps › Create New",
+   "steps": [
+    "Name it",
+    "Add actions: Forward to, Categorize, Move to folder",
+    "Click it on any email"
+   ]
+  },
+  {
+   "app": "o",
+   "name": "My Templates / Quick Parts",
+   "level": "B",
+   "core": false,
+   "what": "Reusable reply text inserted in two clicks.",
+   "use": "Standard reply for vendor 'when is my payment' enquiries.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "New email › Message › My Templates (classic: Insert › Quick Parts)",
+   "steps": [
+    "Open My Templates › + Template",
+    "Paste your standard reply",
+    "Insert into any email"
+   ]
+  },
+  {
+   "app": "o",
+   "name": "Schedule send / delay delivery",
+   "level": "B",
+   "core": false,
+   "what": "Write now, send at a set time.",
+   "use": "Reminders to HODs land at 8:00 Monday; sending after hours without disturbing.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "New Outlook: Send ▾ › Schedule send · Classic: Options › Delay Delivery",
+   "steps": [
+    "Write the email",
+    "Pick date and time",
+    "Leave it; it sends on time"
+   ]
+  },
+  {
+   "app": "o",
+   "name": "Categories, flags & search folders",
+   "level": "B",
+   "core": false,
+   "what": "Colour tags, follow-up flags, and saved searches that act like folders.",
+   "use": "Tag by company code; a search folder for 'unread from HOD'.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Home › Categorize · Folder › New Search Folder",
+   "steps": [
+    "Rename category colours to your groups",
+    "Flag emails for follow-up",
+    "Classic: Folder › New Search Folder › e.g. Mail from specific people"
+   ]
+  },
+  {
+   "app": "o",
+   "name": "Shared mailbox & delegate access",
+   "level": "I",
+   "core": false,
+   "what": "Team mailbox everyone in F&A reads and sends from.",
+   "use": "finance@ or ap@ mailbox so nothing is lost when someone is on leave.",
+   "version": "All versions",
+   "it": "Access is granted by IT only.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Appears in the folder pane after IT grants access",
+   "steps": [
+    "Ask IT for access",
+    "New email › From › choose the shared mailbox",
+    "Sent items stay in the shared mailbox"
+   ]
+  },
+  {
+   "app": "o",
+   "name": "Scheduling Assistant, polls & time zones",
+   "level": "B",
+   "core": false,
+   "what": "See colleagues' free time, send a scheduling poll, show a second time zone.",
+   "use": "Book closing meetings with overseas colleagues in another time zone without back-and-forth.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "New Meeting › Scheduling Assistant · Settings › Calendar › Time zones",
+   "steps": [
+    "Add attendees › see free/busy",
+    "Show a second time zone in calendar settings",
+    "New Outlook: send a Scheduling poll from a new email"
+   ]
+  },
+  {
+   "app": "o",
+   "name": "Classic vs new Outlook",
+   "level": "B",
+   "core": true,
+   "what": "New Outlook is web-based. It lacks VBA, COM add-ins and some client-side rules.",
+   "use": "Know which one you're on before building macros or add-in based workflows.",
+   "version": "365",
+   "it": "IT may force switch to new Outlook or keep you on classic.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "'New Outlook' toggle at top right",
+   "steps": [
+    "Check which version you're on",
+    "List what you rely on: VBA, COM add-ins, client rules",
+    "Ask IT before switching"
+   ]
+  },
+  {
+   "app": "o",
+   "name": "Recall message",
+   "level": "B",
+   "core": false,
+   "what": "Tries to pull back a sent email.",
+   "use": "Wrong attachment to a colleague. Only works inside the company mailbox system.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "Doesn't work for external recipients.",
+   "where": "Sent Items › open email › Recall Message",
+   "steps": [
+    "Open the sent email",
+    "Choose Recall",
+    "A report email tells you if it worked"
+   ]
+  },
+  {
+   "app": "b",
+   "name": "Star schema & relationships",
+   "level": "I",
+   "core": true,
+   "what": "Fact tables (transactions) in the middle, dimension tables (date, company, customer, account) around, one-to-many relationships.",
+   "use": "GL/sales fact + Date + Company (several codes) + Customer + Account. Faster, simpler DAX.",
+   "version": "Power BI Desktop (free)",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Power BI Desktop › Model view",
+   "steps": [
+    "Keep amounts (facts) separate from lists (dimensions) in Power Query",
+    "Model view › drag the key from dimension to fact",
+    "One-to-many, single direction",
+    "Hide key columns in the fact table"
+   ]
+  },
+  {
+   "app": "b",
+   "name": "Date table with fiscal year Apr–Mar",
+   "level": "I",
+   "core": true,
+   "what": "A proper calendar table marked as date table, with FY and fiscal period columns.",
+   "use": "TOTALYTD([Sales], 'Date'[Date], \"3/31\") gives YTD from April.",
+   "version": "Power BI Desktop",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Modeling › New table",
+   "steps": [
+    "Date = CALENDAR(DATE(2020,4,1), DATE(2027,3,31))",
+    "Add FY = IF(MONTH([Date])>=4, YEAR([Date]), YEAR([Date])-1) and FiscalPeriod",
+    "Table tools › Mark as date table",
+    "Relate it to the fact table's date"
+   ]
+  },
+  {
+   "app": "b",
+   "name": "DAX measures & CALCULATE",
+   "level": "A",
+   "core": true,
+   "what": "Measures are formulas that respond to filters. CALCULATE changes the filter context.",
+   "use": "Sales LY, Variance %, DSO = AR ÷ Sales × days, share of group.",
+   "version": "Power BI Desktop",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Home › New measure",
+   "steps": [
+    "Total Sales = SUM(Sales[Amount])",
+    "Sales Co A = CALCULATE([Total Sales], Company[Code] = \"1000\")",
+    "Var % = DIVIDE([Actual] - [Budget], [Budget])"
+   ]
+  },
+  {
+   "app": "b",
+   "name": "Time intelligence",
+   "level": "A",
+   "core": false,
+   "what": "SAMEPERIODLASTYEAR, DATEADD, DATESYTD for comparisons across periods.",
+   "use": "5-year sales trend, month vs same month last year.",
+   "version": "Power BI Desktop",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Home › New measure",
+   "steps": [
+    "Sales LY = CALCULATE([Total Sales], SAMEPERIODLASTYEAR('Date'[Date]))",
+    "Sales FYTD = TOTALYTD([Total Sales], 'Date'[Date], \"3/31\")",
+    "Put Date[Month] on an axis to test"
+   ]
+  },
+  {
+   "app": "b",
+   "name": "Visual calculations",
+   "level": "I",
+   "core": false,
+   "what": "Calculations written on the visual itself: running total, % of parent, moving average.",
+   "use": "Running total of collections on a chart without a new model measure.",
+   "version": "Recent Desktop & Service",
+   "it": "",
+   "licence": "",
+   "oldVersion": "Very old Desktop builds can't open the file. Keep Desktop updated.",
+   "where": "Select a visual › Home › New visual calculation",
+   "steps": [
+    "Select the visual",
+    "New visual calculation: Running = RUNNINGSUM([Sales])",
+    "It exists only on that visual"
+   ]
+  },
+  {
+   "app": "b",
+   "name": "Field parameters",
+   "level": "I",
+   "core": false,
+   "what": "One slicer switches which measure or column a chart shows.",
+   "use": "One chart that toggles Sales / Quantity / GP.",
+   "version": "Power BI Desktop",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Modeling › New parameter › Fields",
+   "steps": [
+    "Add Sales, Quantity, GP",
+    "Tick Add slicer to this page",
+    "Use the parameter on the chart's axis or values"
+   ]
+  },
+  {
+   "app": "b",
+   "name": "Calculation groups",
+   "level": "A",
+   "core": false,
+   "what": "Apply the same logic (YTD, LY, Var %) to every measure without copying measures.",
+   "use": "Actual / Forecast / Budget / Variance toggle for all KPIs.",
+   "version": "Power BI Desktop",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Model view › Model explorer › Calculation groups › New",
+   "steps": [
+    "Item Current = SELECTEDMEASURE()",
+    "Item LY = CALCULATE(SELECTEDMEASURE(), SAMEPERIODLASTYEAR('Date'[Date]))",
+    "Put the group column in a slicer or matrix columns"
+   ]
+  },
+  {
+   "app": "b",
+   "name": "Bookmarks, buttons & page navigation",
+   "level": "I",
+   "core": false,
+   "what": "Save views and switch with buttons, like a small app.",
+   "use": "Summary view vs detail view for Top Management; 'Reset filters' button.",
+   "version": "Power BI Desktop",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "View › Bookmarks · Insert › Buttons",
+   "steps": [
+    "Set the page as you want › Bookmarks › Add",
+    "Insert › Button › Action › Bookmark",
+    "Ctrl+click to test in Desktop"
+   ]
+  },
+  {
+   "app": "b",
+   "name": "Drill-through & tooltip pages",
+   "level": "I",
+   "core": false,
+   "what": "Right-click a bar to jump to a detail page for that item; hover shows a mini report.",
+   "use": "Click a company → list of overdue invoices; hover a month → top 5 customers.",
+   "version": "Power BI Desktop",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Detail page › Visualizations pane › Drill through",
+   "steps": [
+    "Build a detail page",
+    "Drag Customer into Drill through",
+    "On the summary: right-click a bar › Drill through",
+    "Tooltip page: Format page › Allow use as tooltip"
+   ]
+  },
+  {
+   "app": "b",
+   "name": "Conditional formatting",
+   "level": "B",
+   "core": false,
+   "what": "Colour, icons and data bars from rules or a measure.",
+   "use": "DSO red above target, green below.",
+   "version": "Power BI Desktop",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Format visual › Cell elements › fx",
+   "steps": [
+    "Turn on Background color › fx",
+    "Choose Rules, or Field value with a colour measure",
+    "Example: Colour = IF([DSO] > 60, \"#C0392B\", \"#1E8E5A\")"
+   ]
+  },
+  {
+   "app": "b",
+   "name": "Decomposition tree & Key influencers",
+   "level": "B",
+   "core": false,
+   "what": "AI visuals that break a number down step by step, or find what drives it.",
+   "use": "Why did variable cost jump: break down by plant → material → vendor.",
+   "version": "Power BI Desktop",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Visualizations › Decomposition tree / Key influencers",
+   "steps": [
+    "Analyze: Variable Cost",
+    "Explain by: Plant, Material, Vendor",
+    "Click + to expand, or choose High value to let AI pick"
+   ]
+  },
+  {
+   "app": "b",
+   "name": "Q&A visual",
+   "level": "B",
+   "core": false,
+   "what": "Ask in English, get a visual.",
+   "use": "'total sales by customer FY2026' during a meeting.",
+   "version": "Power BI Desktop & Service",
+   "it": "",
+   "licence": "",
+   "oldVersion": "English only; Microsoft is moving this to Copilot.",
+   "where": "Insert › Q&A, or double-click the canvas",
+   "steps": [
+    "Type a question",
+    "Turn the answer into a standard visual",
+    "Add synonyms in Q&A setup"
+   ]
+  },
+  {
+   "app": "b",
+   "name": "Row-level security (RLS)",
+   "level": "A",
+   "core": false,
+   "what": "Roles filter data by user, so each viewer sees only their part.",
+   "use": "Each company's MD sees only their company code in one shared report.",
+   "version": "Service",
+   "it": "Roles membership managed with IT/admin.",
+   "licence": "You need Pro to publish; every viewer also needs Pro (unless Fabric capacity F64+).",
+   "oldVersion": "",
+   "where": "Modeling › Manage roles",
+   "steps": [
+    "Create a role per company",
+    "Filter Company[Code] = \"1000\" (or use USERPRINCIPALNAME() with a mapping table)",
+    "Modeling › View as › test",
+    "In the Service: semantic model › Security › add people"
+   ]
+  },
+  {
+   "app": "b",
+   "name": "Workspaces & Apps",
+   "level": "B",
+   "core": true,
+   "what": "Publish reports to a workspace, then bundle them into an App for viewers.",
+   "use": "One 'F&A Management Reports' app for Top Management.",
+   "version": "Service",
+   "it": "",
+   "licence": "Pro for you and for every viewer, unless the workspace is on Fabric/Premium capacity.",
+   "oldVersion": "",
+   "where": "Power BI Service › Workspaces › New workspace · Create app",
+   "steps": [
+    "Publish from Desktop to the workspace",
+    "Workspace › Create app › add reports and audience",
+    "Share the app link; update the app after changes"
+   ]
+  },
+  {
+   "app": "b",
+   "name": "Scheduled refresh & gateway",
+   "level": "I",
+   "core": false,
+   "what": "Service refreshes data on a schedule. Pro: up to 8 times a day.",
+   "use": "Daily refresh from Excel files on SharePoint. SharePoint Online needs no gateway.",
+   "version": "Service",
+   "it": "On-premises sources (files on a server/PC, SAP) need a gateway installed and managed by IT.",
+   "licence": "Pro: 8 refreshes/day; PPU: 48/day.",
+   "oldVersion": "",
+   "where": "Service › Semantic model › Settings",
+   "steps": [
+    "Use SharePoint links as sources, not C: drive",
+    "Data source credentials › sign in (OAuth2)",
+    "Scheduled refresh › On › add times"
+   ]
+  },
+  {
+   "app": "b",
+   "name": "Subscriptions & data alerts",
+   "level": "B",
+   "core": false,
+   "what": "Email a page snapshot on a schedule; alert when a card value crosses a threshold.",
+   "use": "DSO page emailed every Monday 8:00; alert if cash falls below a level.",
+   "version": "Service",
+   "it": "",
+   "licence": "Pro. Full-report PDF/PowerPoint attachments may need Premium/Fabric capacity.",
+   "oldVersion": "",
+   "where": "Report › Subscribe to report · Dashboard tile › ⋯ › Manage alerts",
+   "steps": [
+    "Subscribe › Create subscription › pick page, people, schedule",
+    "Alerts: pin a card to a dashboard › ⋯ › Manage alerts"
+   ]
+  },
+  {
+   "app": "b",
+   "name": "Analyze in Excel & export data",
+   "level": "B",
+   "core": false,
+   "what": "Pivot the published model from Excel, or export a visual's data.",
+   "use": "Accountants who prefer Excel pivot the same numbers Top Management sees.",
+   "version": "Service",
+   "it": "IT/admin can switch off export or Analyze in Excel in tenant settings (data leakage).",
+   "licence": "Pro.",
+   "oldVersion": "",
+   "where": "Service › Report › Export › Analyze in Excel",
+   "steps": [
+    "Export › Analyze in Excel",
+    "Open the file › Enable editing",
+    "Build a PivotTable from the live model"
+   ]
+  },
+  {
+   "app": "b",
+   "name": "Paginated reports (Report Builder)",
+   "level": "A",
+   "core": false,
+   "what": "Pixel-perfect, printable, multi-page reports with long tables.",
+   "use": "Customer statement of account; invoice-level ageing listing for all customers.",
+   "version": "Report Builder (free) + Service",
+   "it": "",
+   "licence": "Now runs in Pro workspaces; older guides say Premium only.",
+   "oldVersion": "",
+   "where": "Install Power BI Report Builder (free)",
+   "steps": [
+    "New report › connect to the published semantic model",
+    "Add a table, groups and page header",
+    "Publish to the workspace",
+    "Export to PDF or Excel"
+   ]
+  },
+  {
+   "app": "b",
+   "name": "Power BI in PowerPoint & Teams",
+   "level": "B",
+   "core": false,
+   "what": "Live report page inside a slide or a Teams tab.",
+   "use": "Live dashboard slide in the closing meeting, filterable during discussion.",
+   "version": "Service",
+   "it": "IT may block the PowerPoint add-in.",
+   "licence": "Every viewer needs a Power BI licence to see live data.",
+   "oldVersion": "",
+   "where": "PowerPoint › Insert › Power BI · Teams › + tab › Power BI",
+   "steps": [
+    "Report › Share › PowerPoint (copy link)",
+    "Paste into the add-in slide",
+    "Viewers sign in to see live data"
+   ]
+  },
+  {
+   "app": "b",
+   "name": "Publish to web",
+   "level": "B",
+   "core": false,
+   "what": "Makes a report public on the internet with an open link.",
+   "use": "Never for company data.",
+   "version": "Service",
+   "it": "Should be blocked by IT. Anyone on the internet can see the data.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Don't use for company data",
+   "steps": [
+    "Use Share or an App instead",
+    "Ask IT to keep it disabled"
+   ]
+  },
+  {
+   "app": "b",
+   "name": "Performance analyzer & DAX query view",
+   "level": "A",
+   "core": false,
+   "what": "Times each visual; write and test DAX queries inside Desktop.",
+   "use": "Find why the DSO page is slow; check a measure's result against Excel.",
+   "version": "Power BI Desktop",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Optimize › Performance analyzer · DAX query view (left bar)",
+   "steps": [
+    "Start recording › Refresh visuals",
+    "Find the slow visual; check DAX query time",
+    "Copy query › paste in DAX query view › Run"
+   ]
+  },
+  {
+   "app": "b",
+   "name": "Dataflows",
+   "level": "I",
+   "core": false,
+   "what": "Power Query in the Service, cleaned once and reused by many reports.",
+   "use": "One cleaned 'SAP sales' dataflow feeding the sales trend and DSO reports.",
+   "version": "Service",
+   "it": "",
+   "licence": "Gen1 with Pro; Gen2 needs Fabric capacity.",
+   "oldVersion": "",
+   "where": "Service › Workspace › New › Dataflow",
+   "steps": [
+    "Build Power Query steps in the browser",
+    "Set scheduled refresh",
+    "Desktop › Get data › Dataflows"
+   ]
+  },
+  {
+   "app": "b",
+   "name": "TMDL view & external tools",
+   "level": "C",
+   "core": false,
+   "what": "Edit the model as code (TMDL); tools like Tabular Editor and DAX Studio.",
+   "use": "Bulk-edit 50 measures' formats; document all measures.",
+   "version": "Recent Desktop",
+   "it": "Installing external tools usually needs IT approval.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Desktop › TMDL view (left bar)",
+   "steps": [
+    "Drag tables or measures into TMDL view",
+    "Edit the text › Apply",
+    "External tools: request install via IT"
+   ]
+  },
+  {
+   "app": "b",
+   "name": "Deployment pipelines",
+   "level": "A",
+   "core": false,
+   "what": "Dev → Test → Production stages for reports.",
+   "use": "Change the DSO report safely without breaking what Top Management uses.",
+   "version": "Service",
+   "it": "",
+   "licence": "PPU or Fabric/Premium capacity.",
+   "oldVersion": "",
+   "where": "Service › Deployment pipelines",
+   "steps": [
+    "Create a pipeline",
+    "Assign Dev, Test, Prod workspaces",
+    "Deploy forward after checking"
+   ]
+  },
+  {
+   "app": "a",
+   "name": "Save email attachments to SharePoint/OneDrive",
+   "level": "B",
+   "core": true,
+   "what": "Trigger: new email from X with attachment. Action: create file in a folder (can rename by date).",
+   "use": "Bank credit advice PDFs filed automatically by date and bank.",
+   "version": "Included with M365",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "make.powerautomate.com › Create › Automated cloud flow › When a new email arrives (V3)",
+   "steps": [
+    "Trigger: From = bank address, Include Attachments = Yes",
+    "Apply to each attachment › SharePoint › Create file",
+    "File name: formatDateTime(utcNow(),'yyyy-MM-dd') plus the attachment name",
+    "Send yourself a test email"
+   ]
+  },
+  {
+   "app": "a",
+   "name": "Scheduled (recurrence) flows",
+   "level": "B",
+   "core": false,
+   "what": "Run on a schedule: daily, monthly, specific weekday.",
+   "use": "25th every month: remind HODs to submit accruals; 1st working day: post close calendar in Teams.",
+   "version": "Included with M365",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Create › Scheduled cloud flow",
+   "steps": [
+    "Recurrence: every 1 Month, on day 25 at 09:00, your time zone",
+    "Add Send an email (V2) or Post message in Teams",
+    "Test › Manually"
+   ]
+  },
+  {
+   "app": "a",
+   "name": "Approvals",
+   "level": "I",
+   "core": true,
+   "what": "Send an approval request; approver clicks Approve/Reject in Teams or email; full history kept.",
+   "use": "Journal or payment request approval with audit trail. The bank release still happens in the bank portal.",
+   "version": "Included with M365",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Action › Approvals › Start and wait for an approval",
+   "steps": [
+    "Choose a trigger (button, form, file added)",
+    "Approve/Reject – First to respond, add approver and details",
+    "Condition: Outcome = Approve › notify or update the list"
+   ]
+  },
+  {
+   "app": "a",
+   "name": "Forms → Excel/Lists → email",
+   "level": "B",
+   "core": false,
+   "what": "New form response triggers: add row, notify someone.",
+   "use": "Vendor registration request or new GL account request routed to you.",
+   "version": "Included with M365",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Automated flow › When a new response is submitted (Forms)",
+   "steps": [
+    "Get response details",
+    "Add a row into a table (Excel) or Create item (Lists)",
+    "Send an email to the reviewer"
+   ]
+  },
+  {
+   "app": "a",
+   "name": "Excel Online (Business) connector",
+   "level": "I",
+   "core": false,
+   "what": "Read/write rows in an Excel Table stored in OneDrive/SharePoint. Turn on Pagination for big tables.",
+   "use": "Email each overdue debtor from the Excel ageing list.",
+   "version": "Included with M365",
+   "it": "",
+   "licence": "",
+   "oldVersion": "Data must be in a formatted Table; file must be in the cloud.",
+   "where": "Action › Excel Online (Business) › List rows present in a table",
+   "steps": [
+    "Data must be a Table in OneDrive/SharePoint",
+    "Settings › Pagination On, threshold e.g. 5000",
+    "Filter Query, e.g. Status eq 'Overdue'",
+    "Apply to each › Send an email"
+   ]
+  },
+  {
+   "app": "a",
+   "name": "Conditions, Apply to each & expressions",
+   "level": "A",
+   "core": false,
+   "what": "Branch logic, loops, and expressions like formatDateTime(utcNow(),'yyyy-MM').",
+   "use": "Name files '2026-11 Bank A credit advice.pdf'; skip weekends.",
+   "version": "Included with M365",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Add an action › Control › Condition · Expression tab",
+   "steps": [
+    "Condition: Amount is greater than 10000",
+    "Expression: formatDateTime(utcNow(),'yyyy-MM')",
+    "dayOfWeek(utcNow()) to skip weekends (0 = Sunday)"
+   ]
+  },
+  {
+   "app": "a",
+   "name": "Teams posts & adaptive cards",
+   "level": "I",
+   "core": false,
+   "what": "Post messages or interactive cards to a channel or chat.",
+   "use": "Daily 'bank files received' summary in the F&A channel.",
+   "version": "Included with M365",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Action › Microsoft Teams › Post message / Post adaptive card",
+   "steps": [
+    "Pick the team and channel",
+    "Write the message with dynamic content",
+    "Use the Adaptive Card designer for buttons"
+   ]
+  },
+  {
+   "app": "a",
+   "name": "Run Office Script from a flow",
+   "level": "C",
+   "core": false,
+   "what": "Excel Online › Run script. Combine scheduled flows with Excel automation.",
+   "use": "Format the SAP export and mail it as PDF every morning.",
+   "version": "Included with M365",
+   "it": "Needs Office Scripts enabled by admin.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Action › Excel Online (Business) › Run script",
+   "steps": [
+    "Create the script in Excel (Automate tab)",
+    "Add Run script; pick file and script",
+    "Combine with a Recurrence trigger"
+   ]
+  },
+  {
+   "app": "a",
+   "name": "Error handling: Configure run after, Scope",
+   "level": "A",
+   "core": false,
+   "what": "Do something when a step fails, e.g. email yourself.",
+   "use": "Know immediately when the credit-advice flow fails, before month end.",
+   "version": "Included with M365",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Control › Scope · step ⋯ › Configure run after",
+   "steps": [
+    "Wrap the main steps in a Scope",
+    "Add an action after it › ⋯ › Configure run after › has failed",
+    "Send yourself 'Flow failed' with the run link"
+   ]
+  },
+  {
+   "app": "a",
+   "name": "Shared mailbox triggers",
+   "level": "I",
+   "core": false,
+   "what": "Trigger flows from emails arriving in a shared mailbox.",
+   "use": "Log every AP mailbox email into a List with received date.",
+   "version": "Included with M365",
+   "it": "Needs access to the shared mailbox granted by IT.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Office 365 Outlook › When a new email arrives in a shared mailbox (V2)",
+   "steps": [
+    "Type the mailbox address",
+    "Add actions (log to List, save attachment)",
+    "You must already have access to the mailbox"
+   ]
+  },
+  {
+   "app": "a",
+   "name": "Power Automate for desktop (RPA)",
+   "level": "A",
+   "core": false,
+   "what": "Records mouse/keyboard on Windows apps: SAP GUI, Excel, legacy screens.",
+   "use": "Loop CN41N or other SAP downloads for several projects or company codes.",
+   "version": "Windows 10/11",
+   "it": "Install may need admin rights; SAP GUI scripting must be enabled. Never store bank portal passwords in a flow.",
+   "licence": "Free to build and run manually; triggering from cloud/schedule needs Premium ($15); unattended bots need Process ($150/bot).",
+   "oldVersion": "",
+   "where": "Install Power Automate for desktop · New flow › Recorder",
+   "steps": [
+    "Install (IT may need to)",
+    "Recorder › record the screen steps once",
+    "Add a Loop over a list read from Excel",
+    "Run manually and watch"
+   ]
+  },
+  {
+   "app": "a",
+   "name": "Premium connectors (HTTP, SQL, SAP ERP, Dataverse)",
+   "level": "A",
+   "core": false,
+   "what": "Connect to systems outside standard Microsoft 365.",
+   "use": "Pull data from SAP or a database directly.",
+   "version": "Premium",
+   "it": "DLP policies set by IT decide which connectors can be mixed.",
+   "licence": "Power Automate Premium, about $15/user/month.",
+   "oldVersion": "",
+   "where": "Look for the 'Premium' diamond on a connector",
+   "steps": [
+    "Check the tag before building",
+    "Confirm licence with IT"
+   ]
+  },
+  {
+   "app": "a",
+   "name": "AI Builder (invoice / document reading)",
+   "level": "A",
+   "core": false,
+   "what": "Extract fields from invoices, receipts and forms.",
+   "use": "Read supplier invoice PDF: number, date, amount → AP log.",
+   "version": "Premium",
+   "it": "",
+   "licence": "AI Builder credits are not included in Microsoft 365.",
+   "oldVersion": "",
+   "where": "Action › AI Builder › Extract information from invoices",
+   "steps": [
+    "Needs AI Builder credits",
+    "Pass the PDF content",
+    "Map fields to your log"
+   ]
+  },
+  {
+   "app": "a",
+   "name": "Workflows app in Teams",
+   "level": "B",
+   "core": false,
+   "what": "Ready-made flow templates started inside Teams.",
+   "use": "Quick 'notify channel when a file is added to Closing folder'.",
+   "version": "Included with M365",
+   "it": "IT may hide apps in Teams.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Teams › Apps › Workflows",
+   "steps": [
+    "Open Workflows",
+    "Pick a template",
+    "Sign in connections › Save"
+   ]
+  },
+  {
+   "app": "p",
+   "name": "Canvas app from a SharePoint list",
+   "level": "I",
+   "core": false,
+   "what": "Start from a List; Power Apps builds a phone-ready app to view, add and edit items.",
+   "use": "Petty cash claim app; site staff submit claims with photo of receipt.",
+   "version": "Included with M365",
+   "it": "Environment creation and sharing may be restricted by IT.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "List › Integrate › Power Apps › Create an app",
+   "steps": [
+    "Open the List › Integrate › Create an app",
+    "Power Apps builds browse, detail and edit screens",
+    "Adjust fields › Save › Share"
+   ]
+  },
+  {
+   "app": "p",
+   "name": "Power Fx formulas",
+   "level": "C",
+   "core": false,
+   "what": "Excel-like formulas that control app behaviour.",
+   "use": "Validate claim amount ≤ limit; auto-fill company code from user's department.",
+   "version": "Included with M365",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Select a control › formula bar",
+   "steps": [
+    "DisplayMode: If(Value(txtAmt.Text) > 500, DisplayMode.Disabled, DisplayMode.Edit)",
+    "Save a record: Patch(MyList, Defaults(MyList), {Title: txtTitle.Text})",
+    "Formulas feel like Excel"
+   ]
+  },
+  {
+   "app": "p",
+   "name": "Dataverse & model-driven apps",
+   "level": "A",
+   "core": false,
+   "what": "Proper database with security roles and forms.",
+   "use": "Bigger systems like a full vendor onboarding process.",
+   "version": "Premium",
+   "it": "",
+   "licence": "Power Apps Premium, about $20/user/month.",
+   "oldVersion": "",
+   "where": "make.powerapps.com › Tables",
+   "steps": [
+    "Needs Premium licence",
+    "Tables › New table",
+    "Create a model-driven app from the tables"
+   ]
+  },
+  {
+   "app": "t",
+   "name": "Channels + Files tab",
+   "level": "B",
+   "core": true,
+   "what": "Each channel has a folder in SharePoint behind it.",
+   "use": "F&A team with channels AP, AR, Closing, Reporting. Files no longer stuck in email.",
+   "version": "All (365)",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Team › ⋯ › Add channel · Files tab",
+   "steps": [
+    "Add a channel per process",
+    "Files tab › Open in SharePoint to manage",
+    "Save files there instead of emailing"
+   ]
+  },
+  {
+   "app": "t",
+   "name": "Pinned tabs",
+   "level": "B",
+   "core": false,
+   "what": "Pin an Excel file, Power BI report, Planner plan or List at the top of a channel.",
+   "use": "Closing tracker and DSO dashboard one click away for the team.",
+   "version": "All (365)",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Channel › + (Add a tab)",
+   "steps": [
+    "Click +",
+    "Pick Excel, Power BI, Planner or Lists",
+    "Choose the item and name the tab"
+   ]
+  },
+  {
+   "app": "t",
+   "name": "Meeting recording & transcript",
+   "level": "B",
+   "core": false,
+   "what": "Record, auto-transcribe, search what was said.",
+   "use": "Record the forecast discussion; search the transcript for agreed actions.",
+   "version": "All (365)",
+   "it": "Meeting policy set by IT; may need consent; recordings stored in OneDrive/SharePoint with expiry.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Meeting › More › Record and transcribe",
+   "steps": [
+    "Tell attendees first",
+    "Start recording",
+    "After the meeting, open the Recap tab"
+   ]
+  },
+  {
+   "app": "t",
+   "name": "Live captions & translated captions",
+   "level": "B",
+   "core": false,
+   "what": "Captions in the speaker's language are free; translated captions need Teams Premium.",
+   "use": "Overseas colleagues follow the discussion with captions in their language.",
+   "version": "All (365)",
+   "it": "",
+   "licence": "Live translated captions need Teams Premium or Microsoft 365 Copilot.",
+   "oldVersion": "",
+   "where": "Meeting › More › Language and speech › Show live captions",
+   "steps": [
+    "Turn on captions",
+    "Caption settings › set spoken language",
+    "Translated captions appear only with Premium"
+   ]
+  },
+  {
+   "app": "t",
+   "name": "External chat & shared channels",
+   "level": "I",
+   "core": false,
+   "what": "Chat or share a channel with people from other companies.",
+   "use": "Work with auditors or overseas HQ in one shared channel.",
+   "version": "All (365)",
+   "it": "External access and guest access are controlled by IT.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "New chat › type an external email",
+   "steps": [
+    "Start the chat",
+    "If blocked, it's an IT policy"
+   ]
+  },
+  {
+   "app": "t",
+   "name": "Intelligent recap",
+   "level": "B",
+   "core": false,
+   "what": "Auto meeting notes, tasks and name mentions after a meeting.",
+   "use": "Closing meeting action list without writing minutes.",
+   "version": "All (365)",
+   "it": "",
+   "licence": "Teams Premium or Microsoft 365 Copilot.",
+   "oldVersion": "",
+   "where": "Meeting chat › Recap tab",
+   "steps": [
+    "Open Recap after the meeting",
+    "AI notes and tasks show if licensed"
+   ]
+  },
+  {
+   "app": "s",
+   "name": "Version history & restore",
+   "level": "B",
+   "core": true,
+   "what": "Every save is a version. Restore yesterday's file in a few clicks.",
+   "use": "Undo a bad overwrite on the forecast workbook.",
+   "version": "Cloud files",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "File ⋯ › Version history",
+   "steps": [
+    "Open the file's menu in OneDrive/SharePoint",
+    "Version history",
+    "Open an old version › Restore"
+   ]
+  },
+  {
+   "app": "s",
+   "name": "Sharing link types",
+   "level": "B",
+   "core": true,
+   "what": "Specific people / people in the organisation / anyone with the link. Can block download.",
+   "use": "Share payroll schedule only with HOD, view-only.",
+   "version": "Cloud files",
+   "it": "'Anyone' links are usually disabled; external sharing restricted.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Share › link settings (gear icon)",
+   "steps": [
+    "Share › gear",
+    "Choose Specific people",
+    "Can view; Block download if needed"
+   ]
+  },
+  {
+   "app": "s",
+   "name": "Sync & Files On-Demand",
+   "level": "B",
+   "core": false,
+   "what": "See SharePoint libraries in File Explorer; files download only when opened.",
+   "use": "Work on team folders like local folders; Power Query from a synced path.",
+   "version": "Windows/Mac",
+   "it": "",
+   "licence": "",
+   "oldVersion": "Power Query links to a synced path are user-specific. Prefer the SharePoint URL source.",
+   "where": "SharePoint library › Sync, or Add shortcut to My files",
+   "steps": [
+    "Click Sync or Add shortcut",
+    "Files appear in File Explorer",
+    "Right-click › Always keep on this device or Free up space"
+   ]
+  },
+  {
+   "app": "s",
+   "name": "Request files",
+   "level": "B",
+   "core": false,
+   "what": "Send a link where others upload into your folder without seeing it.",
+   "use": "Collect supporting documents from departments at year-end.",
+   "version": "OneDrive",
+   "it": "May be disabled, especially for external people.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "OneDrive web › select folder › Request files",
+   "steps": [
+    "Select the folder › Request files",
+    "Enter names or copy the link",
+    "Uploaders can't see each other's files"
+   ]
+  },
+  {
+   "app": "s",
+   "name": "Library metadata columns & views",
+   "level": "I",
+   "core": false,
+   "what": "Tag files with columns (company, vendor, month) and filter or group by them. No deep folder trees.",
+   "use": "Invoice archive: filter by vendor and month in seconds.",
+   "version": "SharePoint",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Library › + Add column",
+   "steps": [
+    "Add columns: Company, Vendor, Month",
+    "Fill them when uploading",
+    "Group by, filter, then Save view as"
+   ]
+  },
+  {
+   "app": "s",
+   "name": "Permissions for sensitive folders",
+   "level": "I",
+   "core": false,
+   "what": "Break inheritance so only certain people see a folder or library.",
+   "use": "Payroll and salary folders restricted to authorised people.",
+   "version": "SharePoint",
+   "it": "Site owners/IT manage; ask for a separate restricted library.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Folder ⋯ › Manage access",
+   "steps": [
+    "Manage access › Advanced settings",
+    "Stop inheriting permissions",
+    "Remove broad groups; add named people"
+   ]
+  },
+  {
+   "app": "s",
+   "name": "Retention labels",
+   "level": "A",
+   "core": false,
+   "what": "Keep or delete content automatically after a period.",
+   "use": "Accounting records kept 7 years (Companies Act 2016).",
+   "version": "SharePoint",
+   "it": "Set up by IT/compliance only.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "File ⋯ › More › Compliance details",
+   "steps": [
+    "Check if IT has published labels",
+    "Library settings › Apply label to items"
+   ]
+  },
+  {
+   "app": "n",
+   "name": "Notebook structure",
+   "level": "B",
+   "core": true,
+   "what": "Notebook › sections › pages; search across everything.",
+   "use": "'Closing FY2026' notebook with a section per month, page per issue.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "File › New › Notebook (save in OneDrive)",
+   "steps": [
+    "+ Add section per month",
+    "Ctrl+N new page",
+    "Ctrl+E searches every notebook"
+   ]
+  },
+  {
+   "app": "n",
+   "name": "Tags & To Do tags",
+   "level": "B",
+   "core": false,
+   "what": "Tag lines as To Do, Important, Question; Find Tags summarises them.",
+   "use": "Collect every open question from meeting notes before closing.",
+   "version": "Desktop",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Home › Tags · Find Tags",
+   "steps": [
+    "Ctrl+1 adds a To Do tag",
+    "Home › Find Tags › summary page"
+   ]
+  },
+  {
+   "app": "n",
+   "name": "Copy text from picture",
+   "level": "B",
+   "core": false,
+   "what": "Right-click an image › Copy Text from Picture (OCR).",
+   "use": "Grab figures from a scanned letter or screenshot.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Right-click image › Copy Text from Picture",
+   "steps": [
+    "Paste the image",
+    "Right-click › Copy Text from Picture",
+    "Paste into Excel or Word"
+   ]
+  },
+  {
+   "app": "n",
+   "name": "Insert file printout & embedded Excel",
+   "level": "B",
+   "core": false,
+   "what": "Insert a PDF printout or a live Excel sheet on a page.",
+   "use": "SAP step-by-step with screenshots for the junior.",
+   "version": "All versions",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Insert › File Printout · Insert › Spreadsheet",
+   "steps": [
+    "Insert › File Printout › choose PDF",
+    "Insert › Spreadsheet › Existing or New"
+   ]
+  },
+  {
+   "app": "n",
+   "name": "Audio recording linked to notes",
+   "level": "B",
+   "core": false,
+   "what": "Record while typing; click a note to hear what was said at that moment.",
+   "use": "Learning sessions with seniors or overseas HQ.",
+   "version": "Desktop",
+   "it": "Recording needs consent; some companies restrict.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Insert › Record Audio",
+   "steps": [
+    "Get consent",
+    "Record while typing notes",
+    "Click a note's audio icon to replay that moment"
+   ]
+  },
+  {
+   "app": "n",
+   "name": "Page templates",
+   "level": "B",
+   "core": false,
+   "what": "Insert › Page Templates, or save your own.",
+   "use": "Standard meeting minutes and issue log page.",
+   "version": "Desktop",
+   "it": "",
+   "licence": "",
+   "oldVersion": "'OneNote for Windows 10' is retired. Use the OneNote desktop app.",
+   "where": "Insert › Page Templates",
+   "steps": [
+    "Pick a template or build a page",
+    "Save current page as a template",
+    "Set as default for the section"
+   ]
+  },
+  {
+   "app": "f",
+   "name": "Surveys & quizzes with branching",
+   "level": "B",
+   "core": true,
+   "what": "Questions that skip based on answers; quiz mode scores automatically.",
+   "use": "SAP T-code and process quiz for the intern; internal control self-check.",
+   "version": "All (365)",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "forms.office.com › New Form / New Quiz",
+   "steps": [
+    "Add questions",
+    "⋯ › Add branching",
+    "Quiz: mark correct answers and points",
+    "Collect responses › copy link"
+   ]
+  },
+  {
+   "app": "f",
+   "name": "Responses in Excel",
+   "level": "B",
+   "core": false,
+   "what": "Responses go live into an Excel file in OneDrive/SharePoint.",
+   "use": "Budget assumptions from department heads land in one sheet.",
+   "version": "All (365)",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Responses tab › Open results in Excel",
+   "steps": [
+    "For live sync: create the form from Excel (Insert › Forms)",
+    "Or Responses › Open results in Excel"
+   ]
+  },
+  {
+   "app": "f",
+   "name": "File upload question",
+   "level": "B",
+   "core": false,
+   "what": "Respondents upload files; stored in your OneDrive.",
+   "use": "Departments upload supporting documents for accruals.",
+   "version": "All (365)",
+   "it": "Only for people inside the company; IT may block external respondents.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Add new › ⋯ › File upload",
+   "steps": [
+    "Set number and size limit",
+    "Files go to your OneDrive › Apps › Microsoft Forms"
+   ]
+  },
+  {
+   "app": "l",
+   "name": "Lists from templates",
+   "level": "B",
+   "core": true,
+   "what": "Issue tracker, asset manager, event itinerary, etc. A smarter table that lives in the cloud.",
+   "use": "Closing issue log; fixed asset tagging register; CPE hours log.",
+   "version": "All (365)",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Lists app › + New list › Templates",
+   "steps": [
+    "Pick Issue tracker",
+    "Rename columns",
+    "Share with the team"
+   ]
+  },
+  {
+   "app": "l",
+   "name": "Views, grouping & formatting",
+   "level": "B",
+   "core": false,
+   "what": "Group by owner, board view, calendar view, colour by status.",
+   "use": "See all 'Pending HOD' items across companies at a glance.",
+   "version": "All (365)",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "List › + Add view · column ⋯ › Column settings › Format",
+   "steps": [
+    "Add a Board or Calendar view",
+    "Group by Owner",
+    "Format the Status column with colours"
+   ]
+  },
+  {
+   "app": "l",
+   "name": "Rules & alerts",
+   "level": "B",
+   "core": false,
+   "what": "When status changes to X, notify Y. No Power Automate needed.",
+   "use": "Email you when an issue is marked Resolved.",
+   "version": "All (365)",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "List › Automate › Create a rule",
+   "steps": [
+    "When a column changes",
+    "Status = Resolved",
+    "Send email to a person"
+   ]
+  },
+  {
+   "app": "l",
+   "name": "Item version history",
+   "level": "B",
+   "core": false,
+   "what": "Every change to every row is kept with who and when.",
+   "use": "Audit trail of who changed an accrual amount.",
+   "version": "All (365)",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Select item › ⋯ › Version history",
+   "steps": [
+    "Each change shows who and when",
+    "Compare old values"
+   ]
+  },
+  {
+   "app": "pl",
+   "name": "Plans, buckets & recurring tasks",
+   "level": "B",
+   "core": true,
+   "what": "Tasks with owners, due dates, checklists; buckets for stages; repeat monthly.",
+   "use": "Month-end close plan by working day: D+1, D+2 … D+5, repeats every month.",
+   "version": "All (365)",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Planner (Teams or web) › + New plan",
+   "steps": [
+    "Buckets D+1 to D+5",
+    "Task › assignee, due date, checklist",
+    "Repeat › Monthly"
+   ]
+  },
+  {
+   "app": "pl",
+   "name": "Timeline, dependencies (Planner Premium)",
+   "level": "I",
+   "core": false,
+   "what": "Gantt view, task dependencies, critical path.",
+   "use": "Year-end audit timeline with dependencies.",
+   "version": "Premium",
+   "it": "",
+   "licence": "Planner Plan 1 / Project licence.",
+   "oldVersion": "",
+   "where": "Premium plan › Timeline view",
+   "steps": [
+    "Create a Premium plan",
+    "Add dependencies between tasks"
+   ]
+  },
+  {
+   "app": "pl",
+   "name": "To Do + flagged emails",
+   "level": "B",
+   "core": false,
+   "what": "Flagged emails and Planner tasks land in one personal list.",
+   "use": "Personal 'my day' list that collects everything.",
+   "version": "All (365)",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Outlook flag · To Do app",
+   "steps": [
+    "Flag an email",
+    "It appears in To Do › Flagged email",
+    "Assigned to me lists Planner tasks"
+   ]
+  },
+  {
+   "app": "lp",
+   "name": "Loop components in chat & email",
+   "level": "B",
+   "core": false,
+   "what": "A table, checklist or list pasted in Teams chat or Outlook that everyone edits live.",
+   "use": "Who's-doing-what checklist for today's close in the team chat.",
+   "version": "365",
+   "it": "IT may disable Loop.",
+   "licence": "",
+   "oldVersion": "Classic or old Outlook shows only a link.",
+   "where": "Teams chat › Loop icon · Outlook › Insert › Loop",
+   "steps": [
+    "Choose Table or Checklist",
+    "Send it",
+    "Everyone edits in place"
+   ]
+  },
+  {
+   "app": "lp",
+   "name": "Loop workspaces",
+   "level": "I",
+   "core": false,
+   "what": "Shared pages that pull Loop components together.",
+   "use": "Project page for implementing a new report with tasks and notes.",
+   "version": "365",
+   "it": "Often disabled or restricted by IT (storage and retention concerns).",
+   "licence": "",
+   "oldVersion": "",
+   "where": "loop.cloud.microsoft",
+   "steps": [
+    "+ New workspace",
+    "Add pages",
+    "Share with the team"
+   ]
+  },
+  {
+   "app": "c",
+   "name": "Copilot Chat (Basic, free)",
+   "level": "B",
+   "core": true,
+   "what": "Secure AI chat with your work account in the Microsoft 365 Copilot app, Teams, Outlook and the web. You can upload a file.",
+   "use": "Explain a DAX or Excel formula, draft an email, summarise a policy, outline an SOP.",
+   "version": "Web / app",
+   "it": "IT can turn off web search or uploads. Follow company AI policy for confidential data.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Microsoft 365 Copilot app, or Copilot in Teams",
+   "steps": [
+    "Sign in with your work account (look for the green shield)",
+    "Ask, or upload a file",
+    "Check answers before using them"
+   ]
+  },
+  {
+   "app": "c",
+   "name": "Copilot in Outlook",
+   "level": "B",
+   "core": false,
+   "what": "Summarise long threads, draft replies.",
+   "use": "Catch up on a long vendor dispute thread after leave.",
+   "version": "Outlook (classic/new)",
+   "it": "",
+   "licence": "Basic Chat still works in Outlook without the paid licence.",
+   "oldVersion": "",
+   "where": "Open an email thread › Summarize · New email › Draft with Copilot",
+   "steps": [
+    "Summarize a long thread",
+    "Draft a reply, set tone and length"
+   ]
+  },
+  {
+   "app": "c",
+   "name": "Copilot inside Word / Excel / PowerPoint / OneNote",
+   "level": "I",
+   "core": false,
+   "what": "Draft from notes, analyse a table, build a deck from a Word document, inside the app.",
+   "use": "Turn closing notes into a first-draft memo; first-draft deck from a Word report.",
+   "version": "365",
+   "it": "IT decides who gets the licence.",
+   "licence": "Since April–May 2026 in-app Copilot needs the paid Microsoft 365 Copilot licence (about $30/user/month).",
+   "oldVersion": "",
+   "where": "Copilot button on the Home ribbon (if licensed)",
+   "steps": [
+    "Click Copilot",
+    "Ask, e.g. 'Draft a memo from these notes'",
+    "Review and edit the draft"
+   ]
+  },
+  {
+   "app": "c",
+   "name": "=COPILOT() function in Excel",
+   "level": "I",
+   "core": false,
+   "what": "Use AI inside a formula to classify or summarise text in cells.",
+   "use": "Classify expense descriptions into categories; sentiment of customer feedback.",
+   "version": "365",
+   "it": "Needs admin enablement.",
+   "licence": "Microsoft 365 Copilot licence.",
+   "oldVersion": "Other users see #NAME? or stored values.",
+   "where": "Type in a cell (if licensed)",
+   "steps": [
+    "=COPILOT(\"Classify into Travel, Utilities, Repairs\", A2)",
+    "Fill down",
+    "Spot-check results"
+   ]
+  },
+  {
+   "app": "c",
+   "name": "Copilot in Power BI",
+   "level": "I",
+   "core": false,
+   "what": "Create report pages, write DAX, summarise a page in words.",
+   "use": "Draft narrative under the DSO dashboard; suggest a measure.",
+   "version": "Service & Desktop",
+   "it": "Tenant setting controlled by admin.",
+   "licence": "Needs Fabric capacity F64+ or a Copilot capacity set up by IT. Pro alone doesn't unlock it.",
+   "oldVersion": "",
+   "where": "Copilot button in Desktop or Service (if capacity is enabled)",
+   "steps": [
+    "Open Copilot",
+    "Ask 'Summarise this page'",
+    "Check numbers against the visuals"
+   ]
+  },
+  {
+   "app": "c",
+   "name": "Agents: Researcher & Analyst",
+   "level": "A",
+   "core": false,
+   "what": "Researcher does multi-step research across work data and web; Analyst runs Python on your data.",
+   "use": "Analyst on a large SAP extract to find unusual postings.",
+   "version": "365 Copilot app",
+   "it": "Admin controls agents.",
+   "licence": "Microsoft 365 Copilot licence.",
+   "oldVersion": "",
+   "where": "Microsoft 365 Copilot app › Agents",
+   "steps": [
+    "Open Researcher or Analyst",
+    "Give the data and question",
+    "Check sources and results"
+   ]
+  }
+ ],
+ "tasks": [
+  {
+   "task": "Formal letter to a supplier, bank or authority",
+   "size": "Small",
+   "scope": "fin",
+   "app": "w",
+   "why": "Template with letterhead + Quick Parts for signature. Export PDF to send.",
+   "alt": "Outlook if it's a short message, not a formal letter."
+  },
+  {
+   "task": "Resume / CV, cover letter",
+   "size": "Small",
+   "scope": "per",
+   "app": "w",
+   "why": "Word resume templates + styles keep layout clean when you edit.",
+   "alt": "PowerPoint if you want a one-page visual profile."
+  },
+  {
+   "task": "Reply to repeated vendor enquiries",
+   "size": "Small",
+   "scope": "fin",
+   "app": "o",
+   "why": "My Templates or Quick Parts; Quick Steps to file the email.",
+   "alt": "Copilot Chat to draft a polite but firm reply."
+  },
+  {
+   "task": "Monthly accrual schedule",
+   "size": "Small",
+   "scope": "fin",
+   "app": "x",
+   "why": "Excel Table + SUMIFS + fiscal period formula. Keep one row per accrual.",
+   "alt": "Lists if many people need to add accruals with an audit trail."
+  },
+  {
+   "task": "Clean one SAP export for today",
+   "size": "Small",
+   "scope": "fin",
+   "app": "x",
+   "why": "Text to Columns, Go To Special blanks, Paste Special ×-1.",
+   "alt": "Power Query if you'll do the same clean every month."
+  },
+  {
+   "task": "Personal to-do and follow-ups",
+   "size": "Small",
+   "scope": "per",
+   "app": "pl",
+   "why": "To Do: flagged emails + tasks in one list.",
+   "alt": "OneNote To Do tags if you live in your notes."
+  },
+  {
+   "task": "Meeting notes & issue log",
+   "size": "Small",
+   "scope": "fin",
+   "app": "n",
+   "why": "OneNote page template per meeting; tags for open questions.",
+   "alt": "Loop component if everyone should edit the same list live; Teams recap if licensed."
+  },
+  {
+   "task": "Bulk balance confirmation / reminder letters",
+   "size": "Medium",
+   "scope": "fin",
+   "app": "w",
+   "why": "Mail Merge with Excel list: one letter per customer with its own amount.",
+   "alt": "Power Automate if each letter must be emailed separately with a log."
+  },
+  {
+   "task": "Combine 12 monthly SAP exports",
+   "size": "Medium",
+   "scope": "fin",
+   "app": "q",
+   "why": "Power Query 'From Folder': drop the new month in, click Refresh.",
+   "alt": "VSTACK formulas for a few small files (365 only)."
+  },
+  {
+   "task": "Bank reconciliation",
+   "size": "Medium",
+   "scope": "fin",
+   "app": "q",
+   "why": "Merge bank statement vs SAP bank GL; Left Anti join lists unmatched items both sides.",
+   "alt": "Excel XLOOKUP/COUNTIFS for small volume; SAP's own bank rec where available."
+  },
+  {
+   "task": "Budget vs actual variance",
+   "size": "Medium",
+   "scope": "fin",
+   "app": "x",
+   "why": "PivotTable with 'Show Values As' for ad hoc; Data Model if several tables.",
+   "alt": "Power BI if it's monthly and goes to Top Management."
+  },
+  {
+   "task": "Forecast P&L model",
+   "size": "Medium",
+   "scope": "fin",
+   "app": "x",
+   "why": "Excel: inputs sheet, Tables, LET/XLOOKUP, Data Table for sensitivities. Protect input cells.",
+   "alt": "Power BI only for presenting the result, not for building the forecast."
+  },
+  {
+   "task": "Closing / forecast presentation",
+   "size": "Medium",
+   "scope": "fin",
+   "app": "pp",
+   "why": "Slide Master + paste-linked Excel charts. Updates when numbers change.",
+   "alt": "Power BI in PowerPoint for live slides, only if all viewers have a Power BI licence."
+  },
+  {
+   "task": "Month-end close checklist with owners",
+   "size": "Medium",
+   "scope": "fin",
+   "app": "pl",
+   "why": "Planner: bucket per working day, recurring monthly, pinned in Teams.",
+   "alt": "Lists when you need extra fields (company, evidence link) and a full audit trail; Excel with checkboxes if offline."
+  },
+  {
+   "task": "File bank credit advices from email",
+   "size": "Medium",
+   "scope": "fin",
+   "app": "a",
+   "why": "Cloud flow: email with attachment → save to SharePoint by bank and date.",
+   "alt": "Outlook Rule if you only need to move the email, not the file."
+  },
+  {
+   "task": "Payment / journal approval",
+   "size": "Medium",
+   "scope": "fin",
+   "app": "a",
+   "why": "Approvals in Teams with history. The payment itself is still released in the online banking portal.",
+   "alt": "Forms + Lists if approvers prefer a form."
+  },
+  {
+   "task": "Collect input from many departments",
+   "size": "Medium",
+   "scope": "fin",
+   "app": "x",
+   "why": "Excel template on SharePoint with co-authoring + protected input cells for numbers.",
+   "alt": "Forms for text answers; Lists + Power Automate if it needs routing."
+  },
+  {
+   "task": "Sensitivity: price or FX up 5%",
+   "size": "Medium",
+   "scope": "fin",
+   "app": "x",
+   "why": "Data Table or Scenario Manager for the forecast pack.",
+   "alt": "Power BI what-if parameter for an interactive slider in meetings."
+  },
+  {
+   "task": "Train the intern / junior",
+   "size": "Medium",
+   "scope": "fin",
+   "app": "w",
+   "why": "Word SOP with styles + screenshots; short PowerPoint screen recording.",
+   "alt": "Forms quiz to check understanding; OneNote shared notebook."
+  },
+  {
+   "task": "Management dashboard for 6 companies",
+   "size": "Big",
+   "scope": "fin",
+   "app": "b",
+   "why": "Power BI: star schema, fiscal date table, RLS per company code, App for Top Management.",
+   "alt": "Excel dashboard (Pivots + Slicers) if viewers have no Power BI licence."
+  },
+  {
+   "task": "DSO / AR ageing for Top Management",
+   "size": "Big",
+   "scope": "fin",
+   "app": "b",
+   "why": "Power BI with drill-through to invoice list; subscription every Monday.",
+   "alt": "Paginated report for printable per-customer statements."
+  },
+  {
+   "task": "Repetitive SAP GUI downloads (e.g. CN41N)",
+   "size": "Big",
+   "scope": "fin",
+   "app": "x",
+   "why": "VBA + SAP GUI scripting if scripting is enabled. Runs on your PC.",
+   "alt": "Power Automate for desktop: free to run manually; scheduling needs Premium."
+  },
+  {
+   "task": "AP invoice intake & tracking",
+   "size": "Big",
+   "scope": "fin",
+   "app": "l",
+   "why": "List as the invoice log + Forms or email trigger + Power Automate to log and notify.",
+   "alt": "Power Apps on top of the List if site staff need a phone app."
+  },
+  {
+   "task": "Weekly report emailed automatically",
+   "size": "Big",
+   "scope": "fin",
+   "app": "b",
+   "why": "Power BI subscription (Pro) sends a snapshot and link on schedule.",
+   "alt": "Power Automate + Office Script for Excel-based reports."
+  },
+  {
+   "task": "Audit sample selection & testing",
+   "size": "Big",
+   "scope": "fin",
+   "app": "x",
+   "why": "RANDARRAY/SORTBY or Data Analysis sampling; document the seed and method.",
+   "alt": "Python in Excel for statistical tests, if enabled."
+  },
+  {
+   "task": "Year-end document archive",
+   "size": "Big",
+   "scope": "fin",
+   "app": "s",
+   "why": "SharePoint library with metadata (company, vendor, month) + retention label.",
+   "alt": "OneDrive folders only if it's personal working files."
+  },
+  {
+   "task": "Ask a quick question about data",
+   "size": "Small",
+   "scope": "fin",
+   "app": "c",
+   "why": "Copilot Chat: upload a non-confidential extract or paste a formula to explain.",
+   "alt": "Power BI Q&A on the published model; Excel Analyze Data."
+  },
+  {
+   "task": "Family / household budget",
+   "size": "Small",
+   "scope": "per",
+   "app": "x",
+   "why": "Excel Table + PivotTable by category; free templates from File › New.",
+   "alt": "Lists if your spouse also needs to add expenses from phone."
+  },
+  {
+   "task": "Kids' school schedule & reminders",
+   "size": "Small",
+   "scope": "per",
+   "app": "o",
+   "why": "Shared Outlook calendar with recurring events and reminders.",
+   "alt": "Planner if you want a task list for school items."
+  },
+  {
+   "task": "Rental house bookings & income",
+   "size": "Medium",
+   "scope": "per",
+   "app": "x",
+   "why": "Excel Table: booking, dates, amount, platform; Pivot by month.",
+   "alt": "Forms for guest check-in details → Excel; Lists if shared with a helper."
+  }
+ ],
+ "versions": [
+  {
+   "feature": "XLOOKUP",
+   "v2016": "n",
+   "v2019": "n",
+   "v2021": "y",
+   "v2024": "y",
+   "m365": "y",
+   "web": "y",
+   "mobile": "y",
+   "fails": "#NAME? after recalculation"
+  },
+  {
+   "feature": "FILTER / SORT / UNIQUE (spill)",
+   "v2016": "n",
+   "v2019": "p",
+   "v2021": "y",
+   "v2024": "y",
+   "m365": "y",
+   "web": "y",
+   "mobile": "y",
+   "fails": "#NAME? or frozen {array}"
+  },
+  {
+   "feature": "LET",
+   "v2016": "n",
+   "v2019": "n",
+   "v2021": "y",
+   "v2024": "y",
+   "m365": "y",
+   "web": "y",
+   "mobile": "y",
+   "fails": "#NAME?"
+  },
+  {
+   "feature": "LAMBDA, VSTACK, TEXTSPLIT, TAKE",
+   "v2016": "n",
+   "v2019": "n",
+   "v2021": "n",
+   "v2024": "y",
+   "m365": "y",
+   "web": "y",
+   "mobile": "y",
+   "fails": "#NAME?"
+  },
+  {
+   "feature": "GROUPBY / PIVOTBY, REGEX, TRIMRANGE",
+   "v2016": "n",
+   "v2019": "n",
+   "v2021": "n",
+   "v2024": "n",
+   "m365": "y",
+   "web": "y",
+   "mobile": "p",
+   "fails": "#NAME?"
+  },
+  {
+   "feature": "IFS / SWITCH / CONCAT / TEXTJOIN",
+   "v2016": "n",
+   "v2019": "y",
+   "v2021": "y",
+   "v2024": "y",
+   "m365": "y",
+   "web": "y",
+   "mobile": "y",
+   "fails": "#NAME? in 2016"
+  },
+  {
+   "feature": "Checkboxes in cells",
+   "v2016": "n",
+   "v2019": "n",
+   "v2021": "n",
+   "v2024": "n",
+   "m365": "y",
+   "web": "y",
+   "mobile": "p",
+   "fails": "TRUE / FALSE text"
+  },
+  {
+   "feature": "Data types (Currencies, Stocks)",
+   "v2016": "n",
+   "v2019": "n",
+   "v2021": "p",
+   "v2024": "p",
+   "m365": "y",
+   "web": "y",
+   "mobile": "p",
+   "fails": "Last value, no refresh"
+  },
+  {
+   "feature": "Python in Excel",
+   "v2016": "n",
+   "v2019": "n",
+   "v2021": "n",
+   "v2024": "n",
+   "m365": "y",
+   "web": "y",
+   "mobile": "n",
+   "fails": "Last values, can't recalc"
+  },
+  {
+   "feature": "Waterfall / funnel charts",
+   "v2016": "p",
+   "v2019": "y",
+   "v2021": "y",
+   "v2024": "y",
+   "m365": "y",
+   "web": "y",
+   "mobile": "y",
+   "fails": "Blank chart in 2013 (funnel needs 2019)"
+  },
+  {
+   "feature": "Power Query refresh",
+   "v2016": "y",
+   "v2019": "y",
+   "v2021": "y",
+   "v2024": "y",
+   "m365": "y",
+   "web": "p",
+   "mobile": "n",
+   "fails": "Web refreshes cloud sources only"
+  },
+  {
+   "feature": "Data Model / Power Pivot",
+   "v2016": "y",
+   "v2019": "y",
+   "v2021": "y",
+   "v2024": "y",
+   "m365": "y",
+   "web": "p",
+   "mobile": "n",
+   "fails": "Web/Mac: view, not edit"
+  },
+  {
+   "feature": "VBA macros (.xlsm)",
+   "v2016": "y",
+   "v2019": "y",
+   "v2021": "y",
+   "v2024": "y",
+   "m365": "y",
+   "web": "n",
+   "mobile": "n",
+   "fails": "Doesn't run; may be blocked"
+  },
+  {
+   "feature": "Office Scripts",
+   "v2016": "n",
+   "v2019": "n",
+   "v2021": "n",
+   "v2024": "n",
+   "m365": "y",
+   "web": "y",
+   "mobile": "n",
+   "fails": "Not available"
+  },
+  {
+   "feature": "Co-authoring & Show Changes",
+   "v2016": "n",
+   "v2019": "n",
+   "v2021": "p",
+   "v2024": "p",
+   "m365": "y",
+   "web": "y",
+   "mobile": "y",
+   "fails": "Read-only or 'locked by'"
+  },
+  {
+   "feature": "Threaded comments",
+   "v2016": "n",
+   "v2019": "n",
+   "v2021": "p",
+   "v2024": "y",
+   "m365": "y",
+   "web": "y",
+   "mobile": "y",
+   "fails": "Read-only notes"
+  },
+  {
+   "feature": "PowerPoint Morph",
+   "v2016": "n",
+   "v2019": "y",
+   "v2021": "y",
+   "v2024": "y",
+   "m365": "y",
+   "web": "y",
+   "mobile": "y",
+   "fails": "Simple fade"
+  },
+  {
+   "feature": "PowerPoint Zoom",
+   "v2016": "n",
+   "v2019": "y",
+   "v2021": "y",
+   "v2024": "y",
+   "m365": "y",
+   "web": "p",
+   "mobile": "p",
+   "fails": "Static picture"
+  },
+  {
+   "feature": "Sensitivity labels (encrypted)",
+   "v2016": "p",
+   "v2019": "p",
+   "v2021": "y",
+   "v2024": "y",
+   "m365": "y",
+   "web": "y",
+   "mobile": "y",
+   "fails": "May not open"
+  },
+  {
+   "feature": "Loop components",
+   "v2016": "n",
+   "v2019": "n",
+   "v2021": "n",
+   "v2024": "n",
+   "m365": "y",
+   "web": "y",
+   "mobile": "y",
+   "fails": "Just a link"
+  }
+ ],
+ "itBlocks": [
+  {
+   "what": "Macros from email / internet",
+   "apps": "Excel, Word, PowerPoint",
+   "why": "Main way malware gets in. Files from outside are marked and macros blocked by default.",
+   "ask": "Ask for a trusted location on SharePoint, or digitally signed macros. Remove 'Mark of the Web' only if IT allows."
+  },
+  {
+   "what": "Connected experiences (Designer, Translate, Dictate, Analyze Data, data types)",
+   "apps": "All Office",
+   "why": "These send content to Microsoft cloud services; some companies restrict for confidentiality.",
+   "ask": "Ask which experiences are allowed; use offline alternatives."
+  },
+  {
+   "what": "Office Add-ins store",
+   "apps": "Excel, Word, Outlook",
+   "why": "Third-party add-ins can read your documents and emails.",
+   "ask": "Ask IT to approve and deploy the specific add-in centrally."
+  },
+  {
+   "what": "'Anyone' sharing links, external sharing",
+   "apps": "OneDrive, SharePoint, Teams",
+   "why": "Stops company files from being forwarded to anyone on the internet.",
+   "ask": "Use 'Specific people' links; request guest access for auditors."
+  },
+  {
+   "what": "Auto-forward to external email",
+   "apps": "Outlook",
+   "why": "Classic data-leak route.",
+   "ask": "Use shared mailbox or flows inside the company."
+  },
+  {
+   "what": "Publish to web, export data, Analyze in Excel",
+   "apps": "Power BI",
+   "why": "Public links and exports let data leave governed reports.",
+   "ask": "Share via App or workspace; ask for export only where needed."
+  },
+  {
+   "what": "On-premises data gateway",
+   "apps": "Power BI, Power Automate",
+   "why": "Opens a path from cloud to internal servers; needs a managed server.",
+   "ask": "Keep sources on SharePoint Online (no gateway needed) or ask IT for a central gateway."
+  },
+  {
+   "what": "Premium connectors / DLP policies",
+   "apps": "Power Automate, Power Apps",
+   "why": "Prevents mixing business data with personal or unknown services; costs extra.",
+   "ask": "Explain the business case; ask for a Premium licence or approved connector."
+  },
+  {
+   "what": "Power Automate for desktop / external tools install",
+   "apps": "Windows",
+   "why": "Software install needs admin rights; bots can act as you.",
+   "ask": "Request install via IT ticket with purpose stated."
+  },
+  {
+   "what": "SAP GUI scripting",
+   "apps": "SAP + VBA / RPA",
+   "why": "Scripts can post or extract data at scale as your user.",
+   "ask": "SAP Basis enables per user/system; keep it to display transactions."
+  },
+  {
+   "what": "Office Scripts, Python in Excel",
+   "apps": "Excel",
+   "why": "Code runs in cloud or across files; data governance.",
+   "ask": "Ask admin to enable for your account or group."
+  },
+  {
+   "what": "Copilot, AI uploads, web search in Copilot",
+   "apps": "Copilot",
+   "why": "Confidential data could reach AI services; licence cost.",
+   "ask": "Follow AI policy; use only approved data; ask about a licence pilot."
+  },
+  {
+   "what": "Meeting recording, transcription, audio",
+   "apps": "Teams, OneNote",
+   "why": "Privacy, consent and storage rules.",
+   "ask": "Check meeting policy; announce recording."
+  },
+  {
+   "what": "Loop, external Teams access, apps in Teams",
+   "apps": "Teams, Outlook",
+   "why": "Newer storage and external chat need compliance review.",
+   "ask": "Ask if Loop/external access is planned or available on request."
+  }
+ ],
+ "licences": [
+  {
+   "name": "Microsoft 365 business plans",
+   "price": "Included",
+   "items": [
+    "Word, Excel, PowerPoint, Outlook, Teams, OneDrive, SharePoint, OneNote, Forms, Lists, Planner basic, Loop (if enabled)",
+    "Power Automate cloud flows with standard connectors (about 6,000 actions/day)",
+    "Power Apps with standard connectors",
+    "Copilot Chat (Basic) in app, web, Teams, Outlook"
+   ],
+   "highlight": true
+  },
+  {
+   "name": "Power BI Pro",
+   "price": "~$14",
+   "items": [
+    "Publish and share reports, workspaces, apps",
+    "8 scheduled refreshes/day, subscriptions, paginated reports",
+    "Viewers need Pro too (unless Fabric F64+)"
+   ],
+   "highlight": false
+  },
+  {
+   "name": "Power BI Premium Per User",
+   "price": "~$24",
+   "items": [
+    "Everything in Pro",
+    "48 refreshes/day, larger models, deployment pipelines",
+    "Viewers of PPU content also need PPU"
+   ],
+   "highlight": false
+  },
+  {
+   "name": "Fabric capacity (F-SKU)",
+   "price": "From ~$5,000/month (F64)",
+   "items": [
+    "Company-wide: free viewers from F64",
+    "Copilot in Power BI, Dataflows Gen2, Direct Lake"
+   ],
+   "highlight": false
+  },
+  {
+   "name": "Power Automate Premium",
+   "price": "~$15",
+   "items": [
+    "Premium and custom connectors (HTTP, SQL, SAP, Dataverse)",
+    "Desktop flows triggered from cloud (attended RPA)",
+    "Process licence ~$150/bot for unattended"
+   ],
+   "highlight": false
+  },
+  {
+   "name": "Power Apps Premium",
+   "price": "~$20",
+   "items": [
+    "Dataverse database, model-driven apps",
+    "Premium connectors in apps"
+   ],
+   "highlight": false
+  },
+  {
+   "name": "Microsoft 365 Copilot",
+   "price": "~$30",
+   "items": [
+    "Copilot inside Word, Excel, PowerPoint, OneNote",
+    "=COPILOT() function, agents (Researcher, Analyst)",
+    "Teams meeting recap"
+   ],
+   "highlight": false
+  },
+  {
+   "name": "Teams Premium",
+   "price": "Add-on",
+   "items": [
+    "Live translated captions",
+    "Intelligent recap, advanced webinars, watermarking"
+   ],
+   "highlight": false
+  },
+  {
+   "name": "Planner Premium (Planner Plan 1 / Project)",
+   "price": "Add-on",
+   "items": [
+    "Timeline/Gantt, dependencies, goals",
+    "Bigger project planning"
+   ],
+   "highlight": false
+  }
+ ],
+ "teachers": [
+  {
+   "app": "x",
+   "name": "Search box",
+   "how": "Alt + Q",
+   "note": "Type what you want ('remove duplicates', 'freeze top row'). It runs the command and shows where it lives."
+  },
+  {
+   "app": "x",
+   "name": "Insert Function dialog",
+   "how": "Shift + F3",
+   "note": "Explains every argument as you fill it; 'Help on this function' gives examples offline-ish."
+  },
+  {
+   "app": "x",
+   "name": "Evaluate Formula",
+   "how": "Formulas › Evaluate Formula",
+   "note": "Steps through a formula one piece at a time. Best way to understand a colleague's formula."
+  },
+  {
+   "app": "q",
+   "name": "Applied Steps + Advanced Editor",
+   "how": "Power Query › View › Advanced Editor",
+   "note": "Every click writes M code. Read it after each click to learn M without any course."
+  },
+  {
+   "app": "x",
+   "name": "Macro recorder",
+   "how": "View › Macros › Record",
+   "note": "Do a task once, then open the VBA (Alt+F11) and read what it recorded."
+  },
+  {
+   "app": "x",
+   "name": "Office Scripts recorder",
+   "how": "Automate › Record Actions",
+   "note": "Same idea for TypeScript; the code panel shows the script live."
+  },
+  {
+   "app": "b",
+   "name": "Quick measures",
+   "how": "Power BI › Home › Quick measure",
+   "note": "Pick a calculation from a list; Power BI writes the DAX. Open the measure and read it."
+  },
+  {
+   "app": "b",
+   "name": "Performance analyzer",
+   "how": "Power BI › Optimize › Performance analyzer",
+   "note": "Copy the DAX query behind any visual; see what the visual really asks the model."
+  },
+  {
+   "app": "a",
+   "name": "Templates & Peek code",
+   "how": "Power Automate › Templates; ⋯ › Peek code",
+   "note": "Start from a template, then peek at the JSON/expressions it uses."
+  },
+  {
+   "app": "c",
+   "name": "Copilot Chat as tutor",
+   "how": "m365copilot.com or Teams",
+   "note": "Paste a formula/DAX and ask 'explain step by step'. Use for understanding, then do it yourself."
+  },
+  {
+   "app": "w",
+   "name": "Tell me + Styles pane",
+   "how": "Alt + Q; Alt + Ctrl + Shift + S",
+   "note": "Find features; Styles pane shows exactly what formatting is applied."
+  },
+  {
+   "app": "pp",
+   "name": "Microsoft templates & Designer",
+   "how": "File › New",
+   "note": "Open a template and reverse-engineer its Slide Master."
+  }
+ ]
+}
