@@ -227,6 +227,11 @@ body.lock{overflow:hidden}
 .chg ul{margin:6px 0 0;padding-left:20px;font-size:14px;display:grid;gap:4px}
 .comments{min-height:120px}
 .muted{color:var(--muted);margin:0}
+.d-plain{background:linear-gradient(135deg,color-mix(in oklab,var(--c) 14%,white),#FFF8E1);border-radius:12px;padding:11px 13px;font-size:15px;line-height:1.5;display:grid;gap:4px}
+.d-ex{background:#F4FBF6;border:1px solid #CDEBD8;border-radius:10px;padding:9px 11px;font-size:14px;overflow-wrap:anywhere}
+.d-watch{background:#FFF1F1;border:1px solid #F6C9C9;border-radius:10px;padding:9px 11px;font-size:14px;display:grid;gap:3px}
+.d-watch .d-k{color:#B42323}
+.d-what{color:var(--muted);font-size:14px!important}
 footer .copy{font-size:14px;color:var(--ink);margin-bottom:4px}
 
 /* Ask the notes */
@@ -485,7 +490,7 @@ function match(it){
   if (S.free && it.licence) return false;
   if (S.todo && S.tried.has(it.name)) return false;
   if (S.q){
-    const hay = [it.name,it.what,it.use,it.where,(it.steps||[]).join(" "),appById[it.app].name,it.it,it.licence].join(" ").toLowerCase();
+    const hay = [it.name,it.plain,it.what,it.use,it.where,(it.steps||[]).join(" "),appById[it.app].name,it.it,it.licence].join(" ").toLowerCase();
     return S.q.toLowerCase().split(/\s+/).every(w=>hay.includes(w));
   }
   return true;
@@ -556,10 +561,13 @@ function openDrawer(idx){
   $("d-app").innerHTML = `${tile(a)}<span>${esc(a.name)}</span><span class="lvl${it.level==="C"?" code":""}" style="--lc:var(${lc})">${ln}</span>${it.core?'<span class="star">★ Core</span>':""}`;
   $("d-title").textContent = it.name;
   $("d-body").innerHTML = `
+    ${it.plain?`<div class="d-plain"><div class="d-k">In plain words</div>${esc(it.plain)}</div>`:""}
     <p class="d-what">${esc(it.what)}</p>
     ${it.where?`<div class="d-sec"><div class="d-k">Where to find it</div><div class="d-where">${esc(it.where)}</div></div>`:""}
     ${it.steps && it.steps.length?`<div class="d-sec"><div class="d-k">Try it</div><ol class="d-steps">${it.steps.map(s=>`<li>${esc(s)}</li>`).join("")}</ol></div>`:""}
-    <div class="d-sec"><div class="d-k">F&amp;A example</div><div class="use">${esc(it.use)}</div></div>
+    ${it.example?`<div class="d-sec"><div class="d-k">Example</div><div class="d-ex">${esc(it.example)}</div></div>`:""}
+    ${it.watch?`<div class="d-watch"><span class="d-k">Watch out</span>${esc(it.watch)}</div>`:""}
+    <div class="d-sec"><div class="d-k">F&amp;A use</div><div class="use">${esc(it.use)}</div></div>
     <div class="d-sec"><div class="d-k">Version</div><div class="ver">${esc(it.version)}</div></div>
     ${notesHtml(it)?`<div class="d-sec notes">${notesHtml(it)}</div>`:""}
     <label class="tried big"><input type="checkbox" data-tried="${esc(it.name)}" ${S.tried.has(it.name)?"checked":""}> I've tried this</label>`;
@@ -688,7 +696,7 @@ function tokens(q){
 let IDX = null;
 function buildIndex(){
   IDX = {
-    f: items.map((it,i)=>({i, name:norm(it.name), body:norm([it.what,it.use].join(" ")), deep:norm([it.where,(it.steps||[]).join(" "),appById[it.app].name,it.it,it.licence,it.oldVersion].join(" "))})),
+    f: items.map((it,i)=>({i, name:norm(it.name), body:norm([it.what,it.use].join(" ")), deep:norm([it.plain,it.where,(it.steps||[]).join(" "),appById[it.app].name,it.it,it.licence,it.oldVersion].join(" "))})),
     t: DATA.tasks.map((t,i)=>({i, name:norm(t.task), body:norm(t.why+" "+t.alt+" "+appById[t.app].name)}))
   };
 }
@@ -764,6 +772,7 @@ function answer(q){
      ${DATA.aiEndpoint ? `<button class="b-ai" data-q="${esc(q)}">Ask AI here</button>` : ""}
      ${!found ? `<button class="b-link" data-tab="updates">Suggest this topic ›</button>` : ""}</div>`);
   botAdd(parts.join(""), "bot");
+  try{ $("bot-in").focus({preventScroll:true}); }catch(e){}
 }
 async function askAI(q, btn){
   btn.disabled = true; btn.textContent = "Thinking…";

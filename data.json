@@ -177,7 +177,10 @@
     "Subheadings › Heading 2",
     "Ctrl+F opens the Navigation pane; drag headings to reorder sections",
     "Right-click Heading 1 › Modify to change every heading at once"
-   ]
+   ],
+   "plain": "Styles are saved formats like 'Heading 1'. Word remembers which lines are headings, so it can build an outline and change all of them together.",
+   "example": "You type 'Section 3: Accruals' and click Heading 1. It now shows in the Navigation pane. Click it there and Word jumps to that section.",
+   "watch": "Making a line bold and big by hand is NOT a heading. Word can't see it, so it won't show in the outline or the table of contents."
   },
   {
    "app": "w",
@@ -197,7 +200,10 @@
     "Select a table › References › Insert Caption › Label: Table",
     "Where you mention it: References › Cross-reference › Table › Only label and number",
     "Before printing: Ctrl+A, then F9 to update everything"
-   ]
+   ],
+   "plain": "Word writes the contents page and table numbers for you, and keeps them correct when pages move.",
+   "example": "Insert a table between Table 2 and Table 3. Press F9: the old Table 3 becomes Table 4, and every 'see Table 4' in the text updates too.",
+   "watch": "It doesn't update by itself. Always select all and press F9 before printing or sending."
   },
   {
    "app": "w",
@@ -217,7 +223,10 @@
     "Insert Merge Field wherever each value goes",
     "Preview Results and check a few letters",
     "Finish & Merge › Edit Individual Documents, or Send Email Messages"
-   ]
+   ],
+   "plain": "Write one letter with blanks. Word fills the blanks from an Excel list and makes one letter per row.",
+   "example": "Excel: Ali Sdn Bhd | 12,500.00. Letter: 'Dear «Name», your balance is RM«Balance».' Result: 'Dear Ali Sdn Bhd, your balance is RM12,500.00.'",
+   "watch": "Amounts may come out as 12500.1 with no commas. Fix it with the number format field switch, or format the column as text in Excel first."
   },
   {
    "app": "w",
@@ -236,7 +245,10 @@
     "File › New › Personal to start a letter from it",
     "Select a signature block › Insert › Quick Parts › Save Selection to Quick Part Gallery",
     "Next time type the Quick Part name and press F3"
-   ]
+   ],
+   "plain": "A template is a blank starting file you reuse without overwriting it. Quick Parts are saved text blocks you insert in seconds.",
+   "example": "Save your letterhead as 'Supplier Letter.dotx'. File › New gives you a fresh copy each time; the template itself never changes.",
+   "watch": "Opening the .dotx file directly edits the template. Use File › New › Personal instead."
   },
   {
    "app": "w",
@@ -254,7 +266,10 @@
     "Turn on Track Changes (Ctrl+Shift+E) before sending for review",
     "Edits show in colour; Accept or Reject one by one",
     "No tracking used? Review › Compare › Compare › pick Original and Revised › OK"
-   ]
+   ],
+   "plain": "Track Changes records every edit in colour so you can accept or reject each one. Compare finds the differences between two versions for you.",
+   "example": "Legal changes '30 days' to '45 days'. You see '30' crossed out and '45' in colour, and you click Accept or Reject.",
+   "watch": "Accepting all changes removes the history. Keep a copy of the tracked version for your records."
   },
   {
    "app": "w",
@@ -273,7 +288,10 @@
     "Insert Drop-Down List, Date Picker or Check Box where the blanks go",
     "Properties › add the choices",
     "Review › Restrict Editing › Filling in forms › Yes, Start Enforcing Protection"
-   ]
+   ],
+   "plain": "A form where people can only fill in the blanks and can't change your wording or layout.",
+   "example": "A claim form with a drop-down for Department, a date picker for Date and a box for Amount. Everything else is locked.",
+   "watch": "Turn on Restrict Editing last. While it's on, you can't edit the form either; stop protection first."
   },
   {
    "app": "w",
@@ -292,7 +310,10 @@
     "Do the same after the table",
     "Click in the middle section › Orientation › Landscape",
     "Double-click the header › untick Link to Previous to give it its own header"
-   ]
+   ],
+   "plain": "A section break splits the document, so one part can have different page orientation, headers or page numbers.",
+   "example": "Pages 1–4 portrait, page 5 a wide landscape ageing table, pages 6–8 back to portrait.",
+   "watch": "A Page Break isn't a Section Break. Only Layout › Breaks › Next Page lets you change orientation for one part."
   },
   {
    "app": "w",
@@ -311,7 +332,10 @@
     "Word › Paste Special › Paste link › Microsoft Excel Worksheet Object",
     "After Excel changes: right-click › Update Link",
     "Before sending: File › Info › Edit Links to Files › Break Link"
-   ]
+   ],
+   "plain": "Paste numbers from Excel that stay connected, so the Word report updates when the Excel file changes.",
+   "example": "Excel shows Revenue 1,250. You change it to 1,300; in Word, right-click › Update Link and it shows 1,300.",
+   "watch": "If you rename or move the Excel file, the link breaks. Keep both files in the same folder."
   },
   {
    "app": "w",
@@ -329,7 +353,10 @@
     "Open the PDF from Word and click OK on the conversion message",
     "Check the layout and copy what you need",
     "Keep the original PDF as the record"
-   ]
+   ],
+   "plain": "Word can turn a PDF into an editable Word document, so you don't retype it.",
+   "example": "Open the bank's PDF letter in Word, copy the paragraph you need, and paste it into your reply.",
+   "watch": "Tables and columns may shift. Check the numbers against the original PDF."
   },
   {
    "app": "w",
@@ -347,7 +374,10 @@
     "Click Dictate and allow the microphone",
     "Say punctuation out loud: 'comma', 'full stop', 'new line'",
     "For a recording: Word for web › Transcribe › Upload audio › Add to document"
-   ]
+   ],
+   "plain": "Speak and Word types for you (Dictate), or upload a recording and Word turns it into text (Transcribe).",
+   "example": "Say 'The variance is due to higher freight cost full stop'. Word types: 'The variance is due to higher freight cost.'",
+   "watch": "Numbers and names often come out wrong. Always proofread."
   },
   {
    "app": "w",
@@ -366,7 +396,10 @@
     "Select text › Review › Translate › Translate Selection",
     "Choose the language › Insert",
     "Ask a fluent person to check before formal use"
-   ]
+   ],
+   "plain": "Editor checks spelling, grammar and clarity. Translate turns text into another language inside Word.",
+   "example": "Select a paragraph › Translate › Japanese. The translation appears on the right, ready to insert.",
+   "watch": "Machine translation can be wrong in tone or meaning. Use it to understand; get a person to check formal letters."
   },
   {
    "app": "w",
@@ -384,7 +417,10 @@
     "Look for the Sensitivity button on the Home tab",
     "Pick a label such as Confidential",
     "The label may add a header, watermark and encryption automatically"
-   ]
+   ],
+   "plain": "A tag like 'Confidential' that marks how sensitive a file is, and can lock it so only staff can open it.",
+   "example": "Label the salary file 'Confidential'. A watermark appears, and it won't open for people outside the company.",
+   "watch": "You only see this if IT has set it up. You can't create labels yourself."
   },
   {
    "app": "w",
@@ -403,7 +439,10 @@
     "Layout › Formula › =SUM(ABOVE)",
     "Number format: #,##0.00",
     "After changing numbers: Ctrl+A, then F9"
-   ]
+   ],
+   "plain": "Word tables can do simple sums, so totals in a Word form calculate themselves.",
+   "example": "A column with 100, 250, 50. In the total cell: =SUM(ABOVE) gives 400.",
+   "watch": "It doesn't recalculate live like Excel. Press F9 after changing numbers."
   },
   {
    "app": "w",
@@ -422,7 +461,10 @@
     "Alt+F11 and read the recorded code",
     "Save as .docm",
     "Run with Alt+F8"
-   ]
+   ],
+   "plain": "A macro is a recorded set of steps you can replay with one click, or code that repeats a task many times.",
+   "example": "Record: Save As PDF. Then a short loop runs it on 50 letters in a folder, saving 50 PDFs.",
+   "watch": "Files with macros from email are blocked by default. Keep macros in your own trusted files."
   },
   {
    "app": "x",
@@ -441,7 +483,10 @@
     "Table Design › Table Name › rename, e.g. tblAP",
     "Type a new row under the table: it joins and formulas copy down",
     "Use the name in formulas: =SUM(tblAP[Amount])"
-   ]
+   ],
+   "plain": "Turns a block of data into a smart list that grows by itself, with filters and named columns.",
+   "example": "Rows A1:E100. After Ctrl+T, typing in row 101 adds it to the table, and =SUM(tblAP[Amount]) includes it automatically.",
+   "watch": "Don't leave blank rows or columns inside the data before pressing Ctrl+T."
   },
   {
    "app": "x",
@@ -460,7 +505,10 @@
     "Type #,##0;(#,##0);\"-\"",
     "For thousands: #,##0,;(#,##0,);\"-\"",
     "The cell keeps the full number; only the display changes"
-   ]
+   ],
+   "plain": "Change how a number looks without changing its value: brackets for negatives, a dash for zero, thousands.",
+   "example": "-12345 shows as (12,345); 0 shows as -; with #,##0, then 1,250,000 shows as 1,250.",
+   "watch": "It's display only. The cell still holds 1,250,000, so formulas use the full number."
   },
   {
    "app": "x",
@@ -479,7 +527,10 @@
     "Select the amounts › Ctrl+Alt+V › Multiply › OK",
     "Values only: Ctrl+Alt+V › Values",
     "Turn rows into columns: tick Transpose"
-   ]
+   ],
+   "plain": "Paste only part of what you copied (just values or formats), or do maths while pasting.",
+   "example": "SAP gives credits as positive. Copy -1 › select the amounts › Paste Special › Multiply: 500 becomes -500.",
+   "watch": "Paste Values removes the formulas. Do it on a copy if you still need them."
   },
   {
    "app": "x",
@@ -498,7 +549,10 @@
     "Type = then press the ↑ arrow key",
     "Press Ctrl+Enter to fill every blank",
     "Copy the column › Paste values"
-   ]
+   ],
+   "plain": "Select only the empty cells at once and fill each with the value above it.",
+   "example": "Before: 1000, blank, blank, 2000, blank. After: 1000, 1000, 1000, 2000, 2000.",
+   "watch": "Paste as values afterwards, or the cells keep '=A2' formulas that break when you sort."
   },
   {
    "app": "x",
@@ -516,7 +570,10 @@
     "Select the column › Text to Columns › Delimited › choose the separator",
     "For text dates: last step › Column data format › Date › DMY",
     "Flash Fill: type the result for row 1, move down, press Ctrl+E"
-   ]
+   ],
+   "plain": "Split one column into several, or fix text that should be dates. Flash Fill copies a pattern you show it once.",
+   "example": "'400100 - Freight' becomes 400100 | Freight. The text '31.10.2026' becomes a real date you can sort.",
+   "watch": "Dates can turn into the wrong month. Choose DMY in the last step."
   },
   {
    "app": "x",
@@ -535,7 +592,10 @@
     "Select input cells › Data Validation › Allow: List",
     "Source: select the list range",
     "Error Alert tab › Style: Stop"
-   ]
+   ],
+   "plain": "Limit a cell to choices from a list, so people can't type wrong or different spellings.",
+   "example": "The Status cell offers only Open, Pending HOD, Closed. Typing 'done' gives an error.",
+   "watch": "Pasting over the cell removes the rule. Ask users to type or pick, not paste."
   },
   {
    "app": "x",
@@ -553,7 +613,10 @@
     "Turn on Background color › fx",
     "Choose Rules, or Field value with a colour measure",
     "Example: Colour = IF([DSO] > 60, \"#C0392B\", \"#1E8E5A\")"
-   ]
+   ],
+   "plain": "Colour numbers automatically by rules, so good and bad stand out.",
+   "example": "DSO 72 turns red (target 60); 45 turns green.",
+   "watch": "Rules on percentages use decimals (0.6), not 60."
   },
   {
    "app": "x",
@@ -571,7 +634,10 @@
     "Pattern: =SUMIFS(sum_range, criteria_range1, criteria1, …)",
     "Example: =SUMIFS(tblGL[Amount], tblGL[CoCode], $A2, tblGL[Period], B$1)",
     "Lock with $ so it copies across a grid"
-   ]
+   ],
+   "plain": "Add up (or count) only the rows that meet your conditions.",
+   "example": "=SUMIFS(Amount, CoCode, \"1000\", Month, \"Oct\") adds only company 1000's October amounts.",
+   "watch": "Text numbers don't match real numbers. '1000' as text won't match 1000 as a number."
   },
   {
    "app": "x",
@@ -589,7 +655,10 @@
     "=XLOOKUP(lookup_value, lookup_array, return_array, \"Not found\")",
     "Return several columns: select them all as return_array",
     "Last match: add match mode 0 and search mode -1"
-   ]
+   ],
+   "plain": "Find a value in one list and bring back related information. It's the modern, easier VLOOKUP.",
+   "example": "=XLOOKUP(\"V001\", VendorID, VendorName, \"Not found\") returns 'ABC Supplies'.",
+   "watch": "Shows #NAME? in Excel 2019 and older. Use INDEX+MATCH if the file goes to old Excel."
   },
   {
    "app": "x",
@@ -607,7 +676,10 @@
     "=INDEX(return_column, MATCH(lookup_value, lookup_column, 0))",
     "Two-way: =INDEX(table, MATCH(row_value, row_list, 0), MATCH(col_value, col_list, 0))",
     "Always keep the 0 for exact match"
-   ]
+   ],
+   "plain": "Two functions that together do a lookup. MATCH finds the row number, INDEX picks the value from that row.",
+   "example": "MATCH(\"V001\", IDs, 0) → 3. INDEX(Names, 3) → 'ABC Supplies'.",
+   "watch": "Forget the 0 in MATCH and it may return a wrong 'close' match."
   },
   {
    "app": "x",
@@ -626,7 +698,10 @@
     "Fiscal year label: =\"FY\"&(YEAR(A2)-(MONTH(A2)<4))",
     "Month-end: =EOMONTH(A2,0)",
     "Ageing days: =TODAY()-DueDate"
-   ]
+   ],
+   "plain": "Formulas that turn a date into your fiscal month and year when the year starts in April.",
+   "example": "15 May 2026 → period 2, FY2026. 10 Feb 2027 → period 11, FY2026.",
+   "watch": "Check that the cell holds a real date (right-aligned), not text."
   },
   {
    "app": "x",
@@ -644,7 +719,10 @@
     "Round at line level: =ROUND(A2*rate,2)",
     "Decide: sum of rounded lines or rounded total, whichever matches the system",
     "Check: =SUM(range)-SystemTotal should be 0"
-   ]
+   ],
+   "plain": "Round at the right step so your totals match the system to the cent.",
+   "example": "Ten lines of 33.333 add to 333.33, but rounded lines (33.33 × 10) add to 333.30. Decide which one SAP uses.",
+   "watch": "Formatting to 2 decimals only hides the decimals. It doesn't round the value."
   },
   {
    "app": "x",
@@ -662,7 +740,10 @@
     "=IFERROR(XLOOKUP(…),0)",
     "=IFS(D2<=30,\"0-30\",D2<=60,\"31-60\",D2<=90,\"61-90\",TRUE,\">90\")",
     "=SWITCH(A2,\"1000\",\"Company A\",\"2000\",\"Company B\",\"Other\")"
-   ]
+   ],
+   "plain": "Cleaner if-then logic. IFERROR replaces errors, IFS checks several conditions, SWITCH maps codes to names.",
+   "example": "=IFS(D2<=30,\"0-30\",D2<=60,\"31-60\",TRUE,\">60\"). 45 days gives '31-60'.",
+   "watch": "IFERROR hides real mistakes too. Use it only where an error is expected."
   },
   {
    "app": "x",
@@ -680,7 +761,10 @@
     "=FILTER(tblAP, (tblAP[Vendor]=H1)*(tblAP[Status]=\"Open\"))",
     "=SORT(UNIQUE(tblAR[Customer]))",
     "Leave empty cells below; #SPILL! means something is in the way"
-   ]
+   ],
+   "plain": "One formula returns a whole list that grows or shrinks by itself.",
+   "example": "=UNIQUE(Customer) lists each customer once. Add a new customer to the data and it appears in the list.",
+   "watch": "It needs empty cells below. If something is in the way you get #SPILL!."
   },
   {
    "app": "x",
@@ -697,7 +781,10 @@
    "steps": [
     "=LET(sales, SUMIFS(…), cost, SUMIFS(…), sales-cost)",
     "Name each part once; the last argument is the result"
-   ]
+   ],
+   "plain": "Give names to parts of a long formula, so it's shorter, easier to read and faster.",
+   "example": "=LET(s, SUM(Sales), c, SUM(Cost), (s-c)/s) gives GP% without repeating SUM(Sales).",
+   "watch": "Names can't look like cell addresses (A1, GP1). Use words like sales, cost."
   },
   {
    "app": "x",
@@ -716,7 +803,10 @@
     "Name Manager › New › Name: FYPERIOD",
     "Refers to: =LAMBDA(d, MOD(MONTH(d)-4,12)+1)",
     "Now use =FYPERIOD(A2) anywhere in the workbook"
-   ]
+   ],
+   "plain": "Create your own Excel function once and reuse it everywhere by name.",
+   "example": "Define FYPERIOD once. Then =FYPERIOD(A2) gives 2 for a May date, in any cell of that workbook.",
+   "watch": "It exists only in that workbook. Copy the name to other files that need it."
   },
   {
    "app": "x",
@@ -734,7 +824,10 @@
     "=GROUPBY(tblSales[Customer], tblSales[Amount], SUM)",
     "=PIVOTBY(tblSales[Customer], tblSales[Month], tblSales[Amount], SUM)",
     "Extra arguments control totals and sorting"
-   ]
+   ],
+   "plain": "A pivot table made with a formula. It updates instantly, with no Refresh button.",
+   "example": "=GROUPBY(Customer, Amount, SUM) gives each customer with their total sales.",
+   "watch": "Only in Microsoft 365. People on Excel 2024 or older see #NAME?."
   },
   {
    "app": "x",
@@ -752,7 +845,10 @@
     "Stack sheets: =VSTACK(CoA!A2:F500, CoB!A2:F500)",
     "Top 10: =TAKE(SORT(tbl,3,-1),10)",
     "Split text: =TEXTSPLIT(A2,\" - \")"
-   ]
+   ],
+   "plain": "Tools to stack, split and trim lists with formulas instead of copy-paste.",
+   "example": "=VSTACK(CoA!A2:D100, CoB!A2:D100) puts both companies' rows into one list.",
+   "watch": "Blank rows in the ranges come through as zeros. Trim the ranges or filter out blanks."
   },
   {
    "app": "x",
@@ -770,7 +866,10 @@
     "=REGEXEXTRACT(A2,\"INV\\d+\") pulls INV12345 out of text",
     "=REGEXTEST(A2,\"^\\d{10}$\") checks for exactly 10 digits",
     "Feed the result into XLOOKUP to match"
-   ]
+   ],
+   "plain": "Find text that follows a pattern, like 'INV followed by numbers', inside messy text.",
+   "example": "From 'IBG CR ABC SDN BHD INV20456 REF' → =REGEXEXTRACT(A2,\"INV\\d+\") gives INV20456.",
+   "watch": "Patterns are fussy. Test on a few rows before applying to all."
   },
   {
    "app": "x",
@@ -789,7 +888,10 @@
     "Drag Account to Rows, Company to Columns, Amount to Values",
     "Right-click › Refresh after the data changes",
     "PivotTable Design › Report Layout › Show in Tabular Form"
-   ]
+   ],
+   "plain": "Summarise thousands of rows into a small table by dragging fields, with no formulas.",
+   "example": "50,000 GL lines become a table of account × company totals in 10 seconds.",
+   "watch": "It doesn't update by itself. Right-click › Refresh after the data changes."
   },
   {
    "app": "x",
@@ -806,7 +908,10 @@
    "steps": [
     "% of Grand Total, or Difference From › Base field: Month › (previous)",
     "Calculated field: PivotTable Analyze › Fields, Items & Sets › Calculated Field"
-   ]
+   ],
+   "plain": "Show pivot numbers as % of total or change from last month, without extra columns.",
+   "example": "Sales Oct 120, Nov 150. Show Values As › Difference From (previous) shows Nov +30.",
+   "watch": "Calculated fields work on totals, not row by row. Ratios can look different from Excel formulas."
   },
   {
    "app": "x",
@@ -824,7 +929,10 @@
     "Click the pivot › Insert Slicer › Company",
     "Insert Timeline › Posting Date",
     "Right-click slicer › Report Connections to control several pivots"
-   ]
+   ],
+   "plain": "Clickable buttons that filter pivots and tables. Easy for people who don't know Excel.",
+   "example": "Click 'Company B' on the slicer; every connected pivot shows only Company B.",
+   "watch": "A slicer controls only its own pivot unless you link others in Report Connections."
   },
   {
    "app": "x",
@@ -842,7 +950,10 @@
     "Excel writes the GETPIVOTDATA formula for you",
     "Replace the typed labels with cell references",
     "To stop it: PivotTable Analyze › Options ▾ › untick Generate GetPivotData"
-   ]
+   ],
+   "plain": "A formula that reads one number from a pivot table, even if the pivot layout changes.",
+   "example": "=GETPIVOTDATA(\"Amount\",$A$3,\"Account\",\"Freight\") returns freight's total.",
+   "watch": "If the item isn't in the pivot (e.g. filtered out), it returns #REF!. Wrap with IFERROR."
   },
   {
    "app": "x",
@@ -861,7 +972,10 @@
     "Data › Relationships › New: GL[Account] → Accounts[Account]",
     "Power Pivot › Measures › New: Total := SUM(GL[Amount])",
     "Insert a PivotTable from the Data Model"
-   ]
+   ],
+   "plain": "Connect several tables inside Excel, like a mini database, and build pivots across them without VLOOKUP.",
+   "example": "GL table + Account master linked by account number. A pivot shows amounts by account group straight away.",
+   "watch": "Relationships need one unique row per key in the master table. Duplicates cause errors."
   },
   {
    "app": "x",
@@ -880,7 +994,10 @@
     "Right-click first and last bars › Set as total",
     "Combo: Insert › Combo › line on secondary axis",
     "Sparklines: select cells › Insert › Line › data range"
-   ]
+   ],
+   "plain": "Waterfall shows how you got from one number to another. Combo mixes bars and a line. Sparklines are tiny trend charts in a cell.",
+   "example": "Budget PBT 500 → +80 sales → -30 freight → -20 FX → Actual 530, as a waterfall.",
+   "watch": "Set the first and last bars as 'total', or the waterfall looks wrong."
   },
   {
    "app": "x",
@@ -898,7 +1015,10 @@
     "Copy a range",
     "Go to the dashboard sheet › Paste ▾ › Linked Picture",
     "Move and resize; it updates live"
-   ]
+   ],
+   "plain": "A live picture of cells that you can place anywhere, like on a dashboard.",
+   "example": "A KPI box on Sheet3 appears as a picture on the Dashboard sheet and updates when Sheet3 changes.",
+   "watch": "It shows the cells' formatting too. Tidy the source range first."
   },
   {
    "app": "x",
@@ -916,7 +1036,10 @@
     "Goal Seek: Set cell = PBT, To value = target, By changing = sales",
     "Data Table: inputs down a column, formula at the top › Data Table › Column input cell",
     "Scenario Manager: save Best, Base and Worst inputs"
-   ]
+   ],
+   "plain": "Ask 'what input do I need?' (Goal Seek) or 'what if this changes?' (Data Table, Scenarios).",
+   "example": "PBT target 1,000. Goal Seek finds sales must be 8,400.",
+   "watch": "Data Tables recalculate constantly and slow big files. Set calculation to 'Automatic except data tables'."
   },
   {
    "app": "x",
@@ -935,7 +1058,10 @@
     "Data › Forecast Sheet › choose end date",
     "Options: seasonality and confidence interval",
     "Excel makes a new sheet with FORECAST.ETS formulas"
-   ]
+   ],
+   "plain": "Excel predicts future months from your past months, including seasonal patterns.",
+   "example": "24 months of electricity cost give a forecast for the next 6 months with a high-low range.",
+   "watch": "It only follows the past pattern. It can't know about a new tariff or new machine."
   },
   {
    "app": "x",
@@ -954,7 +1080,10 @@
     "Set Objective cell, Max or Min",
     "By Changing Variable Cells; Add constraints",
     "Solve › Keep Solver Solution"
-   ]
+   ],
+   "plain": "Finds the best answer when several inputs can change and there are limits.",
+   "example": "Split a cost across 3 plants to minimise total cost, with each plant at most 40%.",
+   "watch": "Results depend on correct constraints. Check the answer makes business sense."
   },
   {
    "app": "x",
@@ -973,7 +1102,10 @@
     "Evaluate Formula › click Evaluate step by step",
     "Watch Window › Add Watch for key totals",
     "Ctrl+[ jumps to the source cells"
-   ]
+   ],
+   "plain": "Tools that show where a number comes from and calculate a formula step by step.",
+   "example": "Trace Precedents draws arrows from the total to the 5 cells it adds, so you can spot the wrong one.",
+   "watch": "Arrows stay on screen. Click Remove Arrows when done."
   },
   {
    "app": "x",
@@ -992,7 +1124,10 @@
     "Colour them yellow",
     "Review › Protect Sheet › set a password and keep it safe",
     "Users can now type only in the yellow cells"
-   ]
+   ],
+   "plain": "Lock formulas so people can only type in the input cells you allow.",
+   "example": "HODs can type in yellow cells C5:C20; clicking a formula cell shows 'protected'.",
+   "watch": "It's not real security; passwords are easy to break. Don't rely on it for confidential data."
   },
   {
    "app": "x",
@@ -1011,7 +1146,10 @@
     "Others open it in Excel desktop or web; you see their cursors",
     "Review › Show Changes lists who changed what",
     "Version History restores an older copy"
-   ]
+   ],
+   "plain": "Several people edit the same file at the same time, and you can see who changed what and go back.",
+   "example": "Two HODs fill the budget file at once. Show Changes: 'Aminah changed C12 from 500 to 750, 2:15 pm'.",
+   "watch": "Works only for files saved in OneDrive or SharePoint, not email attachments or your C: drive."
   },
   {
    "app": "x",
@@ -1029,7 +1167,10 @@
     "While co-authoring, View › New",
     "Sort and filter freely; others don't see it",
     "Exit to go back to the default view"
-   ]
+   ],
+   "plain": "Your own sort and filter while sharing a file, without disturbing other people's view.",
+   "example": "You filter Company A; your colleague still sees all companies.",
+   "watch": "Changes to values still affect everyone. Only sort and filter are personal."
   },
   {
    "app": "x",
@@ -1047,7 +1188,10 @@
     "Select the cells › Insert › Checkbox",
     "Click to tick (TRUE)",
     "Count done items: =COUNTIF(range,TRUE)"
-   ]
+   ],
+   "plain": "A real tick box inside a cell that counts as TRUE or FALSE.",
+   "example": "Ten tasks with boxes. =COUNTIF(B2:B11,TRUE) shows 7 done.",
+   "watch": "People on older Excel see TRUE/FALSE text instead of boxes."
   },
   {
    "app": "x",
@@ -1066,7 +1210,10 @@
     "Data › Currencies",
     "Click the card icon › add field Price",
     "Data › Refresh All to update"
-   ]
+   ],
+   "plain": "Excel pulls live exchange rates and stock prices from the internet into cells.",
+   "example": "MYR/JPY › Data › Currencies › Price shows today's rate, and Refresh updates it.",
+   "watch": "These are market rates with a delay. Not the bank or BNM rate for your books."
   },
   {
    "app": "x",
@@ -1084,7 +1231,10 @@
     "Click inside a Table › Analyze Data",
     "Ask a question, e.g. 'total amount by vendor'",
     "Insert the suggested chart or pivot"
-   ]
+   ],
+   "plain": "Excel suggests charts and patterns, and answers simple questions about your table.",
+   "example": "Ask 'top 5 vendors by amount' and get a ready chart you can insert.",
+   "watch": "Data is sent to Microsoft to analyse. Check your company allows it."
   },
   {
    "app": "x",
@@ -1101,7 +1251,10 @@
    "steps": [
     "Review › Check Performance › Optimize all",
     "Workbook Statistics shows what each sheet holds"
-   ]
+   ],
+   "plain": "Finds hidden waste that makes a file slow, like formatting on millions of empty cells.",
+   "example": "A 25 MB file drops to 6 MB after Optimize all.",
+   "watch": "Save a copy first. Large changes are hard to undo."
   },
   {
    "app": "x",
@@ -1119,7 +1272,10 @@
     "Open Spreadsheet Compare › Compare Files › choose v1 and v2",
     "Coloured grid shows changed values and formulas",
     "Export Results to Excel"
-   ]
+   ],
+   "plain": "Compares two Excel files and shows every changed number and formula.",
+   "example": "v1 vs v2 shows that cell F20 changed from =SUM(F5:F19) to a typed 12,500.",
+   "watch": "Not in every Office edition. If you can't find it, your licence doesn't include it."
   },
   {
    "app": "x",
@@ -1137,7 +1293,10 @@
     "Check Compatibility › Select versions to show › read the list",
     "Inspect Document › Inspect › Remove All for hidden items",
     "Do this on a copy"
-   ]
+   ],
+   "plain": "Shows what will break for people with older Excel, and removes hidden data before you send a file.",
+   "example": "It lists 'XLOOKUP not supported in Excel 2019 (3 cells)' and finds 2 hidden sheets.",
+   "watch": "Inspect › Remove All can't be undone. Run it on a copy."
   },
   {
    "app": "x",
@@ -1155,7 +1314,10 @@
     "Letters appear on the ribbon; type them in order",
     "Alt H O I autofits a column; Alt A T toggles filters; Alt H V V pastes values",
     "Learn one new sequence each week"
-   ]
+   ],
+   "plain": "Use the keyboard to reach any ribbon button, faster than the mouse.",
+   "example": "Alt, H, O, I autofits a column. Alt, A, T turns filters on or off.",
+   "watch": "Press and release Alt first; don't hold it."
   },
   {
    "app": "x",
@@ -1174,7 +1336,10 @@
     "Alt+F11 › read Module1",
     "Replace fixed ranges with Range(\"A1\").CurrentRegion",
     "Save as .xlsm; run with Alt+F8"
-   ]
+   ],
+   "plain": "Code that repeats Excel steps for you. Record once, replay any time.",
+   "example": "A macro opens each of 6 company exports, cleans them and saves each as PDF in one click.",
+   "watch": "Recorded macros use fixed ranges. Adjust them or they break when data grows."
   },
   {
    "app": "x",
@@ -1192,7 +1357,10 @@
     "Automate › Record Actions › do the steps › Stop",
     "Open the script and read the code",
     "Save; in Power Automate use Excel Online (Business) › Run script"
-   ]
+   ],
+   "plain": "Like macros, but for Excel online. Can run automatically on a schedule with Power Automate.",
+   "example": "Every morning a flow runs your script: format the export, add totals, email it.",
+   "watch": "Can't control other apps (like SAP) the way VBA can."
   },
   {
    "app": "x",
@@ -1210,7 +1378,10 @@
     "Type =PY( then xl(\"tblGL[#All]\", headers=True) to load the table",
     "Write pandas, e.g. df.groupby(\"Account\")[\"Amount\"].sum()",
     "Ctrl+Enter to run; choose Excel value as output"
-   ]
+   ],
+   "plain": "Write Python inside an Excel cell to do advanced analysis and charts.",
+   "example": "=PY(...) uses pandas to find journal entries more than 3 standard deviations from normal.",
+   "watch": "It runs in Microsoft's cloud, so it needs internet, and IT may turn it off."
   },
   {
    "app": "q",
@@ -1229,7 +1400,10 @@
     "Get Data › From Folder › Combine & Transform Data",
     "Clean the 'Transform Sample File' query once; all files follow",
     "Next month: drop the new file in the folder › Data › Refresh All"
-   ]
+   ],
+   "plain": "Power Query reads every file in a folder and stacks them into one table. New month = drop the file in and refresh.",
+   "example": "Jan.xlsx, Feb.xlsx, Mar.xlsx (1,000 rows each) become one 3,000-row table. Add Apr.xlsx, Refresh, and it's 4,000 rows.",
+   "watch": "All files need the same columns and layout. One odd file breaks the refresh."
   },
   {
    "app": "q",
@@ -1248,7 +1422,10 @@
     "Transform › Unpivot Other Columns",
     "Rename Attribute → Month, Value → Amount",
     "Change Month's type to Date"
-   ]
+   ],
+   "plain": "Turns a wide table (months across) into a long table (one row per month), the shape pivots like.",
+   "example": "Account | Apr | May becomes Account | Month | Amount, with Apr and May on separate rows.",
+   "watch": "Select the columns to KEEP and choose Unpivot OTHER Columns, so new months are included automatically."
   },
   {
    "app": "q",
@@ -1267,7 +1444,10 @@
     "Join Kind: Left Anti › shows bank items not in the books",
     "Do it again System → Bank for the other side",
     "Load both lists as your reconciling items"
-   ]
+   ],
+   "plain": "Join two tables on a common column, like a lookup for whole tables. 'Anti join' shows what's missing.",
+   "example": "Bank 100 rows, books 98 rows. Left Anti join (Bank vs Books) shows the 2 bank items not in your books.",
+   "watch": "Match on clean keys. Extra spaces or text-vs-number differences make good matches fail."
   },
   {
    "app": "q",
@@ -1285,7 +1465,10 @@
     "Make sure column names match",
     "Append › Three or more tables › add them all",
     "Add a 'Source' column first if you need to know where each row came from"
-   ]
+   ],
+   "plain": "Stack tables with the same columns one under another.",
+   "example": "Company A (500 rows) + Company B (300 rows) = one list of 800 rows.",
+   "watch": "Columns are matched by name. 'Amount' and 'Amt' become two separate columns."
   },
   {
    "app": "q",
@@ -1303,7 +1486,10 @@
     "Data type: Date, Locale: English (United Kingdom) for 31/10/2026",
     "Dates like 31.10.2026 or amounts like 1.234,56: use German locale",
     "Do this before any other type change"
-   ]
+   ],
+   "plain": "Tell Power Query how dates and numbers are written in the file, so it reads them correctly.",
+   "example": "'03/04/2026' read as Malaysian format = 3 April. Read as US format = 4 March.",
+   "watch": "Wrong locale gives silent errors: months swap without any warning."
   },
   {
    "app": "q",
@@ -1322,7 +1508,10 @@
     "Split Column › By Delimiter",
     "Format › Trim and Clean",
     "Replace Values for known bad text"
-   ]
+   ],
+   "plain": "Point-and-click fixes that repeat automatically every time you refresh.",
+   "example": "Trim turns ' ABC Sdn Bhd ' into 'ABC Sdn Bhd', so lookups match.",
+   "watch": "Steps run in order. Changing an early step can break later ones."
   },
   {
    "app": "q",
@@ -1339,7 +1528,10 @@
    "steps": [
     "Advanced › group by Vendor and Month",
     "New column Total = Sum of Amount; Count = Count Rows"
-   ]
+   ],
+   "plain": "Summarise rows into totals before loading, so the result is small and fast.",
+   "example": "10,000 invoice lines become 120 rows: one per vendor per month with the total.",
+   "watch": "You lose the detail lines. Keep a separate detailed query if you need them."
   },
   {
    "app": "q",
@@ -1357,7 +1549,10 @@
     "Create a parameter named FolderPath",
     "Advanced Editor › replace the typed path with FolderPath",
     "Change the parameter value to switch the source"
-   ]
+   ],
+   "plain": "A single setting reused by all your queries, so you change it in one place.",
+   "example": "FolderPath = 'C:\\Data\\2026'. Change it to the SharePoint folder and every query follows.",
+   "watch": "Avoid personal paths like C:\\Users\\yourname. They break on colleagues' PCs."
   },
   {
    "app": "q",
@@ -1374,7 +1569,10 @@
    "steps": [
     "Set Similarity threshold, e.g. 0.8",
     "Check the matched pairs by eye before trusting them"
-   ]
+   ],
+   "plain": "Match text that is similar but not exactly the same.",
+   "example": "'ABC Sdn. Bhd.' matches 'ABC SDN BHD' at 0.85 similarity.",
+   "watch": "It can match wrong pairs. Always review the results."
   },
   {
    "app": "q",
@@ -1391,7 +1589,10 @@
    "steps": [
     "Turn the three options on",
     "Status bar › Column profiling based on entire data set (default is first 1,000 rows)"
-   ]
+   ],
+   "plain": "Shows how many errors, blanks and unique values each column has before you load.",
+   "example": "Amount column: 98% valid, 2% error, so you fix the 20 bad rows first.",
+   "watch": "By default it checks only the first 1,000 rows. Switch to the entire data set."
   },
   {
    "app": "q",
@@ -1409,7 +1610,10 @@
     "Custom Column: if [Amount] < 0 then \"Credit\" else \"Debit\"",
     "Open Advanced Editor to see the full M code",
     "Each line equals one Applied Step"
-   ]
+   ],
+   "plain": "Add your own calculated column, and see or edit the code Power Query writes for each click.",
+   "example": "if [Amount] < 0 then \"Credit\" else \"Debit\" adds a Credit/Debit column.",
+   "watch": "M is case-sensitive. 'amount' and 'Amount' aren't the same."
   },
   {
    "app": "q",
@@ -1427,7 +1631,10 @@
     "See the diagram of how queries feed each other",
     "Right-click a query › Properties › Refresh data when opening the file",
     "Untick background refresh if formulas depend on the result"
-   ]
+   ],
+   "plain": "A map of how your queries connect, plus settings for when data refreshes.",
+   "example": "The diagram shows Folder → Clean → Merge with Master → Final Report.",
+   "watch": "Refresh on open can make big files slow to open. Use it only where needed."
   },
   {
    "app": "pp",
@@ -1446,7 +1653,10 @@
     "Add footer text, e.g. 'Confidential'",
     "Adjust layouts for Title, Two Content, Chart",
     "File › Save As › PowerPoint Template (.potx)"
-   ]
+   ],
+   "plain": "The master controls fonts, colours, logo and footer for every slide at once.",
+   "example": "Change the title font in the master; all 40 slides update.",
+   "watch": "Text typed on a normal slide doesn't come from the master. Put logos and footers on the master."
   },
   {
    "app": "pp",
@@ -1465,7 +1675,10 @@
     "PowerPoint › Paste Special › Paste link",
     "File › Info › Edit Links to Files › Update Now",
     "Break Link on the copy you send"
-   ]
+   ],
+   "plain": "Paste a chart that stays connected to Excel and updates when the numbers change.",
+   "example": "Change October sales in Excel; in PowerPoint, Update Links and the chart shows the new bar.",
+   "watch": "Receivers without the Excel file see broken links. Break links on the copy you send."
   },
   {
    "app": "pp",
@@ -1482,7 +1695,10 @@
    "steps": [
     "Add a picture or bullet list",
     "Open Designer › pick an idea"
-   ]
+   ],
+   "plain": "PowerPoint suggests ready-made layouts for your slide content.",
+   "example": "A slide with 4 bullet points becomes 4 icon boxes in one click.",
+   "watch": "Suggestions can ignore your company template. Check it still matches."
   },
   {
    "app": "pp",
@@ -1500,7 +1716,10 @@
     "Duplicate a slide",
     "Move or resize objects on the second slide",
     "Transitions › Morph on the second slide"
-   ]
+   ],
+   "plain": "Smooth animation that moves and resizes objects between two slides.",
+   "example": "Slide 1: small group chart. Slide 2: the same chart large. Morph zooms in smoothly.",
+   "watch": "Objects must be the same object (duplicated slide), or Morph just fades."
   },
   {
    "app": "pp",
@@ -1518,7 +1737,10 @@
     "Create sections first (right-click slide › Add Section)",
     "Insert › Zoom › Summary Zoom › tick sections",
     "In the show, click a tile; it returns to the summary"
-   ]
+   ],
+   "plain": "Clickable thumbnails that jump to other parts of the deck and come back.",
+   "example": "One summary slide with 6 company tiles. Click Company C, go to its slides, and return automatically.",
+   "watch": "Older PowerPoint shows them as static pictures."
   },
   {
    "app": "pp",
@@ -1536,7 +1758,10 @@
     "Write notes under each slide",
     "Slide Show › Use Presenter View",
     "Rehearse with Coach for a feedback report"
-   ]
+   ],
+   "plain": "You see notes and the next slide on your screen while the audience sees only the slide.",
+   "example": "Your laptop shows 'Mention freight +12%' under the slide; the projector doesn't.",
+   "watch": "Check which screen is the projector before you start (Display Settings)."
   },
   {
    "app": "pp",
@@ -1554,7 +1779,10 @@
     "Record and talk through the slides, use the pen",
     "Stop and review",
     "Export › Create a Video › MP4"
-   ]
+   ],
+   "plain": "Record yourself talking through slides and save it as a video anyone can play.",
+   "example": "A 6-minute MP4 on 'How to read the AR report' for new staff.",
+   "watch": "Large videos are hard to email. Share via OneDrive or Teams."
   },
   {
    "app": "pp",
@@ -1572,7 +1800,10 @@
     "Spoken language: English",
     "Subtitle language: the audience's language",
     "Always Use Subtitles › start the show"
-   ]
+   ],
+   "plain": "PowerPoint shows live captions of what you say, and can translate them.",
+   "example": "You speak English; the screen shows Japanese subtitles.",
+   "watch": "Accuracy drops with accents and jargon. Speak clearly and slowly."
   },
   {
    "app": "pp",
@@ -1590,7 +1821,10 @@
     "Browse to the old deck",
     "Click slides to insert; tick Keep source formatting if needed",
     "Right-click › Add Section to group them"
-   ]
+   ],
+   "plain": "Insert slides from other decks without opening them, and group slides into named sections.",
+   "example": "Pull slides 3–7 from Oct and Nov decks into the quarterly deck.",
+   "watch": "Without 'Keep source formatting', slides take the new deck's design."
   },
   {
    "app": "pp",
@@ -1608,7 +1842,10 @@
     "Alt+F10 lists every object; eye icon hides",
     "Select several › Align Middle › Distribute Horizontally",
     "Ctrl+Shift+C then Ctrl+Shift+V copies formatting"
-   ]
+   ],
+   "plain": "See every object on the slide in a list, and line them up perfectly.",
+   "example": "Four boxes at slightly different heights › Align Middle › all exactly in line.",
+   "watch": "Hidden objects in the Selection pane still exist. Delete what you don't need."
   },
   {
    "app": "o",
@@ -1627,7 +1864,10 @@
     "From sender + subject contains › Move to folder",
     "Advanced Options for more conditions",
     "Run Rules Now for existing emails"
-   ]
+   ],
+   "plain": "Outlook automatically sorts incoming emails based on conditions you set.",
+   "example": "Emails from the bank with 'Credit Advice' in the subject go straight to the Bank folder.",
+   "watch": "Rules run top to bottom. A rule with 'stop processing' blocks the rules below it."
   },
   {
    "app": "o",
@@ -1645,7 +1885,10 @@
     "Name it",
     "Add actions: Forward to, Categorize, Move to folder",
     "Click it on any email"
-   ]
+   ],
+   "plain": "One button that does several email actions at once.",
+   "example": "'To AP' button: forward to the AP junior, mark as read, move to AP folder.",
+   "watch": "It applies to the selected emails. Check your selection before clicking."
   },
   {
    "app": "o",
@@ -1663,7 +1906,10 @@
     "Open My Templates › + Template",
     "Paste your standard reply",
     "Insert into any email"
-   ]
+   ],
+   "plain": "Saved email text you insert with a click, instead of retyping.",
+   "example": "'Payment enquiry' inserts: 'Thank you for your email. Payment is scheduled on...'",
+   "watch": "Personalise before sending. Templates still need names and dates."
   },
   {
    "app": "o",
@@ -1681,7 +1927,10 @@
     "Write the email",
     "Pick date and time",
     "Leave it; it sends on time"
-   ]
+   ],
+   "plain": "Write an email now and choose when it's sent.",
+   "example": "Write at 10 pm, schedule for 8:00 am Monday.",
+   "watch": "In classic Outlook, some setups need Outlook open at that time."
   },
   {
    "app": "o",
@@ -1699,7 +1948,10 @@
     "Rename category colours to your groups",
     "Flag emails for follow-up",
     "Classic: Folder › New Search Folder › e.g. Mail from specific people"
-   ]
+   ],
+   "plain": "Colour labels, follow-up flags, and saved searches that act like folders.",
+   "example": "Search folder 'From HOD, unread' always shows those emails, wherever they're filed.",
+   "watch": "Categories are personal. Others in a shared mailbox may not see yours."
   },
   {
    "app": "o",
@@ -1717,7 +1969,10 @@
     "Ask IT for access",
     "New email › From › choose the shared mailbox",
     "Sent items stay in the shared mailbox"
-   ]
+   ],
+   "plain": "One team mailbox many people can read and send from.",
+   "example": "ap@company inbox: the team sees every vendor email even when you're on leave.",
+   "watch": "Change From to the shared mailbox, or the email goes out from your name."
   },
   {
    "app": "o",
@@ -1735,7 +1990,10 @@
     "Add attendees › see free/busy",
     "Show a second time zone in calendar settings",
     "New Outlook: send a Scheduling poll from a new email"
-   ]
+   ],
+   "plain": "See when people are free, or let them vote on a time, across time zones.",
+   "example": "Your calendar shows your time and the overseas office time side by side, e.g. 9:00 here = 10:00 there.",
+   "watch": "Free/busy shows only for people in your organisation."
   },
   {
    "app": "o",
@@ -1753,7 +2011,10 @@
     "Check which version you're on",
     "List what you rely on: VBA, COM add-ins, client rules",
     "Ask IT before switching"
-   ]
+   ],
+   "plain": "Two versions of Outlook. 'New' is simpler but lacks some older features.",
+   "example": "A VBA macro that works in classic Outlook doesn't run in new Outlook.",
+   "watch": "Check before building rules or add-ins that only work in classic."
   },
   {
    "app": "o",
@@ -1771,7 +2032,10 @@
     "Open the sent email",
     "Choose Recall",
     "A report email tells you if it worked"
-   ]
+   ],
+   "plain": "Tries to pull back an email you already sent.",
+   "example": "Sent the wrong file to a colleague › Recall › it disappears if they haven't opened it.",
+   "watch": "Doesn't work for external email addresses. Check before you hit send."
   },
   {
    "app": "b",
@@ -1790,7 +2054,10 @@
     "Model view › drag the key from dimension to fact",
     "One-to-many, single direction",
     "Hide key columns in the fact table"
-   ]
+   ],
+   "plain": "Organise data as one central table of transactions linked to smaller lookup tables. Faster and easier.",
+   "example": "Sales (amounts) in the middle, linked to Date, Customer, Company. Filter Company B and Sales follows.",
+   "watch": "Avoid many-to-many links and double-direction filters unless you know why."
   },
   {
    "app": "b",
@@ -1809,7 +2076,10 @@
     "Add FY = IF(MONTH([Date])>=4, YEAR([Date]), YEAR([Date])-1) and FiscalPeriod",
     "Table tools › Mark as date table",
     "Relate it to the fact table's date"
-   ]
+   ],
+   "plain": "A calendar table that tells Power BI your year starts in April, so YTD and periods are right.",
+   "example": "15 May 2026 → FY2026, period 2. YTD in May = April + May.",
+   "watch": "Without 'Mark as date table', time functions can give wrong YTD."
   },
   {
    "app": "b",
@@ -1827,7 +2097,10 @@
     "Total Sales = SUM(Sales[Amount])",
     "Sales Co A = CALCULATE([Total Sales], Company[Code] = \"1000\")",
     "Var % = DIVIDE([Actual] - [Budget], [Budget])"
-   ]
+   ],
+   "plain": "Measures are formulas that recalculate for every filter. CALCULATE changes which data a measure looks at.",
+   "example": "[Sales] = 10m total. Click Company A, it shows 4m. [Sales Co A] always shows 4m.",
+   "watch": "A measure isn't a column. You can't see it in the table, only in visuals."
   },
   {
    "app": "b",
@@ -1845,7 +2118,10 @@
     "Sales LY = CALCULATE([Total Sales], SAMEPERIODLASTYEAR('Date'[Date]))",
     "Sales FYTD = TOTALYTD([Total Sales], 'Date'[Date], \"3/31\")",
     "Put Date[Month] on an axis to test"
-   ]
+   ],
+   "plain": "Ready functions for comparisons like last year, YTD and previous month.",
+   "example": "Oct 2026 sales 1.2m; Sales LY shows Oct 2025 = 1.0m, so +20%.",
+   "watch": "They need a proper date table with no missing days."
   },
   {
    "app": "b",
@@ -1863,7 +2139,10 @@
     "Select the visual",
     "New visual calculation: Running = RUNNINGSUM([Sales])",
     "It exists only on that visual"
-   ]
+   ],
+   "plain": "Calculations written for one chart, like running totals, without changing the data model.",
+   "example": "Monthly collections 100, 120, 90 → running total 100, 220, 310.",
+   "watch": "They exist only in that visual. Other visuals can't reuse them."
   },
   {
    "app": "b",
@@ -1881,7 +2160,10 @@
     "Add Sales, Quantity, GP",
     "Tick Add slicer to this page",
     "Use the parameter on the chart's axis or values"
-   ]
+   ],
+   "plain": "Let viewers choose what a chart shows with a slicer.",
+   "example": "Slicer: Sales / Qty / GP. Pick GP and the same chart shows gross profit.",
+   "watch": "Name the options clearly; viewers see those names."
   },
   {
    "app": "b",
@@ -1899,7 +2181,10 @@
     "Item Current = SELECTEDMEASURE()",
     "Item LY = CALCULATE(SELECTEDMEASURE(), SAMEPERIODLASTYEAR('Date'[Date]))",
     "Put the group column in a slicer or matrix columns"
-   ]
+   ],
+   "plain": "Write Actual, LY, YTD logic once and apply it to every measure.",
+   "example": "One switch turns Sales, GP and Cost into their YTD versions together.",
+   "watch": "Measures with fixed formats may lose formatting. Set format strings in the group."
   },
   {
    "app": "b",
@@ -1917,7 +2202,10 @@
     "Set the page as you want › Bookmarks › Add",
     "Insert › Button › Action › Bookmark",
     "Ctrl+click to test in Desktop"
-   ]
+   ],
+   "plain": "Save a view of a page and switch to it with a button, like a mini app.",
+   "example": "'Summary' and 'Detail' buttons flip between a chart view and a table view.",
+   "watch": "Bookmarks also save filters. Untick 'Data' if you don't want that."
   },
   {
    "app": "b",
@@ -1936,7 +2224,10 @@
     "Drag Customer into Drill through",
     "On the summary: right-click a bar › Drill through",
     "Tooltip page: Format page › Allow use as tooltip"
-   ]
+   ],
+   "plain": "Right-click a summary to jump to details for just that item, or hover to see a mini report.",
+   "example": "Right-click 'Company C' › Drill through › see only Company C's overdue invoices.",
+   "watch": "The detail page needs the drill-through field (e.g. Company) added to its filter well."
   },
   {
    "app": "b",
@@ -1954,7 +2245,10 @@
     "Turn on Background color › fx",
     "Choose Rules, or Field value with a colour measure",
     "Example: Colour = IF([DSO] > 60, \"#C0392B\", \"#1E8E5A\")"
-   ]
+   ],
+   "plain": "Colour numbers automatically by rules, so good and bad stand out.",
+   "example": "DSO 72 turns red (target 60); 45 turns green.",
+   "watch": "Rules on percentages use decimals (0.6), not 60."
   },
   {
    "app": "b",
@@ -1972,7 +2266,10 @@
     "Analyze: Variable Cost",
     "Explain by: Plant, Material, Vendor",
     "Click + to expand, or choose High value to let AI pick"
-   ]
+   ],
+   "plain": "AI visuals that break a number down level by level, or find what affects it most.",
+   "example": "Variable cost +15% → Plant 2 → Material X → Vendor Y explains most of it.",
+   "watch": "It shows patterns, not causes. Confirm with real business reasons."
   },
   {
    "app": "b",
@@ -1990,7 +2287,10 @@
     "Type a question",
     "Turn the answer into a standard visual",
     "Add synonyms in Q&A setup"
-   ]
+   ],
+   "plain": "Type a question in plain English and Power BI draws the chart.",
+   "example": "'Total sales by customer this year' gives a bar chart.",
+   "watch": "It needs clear table and column names. Rename cryptic fields like 'ZFKN1'."
   },
   {
    "app": "b",
@@ -2009,7 +2309,10 @@
     "Filter Company[Code] = \"1000\" (or use USERPRINCIPALNAME() with a mapping table)",
     "Modeling › View as › test",
     "In the Service: semantic model › Security › add people"
-   ]
+   ],
+   "plain": "Each viewer sees only their part of the data, in the same report.",
+   "example": "Company A's manager opens the report and sees only Company A's numbers.",
+   "watch": "Test with 'View as role'. Workspace admins still see everything."
   },
   {
    "app": "b",
@@ -2027,7 +2330,10 @@
     "Publish from Desktop to the workspace",
     "Workspace › Create app › add reports and audience",
     "Share the app link; update the app after changes"
-   ]
+   ],
+   "plain": "A workspace is where you build reports; an app is the tidy package viewers open.",
+   "example": "Top management opens 'F&A Reports' app and sees 3 reports, no draft pages.",
+   "watch": "After changing reports, click Update app or viewers keep the old version."
   },
   {
    "app": "b",
@@ -2045,7 +2351,10 @@
     "Use SharePoint links as sources, not C: drive",
     "Data source credentials › sign in (OAuth2)",
     "Scheduled refresh › On › add times"
-   ]
+   ],
+   "plain": "Power BI online refreshes the data itself on a timetable.",
+   "example": "At 7:00 am daily it reads the latest Excel from SharePoint; the report is fresh at 8:00.",
+   "watch": "A file on your C: drive needs a gateway and your PC switched on. Use SharePoint."
   },
   {
    "app": "b",
@@ -2062,7 +2371,10 @@
    "steps": [
     "Subscribe › Create subscription › pick page, people, schedule",
     "Alerts: pin a card to a dashboard › ⋯ › Manage alerts"
-   ]
+   ],
+   "plain": "Power BI emails a snapshot on a schedule, or alerts you when a number crosses a line.",
+   "example": "Every Monday 8:00 the DSO page arrives by email. Alert when cash < RM1m.",
+   "watch": "Alerts work only on cards, KPIs and gauges pinned to a dashboard."
   },
   {
    "app": "b",
@@ -2080,7 +2392,10 @@
     "Export › Analyze in Excel",
     "Open the file › Enable editing",
     "Build a PivotTable from the live model"
-   ]
+   ],
+   "plain": "Open the Power BI data in Excel and build your own pivots on it.",
+   "example": "Accountants pivot the same model by account and month in Excel.",
+   "watch": "Export may be turned off by IT. Respect data sharing rules."
   },
   {
    "app": "b",
@@ -2099,7 +2414,10 @@
     "Add a table, groups and page header",
     "Publish to the workspace",
     "Export to PDF or Excel"
-   ]
+   ],
+   "plain": "Print-ready reports with exact layout that flow across many pages.",
+   "example": "A statement of account per customer: header, invoice list, total, page numbers.",
+   "watch": "Different tool from Power BI Desktop; layouts take longer to build."
   },
   {
    "app": "b",
@@ -2117,7 +2435,10 @@
     "Report › Share › PowerPoint (copy link)",
     "Paste into the add-in slide",
     "Viewers sign in to see live data"
-   ]
+   ],
+   "plain": "Show a live, clickable Power BI page inside a slide or a Teams tab.",
+   "example": "In the meeting, filter the slide to Company B live while presenting.",
+   "watch": "Viewers need a Power BI licence and access, or they see nothing."
   },
   {
    "app": "b",
@@ -2134,7 +2455,10 @@
    "steps": [
     "Use Share or an App instead",
     "Ask IT to keep it disabled"
-   ]
+   ],
+   "plain": "Creates a public link anyone on the internet can see, with no login.",
+   "example": "Only for public data, like a published annual summary.",
+   "watch": "Never use it for company data. Anyone with the link can see everything."
   },
   {
    "app": "b",
@@ -2152,7 +2476,10 @@
     "Start recording › Refresh visuals",
     "Find the slow visual; check DAX query time",
     "Copy query › paste in DAX query view › Run"
-   ]
+   ],
+   "plain": "Measures how long each visual takes to load, and shows the query behind it.",
+   "example": "Table visual 4.2 seconds; the cause is a slow measure. Fix it and it drops to 0.6 seconds.",
+   "watch": "Test after clearing the cache (Refresh visuals) for real times."
   },
   {
    "app": "b",
@@ -2170,7 +2497,10 @@
     "Build Power Query steps in the browser",
     "Set scheduled refresh",
     "Desktop › Get data › Dataflows"
-   ]
+   ],
+   "plain": "Power Query that runs online, cleaned once and reused by many reports.",
+   "example": "One 'Clean Sales' dataflow feeds 3 reports; fix a rule once, all 3 get it.",
+   "watch": "Refresh order matters. The dataflow must refresh before the reports."
   },
   {
    "app": "b",
@@ -2188,7 +2518,10 @@
     "Drag tables or measures into TMDL view",
     "Edit the text › Apply",
     "External tools: request install via IT"
-   ]
+   ],
+   "plain": "See and edit the data model as text, or use expert tools for bulk changes.",
+   "example": "Change the format of 40 measures to #,##0 in one edit.",
+   "watch": "Text edits can break the model. Save a copy first."
   },
   {
    "app": "b",
@@ -2206,7 +2539,10 @@
     "Create a pipeline",
     "Assign Dev, Test, Prod workspaces",
     "Deploy forward after checking"
-   ]
+   ],
+   "plain": "Separate test and live versions of a report, and move changes forward safely.",
+   "example": "Edit in Dev, check in Test, then Deploy to Production; users never see half-done work.",
+   "watch": "Needs Premium Per User or Fabric capacity."
   },
   {
    "app": "a",
@@ -2225,7 +2561,10 @@
     "Apply to each attachment › SharePoint › Create file",
     "File name: formatDateTime(utcNow(),'yyyy-MM-dd') plus the attachment name",
     "Send yourself a test email"
-   ]
+   ],
+   "plain": "A flow watches your inbox and saves attachments from chosen senders into a folder.",
+   "example": "An email from the bank with a PDF arrives; seconds later '2026-11-03 credit advice.pdf' is in the Bank folder.",
+   "watch": "Signature images (logo.png) are attachments too. Add a condition to save only PDFs."
   },
   {
    "app": "a",
@@ -2243,7 +2582,10 @@
     "Recurrence: every 1 Month, on day 25 at 09:00, your time zone",
     "Add Send an email (V2) or Post message in Teams",
     "Test › Manually"
-   ]
+   ],
+   "plain": "A flow that runs by itself on a timetable.",
+   "example": "On the 25th of each month at 9 am, an email reminds HODs to submit accruals.",
+   "watch": "Set the time zone, or it runs on UTC time (8 hours earlier)."
   },
   {
    "app": "a",
@@ -2261,7 +2603,10 @@
     "Choose a trigger (button, form, file added)",
     "Approve/Reject – First to respond, add approver and details",
     "Condition: Outcome = Approve › notify or update the list"
-   ]
+   ],
+   "plain": "Send a request; the approver clicks Approve or Reject in Teams or email, and the decision is recorded.",
+   "example": "Payment request RM45,000 → HOD approves on phone → requester is notified, with the record kept.",
+   "watch": "The approval is a record only. It doesn't release the bank payment."
   },
   {
    "app": "a",
@@ -2279,7 +2624,10 @@
     "Get response details",
     "Add a row into a table (Excel) or Create item (Lists)",
     "Send an email to the reviewer"
-   ]
+   ],
+   "plain": "When someone submits a form, the answers are saved and someone is notified automatically.",
+   "example": "New vendor request submitted → row added to the tracker → you get an email.",
+   "watch": "Choose the right form and responses in 'Get response details', or fields come out empty."
   },
   {
    "app": "a",
@@ -2298,7 +2646,10 @@
     "Settings › Pagination On, threshold e.g. 5000",
     "Filter Query, e.g. Status eq 'Overdue'",
     "Apply to each › Send an email"
-   ]
+   ],
+   "plain": "Lets a flow read or add rows in an Excel table stored online.",
+   "example": "For each overdue row in the ageing table, send a reminder email to that customer.",
+   "watch": "The data must be a formatted Table, and the file must be closed by others to avoid lock errors."
   },
   {
    "app": "a",
@@ -2316,7 +2667,10 @@
     "Condition: Amount is greater than 10000",
     "Expression: formatDateTime(utcNow(),'yyyy-MM')",
     "dayOfWeek(utcNow()) to skip weekends (0 = Sunday)"
-   ]
+   ],
+   "plain": "Logic for flows: if-then branches, loops, and small formulas like dates.",
+   "example": "If Amount > 10,000 then get HOD approval, else get supervisor approval.",
+   "watch": "Apply to each over many rows is slow. Filter first."
   },
   {
    "app": "a",
@@ -2334,7 +2688,10 @@
     "Pick the team and channel",
     "Write the message with dynamic content",
     "Use the Adaptive Card designer for buttons"
-   ]
+   ],
+   "plain": "A flow posts messages or interactive cards to a Teams chat or channel.",
+   "example": "Daily 9 am post: '3 bank files received today ✓'.",
+   "watch": "Posts come from 'Flow bot' or your name. Tell the team what it is."
   },
   {
    "app": "a",
@@ -2352,7 +2709,10 @@
     "Create the script in Excel (Automate tab)",
     "Add Run script; pick file and script",
     "Combine with a Recurrence trigger"
-   ]
+   ],
+   "plain": "A flow runs your Excel script automatically, even with Excel closed.",
+   "example": "Every morning: script formats the new export, then the flow emails it as an attachment.",
+   "watch": "Scripts have time limits. Very large files may time out."
   },
   {
    "app": "a",
@@ -2370,7 +2730,10 @@
     "Wrap the main steps in a Scope",
     "Add an action after it › ⋯ › Configure run after › has failed",
     "Send yourself 'Flow failed' with the run link"
-   ]
+   ],
+   "plain": "Make a flow tell you when something fails, instead of failing silently.",
+   "example": "The save-attachment step fails → you get 'Bank flow failed at 10:02' with a link.",
+   "watch": "Check your flows' run history monthly anyway."
   },
   {
    "app": "a",
@@ -2388,7 +2751,10 @@
     "Type the mailbox address",
     "Add actions (log to List, save attachment)",
     "You must already have access to the mailbox"
-   ]
+   ],
+   "plain": "Start a flow when an email arrives in a team mailbox, not just yours.",
+   "example": "Every email to ap@ is logged in a List with sender, subject and date.",
+   "watch": "You need access to the shared mailbox first, granted by IT."
   },
   {
    "app": "a",
@@ -2407,7 +2773,10 @@
     "Recorder › record the screen steps once",
     "Add a Loop over a list read from Excel",
     "Run manually and watch"
-   ]
+   ],
+   "plain": "A robot that clicks and types on your PC for you, for systems without connectors.",
+   "example": "It opens SAP, runs CN41N for 20 projects one by one, and saves each export.",
+   "watch": "Screens that change (pop-ups, slow loading) break bots. Add waits."
   },
   {
    "app": "a",
@@ -2424,7 +2793,10 @@
    "steps": [
     "Check the tag before building",
     "Confirm licence with IT"
-   ]
+   ],
+   "plain": "Connections to systems outside Microsoft 365, which need a paid licence.",
+   "example": "Pull data directly from a SQL database into a flow.",
+   "watch": "Using one makes the whole flow premium. Check with IT before building."
   },
   {
    "app": "a",
@@ -2442,7 +2814,10 @@
     "Needs AI Builder credits",
     "Pass the PDF content",
     "Map fields to your log"
-   ]
+   ],
+   "plain": "AI reads documents like invoices and pulls out fields for you.",
+   "example": "A PDF invoice gives Invoice No INV-889, Date 02/11/2026, Amount 3,450.00 into your log.",
+   "watch": "It makes mistakes on poor scans. Review before posting."
   },
   {
    "app": "a",
@@ -2460,7 +2835,10 @@
     "Open Workflows",
     "Pick a template",
     "Sign in connections › Save"
-   ]
+   ],
+   "plain": "Ready-made automations you start inside Teams, no building from scratch.",
+   "example": "Template: notify the channel when a file is added to the Closing folder.",
+   "watch": "It still uses Power Automate behind the scenes, with the same licence rules."
   },
   {
    "app": "p",
@@ -2478,7 +2856,10 @@
     "Open the List › Integrate › Create an app",
     "Power Apps builds browse, detail and edit screens",
     "Adjust fields › Save › Share"
-   ]
+   ],
+   "plain": "Turn a SharePoint list into a phone app in a few clicks.",
+   "example": "Site staff open 'Petty Cash' app, enter the amount, snap the receipt, Submit.",
+   "watch": "Share the app AND the list with users, or they can't see data."
   },
   {
    "app": "p",
@@ -2496,7 +2877,10 @@
     "DisplayMode: If(Value(txtAmt.Text) > 500, DisplayMode.Disabled, DisplayMode.Edit)",
     "Save a record: Patch(MyList, Defaults(MyList), {Title: txtTitle.Text})",
     "Formulas feel like Excel"
-   ]
+   ],
+   "plain": "Excel-like formulas that control what an app does.",
+   "example": "If(Amount > 500, show 'Needs HOD approval').",
+   "watch": "Some functions don't work with large lists (delegation). Test with real data size."
   },
   {
    "app": "p",
@@ -2514,7 +2898,10 @@
     "Needs Premium licence",
     "Tables › New table",
     "Create a model-driven app from the tables"
-   ]
+   ],
+   "plain": "A proper database with security, for bigger business apps.",
+   "example": "A vendor onboarding app with stages, roles and audit history.",
+   "watch": "Needs Premium licences for every user."
   },
   {
    "app": "t",
@@ -2532,7 +2919,10 @@
     "Add a channel per process",
     "Files tab › Open in SharePoint to manage",
     "Save files there instead of emailing"
-   ]
+   ],
+   "plain": "Each channel is a topic space, and its Files tab is a shared SharePoint folder.",
+   "example": "The AR channel holds AR files and AR discussion together, not in emails.",
+   "watch": "Files sent in a 1:1 chat are in your OneDrive, not the team. Post in the channel instead."
   },
   {
    "app": "t",
@@ -2550,7 +2940,10 @@
     "Click +",
     "Pick Excel, Power BI, Planner or Lists",
     "Choose the item and name the tab"
-   ]
+   ],
+   "plain": "Pin files, reports or plans at the top of a channel for one-click access.",
+   "example": "A 'Closing tracker' tab at the top of the Closing channel.",
+   "watch": "People still need permission to the file itself."
   },
   {
    "app": "t",
@@ -2568,7 +2961,10 @@
     "Tell attendees first",
     "Start recording",
     "After the meeting, open the Recap tab"
-   ]
+   ],
+   "plain": "Record the meeting and get a searchable text of what everyone said.",
+   "example": "Search the transcript for 'accrual' and jump to the minute it was agreed.",
+   "watch": "Recordings may expire after some time. Download important ones."
   },
   {
    "app": "t",
@@ -2586,7 +2982,10 @@
     "Turn on captions",
     "Caption settings › set spoken language",
     "Translated captions appear only with Premium"
-   ]
+   ],
+   "plain": "Live subtitles during a Teams meeting; translation needs a Premium licence.",
+   "example": "You speak English; a colleague reads captions in their language (if Premium).",
+   "watch": "Set the spoken language correctly, or captions come out wrong."
   },
   {
    "app": "t",
@@ -2603,7 +3002,10 @@
    "steps": [
     "Start the chat",
     "If blocked, it's an IT policy"
-   ]
+   ],
+   "plain": "Chat or work in a channel with people from other companies.",
+   "example": "A shared channel with the auditors for queries and files during audit.",
+   "watch": "Check what's in the channel before inviting outsiders."
   },
   {
    "app": "t",
@@ -2620,7 +3022,10 @@
    "steps": [
     "Open Recap after the meeting",
     "AI notes and tasks show if licensed"
-   ]
+   ],
+   "plain": "AI meeting notes and follow-up tasks after a meeting.",
+   "example": "After the closing meeting: 5 action items with names, created automatically.",
+   "watch": "Needs Teams Premium or Copilot. Review the notes for accuracy."
   },
   {
    "app": "s",
@@ -2638,7 +3043,10 @@
     "Open the file's menu in OneDrive/SharePoint",
     "Version history",
     "Open an old version › Restore"
-   ]
+   ],
+   "plain": "Every save is kept, so you can open or restore an older version.",
+   "example": "Someone overwrote the forecast at 3 pm; restore the 11 am version.",
+   "watch": "Restoring replaces the current version. Download the current one first if needed."
   },
   {
    "app": "s",
@@ -2656,7 +3064,10 @@
     "Share › gear",
     "Choose Specific people",
     "Can view; Block download if needed"
-   ]
+   ],
+   "plain": "Choose exactly who can open a link, and whether they can edit or download.",
+   "example": "'Specific people: Aminah, view only, block download' for the payroll summary.",
+   "watch": "'People in your organisation' links work for anyone in the company who gets the link."
   },
   {
    "app": "s",
@@ -2674,7 +3085,10 @@
     "Click Sync or Add shortcut",
     "Files appear in File Explorer",
     "Right-click › Always keep on this device or Free up space"
-   ]
+   ],
+   "plain": "See online team folders in File Explorer, downloading files only when you open them.",
+   "example": "The Finance site appears as a folder; files show a cloud icon until opened.",
+   "watch": "Deleting in File Explorer deletes for everyone. Be careful."
   },
   {
    "app": "s",
@@ -2692,7 +3106,10 @@
     "Select the folder › Request files",
     "Enter names or copy the link",
     "Uploaders can't see each other's files"
-   ]
+   ],
+   "plain": "Send a link so others can upload files to your folder, without seeing what's there.",
+   "example": "Department heads upload their accrual support into one folder by Friday.",
+   "watch": "You only get files, not a message. Ask them to name files clearly."
   },
   {
    "app": "s",
@@ -2710,7 +3127,10 @@
     "Add columns: Company, Vendor, Month",
     "Fill them when uploading",
     "Group by, filter, then Save view as"
-   ]
+   ],
+   "plain": "Tag files with columns like Company, Vendor, Month, then filter instead of digging folders.",
+   "example": "Filter Vendor = ABC, Month = Oct; 3 invoices appear from 2,000 files.",
+   "watch": "Make columns required, or people skip tagging."
   },
   {
    "app": "s",
@@ -2728,7 +3148,10 @@
     "Manage access › Advanced settings",
     "Stop inheriting permissions",
     "Remove broad groups; add named people"
-   ]
+   ],
+   "plain": "Limit a folder to named people so others in the team can't see it.",
+   "example": "Payroll folder: only HOD and payroll staff can open it.",
+   "watch": "Stopping inheritance makes permissions harder to manage. Keep a list of exceptions."
   },
   {
    "app": "s",
@@ -2745,7 +3168,10 @@
    "steps": [
     "Check if IT has published labels",
     "Library settings › Apply label to items"
-   ]
+   ],
+   "plain": "Rules that keep files for a set period and stop early deletion.",
+   "example": "Invoices labelled 'Keep 7 years' can't be deleted before 2033.",
+   "watch": "Only IT/compliance can set these up."
   },
   {
    "app": "n",
@@ -2763,7 +3189,10 @@
     "+ Add section per month",
     "Ctrl+N new page",
     "Ctrl+E searches every notebook"
-   ]
+   ],
+   "plain": "A digital notebook: notebooks hold sections (tabs), sections hold pages.",
+   "example": "Notebook 'Closing FY2026' › section 'Oct' › page 'Issue: GRNI difference'.",
+   "watch": "Save notebooks in OneDrive, not on your PC, so they sync and are backed up."
   },
   {
    "app": "n",
@@ -2780,7 +3209,10 @@
    "steps": [
     "Ctrl+1 adds a To Do tag",
     "Home › Find Tags › summary page"
-   ]
+   ],
+   "plain": "Mark lines as tasks or questions, then list all of them in one place.",
+   "example": "Find Tags shows 8 open To Dos from 5 different meeting pages.",
+   "watch": "Ticked To Dos stay on the page. Filter to unticked when reviewing."
   },
   {
    "app": "n",
@@ -2798,7 +3230,10 @@
     "Paste the image",
     "Right-click › Copy Text from Picture",
     "Paste into Excel or Word"
-   ]
+   ],
+   "plain": "OneNote reads text in an image so you can copy it.",
+   "example": "A screenshot of a statement › Copy Text from Picture › paste the amounts into Excel.",
+   "watch": "Check numbers carefully. 8 and 3, 1 and 7 can be misread."
   },
   {
    "app": "n",
@@ -2815,7 +3250,10 @@
    "steps": [
     "Insert › File Printout › choose PDF",
     "Insert › Spreadsheet › Existing or New"
-   ]
+   ],
+   "plain": "Put a PDF's pages or a small Excel sheet directly on a OneNote page.",
+   "example": "A SAP steps page with the PDF guide printed onto it, plus your notes beside it.",
+   "watch": "Printouts are images. Edit the original file, not the printout."
   },
   {
    "app": "n",
@@ -2833,7 +3271,10 @@
     "Get consent",
     "Record while typing notes",
     "Click a note's audio icon to replay that moment"
-   ]
+   ],
+   "plain": "Record audio while typing; each note links to the moment it was typed.",
+   "example": "Click the note 'Discount 5%?' and hear exactly what was said then.",
+   "watch": "Ask permission before recording people."
   },
   {
    "app": "n",
@@ -2851,7 +3292,10 @@
     "Pick a template or build a page",
     "Save current page as a template",
     "Set as default for the section"
-   ]
+   ],
+   "plain": "Ready layouts for pages, so every meeting note looks the same.",
+   "example": "'Meeting minutes' template with Attendees, Decisions, Actions already set.",
+   "watch": "Templates apply to new pages only."
   },
   {
    "app": "f",
@@ -2870,7 +3314,10 @@
     "⋯ › Add branching",
     "Quiz: mark correct answers and points",
     "Collect responses › copy link"
-   ]
+   ],
+   "plain": "Online forms and quizzes; answers can lead to different next questions.",
+   "example": "Answer 'Yes' to 'Any accruals?' and the form shows the accrual details question; 'No' skips it.",
+   "watch": "Set 'Who can fill in' correctly: only your organisation, or anyone."
   },
   {
    "app": "f",
@@ -2887,7 +3334,10 @@
    "steps": [
     "For live sync: create the form from Excel (Insert › Forms)",
     "Or Responses › Open results in Excel"
-   ]
+   ],
+   "plain": "Form answers flow into an Excel file automatically.",
+   "example": "20 HODs submit; the Excel sheet has 20 rows ready to analyse.",
+   "watch": "Don't add columns inside the response table; add them beside it."
   },
   {
    "app": "f",
@@ -2904,7 +3354,10 @@
    "steps": [
     "Set number and size limit",
     "Files go to your OneDrive › Apps › Microsoft Forms"
-   ]
+   ],
+   "plain": "Let people attach files in the form.",
+   "example": "Departments upload their quotation PDFs with the form.",
+   "watch": "Uploaded files go into your OneDrive and use your storage."
   },
   {
    "app": "l",
@@ -2922,7 +3375,10 @@
     "Pick Issue tracker",
     "Rename columns",
     "Share with the team"
-   ]
+   ],
+   "plain": "A shared, online table with columns, views and history, like a smarter Excel tracker.",
+   "example": "Issue tracker: Issue, Owner, Status, Due date; everyone updates the same list.",
+   "watch": "Plan the columns first. Changing types later can lose data."
   },
   {
    "app": "l",
@@ -2940,7 +3396,10 @@
     "Add a Board or Calendar view",
     "Group by Owner",
     "Format the Status column with colours"
-   ]
+   ],
+   "plain": "Different ways to look at the same list: board, calendar, grouped.",
+   "example": "Board view with cards moving from Open → In progress → Done.",
+   "watch": "Views are shared unless saved as personal."
   },
   {
    "app": "l",
@@ -2958,7 +3417,10 @@
     "When a column changes",
     "Status = Resolved",
     "Send email to a person"
-   ]
+   ],
+   "plain": "Simple 'when this changes, notify someone' rules, with no flow needed.",
+   "example": "When Status becomes 'Pending HOD', the HOD gets an email.",
+   "watch": "Rules only send notifications; they can't edit items."
   },
   {
    "app": "l",
@@ -2975,7 +3437,10 @@
    "steps": [
     "Each change shows who and when",
     "Compare old values"
-   ]
+   ],
+   "plain": "Every change to a row is kept with who changed it and when.",
+   "example": "Amount changed from 5,000 to 7,500 by Ali on 2 Nov, 4:10 pm.",
+   "watch": "Versioning must be on in list settings (it usually is)."
   },
   {
    "app": "pl",
@@ -2993,7 +3458,10 @@
     "Buckets D+1 to D+5",
     "Task › assignee, due date, checklist",
     "Repeat › Monthly"
-   ]
+   ],
+   "plain": "A shared board of tasks with owners and due dates, grouped into columns.",
+   "example": "Bucket 'D+2': Accruals (Ali, due 3rd), Bank rec (Siti, due 3rd). Repeats every month.",
+   "watch": "Too many tiny tasks make the board useless. Keep it to key steps."
   },
   {
    "app": "pl",
@@ -3010,7 +3478,10 @@
    "steps": [
     "Create a Premium plan",
     "Add dependencies between tasks"
-   ]
+   ],
+   "plain": "Gantt-style planning where one task waits for another.",
+   "example": "'Audit fieldwork' can't start until 'Trial balance final' is done.",
+   "watch": "Needs a paid Planner Premium licence."
   },
   {
    "app": "pl",
@@ -3028,7 +3499,10 @@
     "Flag an email",
     "It appears in To Do › Flagged email",
     "Assigned to me lists Planner tasks"
-   ]
+   ],
+   "plain": "One personal list that collects your flagged emails and Planner tasks.",
+   "example": "Flag 3 emails; they appear in To Do next to your 2 Planner tasks.",
+   "watch": "Unflagging the email removes it from To Do."
   },
   {
    "app": "lp",
@@ -3046,7 +3520,10 @@
     "Choose Table or Checklist",
     "Send it",
     "Everyone edits in place"
-   ]
+   ],
+   "plain": "A small table or checklist you paste in a chat that everyone edits live, everywhere it appears.",
+   "example": "Paste a checklist in the team chat; ticks show instantly for everyone.",
+   "watch": "People without Loop support see only a link."
   },
   {
    "app": "lp",
@@ -3064,7 +3541,10 @@
     "+ New workspace",
     "Add pages",
     "Share with the team"
-   ]
+   ],
+   "plain": "Shared pages that collect notes, tasks and Loop components for a project.",
+   "example": "'New DSO report' workspace with requirements, a task list and meeting notes.",
+   "watch": "May be turned off by IT."
   },
   {
    "app": "c",
@@ -3082,7 +3562,10 @@
     "Sign in with your work account (look for the green shield)",
     "Ask, or upload a file",
     "Check answers before using them"
-   ]
+   ],
+   "plain": "Microsoft's AI chat with your work account. Your data is protected and not used to train the AI.",
+   "example": "Paste a formula and ask 'explain step by step'; it explains each part.",
+   "watch": "AI can be wrong. Check numbers, and don't paste confidential data if policy says no."
   },
   {
    "app": "c",
@@ -3099,7 +3582,10 @@
    "steps": [
     "Summarize a long thread",
     "Draft a reply, set tone and length"
-   ]
+   ],
+   "plain": "AI that summarises email threads and drafts replies in Outlook.",
+   "example": "A 25-email thread becomes 5 bullet points: issue, amounts, who agreed what.",
+   "watch": "Read the draft before sending; tone and facts may be off."
   },
   {
    "app": "c",
@@ -3117,7 +3603,10 @@
     "Click Copilot",
     "Ask, e.g. 'Draft a memo from these notes'",
     "Review and edit the draft"
-   ]
+   ],
+   "plain": "AI working directly inside your document, spreadsheet or deck (paid licence).",
+   "example": "'Create 8 slides from this Word report' gives a first-draft deck in a minute.",
+   "watch": "It drafts; you still own accuracy."
   },
   {
    "app": "c",
@@ -3135,7 +3624,10 @@
     "=COPILOT(\"Classify into Travel, Utilities, Repairs\", A2)",
     "Fill down",
     "Spot-check results"
-   ]
+   ],
+   "plain": "An Excel formula that asks AI to classify or summarise text in cells.",
+   "example": "'Grab taxi to client' → Travel. 'TNB bill Oct' → Utilities.",
+   "watch": "Results can change when recalculated. Paste as values when final."
   },
   {
    "app": "c",
@@ -3153,7 +3645,10 @@
     "Open Copilot",
     "Ask 'Summarise this page'",
     "Check numbers against the visuals"
-   ]
+   ],
+   "plain": "AI that helps write measures, build pages, and summarise reports.",
+   "example": "'Summarise this page' gives 3 sentences on the main movements.",
+   "watch": "Needs special capacity. Most Pro-only setups won't have it."
   },
   {
    "app": "c",
@@ -3171,7 +3666,10 @@
     "Open Researcher or Analyst",
     "Give the data and question",
     "Check sources and results"
-   ]
+   ],
+   "plain": "Paid Copilot helpers: one researches across sources, one analyses data with Python.",
+   "example": "Analyst finds the 20 most unusual journal entries in a 100k-row file.",
+   "watch": "Paid licence only. Verify findings before acting."
   }
  ],
  "tasks": [
