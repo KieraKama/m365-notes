@@ -7,6 +7,12 @@
   {
    "date": "2026-11-03",
    "items": [
+    "Added card: Auto-refresh PivotTables. Microsoft says Auto Refresh is Insider only for now; card lists the other ways to keep pivots updated (Microsoft Support: Refresh PivotTable data)."
+   ]
+  },
+  {
+   "date": "2026-11-03",
+   "items": [
     "First public version: 166 features, 30 tasks.",
     "Copilot inside Word/Excel/PowerPoint/OneNote now needs the paid Microsoft 365 Copilot licence (change rolled out April–May 2026).",
     "Power BI: Copilot needs Fabric F64+ or a Copilot capacity; Pro alone doesn't include it."
@@ -25,6 +31,10 @@
   [
    "Power BI pricing (Microsoft)",
    "https://www.microsoft.com/power-platform/products/power-bi/pricing"
+  ],
+  [
+   "Refresh PivotTable data (Microsoft Support)",
+   "https://support.microsoft.com/en-us/excel/refresh-pivottable-data"
   ]
  ],
  "apps": [
@@ -891,7 +901,30 @@
    ],
    "plain": "Summarise thousands of rows into a small table by dragging fields, with no formulas.",
    "example": "50,000 GL lines become a table of account × company totals in 10 seconds.",
-   "watch": "It doesn't update by itself. Right-click › Refresh after the data changes."
+   "watch": "Without Auto Refresh (see next card), it does not update by itself: right-click › Refresh after the data changes."
+  },
+  {
+   "app": "x",
+   "name": "Auto-refresh PivotTables",
+   "level": "B",
+   "core": true,
+   "plain": "Make a PivotTable update by itself when the data changes, instead of clicking Refresh.",
+   "what": "PivotTable Analyze › Auto Refresh keeps pivots built on data inside the same workbook up to date. Where it is not available yet, use Refresh on open, Refresh All, or the GROUPBY formula.",
+   "use": "AR or accrual pivot that stays correct while people add rows during closing.",
+   "example": "Change Freight in the data from 100 to 118. The pivot total shows 118 straight away, no Refresh click.",
+   "watch": "Still rolling out: Microsoft says Insider only for now. Only works for data inside the workbook. No button? Use the steps below.",
+   "version": "Microsoft 365 (rolling out)",
+   "it": "",
+   "licence": "",
+   "oldVersion": "Older Excel never auto-refreshes. The pivot shows old numbers until someone clicks Refresh.",
+   "where": "PivotTable Analyze › Data › Auto Refresh",
+   "steps": [
+    "Make the source a Table (Ctrl+T) so new rows are included",
+    "Click the pivot › PivotTable Analyze › Data › Auto Refresh (outlined = on)",
+    "No Auto Refresh button? PivotTable Analyze › Options › Data › tick Refresh data when opening the file",
+    "Refresh by hand any time: Alt+F5 (this pivot) or Ctrl+Alt+F5 (all)",
+    "Need instant updates without the button? Use =GROUPBY or =PIVOTBY"
+   ]
   },
   {
    "app": "x",
