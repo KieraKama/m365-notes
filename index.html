@@ -412,6 +412,111 @@ footer .copy{font-size:14px;color:var(--ink);margin-bottom:4px}
 .gi{background:#fff;border:1px solid var(--line);border-radius:12px;padding:9px 12px;display:grid;gap:2px;font-size:13.5px}
 .gi b{color:#4337B8}
 .b-btns{display:grid;gap:6px}
+
+/* v5: videos, generic sketch, task pictures, formulas */
+.yt{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;color:#C4302B;text-decoration:none;border:1px solid #F3C4C2;background:#FFF5F5;border-radius:99px;padding:3px 10px 3px 4px;width:max-content}
+.yt:hover{background:#FFE9E8}
+.yt-i{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;background:#E62117;color:#fff;font-size:8px}
+.bl .yt{margin-top:5px;font-size:11.5px;padding:2px 8px 2px 3px}
+.sk.gen .g-bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding:6px 8px;background:#F3F3F5;border-bottom:1px solid #E3E3E8}
+.sk.gen .g-rib{background:#FAFAFB;min-height:34px}
+.sk.gen .g-left,.sk.gen .g-nav,.sk.gen .g-right{background:#fff;border-radius:6px;padding:6px;display:grid;gap:5px;align-content:start;width:120px;flex:none}
+.sk.gen .g-left{width:96px}
+.sk.gen .g-mid{flex:1;display:grid;min-width:0}
+.sk.gen .g-main{background:#fff;border-radius:6px;padding:8px 10px;display:grid;gap:6px;align-content:start}
+.g-lab{display:inline-flex;gap:5px;align-items:center;font-weight:700;font-size:10.5px}
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:12px}
+@media (max-width:800px){.about{grid-template-columns:1fr}}
+.about .box{padding:12px 14px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{background:color-mix(in oklab,var(--c) 10%,white);border:1px solid color-mix(in oklab,var(--c) 28%,white);border-radius:99px;padding:4px 10px;font-size:13px}
+.ftbl td:first-child{font-family:var(--f-mono);font-weight:700;white-space:nowrap;color:color-mix(in oklab,var(--c) 75%,black)}
+.task{cursor:pointer;transition:transform .15s, box-shadow .15s}
+.task:hover{transform:translateY(-2px);box-shadow:0 10px 24px -14px color-mix(in oklab,var(--c) 60%,black)}
+.task .more{font-size:12.5px;font-weight:700;color:color-mix(in oklab,var(--c) 80%,black);justify-self:end}
+.pic{border:1px solid #D9DCE6;border-radius:12px;background:#fff;padding:12px;font-size:13px;overflow-x:auto;font-family:Calibri,Aptos,var(--f-body)}
+.pic p{margin:3px 0}
+.pic.doc{box-shadow:0 2px 8px -4px rgba(0,0,0,.25);max-width:420px}
+.pic.doc .lh{height:8px;background:var(--c);border-radius:3px;margin-bottom:8px;width:40%}
+.pic.mail .mh{display:grid;gap:2px;border-bottom:1px solid #eee;padding-bottom:6px;margin-bottom:6px}
+.pic .sendb{display:inline-block;margin-top:6px;background:#0E78B8;color:#fff;border-radius:6px;padding:2px 12px;font-weight:700}
+.pt{border-collapse:collapse;min-width:0;font-size:12.5px}
+.pt th{background:#F1F3F7;font-weight:700;text-align:left}
+.pt th,.pt td{border:1px solid #DDE1EA;padding:3px 8px;white-space:nowrap}
+.pt tr.hl td{font-weight:800;border-top:2px solid #333}
+.pt td.inp{background:#FFF7C2}
+.pic.ba{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.pic small{display:block;font-weight:700;color:var(--muted);margin-bottom:3px}
+.pic .arr{font-weight:800;color:var(--muted)}
+.pic.folder .fbar{font-size:12px;color:#555;margin-bottom:6px;background:#F3F3F5;border-radius:6px;padding:3px 8px}
+.pic.slide{aspect-ratio:16/9;max-width:420px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto 1fr;gap:6px;background:linear-gradient(135deg,#fff,#FFF4EE)}
+.pic.slide b{grid-column:1/-1;font-size:17px;color:#CC4F25}
+.pic.slide ul{margin:0;padding-left:18px}
+.pic .bars{display:flex;align-items:flex-end;gap:6px;height:80px}
+.pic .bars i{flex:1;background:color-mix(in oklab,var(--c) 70%,white);border-radius:3px 3px 0 0;position:relative}
+.pic .bars i em{position:absolute;bottom:-16px;left:0;right:0;text-align:center;font-size:10px;font-style:normal;color:#666}
+.pic.board{display:grid;grid-template-columns:repeat(4,minmax(110px,1fr));gap:8px}
+.bc{background:#F4F6F9;border-radius:8px;padding:6px;display:grid;gap:5px;align-content:start}
+.bc span{background:#fff;border:1px solid #E1E4EA;border-left:3px solid var(--c);border-radius:6px;padding:4px 6px}
+.bc em{font-style:normal;color:#888;font-size:12px}
+.pic.lst,.pic.note{display:grid;gap:5px;max-width:420px}
+.pic.lst .li{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid #eee;padding:3px 0}
+.pic.lst em{font-style:normal;font-size:12px;background:#EEF2FF;border-radius:99px;padding:0 8px}
+.pic.note .tag{display:inline-block;width:20px;color:#7536A0;font-weight:800}
+.pic.flow{display:grid;justify-items:center;gap:3px}
+.pic.flow .fs{border:1px solid #CCD3E6;border-left:5px solid var(--c);border-radius:8px;padding:6px 10px;background:#fff;width:min(360px,100%)}
+.pic.flow i{font-style:normal;color:#888}
+.pic.chat{display:grid;gap:6px;max-width:440px}
+.pic.chat .cq{justify-self:end;background:#5546D6;color:#fff;border-radius:12px 12px 2px 12px;padding:6px 10px}
+.pic.chat .ca{background:#F3F0FF;border-radius:12px 12px 12px 2px;padding:6px 10px}
+.pic.cal{display:grid;grid-template-columns:repeat(5,minmax(70px,1fr));gap:4px}
+.cd{border:1px solid #E1E4EA;border-radius:6px;min-height:70px;padding:4px;display:grid;gap:3px;align-content:start}
+.cd span{background:color-mix(in oklab,var(--c) 15%,white);border-left:3px solid var(--c);border-radius:4px;padding:1px 4px;font-size:11.5px}
+.pic.dash .cards{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.pic.dash .cards div{border:1px solid #E1E4EA;border-radius:8px;padding:6px 12px;display:grid}
+.pic.dash .cards b{font-size:18px}
+.pic.dash{padding-bottom:24px}
+.pic.rec{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pic.rec > div{display:grid;gap:3px;align-content:start}
+.pic.rec span{border:1px solid #E1E4EA;border-radius:4px;padding:1px 6px;font-family:var(--f-mono);font-size:12px}
+.pic.rec .out{grid-column:1/-1;background:#FFF1F1;border:1px solid #F6C9C9;border-radius:8px;padding:6px 8px}
+.pic.merge{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.pic.merge .doc{border:1px solid #DDE1EA;border-radius:6px;padding:8px;max-width:260px;background:#fff}
+.pic.merge .sm{font-size:12px;padding:5px 8px;margin-bottom:4px}
+.pic.merge mark{background:#E8EEFF;color:#2B5BD7}
+.fx-top{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:14px;align-items:start}
+@media (max-width:900px){.fx-top{grid-template-columns:1fr}}
+.fx-controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.fx-controls select{border:1px solid #D9D0F5;border-radius:12px;padding:9px 12px;font-size:14px;background:#fff}
+.swaps{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(380px,100%),1fr));gap:12px}
+.swap,.fn{background:#fff;border:1px solid #CDEBD8;border-radius:14px;padding:12px 14px;display:grid;gap:7px;align-content:start;min-width:0}
+.swap.dim,.fn.dim{opacity:.62}
+.sw-h{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-weight:700}
+.sw-h .old{text-decoration:line-through;color:#8A8F9E}
+.sw-h .new{color:#1A8754;font-family:var(--f-display);font-size:16px}
+.sw-h .arr{color:var(--muted)}
+.swap p,.fn p{margin:0;font-size:13.5px}
+.sw-f{display:grid;gap:4px}
+.sw-f code,.fn code{font-family:var(--f-mono);font-size:12px;border-radius:8px;padding:5px 8px;overflow-wrap:anywhere}
+.sw-f .o{background:#F4F4F6;color:#666;text-decoration:line-through}
+.sw-f .n{background:#E9F7EF;color:#0F5E39}
+.warn{color:#A86412!important;font-size:12.5px!important}
+.vb{font-size:10.5px;font-weight:800;letter-spacing:.04em;border-radius:6px;padding:2px 7px;white-space:nowrap;margin-left:auto}
+.v2019{background:#E3F5EA;color:#14653F}.v2021{background:#E3EEFF;color:#1E4FA8}.v2024{background:#F1E6FA;color:#6E2C8C}.v365{background:#FFF0DC;color:#94520B}.v365c{background:#FDE7EF;color:#9C1F52}
+.fns{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(330px,100%),1fr));gap:12px}
+.fn-h{display:flex;gap:8px;align-items:flex-start}
+.fn-h h3{font-family:var(--f-mono);font-size:15px;color:#0F5E39;overflow-wrap:anywhere}
+.fn .syn{background:#F4F6FA;color:#333}
+.fn-ex{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.fn-ex code{background:#E9F7EF;color:#0F5E39}
+.fn-ex .res{font-size:13px;font-weight:700;background:#fff;border:1px solid #9DD1B2;border-radius:6px;padding:3px 8px}
+.tip2{font-size:12.5px!important;color:var(--muted)}
+.fn-f{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.fn-f small{font-size:11px;color:var(--muted);font-weight:600}
+.chan{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr));gap:10px}
+.chan a{display:grid;gap:3px;background:#fff;border:1px solid #F3C4C2;border-left:5px solid #E62117;border-radius:12px;padding:10px 12px;text-decoration:none;color:var(--ink)}
+.chan a b{color:#C4302B}
+.chan a span{font-size:13px;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -449,6 +554,7 @@ footer .copy{font-size:14px;color:var(--ink);margin-bottom:4px}
   <div class="wrap" role="tablist">
     <button class="vtab" role="tab" data-view="notes" aria-selected="true">Feature notes</button>
     <button class="vtab" role="tab" data-view="basics" aria-selected="false">Start here: basics</button>
+    <button class="vtab" role="tab" data-view="formulas" aria-selected="false">Excel formulas</button>
     <button class="vtab" role="tab" data-view="tools" aria-selected="false">Which tool for the job?</button>
     <button class="vtab" role="tab" data-view="sharing" aria-selected="false">Sharing &amp; old versions</button>
     <button class="vtab" role="tab" data-view="it" aria-selected="false">IT blocks &amp; licences</button>
@@ -493,6 +599,24 @@ footer .copy{font-size:14px;color:var(--ink);margin-bottom:4px}
   <div id="bx-main"></div>
   <section class="bx-gl"><h2 class="sec-title">Word list</h2><p class="lead2">Simple meanings of words you'll see in Microsoft apps.</p>
     <input id="bx-gq" type="search" placeholder="Find a word: cell, ribbon, measure…" aria-label="Find a word"><div id="bx-gloss"></div></section>
+</section>
+
+<section class="panel" id="v-formulas" hidden>
+  <div class="fx-top">
+    <div class="bx-hero" style="background:linear-gradient(135deg,#EAF8F0,#F1F6FF)"><h2>Excel formulas: new and better</h2>
+      <p>Newer Excel has functions that replace old, longer ways. Pick your Excel version: anything your version can't use is faded, so you know to keep the old way for that file.</p></div>
+    <div class="findbox"><h3>Filter</h3>
+      <div class="fx-controls"><label class="search" style="flex:1 1 200px"><span aria-hidden="true" style="color:var(--muted)">⌕</span><input id="fx-q" type="search" placeholder="Search: lookup, split, unique…" aria-label="Search formulas"></label>
+      <select id="fx-ver" aria-label="My Excel version"><option value="all">All versions</option><option value="365">Microsoft 365</option><option value="2024">Excel 2024</option><option value="2021">Excel 2021</option><option value="2019">Excel 2019</option></select></div>
+      <div class="lvlrow" id="fx-fams" style="margin:0"></div></div>
+  </div>
+  <p id="fx-loading" class="empty">Loading formulas…</p>
+  <h2 class="sec-title">Old way → new way</h2>
+  <p class="lead2">The struck-out formula is the old way; the green one is the new way to use instead.</p>
+  <div class="swaps" id="fx-swaps"></div>
+  <h2 class="sec-title">New functions and what they do</h2>
+  <div class="fns" id="fx-fns"></div>
+  <div class="box" style="margin-top:14px"><h3>Version information from</h3><ul id="fx-src"></ul></div>
 </section>
 
 <section class="panel" id="v-tools" hidden>
@@ -552,6 +676,9 @@ footer .copy{font-size:14px;color:var(--ink);margin-bottom:4px}
   <h2 class="sec-title" style="margin-top:4px">Teachers already inside the apps</h2>
   <p class="lead2">No training, no browsing. These built-in tools show you how things work, or write the formula or code for you so you can read it and learn.</p>
   <div class="teachers" id="teach"></div>
+  <h2 class="sec-title">Good YouTube channels</h2>
+  <p class="lead2">Clear, English, up-to-date channels. Every card on this site also has a "Watch on YouTube" button that searches for that exact feature.</p>
+  <div class="chan" id="channels"></div>
   <h2 class="sec-title">10-minute free-time routine</h2>
   <ol class="routine" style="margin-top:12px">
     <li><div><b>Pick one card</b><span>Filter "Not tried yet" + one app. Start with ★ Core cards.</span></div></li>
@@ -728,6 +855,7 @@ function openDrawer(idx){
     <div class="d-sec"><div class="d-k">F&amp;A use</div><div class="use">${esc(it.use)}</div></div>
     <div class="d-sec"><div class="d-k">Version</div><div class="ver">${esc(it.version)}</div></div>
     ${notesHtml(it)?`<div class="d-sec notes">${notesHtml(it)}</div>`:""}
+    <div class="d-sec">${ytLink(appById[it.app].name+" "+it.name.split(" (")[0]+" tutorial")}</div>
     <label class="tried big"><input type="checkbox" data-tried="${esc(it.name)}" ${S.tried.has(it.name)?"checked":""}> I've tried this</label>`;
   $("dbg").hidden = false; $("drawer").hidden = false;
   document.body.classList.add("lock");
@@ -754,10 +882,10 @@ function renderTasks(){
   });
   $("tasks").innerHTML = list.length ? list.map(t=>{
     const a = appById[t.app];
-    return `<article class="task" style="--c:var(${a.c})">
+    return `<article class="task" style="--c:var(${a.c})" data-task="${DATA.tasks.indexOf(t)}" tabindex="0" role="button">
       <div class="tt"><h3>${esc(t.task)}</h3><span class="size">${t.size}${t.scope==="per"?" · home":""}</span></div>
       <div class="rec">${tile(a)}<div><small>Recommended: ${esc(a.name)}</small><span>${esc(t.why)}</span></div></div>
-      <div class="alt"><b>Also possible:</b> ${esc(t.alt)}</div></article>`;}).join("") : `<div class="empty">No task matches.</div>`;
+      <div class="alt"><b>Also possible:</b> ${esc(t.alt)}</div><span class="more">See example and steps ›</span></article>`;}).join("") : `<div class="empty">No task matches.</div>`;
 }
 function renderStatic(){
   const sym = {y:'<span class="y">✓</span>', n:'<span class="n0">✗</span>', p:'<span class="p">~</span>'};
@@ -793,13 +921,14 @@ function loadComments(){
 }
 
 // views
-const VIEWS = ["notes","basics","tools","sharing","it","learn","updates"];
+const VIEWS = ["notes","basics","formulas","tools","sharing","it","learn","updates"];
 function showView(v){
   if (!VIEWS.includes(v)) v = "notes";
   VIEWS.forEach(x=>{ $("v-"+x).hidden = x!==v; });
   document.querySelectorAll(".vtab").forEach(b=>b.setAttribute("aria-selected", b.dataset.view===v));
   if (v==="updates") loadComments();
   if (v==="basics") initBasics();
+  if (v==="formulas") initFormulas();
 }
 
 function wire(){
@@ -825,6 +954,9 @@ function wire(){
   document.addEventListener("keydown",e=>{ if (e.key==="Escape" && !$("drawer").hidden) closeDrawer(); });
   $("tsize").addEventListener("click",e=>{ const b = e.target.closest("[data-size]"); if(!b) return; S.size=b.dataset.size; renderSizes(); renderTasks(); });
   $("tq").addEventListener("input",renderTasks);
+  $("tasks").addEventListener("click",e=>{ const c = e.target.closest("[data-task]"); if (c) openTask(+c.dataset.task); });
+  $("tasks").addEventListener("keydown",e=>{ if ((e.key==="Enter"||e.key===" ") && e.target.dataset.task){ e.preventDefault(); openTask(+e.target.dataset.task); } });
+  $("drawer").addEventListener("click",e=>{ const o = e.target.closest("[data-open]"); if (o) openDrawer(+o.dataset.open); });
 }
 
 
@@ -972,6 +1104,7 @@ const B = {app:"x"};
 function bdg(n){ return `<i class="bdg">${n}</i>`; }
 function tourHTML(a){
   const L = a.tour.layout, t = n => bdg(n);
+  if (L==="gen") return genTourHTML(a);
   const tabsRow = names => `<div class="sk-tabs">${t(3)}${names.map((x,i)=>`<span class="${i===1?'on':''}">${x}</span>`).join("")}</div>`;
   const ribbonRow = groups => `<div class="sk-ribbon">${t(4)}${groups.map(g=>`<span class="sk-grp"><span class="sk-btns"><em></em><em></em><em></em></span><small>${g}</small></span>`).join("")}</div>`;
   const status = (left, n1, n2) => `<div class="sk-status">${t(n1)}<span>${left}</span><span class="sp"></span>${n2?t(n2):""}<span>▭ ▤ ▦ &nbsp;—●—&nbsp; 100%</span></div>`;
@@ -1042,9 +1175,11 @@ function renderBasics(){
   let k = 0;
   const groupsDrawn = tab.groups.map((g,gi)=>`<div class="rg"><div class="rg-btns">${g.buttons.map((b,bi)=>{k++; return `<button class="rb" data-jump="${gi}-${bi}" title="${esc(b.d)}"><i>${k}</i>${esc(b.n)}</button>`;}).join("")}</div><div class="rg-name">${esc(g.name)}</div></div>`).join("");
   k = 0;
-  const list = tab.groups.map((g,gi)=>`<section class="gl"><h4><span>${esc(g.name)}</span><small>group ${gi+1} of ${tab.groups.length}</small></h4><ol class="bl">${g.buttons.map((b,bi)=>{k++; return `<li id="rb-${gi}-${bi}"><i>${k}</i><div><b>${esc(b.n)}</b>${b.k?`<kbd>${esc(b.k)}</kbd>`:""}<p>${esc(b.d)}</p>${b.ex?exHTML(b.ex):""}</div></li>`;}).join("")}</ol></section>`).join("");
+  const list = tab.groups.map((g,gi)=>`<section class="gl"><h4><span>${esc(g.name)}</span><small>group ${gi+1} of ${tab.groups.length}</small></h4><ol class="bl">${g.buttons.map((b,bi)=>{k++; return `<li id="rb-${gi}-${bi}"><i>${k}</i><div><b>${esc(b.n)}</b>${b.k?`<kbd>${esc(b.k)}</kbd>`:""}<p>${esc(b.d)}</p>${b.ex?exHTML(b.ex):""}<br>${ytLink(a.name+" "+b.n.split(" / ")[0]+" tutorial","Video")}</div></li>`;}).join("")}</ol></section>`).join("");
   $("bx-main").innerHTML = `
     <div class="bx-intro">${tile(ap)}<div><h3>${esc(a.name)}</h3><p>${esc(a.intro)}</p>${a.note?`<p class="muted small">${esc(a.note)}</p>`:""}</div></div>
+    <div class="about"><div class="box"><div class="d-k">What it is</div><p style="margin:4px 0 0">${esc(a.what||"")}</p><div style="margin-top:8px">${ytLink(a.name+" tutorial for beginners","Beginner videos on YouTube")}</div></div>
+      <div class="box"><div class="d-k">What you can do with it</div><div class="chips" style="margin-top:6px">${(a.tasks||[]).map(x=>`<span>${esc(x)}</span>`).join("")}</div></div></div>
     <details class="bx-tour" open><summary>Screen tour: what's on the ${esc(a.name)} screen</summary>
       <div class="tour-wrap"><div class="tour-pic">${tourHTML(a)}</div>
       <ol class="tour-list">${a.tour.areas.map((x,i)=>`<li><i class="bdg">${i+1}</i><div><b>${esc(x[0])}</b><span>${esc(x[1])}</span></div></li>`).join("")}</ol></div></details>
@@ -1053,7 +1188,8 @@ function renderBasics(){
     <div class="bx-tabnote">${tab.contextual?`<span class="pill ctxp">Contextual tab</span> ${esc(tab.contextual)} `:""}${esc(tab.note)}</div>
     <div class="ribbon-pic" aria-label="Drawing of the ${esc(tab.name)} tab"><div class="rp-tabs">${a.tabs.filter(t=>!t.contextual).slice(0,10).map(t=>`<span class="${t===tab?'on':''}">${esc(t.name)}</span>`).join("")}${tab.contextual?`<span class="on ctx">${esc(tab.name)}</span>`:""}</div><div class="rp-body">${groupsDrawn}</div></div>
     <p class="muted small">Numbers go left to right, top to bottom. Click a number to jump to its explanation. Drawing is simplified; real icons look different.</p>
-    <div class="bx-list">${list}</div>`;
+    <div class="bx-list">${list}</div>
+    ${a.files && a.files.length?`<h3 class="bx-h">Save as: file types in ${esc(a.name)}</h3><div class="tblwrap"><table class="ftbl"><thead><tr><th>Type</th><th>Name</th><th>When to use it</th><th>Watch out</th></tr></thead><tbody>${a.files.map(f=>`<tr><td>${esc(f[0])}</td><td>${esc(f[1])}</td><td>${esc(f[2])}</td><td>${esc(f[3])}</td></tr>`).join("")}</tbody></table></div>`:""}`;
 }
 function buildRbIndex(){
   RBidx = [];
@@ -1091,6 +1227,7 @@ function initBasics(){
   fetch("ribbon.json?v=" + Date.now(), {cache:"no-store"}).then(r=>r.json()).then(d=>{
     RB = d; $("bx-loading").hidden = true;
     $("bx-scope").textContent = d.scope;
+    if (d.channels) $("channels").innerHTML = d.channels.map(c=>`<a href="${esc(c[1])}" target="_blank" rel="noopener"><b>▶ ${esc(c[0])}</b><span>${esc(c[2])}</span></a>`).join("");
     $("bx-tips").innerHTML = d.tips.map(t=>`<div class="tip"><b>${esc(t[0])}</b><span>${esc(t[1])}</span></div>`).join("");
     renderBasicsApps(); renderBasics(); renderGloss();
   }).catch(()=>{ $("bx-loading").textContent = "Couldn't load the button guide (ribbon.json)."; });
@@ -1102,6 +1239,97 @@ function initBasics(){
   $("bx-find").addEventListener("input", renderFind);
   $("bx-found").addEventListener("click", e=>{ const b = e.target.closest("[data-go]"); if(!b) return; const [a,ti,gi,bi] = b.dataset.go.split("|"); goButton(a,+ti,+gi,+bi); });
   $("bx-gq").addEventListener("input", renderGloss);
+}
+
+
+// ---------- shared helpers ----------
+const yt = q => "https://www.youtube.com/results?search_query=" + encodeURIComponent(q);
+const ytLink = (q, label) => `<a class="yt" href="${yt(q)}" target="_blank" rel="noopener" title="Search YouTube for: ${esc(q)}"><span class="yt-i">▶</span>${esc(label||"Watch on YouTube")}</a>`;
+
+// ---------- generic screen sketch ----------
+function genTourHTML(a){
+  const by = {}; a.tour.areas.forEach((x,i)=>{ (by[x[2]] = by[x[2]] || []).push([i+1, x[0]]); });
+  const box = (r, cls) => by[r] ? `<div class="g-${r} ${cls||""}">${by[r].map(([n,l])=>`<span class="g-lab">${bdg(n)}${esc(l)}</span>`).join("")}${r==="main"?'<p class="ln"></p><p class="ln"></p><p class="ln s"></p>':""}${["nav","left","right"].includes(r)?'<p class="ln"></p><p class="ln s"></p>':""}</div>` : "";
+  return `<div class="sk gen"><div class="sk-title"><span>${esc(a.name)}</span><span class="sp"></span></div>
+    ${box("top","g-bar")}${box("tabs","g-bar g-tabs")}${box("ribbon","g-bar g-rib")}
+    <div class="sk-body">${box("left")}${box("nav")}<div class="g-mid">${box("main")}</div>${box("right")}</div>
+    ${box("bottom","g-bar")}</div>`;
+}
+
+// ---------- task pictures ----------
+function picHTML(p){
+  const tbl = (cols, rows, o) => `<table class="pt"><thead><tr>${cols.map(c=>`<th>${esc(c)}</th>`).join("")}</tr></thead><tbody>${rows.map((r,i)=>`<tr class="${(o&&o.hl||[]).includes(i)?'hl':''}">${r.map(c=>`<td class="${o&&o.input&&/^\[/.test(c)?'inp':''}">${esc(c)}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
+  switch(p.k){
+    case "letter": return `<div class="pic doc"><div class="lh"></div><b>${esc(p.title)}</b>${p.lines.map(l=>`<p>${esc(l)}</p>`).join("")}</div>`;
+    case "email": return `<div class="pic mail"><div class="mh"><span><b>To:</b> ${esc(p.to)}</span><span><b>Subject:</b> ${esc(p.subject)}</span></div>${p.body.map(l=>`<p>${esc(l)}</p>`).join("")}<span class="sendb">Send</span></div>`;
+    case "sheet": case "pivot":
+      if (p.before) return `<div class="pic sheet ba"><div><small>Before</small>${tbl(p.cols,p.rows)}</div><span class="arr">→</span><div><small>After</small>${tbl(p.cols,p.after)}</div></div>`;
+      return `<div class="pic sheet">${tbl(p.cols,p.rows,p)}</div>`;
+    case "folder": return `<div class="pic sheet folder"><div class="fbar">+ New · Upload · Share · Sync</div>${tbl(p.cols,p.rows)}</div>`;
+    case "slides": return `<div class="pic slide"><b>${esc(p.title)}</b><ul>${p.bullets.map(x=>`<li>${esc(x)}</li>`).join("")}</ul><div class="bars"><i style="height:45%"></i><i style="height:60%"></i><i style="height:52%"></i><i style="height:78%"></i></div></div>`;
+    case "board": return `<div class="pic board">${p.cols.map(c=>`<div class="bc"><b>${esc(c[0])}</b>${c[1].map(t=>`<span>${esc(t)}</span>`).join("")}<em>+ Add task</em></div>`).join("")}</div>`;
+    case "list": return `<div class="pic lst"><b>${esc(p.title)}</b>${p.items.map(it=>`<div class="li"><span>${it[2]?'●':'○'} ${esc(it[0])}</span><em>${esc(it[1])}</em></div>`).join("")}</div>`;
+    case "note": return `<div class="pic note"><b>${esc(p.title)}</b>${p.items.map(it=>`<p><span class="tag">${esc(it[0])}</span>${esc(it[1])}</p>`).join("")}</div>`;
+    case "flow": return `<div class="pic flow">${p.steps.map((s,i)=>`${i?'<i>↓</i>':''}<div class="fs">${esc(s)}</div>`).join("")}</div>`;
+    case "chat": return `<div class="pic chat"><div class="cq">${esc(p.q)}</div><div class="ca">${esc(p.a)}</div></div>`;
+    case "calendar": return `<div class="pic cal">${p.days.map((d,i)=>`<div class="cd"><b>${esc(d)}</b>${p.events.filter(e=>e[0]===i).map(e=>`<span>${esc(e[1])}</span>`).join("")}</div>`).join("")}</div>`;
+    case "dash": return `<div class="pic dash"><div class="cards">${p.cards.map(c=>`<div><small>${esc(c[0])}</small><b>${esc(c[1])}</b></div>`).join("")}</div><div class="bars">${p.bars.map((h,i)=>`<i style="height:${h}%"><em>${p.labels?esc(p.labels[i]):""}</em></i>`).join("")}</div></div>`;
+    case "rec": return `<div class="pic rec"><div><b>${esc(p.left[0])}</b>${p.left[1].map(x=>`<span>${esc(x)}</span>`).join("")}</div><div><b>${esc(p.right[0])}</b>${p.right[1].map(x=>`<span>${esc(x)}</span>`).join("")}</div><div class="out">${p.out.map(x=>`<p>${esc(x)}</p>`).join("")}</div></div>`;
+    case "merge": return `<div class="pic merge"><div class="doc"><small>Template</small><p>${esc(p.template).replace(/«(\w+)»/g,'<mark>«$1»</mark>')}</p></div><span class="arr">→</span><div class="outs">${p.out.map(o=>`<div class="doc sm"><p>Dear ${esc(o[0])}, your balance is RM${esc(o[1])}.</p></div>`).join("")}</div></div>`;
+  }
+  return "";
+}
+function openTask(i){
+  const t = DATA.tasks[i], a = appById[t.app];
+  lastFocus = document.activeElement;
+  $("drawer").style.setProperty("--c", `var(${a.c})`);
+  $("d-app").innerHTML = `${tile(a)}<span>Recommended: ${esc(a.name)}</span><span class="size">${esc(t.size)}</span>`;
+  $("d-title").textContent = t.task;
+  const rel = (t.related||[]).map(n=>{ const k = items.findIndex(f=>f.name===n); return k<0 ? "" : `<button class="b-card" data-open="${k}" style="--c:var(${appById[items[k].app].c})">${tile(appById[items[k].app])}<span><b>${esc(n)}</b><em>${esc(items[k].where||"")}</em></span></button>`; }).join("");
+  $("d-body").innerHTML = `
+    <div class="d-plain"><div class="d-k">Why ${esc(a.name)}</div>${esc(t.why)}</div>
+    ${t.pic?`<div class="d-sec"><div class="d-k">What the result looks like</div>${picHTML(t.pic)}</div>`:""}
+    ${t.steps?`<div class="d-sec"><div class="d-k">Steps</div><ol class="d-steps">${t.steps.map(s=>`<li>${esc(s)}</li>`).join("")}</ol></div>`:""}
+    <div class="d-watch" style="background:#F4F6FF;border-color:#D6DCF7"><span class="d-k" style="color:#4337B8">Also possible</span>${esc(t.alt)}</div>
+    ${rel?`<div class="d-sec"><div class="d-k">Feature cards for this task</div><div class="b-cards">${rel}</div></div>`:""}
+    <div class="d-sec">${ytLink(a.name+" "+t.task.replace(/\(.*?\)/g,"")+" tutorial")}</div>`;
+  $("dbg").hidden = false; $("drawer").hidden = false; document.body.classList.add("lock"); $("d-close").focus();
+}
+
+// ---------- Excel formulas view ----------
+let FX = null, FXs = {fam:"All", ver:"all", q:""};
+const VRANK = {"2019":1,"2021":2,"2024":3,"365":4,"365c":5};
+function renderFormulas(){
+  if (!FX) return;
+  const vlabel = v => ({"2019":"2019+","2021":"2021+","2024":"2024+","365":"365 only","365c":"365 + Copilot"}[v]);
+  $("fx-fams").innerHTML = ["All",...FX.families].map(f=>`<button class="chipbtn" style="color:var(--a-x)" data-fam="${esc(f)}" aria-pressed="${FXs.fam===f}">${esc(f)}</button>`).join("");
+  const mine = FXs.ver === "all" ? 9 : VRANK[FXs.ver];
+  const ok = v => VRANK[v] <= mine;
+  const q = FXs.q.toLowerCase();
+  $("fx-swaps").innerHTML = FX.swaps.filter(s=>!q || s.join(" ").toLowerCase().includes(q)).map(s=>`<div class="swap ${ok(s[5])?'':'dim'}">
+    <div class="sw-h"><span class="old">${esc(s[0])}</span><span class="arr">→</span><span class="new">${esc(s[1])}</span><span class="vb v${s[5]}">${vlabel(s[5])}</span></div>
+    <p>${esc(s[2])}</p>
+    <div class="sw-f"><code class="o">${esc(s[3])}</code><code class="n">${esc(s[4])}</code></div>
+    ${ok(s[5])?"":`<p class="warn">Not in your chosen version. Keep the old way for files going to older Excel.</p>`}
+    ${ytLink("Excel "+s[1].split(" ")[0]+" vs "+s[0].split(" ")[0]+" tutorial","Watch")}</div>`).join("");
+  const list = FX.fns.filter(f=>(FXs.fam==="All"||f[1]===FXs.fam) && (!q || f.join(" ").toLowerCase().includes(q)));
+  $("fx-fns").innerHTML = list.map(f=>`<article class="fn ${ok(f[2])?'':'dim'}">
+    <div class="fn-h"><h3>${esc(f[0])}</h3><span class="vb v${f[2]}">${vlabel(f[2])}</span></div>
+    <p>${esc(f[4])}</p>
+    <code class="syn">${esc(f[3])}</code>
+    <div class="fn-ex"><code>${esc(f[5])}</code><span class="arr">→</span><span class="res">${esc(f[6])}</span></div>
+    ${f[7]?`<p class="tip2"><b>Tip:</b> ${esc(f[7])}</p>`:""}
+    <div class="fn-f"><small>${esc(f[1])}</small>${ytLink("Excel "+f[0].split(" / ")[0]+" function tutorial","Watch")}</div></article>`).join("") || `<div class="empty">No function matches.</div>`;
+  $("fx-src").innerHTML = FX.source.map(s=>`<li><a href="${esc(s[1])}" target="_blank" rel="noopener">${esc(s[0])}</a></li>`).join("");
+}
+let fxReady = false;
+function initFormulas(){
+  if (fxReady) return; fxReady = true;
+  fetch("formulas.json?v=" + Date.now(), {cache:"no-store"}).then(r=>r.json()).then(d=>{ FX = d; $("fx-loading").hidden = true; renderFormulas(); })
+    .catch(()=>{ $("fx-loading").textContent = "Couldn't load formulas.json."; });
+  $("fx-fams").addEventListener("click", e=>{ const b = e.target.closest("[data-fam]"); if(!b) return; FXs.fam = b.dataset.fam; renderFormulas(); });
+  $("fx-ver").addEventListener("change", e=>{ FXs.ver = e.target.value; renderFormulas(); });
+  $("fx-q").addEventListener("input", e=>{ FXs.q = e.target.value.trim(); renderFormulas(); });
 }
 
 function start(data){
