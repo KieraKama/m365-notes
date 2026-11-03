@@ -228,6 +228,45 @@ body.lock{overflow:hidden}
 .comments{min-height:120px}
 .muted{color:var(--muted);margin:0}
 footer .copy{font-size:14px;color:var(--ink);margin-bottom:4px}
+
+/* Ask the notes */
+.bot-fab{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:18;border:0;border-radius:99px;padding:12px 18px 12px 14px;
+  background:linear-gradient(135deg,#5546D6,#C13471);color:#fff;font-weight:700;font-size:15px;display:flex;align-items:center;gap:8px;cursor:pointer;box-shadow:0 12px 28px -10px rgba(85,70,214,.7)}
+.bot-fab .dot{width:26px;height:26px;border-radius:50%;background:#fff;color:#5546D6;display:grid;place-items:center;font-family:var(--f-display);font-weight:800;font-size:13px}
+.bot{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:calc(80px + env(safe-area-inset-bottom,0px));z-index:19;width:min(420px,calc(100vw - 32px));height:min(600px,calc(100vh - 120px));
+  background:#fff;border-radius:20px;border:1px solid #E1DAF7;box-shadow:0 24px 60px -20px rgba(40,30,90,.45);display:flex;flex-direction:column;overflow:hidden}
+.bot-h{background:linear-gradient(135deg,#5546D6,#C13471);color:#fff;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.bot-h b{font-family:var(--f-display);font-size:17px;display:block}
+.bot-h small{opacity:.85;font-size:12px}
+.bot-h button{background:rgba(255,255,255,.18);border:0;color:#fff;border-radius:10px;width:32px;height:32px;cursor:pointer;font-size:14px}
+.bot-log{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;background:#FAF8FF}
+.msg{max-width:92%;font-size:14px;line-height:1.5;padding:10px 12px;border-radius:14px;overflow-wrap:anywhere}
+.msg p{margin:0 0 6px}.msg p:last-child{margin:0}
+.msg.me{align-self:flex-end;background:#5546D6;color:#fff;border-bottom-right-radius:4px}
+.msg.bot{align-self:flex-start;background:#fff;border:1px solid #E6E0F7;border-bottom-left-radius:4px;display:grid;gap:8px}
+.b-starts{display:flex;flex-wrap:wrap;gap:6px}
+.b-starts button{border:1px solid #D9D0F5;background:#F3F0FF;color:#4337B8;border-radius:99px;padding:5px 10px;font-size:12.5px;font-weight:600;cursor:pointer}
+.b-rec{display:flex;gap:10px;align-items:flex-start;background:color-mix(in oklab,var(--c) 10%,white);border-radius:10px;padding:9px 10px}
+.b-rec small{display:block;font-weight:700;color:color-mix(in oklab,var(--c) 75%,black);margin-bottom:2px}
+.b-alt{font-size:12.5px;color:var(--muted);margin-top:4px}
+.b-cards{display:grid;gap:6px}
+.b-card{display:flex;gap:9px;align-items:center;text-align:left;border:1px solid color-mix(in oklab,var(--c) 30%,white);background:color-mix(in oklab,var(--c) 6%,white);border-radius:10px;padding:7px 9px;cursor:pointer}
+.b-card span{display:grid;min-width:0}
+.b-card b{font-size:13.5px;color:color-mix(in oklab,var(--c) 70%,black)}
+.b-card em{font-style:normal;font-size:11.5px;color:var(--muted);font-family:var(--f-mono);overflow-wrap:anywhere}
+.b-quick{font-size:13px;background:#FFF8E1;border-radius:8px;padding:6px 8px}
+.b-more{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12.5px;color:var(--muted);border-top:1px dashed #E6E0F7;padding-top:8px}
+.b-more span{width:100%}
+.b-copilot,.b-open,.b-ai,.b-link{border:1px solid #D9D0F5;background:#fff;color:#4337B8;border-radius:99px;padding:5px 10px;font-size:12.5px;font-weight:600;cursor:pointer;text-decoration:none}
+.b-ai{background:#5546D6;color:#fff;border-color:#5546D6}
+.b-link{border-style:dashed}
+.copybox{width:100%;min-height:90px;font-size:12px;border:1px solid #D9D0F5;border-radius:8px;padding:6px}
+.b-ai-ans small{display:block;font-weight:700;color:#C13471;margin-bottom:4px}
+.bot-f{display:flex;gap:8px;padding:10px;border-top:1px solid #EEE9FB;background:#fff}
+.bot-f input{flex:1;min-width:0;border:1px solid #D9D0F5;border-radius:12px;padding:10px 12px;font-size:14px;outline:none}
+.bot-f input:focus{border-color:#5546D6}
+.bot-f button{border:0;background:#5546D6;color:#fff;border-radius:12px;padding:0 16px;font-weight:700;cursor:pointer}
+@media (max-width:520px){.bot-fab .lbl{display:none}.bot-fab{padding:12px}}
 </style>
 </head>
 <body>
@@ -395,6 +434,21 @@ footer .copy{font-size:14px;color:var(--ink);margin-bottom:4px}
 </section>
 </main>
 
+<button class="bot-fab" id="bot-fab" aria-expanded="false" aria-controls="bot"><span class="dot">?</span><span class="lbl">Ask the notes</span></button>
+<section class="bot" id="bot" hidden aria-label="Ask the notes">
+  <div class="bot-h"><div><b>Ask the notes</b><small>Answers from these notes. Copilot for anything else.</small></div><button id="bot-x" aria-label="Close">✕</button></div>
+  <div class="bot-log" id="bot-log">
+    <div class="msg bot"><p>Hi! Ask me how to do something, or which tool to use. I'll point you to the right card and steps.</p>
+      <div class="b-starts">
+        <button data-ask="Combine monthly SAP files">Combine monthly SAP files</button>
+        <button data-ask="Bank reconciliation">Bank reconciliation</button>
+        <button data-ask="Which tool for a management dashboard?">Dashboard for management</button>
+        <button data-ask="Is XLOOKUP safe to share with old Excel?">XLOOKUP in old Excel?</button>
+        <button data-ask="Save email attachments automatically">Save email attachments</button>
+      </div></div>
+  </div>
+  <form class="bot-f" id="bot-form"><input id="bot-in" type="text" placeholder="e.g. how to send letters to all customers" aria-label="Your question" autocomplete="off"><button type="submit">Ask</button></form>
+</section>
 <div class="drawer-bg" id="dbg" hidden></div>
 <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="d-title" hidden>
   <div class="d-head">
@@ -606,11 +660,145 @@ function wire(){
   $("tq").addEventListener("input",renderTasks);
 }
 
+
+// ---------- Ask the notes (chat box) ----------
+const STOP = new Set("a an the to of for in on at by with and or is are be can do does how what which where when why i my me we our you your it this that from into using use want need get make show please should would could about any some there".split(" "));
+const SYN = {
+  combine:["append","folder","stack","merge"], consolidate:["append","folder","combine","stack"], monthly:["folder","combine"],
+  rec:["reconciliation","merge","anti","match"], reconcile:["reconciliation","merge","anti","match"], reconciliation:["merge","anti","match","bank"],
+  lookup:["xlookup","index","match","merge"], vlookup:["xlookup","index","match"], dashboard:["power","bi","slicer","pivot","chart"],
+  approve:["approval","approvals"], approval:["approvals","approve"], letter:["mail","merge","template","word"], letters:["mail","merge"],
+  email:["outlook","mail","send"], emails:["outlook","mail"], automate:["power","automate","flow","macro","script"], automation:["automate","flow","macro"],
+  macro:["vba","macros","script"], dates:["date","locale","fiscal"], fiscal:["date","period","year"], sap:["export","text","columns","folder"],
+  duplicate:["duplicates","remove","conditional"], slides:["powerpoint","slide","deck"], presentation:["powerpoint","slide","deck"], deck:["powerpoint","slide"],
+  share:["sharing","link","compatibility","old"], old:["compatibility","version","older"], licence:["licence","license","premium","pro","price"], license:["licence","premium","pro"],
+  price:["licence","premium","pro"], cost:["licence","premium"], checklist:["planner","lists","checkbox","checkboxes"], tracker:["lists","planner","table"],
+  survey:["forms","quiz"], quiz:["forms","survey"], meeting:["teams","recording","onenote","recap"], minutes:["onenote","recap","transcribe"],
+  ai:["copilot"], chatgpt:["copilot"], gpt:["copilot"], variance:["show","values","pivot","budget"], budget:["variance","forecast","pivot"], forecast:["what-if","scenario","forecast"],
+  attachment:["attachments","save","email"], attachments:["save","email"], pdf:["pdf","export","word"], protect:["protection","restrict","sensitivity","protect"],
+  password:["protect","sensitivity"], ageing:["aging","conditional","date","dso"], aging:["ageing","date"], dso:["calculate","measure","dax"], bot:["rpa","desktop","automate"]
+};
+const norm = s => String(s||"").toLowerCase().replace(/[^a-z0-9+#.\s-]/g," ");
+function tokens(q){
+  const base = norm(q).split(/\s+/).filter(w=>w && !STOP.has(w));
+  const out = new Set(base);
+  base.forEach(w=>{ (SYN[w]||[]).forEach(s=>out.add(s)); if (w.endsWith("s")) out.add(w.slice(0,-1)); });
+  return {base, all:[...out]};
+}
+let IDX = null;
+function buildIndex(){
+  IDX = {
+    f: items.map((it,i)=>({i, name:norm(it.name), body:norm([it.what,it.use].join(" ")), deep:norm([it.where,(it.steps||[]).join(" "),appById[it.app].name,it.it,it.licence,it.oldVersion].join(" "))})),
+    t: DATA.tasks.map((t,i)=>({i, name:norm(t.task), body:norm(t.why+" "+t.alt+" "+appById[t.app].name)}))
+  };
+}
+const DF = {};
+function idf(w){
+  if (DF[w] == null){ let n = 0; for (const x of IDX.f) if ((x.name+" "+x.body+" "+x.deep).includes(w)) n++; DF[w] = n; }
+  return Math.max(0.15, Math.log((IDX.f.length + 1) / (DF[w] + 1)));
+}
+function scoreText(tok, name, body, deep){
+  let s = 0, hits = 0;
+  for (const w of tok.all){
+    const core = (tok.base.includes(w) ? 1 : 0.6) * idf(w);
+    let h = 0;
+    if (name.includes(w)) h += 6; if (body.includes(w)) h += 2.5; if (deep && deep.includes(w)) h += 1;
+    if (h){ hits++; s += h*core; }
+  }
+  return hits ? s * (0.6 + 0.4*Math.min(1, hits/Math.max(1,tok.base.length))) : 0;
+}
+function search(q){
+  if (!IDX) buildIndex();
+  const tok = tokens(q);
+  if (!tok.base.length) return {tok, f:[], t:[]};
+  const f = IDX.f.map(x=>({i:x.i, s:scoreText(tok,x.name,x.body,x.deep)})).filter(x=>x.s>0).sort((a,b)=>b.s-a.s).slice(0,4);
+  const t = IDX.t.map(x=>({i:x.i, s:scoreText(tok,x.name,x.body,null)})).filter(x=>x.s>0).sort((a,b)=>b.s-a.s).slice(0,1);
+  return {tok, f, t};
+}
+const INTENTS = [
+  [/\b(old|older|2016|2019|2021|2024|compatib|share|send out|external)\b/i, "sharing", "For what breaks in older Office and what to check before sending a file, see the Sharing & old versions tab."],
+  [/\b(licen[cs]e|price|cost|premium|pro\b|ppu|pay|paid|free)\b/i, "it", "Prices and what each licence unlocks are on the IT blocks & licences tab."],
+  [/\b(block|blocked|greyed|disabled|it team|policy|admin)\b/i, "it", "Common IT blocks and what to ask IT are listed on the IT blocks & licences tab."],
+  [/\b(learn|start|begin|beginner|where to start|routine|self.?learn)\b/i, "learn", "For a learning order and a 10-minute routine, see the Self-learn kit tab."],
+  [/\b(update|updated|changed|new this month|last checked)\b/i, "updates", "The dated change log is on the Updates & suggestions tab."]
+];
+const tabName = {sharing:"Sharing & old versions", it:"IT blocks & licences", learn:"Self-learn kit", updates:"Updates & suggestions"};
+
+function botAdd(html, who){
+  const d = document.createElement("div");
+  d.className = "msg " + who; d.innerHTML = html;
+  $("bot-log").appendChild(d); $("bot-log").scrollTop = $("bot-log").scrollHeight;
+  return d;
+}
+function copilotPrompt(q){
+  return "I'm learning Microsoft 365 for finance & accounts work (notes: " + location.origin + location.pathname + "). Question: " + q + "\nPlease answer step by step: where to find it in the app, the steps, and a short finance example. Mention if it needs a paid licence or may be blocked by IT.";
+}
+function askCopilot(q, btn){
+  const text = copilotPrompt(q);
+  const done = ok => { btn.textContent = ok ? "Copied ✓ Paste it in Copilot (Ctrl+V)" : "Copy the question below, then paste in Copilot"; if(!ok){ const ta = document.createElement("textarea"); ta.value = text; ta.className="copybox"; ta.readOnly = true; btn.after(ta); ta.select(); } };
+  try{ navigator.clipboard.writeText(text).then(()=>done(true), ()=>done(false)); }catch(e){ done(false); }
+}
+function answer(q){
+  const r = search(q), parts = [];
+  const intent = INTENTS.find(([re])=>re.test(q));
+  const strongTask = r.t[0] && r.t[0].s >= 25 ? DATA.tasks[r.t[0].i] : null;
+  if (strongTask){
+    const a = appById[strongTask.app];
+    parts.push(`<div class="b-rec" style="--c:var(${a.c})">${tile(a)}<div><small>For "${esc(strongTask.task)}", use ${esc(a.name)}</small>${esc(strongTask.why)}<div class="b-alt">Also possible: ${esc(strongTask.alt)}</div></div></div>`);
+  }
+  const good = r.f.filter(x=>x.s >= (r.f[0] ? r.f[0].s*0.45 : 0) && x.s >= 12);
+  if (good.length){
+    parts.push(`<p>${strongTask ? "Related cards" : "These cards cover it"}. Tap one for the steps:</p><div class="b-cards">` + good.map(x=>{
+      const it = items[x.i], a = appById[it.app];
+      return `<button class="b-card" data-open="${x.i}" style="--c:var(${a.c})">${tile(a)}<span><b>${esc(it.name)}</b><em>${esc(it.where||it.version)}</em></span></button>`;
+    }).join("") + `</div>`);
+    const first = items[good[0].i];
+    if (first.steps && first.steps.length && !strongTask) parts.push(`<p class="b-quick"><b>Quick start:</b> ${esc(first.steps[0])}</p>`);
+  }
+  if (intent) parts.push(`<p>${esc(intent[2])} <button class="b-link" data-tab="${intent[1]}">Open ${esc(tabName[intent[1]])} ›</button></p>`);
+  const found = parts.length > 0;
+  if (!found) parts.push(`<p>I couldn't find this in the notes yet.</p>`);
+  parts.push(`<div class="b-more"><span>${found ? "Need more detail?" : "Try Microsoft Copilot (free with a work account):"}</span>
+     <button class="b-copilot" data-q="${esc(q)}">Copy question for Copilot</button>
+     <a class="b-open" href="https://copilot.cloud.microsoft/" target="_blank" rel="noopener">Open Copilot ↗</a>
+     ${DATA.aiEndpoint ? `<button class="b-ai" data-q="${esc(q)}">Ask AI here</button>` : ""}
+     ${!found ? `<button class="b-link" data-tab="updates">Suggest this topic ›</button>` : ""}</div>`);
+  botAdd(parts.join(""), "bot");
+}
+async function askAI(q, btn){
+  btn.disabled = true; btn.textContent = "Thinking…";
+  const r = search(q);
+  const ctx = r.f.map(x=>{ const it = items[x.i]; return `${it.name} (${appById[it.app].name}): ${it.what} Where: ${it.where}. Steps: ${(it.steps||[]).join("; ")}. Version: ${it.version}. ${it.licence?"Licence: "+it.licence:""} ${it.it?"IT: "+it.it:""}`; }).join("\n");
+  try{
+    const res = await fetch(DATA.aiEndpoint, {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({question:q, context:ctx})});
+    if (!res.ok) throw new Error(res.status === 429 ? "The free AI limit for today is used up. Try again tomorrow, or use Copilot." : "The AI service didn't respond.");
+    const j = await res.json();
+    botAdd(`<div class="b-ai-ans"><small>AI answer (check before relying on it)</small>${esc(j.answer||"").replace(/\n/g,"<br>")}</div>`, "bot");
+    btn.textContent = "Answered";
+  }catch(e){ botAdd(`<p>${esc(e.message || "The AI service didn't respond.")} You can still use Copilot.</p>`, "bot"); btn.textContent = "Ask AI here"; btn.disabled = false; }
+}
+function wireBot(){
+  const open = on => { $("bot").hidden = !on; $("bot-fab").setAttribute("aria-expanded", on); if (on) $("bot-in").focus(); };
+  $("bot-fab").addEventListener("click", ()=>open($("bot").hidden));
+  $("bot-x").addEventListener("click", ()=>open(false));
+  $("bot-form").addEventListener("submit", e=>{
+    e.preventDefault(); const q = $("bot-in").value.trim(); if (!q) return;
+    botAdd(esc(q), "me"); $("bot-in").value = ""; setTimeout(()=>answer(q), 180);
+  });
+  $("bot").addEventListener("click", e=>{
+    const o = e.target.closest("[data-open]"); if (o){ openDrawer(+o.dataset.open); return; }
+    const t = e.target.closest("[data-tab]"); if (t){ location.hash = t.dataset.tab; return; }
+    const c = e.target.closest(".b-copilot"); if (c){ askCopilot(c.dataset.q, c); return; }
+    const a = e.target.closest(".b-ai"); if (a){ askAI(a.dataset.q, a); return; }
+    const s = e.target.closest("[data-ask]"); if (s){ $("bot-in").value = s.dataset.ask; $("bot-form").requestSubmit(); }
+  });
+}
+
 function start(data){
   DATA = data; LV = data.levels; items = data.features;
   appById = Object.fromEntries(data.apps.map(a=>[a.id,a]));
   $("loading").hidden = true;
-  wire();
+  wire(); wireBot();
   renderApps(); renderLv(); renderNotes(); renderProgress(); renderSizes(); renderTasks(); renderStatic();
   showView(location.hash.slice(1));
 }
