@@ -166,7 +166,7 @@ footer{font-size:12.5px;color:var(--muted);padding-block:10px 40px;border-top:1p
 
 /* colourful layer */
 body{background-color:var(--bg);background-image:radial-gradient(var(--dot) 1px, transparent 1.2px),linear-gradient(180deg,#FFF1F6 0%,#F1F6FF 40%,#F2FFF8 100%);background-size:22px 22px,100% 100%;background-attachment:scroll,fixed}
-header.top{position:relative}
+header.top{position:relative;overflow:hidden}
 header.top::before{content:"";position:absolute;inset:8px -40px auto auto;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,#FFD6E7 0%,transparent 70%);z-index:-1}
 header.top::after{content:"";position:absolute;inset:auto auto -20px -60px;width:300px;height:220px;border-radius:50%;background:radial-gradient(circle,#D7E9FF 0%,transparent 70%);z-index:-1}
 h1{background:linear-gradient(90deg,#2B5BD7,#8A3BA6 45%,#CC4F25 80%);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -272,6 +272,146 @@ footer .copy{font-size:14px;color:var(--ink);margin-bottom:4px}
 .bot-f input:focus{border-color:#5546D6}
 .bot-f button{border:0;background:#5546D6;color:#fff;border-radius:12px;padding:0 16px;font-weight:700;cursor:pointer}
 @media (max-width:520px){.bot-fab .lbl{display:none}.bot-fab{padding:12px}}
+
+/* Start here: basics */
+.bx-top{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:14px;align-items:start}
+@media (max-width:900px){.bx-top{grid-template-columns:1fr}}
+.bx-hero{background:linear-gradient(135deg,#EEF4FF,#FFF0F6);border:1px solid #DCE3F7;border-radius:18px;padding:16px 18px;display:grid;gap:8px}
+.bx-hero h2{font-size:26px}
+.bx-hero p{margin:0;max-width:70ch}
+.findbox{background:#fff;border:1px solid #DCD3F3;border-radius:18px;padding:14px;display:grid;gap:8px}
+.findbox h3{font-size:17px}
+.findbox input{border:1px solid #D9D0F5;border-radius:12px;padding:10px 12px;font-size:15px;outline:none;width:100%}
+.findbox input:focus{border-color:#5546D6}
+#bx-found{display:grid;gap:6px;max-height:340px;overflow-y:auto}
+.fd{display:flex;gap:9px;align-items:flex-start;text-align:left;border:1px solid color-mix(in oklab,var(--c) 30%,white);background:color-mix(in oklab,var(--c) 6%,white);border-radius:10px;padding:8px 10px;cursor:pointer}
+.fd span{display:grid;gap:1px;min-width:0}
+.fd b{font-size:14px;color:color-mix(in oklab,var(--c) 70%,black)}
+.fd em{font-style:normal;font-size:12px;font-weight:600;color:var(--muted)}
+.fd small{font-size:12.5px}
+.tips{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(250px,100%),1fr));gap:10px;margin-top:14px}
+.tip{background:#fff;border:1px solid var(--line);border-left:5px solid #F2B705;border-radius:12px;padding:10px 12px;display:grid;gap:3px;font-size:13.5px}
+.tip b{font-size:14px}
+#bx-apps{margin-top:18px}
+#bx-main{margin-top:14px;display:grid;gap:12px}
+.bx-intro{display:flex;gap:12px;align-items:flex-start;background:color-mix(in oklab,var(--c) 9%,white);border:1px solid color-mix(in oklab,var(--c) 25%,white);border-radius:16px;padding:14px 16px}
+.bx-intro .tile{width:44px;height:44px;border-radius:12px;font-size:15px}
+.bx-intro h3{font-size:22px;color:color-mix(in oklab,var(--c) 75%,black)}
+.bx-intro p{margin:4px 0 0;max-width:80ch}
+.small{font-size:12.5px}
+.bx-tour{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 14px}
+.bx-tour summary{cursor:pointer;font-family:var(--f-display);font-weight:700;font-size:17px}
+.tour-wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:16px;margin-top:12px;align-items:start}
+@media (max-width:900px){.tour-wrap{grid-template-columns:1fr}}
+.tour-pic{overflow-x:auto}
+.tour-list{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.tour-list li{display:grid;grid-template-columns:26px 1fr;gap:9px;font-size:13.5px}
+.tour-list li div{display:grid}
+.bdg{display:inline-grid;place-items:center;min-width:20px;height:20px;padding:0 5px;border-radius:99px;background:#E5007E;color:#fff;font-style:normal;font-weight:800;font-size:11px;font-family:var(--f-body);box-shadow:0 0 0 2px #fff;flex:none}
+/* sketch window */
+.sk{min-width:520px;border:1px solid #C9CEDB;border-radius:10px;overflow:hidden;background:#fff;font-size:11.5px;color:#333;font-family:var(--f-body)}
+.sk .sp{flex:1}
+.sk .bdg{justify-self:start}
+.sk-title{display:flex;align-items:center;gap:6px;background:color-mix(in oklab,var(--c) 85%,black);color:#fff;padding:5px 8px}
+.sk-search{background:rgba(255,255,255,.22);border-radius:5px;padding:1px 30px 1px 8px}
+.sk-search.wide{padding-right:90px}
+.sk-tabs{display:flex;align-items:center;gap:10px;background:#F3F3F5;padding:5px 8px;border-bottom:1px solid #E3E3E8;flex-wrap:wrap}
+.sk-tabs .on{color:color-mix(in oklab,var(--c) 80%,black);font-weight:700;border-bottom:2px solid var(--c)}
+.sk-mini{color:#777;font-size:10.5px}
+.sk-ribbon{display:flex;align-items:stretch;gap:4px;background:#FAFAFB;padding:5px 8px;border-bottom:1px solid #E3E3E8}
+.sk-grp{display:grid;gap:2px;border-right:1px solid #E1E1E6;padding:0 6px;text-align:center}
+.sk-btns{display:flex;gap:2px;justify-content:center}
+.sk-btns em{width:12px;height:12px;border-radius:3px;background:color-mix(in oklab,var(--c) 30%,#ddd)}
+.sk-grp small{font-size:9.5px;color:#777}
+.sk-fx{display:flex;align-items:center;gap:6px;padding:4px 8px;border-bottom:1px solid #E3E3E8}
+.sk-fx .nb{border:1px solid #ccc;padding:0 10px}.sk-fx .fx{color:#888;font-style:italic}.sk-fx .fv{border:1px solid #ccc;flex:1;padding:0 6px}
+.sk-grid .r{display:grid;grid-template-columns:34px repeat(5,1fr)}
+.sk-grid .r span{border-right:1px solid #E6E6EA;border-bottom:1px solid #E6E6EA;padding:2px 4px;min-height:20px;display:flex;gap:3px;align-items:center}
+.sk-grid .hd span,.sk-grid .rn{background:#F3F3F5;justify-content:center;color:#666}
+.sk-grid .act{outline:2px solid #1A8754;outline-offset:-2px;font-weight:700}
+.sk-sheets{display:flex;gap:4px;align-items:center;padding:3px 8px;background:#F3F3F5;border-top:1px solid #E3E3E8}
+.sk-sheets span{padding:1px 10px}.sk-sheets .on{background:#fff;color:#1A8754;font-weight:700;border-bottom:2px solid #1A8754}
+.sk-status{display:flex;align-items:center;gap:8px;padding:3px 8px;background:#F0F0F2;color:#555;font-size:10.5px}
+.sk-body{display:flex;gap:6px;padding:8px;background:#ECEDF1;min-height:170px}
+.sk-nav,.sk-folders,.sk-pane,.sk-thumbs,.sk-appbar,.sk-views{background:#fff;border-radius:6px;padding:6px;display:grid;gap:4px;align-content:start;font-size:10.5px;flex:none}
+.sk-nav{width:110px}.sk-folders{width:105px}.sk-pane{width:88px}.sk-pane.wide{width:150px}
+.sk-appbar,.sk-views{width:34px;justify-items:center;color:#666}
+.sk-views .on{color:var(--c);font-weight:800}
+.sk-thumbs{width:62px}.sk-thumbs span{height:30px;border:1px solid #ddd;border-radius:3px;position:relative}.sk-thumbs .on{border:2px solid var(--c)}
+.sk-thumbs span i{position:absolute;left:-1px;top:-1px;font-size:9px;font-style:normal;color:#888}
+.sk-pagewrap{flex:1;display:grid;gap:6px;min-width:0}
+.sk-ruler{height:12px;background:#fff;border-radius:3px;display:flex;align-items:center;gap:4px;padding:0 4px}
+.sk-ruler span{flex:1;height:4px;background:repeating-linear-gradient(90deg,#bbb 0 1px,transparent 1px 8px)}
+.sk-page,.sk-slide,.sk-canvas,.sk-read{background:#fff;border-radius:4px;padding:10px 14px;box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.sk-page p,.sk-read p{margin:4px 0}.sk .h{font-weight:800;font-size:13px;margin:0 0 6px}
+.sk .ln{height:6px;background:#E6E6EA;border-radius:3px}.sk .ln.s{width:60%}
+.sk-slide{aspect-ratio:16/8}
+.sk .bars{display:flex;align-items:flex-end;gap:6px;height:60px;margin-top:6px}
+.sk .bars i{flex:1;background:color-mix(in oklab,var(--c) 70%,white);border-radius:2px 2px 0 0}
+.sk-notes{background:#fff;border-radius:4px;padding:5px 8px;color:#666}
+.sk-list{width:150px;background:#fff;border-radius:6px;padding:6px;display:grid;gap:4px;align-content:start;flex:none}
+.sk-list .m{display:grid;border-bottom:1px solid #eee;padding:2px 0}.sk-list .m.u b{color:var(--c)}
+.sk-read{flex:1;display:grid;gap:4px;align-content:start}
+.sk-canvas{display:flex;gap:10px;align-items:flex-end}
+.sk-canvas .card{border:1px solid #ddd;border-radius:4px;padding:6px 10px;font-weight:800;font-size:14px;display:grid}
+.sk-canvas .card small{font-weight:400;font-size:9.5px;color:#777}
+.sk-canvas .bars{flex:1}
+.sk-pages{display:flex;gap:6px;font-size:10.5px}.sk-pages .on{font-weight:700;color:var(--c)}
+.sk-flow{background:#fff;border-radius:6px;padding:10px;display:grid;justify-items:center;gap:4px}
+.sk-flow .st{border:1px solid #ccd;border-left:4px solid var(--c);border-radius:5px;padding:4px 10px;background:#fff;min-width:170px}
+.sk-flow i{font-style:normal;color:#888}
+/* tabs + ribbon drawing */
+.bx-h{font-size:19px;margin-top:6px}
+.bx-tabs{display:flex;gap:6px;flex-wrap:wrap}
+.bx-tabs button{border:1px solid color-mix(in oklab,var(--c) 30%,white);background:#fff;border-radius:10px;padding:7px 12px;font-weight:600;font-size:14px;cursor:pointer;display:grid;line-height:1.2;text-align:left}
+.bx-tabs button small{font-size:10.5px;color:var(--muted);font-weight:600}
+.bx-tabs button.ctx{border-style:dashed}
+.bx-tabs button[aria-selected="true"]{background:var(--c);color:#fff;border-color:var(--c)}
+.bx-tabs button[aria-selected="true"] small{color:#fff}
+.bx-tabnote{font-size:14px;background:#FFFBEA;border:1px solid #F3E3A6;border-radius:12px;padding:9px 12px}
+.pill.ctxp{background:#EDE7FF;color:#5546D6}
+.ribbon-pic{border:1px solid #C9CEDB;border-radius:12px;overflow:hidden;background:#fff}
+.rp-tabs{display:flex;gap:2px;background:#F3F3F5;padding:6px 10px 0;border-bottom:1px solid #E1E1E6;overflow-x:auto;font-size:13px}
+.rp-tabs span{padding:5px 10px;color:#555;white-space:nowrap}
+.rp-tabs .on{background:#fff;color:color-mix(in oklab,var(--c) 80%,black);font-weight:700;border:1px solid #E1E1E6;border-bottom:2px solid var(--c);border-radius:6px 6px 0 0}
+.rp-tabs .ctx{border-style:dashed}
+.rp-body{display:flex;align-items:stretch;overflow-x:auto;background:#FBFBFC;padding:8px 6px}
+.rg{display:flex;flex-direction:column;border-right:1px solid #E1E1E6;padding:0 8px;flex:none;max-width:290px}
+.rg-btns{display:flex;flex-wrap:wrap;gap:4px;align-content:flex-start;flex:1}
+.rb{display:inline-flex;align-items:center;gap:4px;border:1px solid transparent;background:transparent;border-radius:6px;padding:3px 6px 3px 3px;font-size:12px;cursor:pointer;color:#333;text-align:left;max-width:180px}
+.rb:hover{background:color-mix(in oklab,var(--c) 12%,white);border-color:color-mix(in oklab,var(--c) 35%,white)}
+.rb i{font-style:normal;display:inline-grid;place-items:center;min-width:19px;height:19px;border-radius:99px;background:var(--c);color:#fff;font-weight:800;font-size:10.5px;flex:none}
+.rg-name{text-align:center;font-size:11px;color:#777;padding-top:6px}
+.bx-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(380px,100%),1fr));gap:12px;align-items:start}
+.gl{background:#fff;border:1px solid color-mix(in oklab,var(--c) 22%,white);border-radius:14px;padding:12px 14px}
+.gl h4{margin:0 0 8px;display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-family:var(--f-display);font-size:16px;color:color-mix(in oklab,var(--c) 75%,black)}
+.gl h4 small{font-family:var(--f-body);font-size:11px;color:var(--muted);font-weight:600}
+.bl{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.bl li{display:grid;grid-template-columns:24px 1fr;gap:8px;align-items:start;padding:4px;border-radius:10px;scroll-margin:120px}
+.bl li > i{font-style:normal;display:grid;place-items:center;width:22px;height:22px;border-radius:99px;background:var(--c);color:#fff;font-weight:800;font-size:11px}
+.bl li b{font-size:14.5px}
+.bl li p{margin:2px 0 0;font-size:13.5px}
+.bl li kbd{margin-left:8px;font-family:var(--f-mono);font-size:11px;background:#F1F1F5;border:1px solid #DDDDE5;border-bottom-width:2px;border-radius:5px;padding:0 5px;white-space:nowrap}
+.bl li.flash{animation:fl 1.6s ease}
+@keyframes fl{0%,60%{background:#FFF1A8}100%{background:transparent}}
+.exs{display:inline-flex;align-items:center;gap:6px;margin-top:5px;flex-wrap:wrap}
+.exs .arr{color:var(--muted);font-weight:700}
+.mini{display:inline-block;border:1px solid #D5D8E2;background:#fff;padding:3px 9px;font-size:13px;min-width:60px;font-family:Calibri,Aptos,var(--f-body);border-radius:2px;max-width:220px}
+.mini.after{border-color:#9DD1B2;box-shadow:0 0 0 2px #E3F5EA}
+.x-b{font-weight:800}.x-i{font-style:italic}.x-u{text-decoration:underline}.x-s{text-decoration:line-through}
+.x-red{color:#C62828}.x-fill{background:#FFF3B0}.x-redfill{background:#FAD4D4;color:#9C1C1C}
+.x-border{border:2px solid #333!important;box-shadow:none!important}.x-center{text-align:center;min-width:120px}
+.x-wrap{white-space:normal;max-width:110px;line-height:1.2}.x-merge{min-width:180px;text-align:center;font-weight:700}
+.x-indent{padding-left:28px}.x-big{font-size:19px}.x-serif{font-family:Georgia,"Times New Roman",serif}
+.x-hl{background:#FFF200}.x-val{font-family:var(--f-mono)}
+.x-wm{position:relative}.x-wm::after{content:"DRAFT";position:absolute;inset:0;display:grid;place-items:center;color:rgba(200,0,0,.18);font-weight:800;transform:rotate(-12deg)}
+.x-track{color:#C2185B;text-decoration:underline}
+.bx-gl{margin-top:24px}
+.bx-gl input{border:1px solid #D9D0F5;border-radius:12px;padding:9px 12px;font-size:14px;width:min(360px,100%);outline:none;margin:8px 0 12px}
+#bx-gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:8px}
+.gi{background:#fff;border:1px solid var(--line);border-radius:12px;padding:9px 12px;display:grid;gap:2px;font-size:13.5px}
+.gi b{color:#4337B8}
+.b-btns{display:grid;gap:6px}
 </style>
 </head>
 <body>
@@ -308,6 +448,7 @@ footer .copy{font-size:14px;color:var(--ink);margin-bottom:4px}
 <nav class="views" aria-label="Sections">
   <div class="wrap" role="tablist">
     <button class="vtab" role="tab" data-view="notes" aria-selected="true">Feature notes</button>
+    <button class="vtab" role="tab" data-view="basics" aria-selected="false">Start here: basics</button>
     <button class="vtab" role="tab" data-view="tools" aria-selected="false">Which tool for the job?</button>
     <button class="vtab" role="tab" data-view="sharing" aria-selected="false">Sharing &amp; old versions</button>
     <button class="vtab" role="tab" data-view="it" aria-selected="false">IT blocks &amp; licences</button>
@@ -335,6 +476,23 @@ footer .copy{font-size:14px;color:var(--ink);margin-bottom:4px}
     </details>
   </div>
   <div id="notes"></div>
+</section>
+
+<section class="panel" id="v-basics" hidden>
+  <div class="bx-top">
+    <div class="bx-hero"><h2>Start here: Microsoft basics</h2>
+      <p>New to Microsoft? Pick an app, look at the screen tour, then click any tab to see every button from left to right with what it does. Small pictures show before and after.</p>
+      <p class="muted small" id="bx-scope"></p></div>
+    <div class="findbox"><h3>Where's my button?</h3>
+      <input id="bx-find" type="search" placeholder="Type: bold, freeze, page number, reply, refresh…" aria-label="Find a button">
+      <div id="bx-found"></div></div>
+  </div>
+  <div class="tips" id="bx-tips"></div>
+  <div class="apps" id="bx-apps" aria-label="Choose an app"></div>
+  <p id="bx-loading" class="empty">Loading the button guide…</p>
+  <div id="bx-main"></div>
+  <section class="bx-gl"><h2 class="sec-title">Word list</h2><p class="lead2">Simple meanings of words you'll see in Microsoft apps.</p>
+    <input id="bx-gq" type="search" placeholder="Find a word: cell, ribbon, measure…" aria-label="Find a word"><div id="bx-gloss"></div></section>
 </section>
 
 <section class="panel" id="v-tools" hidden>
@@ -635,12 +793,13 @@ function loadComments(){
 }
 
 // views
-const VIEWS = ["notes","tools","sharing","it","learn","updates"];
+const VIEWS = ["notes","basics","tools","sharing","it","learn","updates"];
 function showView(v){
   if (!VIEWS.includes(v)) v = "notes";
   VIEWS.forEach(x=>{ $("v-"+x).hidden = x!==v; });
   document.querySelectorAll(".vtab").forEach(b=>b.setAttribute("aria-selected", b.dataset.view===v));
   if (v==="updates") loadComments();
+  if (v==="basics") initBasics();
 }
 
 function wire(){
@@ -764,6 +923,8 @@ function answer(q){
     if (first.steps && first.steps.length && !strongTask) parts.push(`<p class="b-quick"><b>Quick start:</b> ${esc(first.steps[0])}</p>`);
   }
   if (intent) parts.push(`<p>${esc(intent[2])} <button class="b-link" data-tab="${intent[1]}">Open ${esc(tabName[intent[1]])} ›</button></p>`);
+  const rbx = RB ? rbSearch(q, 3) : [];
+  if (rbx.length) parts.push(`<p>On the ribbon:</p><div class="b-btns">` + rbx.map(x=>{ const ap = appById[x.a]; return `<button class="fd" style="--c:var(${ap.c})" data-go="${x.a}|${x.ti}|${x.gi}|${x.bi}">${tile(ap)}<span><b>${esc(x.b.n)}</b><em>${esc(x.app)} › ${esc(x.tab)} › ${esc(x.group)}</em><small>${esc(x.b.d)}</small></span></button>`; }).join("") + `</div>`);
   const found = parts.length > 0;
   if (!found) parts.push(`<p>I couldn't find this in the notes yet.</p>`);
   parts.push(`<div class="b-more"><span>${found ? "Need more detail?" : "Try Microsoft Copilot (free with a work account):"}</span>
@@ -796,6 +957,7 @@ function wireBot(){
   });
   $("bot").addEventListener("click", e=>{
     const o = e.target.closest("[data-open]"); if (o){ openDrawer(+o.dataset.open); return; }
+    const g = e.target.closest("[data-go]"); if (g){ const [a,ti,gi,bi] = g.dataset.go.split("|"); goButton(a,+ti,+gi,+bi); return; }
     const t = e.target.closest("[data-tab]"); if (t){ location.hash = t.dataset.tab; return; }
     const c = e.target.closest(".b-copilot"); if (c){ askCopilot(c.dataset.q, c); return; }
     const a = e.target.closest(".b-ai"); if (a){ askAI(a.dataset.q, a); return; }
@@ -803,11 +965,150 @@ function wireBot(){
   });
 }
 
+
+// ---------- Start here: basics (button guide) ----------
+let RB = null, RBsel = {app:"x", tab:1}, RBidx = null;
+const B = {app:"x"};
+function bdg(n){ return `<i class="bdg">${n}</i>`; }
+function tourHTML(a){
+  const L = a.tour.layout, t = n => bdg(n);
+  const tabsRow = names => `<div class="sk-tabs">${t(3)}${names.map((x,i)=>`<span class="${i===1?'on':''}">${x}</span>`).join("")}</div>`;
+  const ribbonRow = groups => `<div class="sk-ribbon">${t(4)}${groups.map(g=>`<span class="sk-grp"><span class="sk-btns"><em></em><em></em><em></em></span><small>${g}</small></span>`).join("")}</div>`;
+  const status = (left, n1, n2) => `<div class="sk-status">${t(n1)}<span>${left}</span><span class="sp"></span>${n2?t(n2):""}<span>▭ ▤ ▦ &nbsp;—●—&nbsp; 100%</span></div>`;
+  if (L==="excel") return `<div class="sk">
+    <div class="sk-title">${t(2)}<span>■ ↶ ↷</span><span class="sp"></span>${t(1)}<span>Budget.xlsx</span><span class="sk-search">Search</span><span class="sp"></span></div>
+    ${tabsRow(["File","Home","Insert","Page Layout","Formulas","Data","Review","View"])}
+    ${ribbonRow(["Clipboard","Font","Alignment","Number","Styles","Cells","Editing"])}
+    <div class="sk-fx">${t(5)}<span class="nb">B4</span>${t(6)}<span class="fx">fx</span><span class="fv">=SUM(B2:B3)</span></div>
+    <div class="sk-grid"><div class="r hd"><span></span>${["A","B","C","D","E"].map((c,i)=>`<span>${i===0?t(7):""}${c}</span>`).join("")}</div>
+      ${[["Item","Amount"],["Freight","1,200"],["Utilities","800"],["Total","2,000"],["",""]].map((r,i)=>`<div class="r"><span class="rn">${i===1?t(8):""}${i+1}</span><span>${r[0]}</span><span class="${i===3?'act':''}">${i===3?t(9):""}${r[1]}</span><span></span><span></span><span></span></div>`).join("")}</div>
+    <div class="sk-sheets">${t(10)}<span class="on">Sheet1</span><span>Sheet2</span><span>+</span></div>
+    ${status("Ready &nbsp; Sum: 2,000",11,12)}</div>`;
+  if (L==="word") return `<div class="sk">
+    <div class="sk-title">${t(2)}<span>■ ↶ ↷</span><span class="sp"></span>${t(1)}<span>Letter.docx</span><span class="sk-search">Search</span><span class="sp"></span></div>
+    ${tabsRow(["File","Home","Insert","Draw","Design","Layout","References","Mailings","Review","View"])}
+    ${ribbonRow(["Clipboard","Font","Paragraph","Styles","Editing"])}
+    <div class="sk-body"><div class="sk-nav">${t(7)}<b>Navigation</b><span>1. Purpose</span><span>2. Details</span><span>3. Action</span></div>
+      <div class="sk-pagewrap"><div class="sk-ruler">${t(5)}<span></span></div><div class="sk-page">${t(6)}<p class="h">Payment Reminder</p><p>Dear Sir/Madam,</p><p class="ln"></p><p class="ln"></p><p class="ln s"></p></div></div></div>
+    ${status("Page 1 of 2 &nbsp; 245 words",8,9)}</div>`;
+  if (L==="ppt") return `<div class="sk">
+    <div class="sk-title">${t(2)}<span>■ ↶ ↷ ▷</span><span class="sp"></span>${t(1)}<span>Closing.pptx</span><span class="sk-search">Search</span><span class="sp"></span></div>
+    ${tabsRow(["File","Home","Insert","Draw","Design","Transitions","Animations","Slide Show","View"])}
+    ${ribbonRow(["Clipboard","Slides","Font","Paragraph","Drawing","Editing"])}
+    <div class="sk-body"><div class="sk-thumbs">${t(5)}${[1,2,3].map(i=>`<span class="${i===2?'on':''}"><i>${i}</i></span>`).join("")}</div>
+      <div class="sk-pagewrap"><div class="sk-slide">${t(6)}<p class="h">October Results</p><div class="bars"><i style="height:40%"></i><i style="height:65%"></i><i style="height:55%"></i><i style="height:80%"></i></div></div>
+      <div class="sk-notes">${t(7)}Mention freight up 12%</div></div></div>
+    ${status("Slide 2 of 3 &nbsp; Notes &nbsp; Comments",8,9)}</div>`;
+  if (L==="outlook") return `<div class="sk">
+    <div class="sk-title"><span class="sp"></span>${t(2)}<span class="sk-search wide">Search</span><span class="sp"></span>${t(7)}<span>⚙ ?</span></div>
+    <div class="sk-tabs">${t(3)}<span class="on">Home</span><span>View</span><span>Help</span><span class="sk-mini">New mail · Delete · Archive · Reply · Flag…</span></div>
+    <div class="sk-body"><div class="sk-appbar">${t(1)}<span>✉</span><span>▦</span><span>☺</span><span>✓</span></div>
+      <div class="sk-folders">${t(4)}<b>Inbox</b><span>Drafts</span><span>Sent Items</span><span>Archive</span></div>
+      <div class="sk-list">${t(5)}${[["Bank","Credit advice",1],["Aminah","Accruals Oct",0],["Vendor","Statement",0]].map(m=>`<div class="m ${m[2]?'u':''}"><b>${m[0]}</b><span>${m[1]}</span></div>`).join("")}</div>
+      <div class="sk-read">${t(6)}<b>Credit advice</b><p class="ln"></p><p class="ln"></p><p class="ln s"></p><span class="sk-mini">Reply · Reply all · Forward</span></div></div></div>`;
+  if (L==="pbi") return `<div class="sk">
+    <div class="sk-title">${t(1)}<span>■ ↶ ↷</span><span class="sp"></span><span>Sales.pbix</span><span class="sp"></span></div>
+    <div class="sk-tabs"><span>File</span><span class="on">Home</span><span>Insert</span><span>Modeling</span><span>View</span><span>Optimize</span><span>Help</span></div>
+    ${ribbonRow(["Clipboard","Data","Queries","Insert","Calculations","Share"]).replace(bdg(4),bdg(2))}
+    <div class="sk-body"><div class="sk-views">${t(3)}<span class="on">▥</span><span>▦</span><span>⧉</span><span>DAX</span></div>
+      <div class="sk-pagewrap"><div class="sk-canvas">${t(4)}<div class="card">12.4M<small>Sales</small></div><div class="bars"><i style="height:40%"></i><i style="height:70%"></i><i style="height:55%"></i><i style="height:85%"></i></div></div>
+      <div class="sk-pages">${t(5)}<span class="on">Page 1</span><span>Page 2</span><span>+</span></div></div>
+      <div class="sk-pane">${t(6)}<b>Filters</b><span>Company</span><span>Month</span></div>
+      <div class="sk-pane">${t(7)}<b>Visualizations</b><span class="icons">▥ ◔ ▤ ▦</span><span>Build · Format</span></div>
+      <div class="sk-pane">${t(8)}<b>Data</b><span>▸ Sales</span><span>▸ Date</span><span>▸ Customer</span></div></div>
+    ${status("Page 1 of 2",9,0)}</div>`;
+  return `<div class="sk">
+    <div class="sk-title">${t(1)}<span>Environment ▾</span><span class="sp"></span><span>⚙ ? ●</span></div>
+    <div class="sk-body"><div class="sk-folders">${t(2)}<span>⌂ Home</span><span>+ Create</span><span>▤ Templates</span><b>My flows</b><span>✓ Approvals</span><span>…More</span></div>
+      <div class="sk-pagewrap"><div class="sk-tabs">${t(3)}<span>←</span><span class="on">Save attachments</span><span class="sp"></span><span>Save</span><span>Flow checker</span><span>Test</span></div>
+        <div class="sk-flow">${t(4)}<div class="st">▷ When a new email arrives</div><i>↓</i><div class="st">▤ Create file</div><i>⊕</i></div></div>
+      <div class="sk-pane wide">${t(5)}<b>Create file</b><span>Parameters · Settings · Code view · About</span><span class="ln"></span><span class="ln"></span></div>
+      <div class="sk-pane">${t(6)}<b>Copilot</b><span>Describe a change…</span></div></div></div>`;
+}
+const EXS = {b:"x-b",i:"x-i",u:"x-u",s:"x-s",red:"x-red",fill:"x-fill",redfill:"x-redfill",border:"x-border",center:"x-center",wrap:"x-wrap",merge:"x-merge",indent:"x-indent",big:"x-big",serif:"x-serif",hl:"x-hl",val:"x-val",wm:"x-wm",track:"x-track"};
+function exHTML(ex){
+  const cls = (ex[2]||"").split(/\s+/).map(k=>EXS[k]||"").join(" ");
+  return `<span class="exs"><span class="mini">${esc(ex[0])}</span><span class="arr">→</span><span class="mini after ${cls}">${esc(ex[1])}</span></span>`;
+}
+function rbApp(){ return RB.apps.find(a=>a.id===RBsel.app); }
+function renderBasicsApps(){
+  $("bx-apps").innerHTML = RB.apps.map(a=>{ const ap = appById[a.id]; return `<button class="appbtn" style="--c:var(${ap.c})" data-bapp="${a.id}" aria-pressed="${RBsel.app===a.id}">${tile(ap)}${esc(a.name)}</button>`; }).join("");
+}
+function renderBasics(){
+  const a = rbApp(), ap = appById[a.id];
+  if (RBsel.tab >= a.tabs.length) RBsel.tab = 0;
+  const tab = a.tabs[RBsel.tab];
+  $("bx-main").style.setProperty("--c", `var(${ap.c})`);
+  let k = 0;
+  const groupsDrawn = tab.groups.map((g,gi)=>`<div class="rg"><div class="rg-btns">${g.buttons.map((b,bi)=>{k++; return `<button class="rb" data-jump="${gi}-${bi}" title="${esc(b.d)}"><i>${k}</i>${esc(b.n)}</button>`;}).join("")}</div><div class="rg-name">${esc(g.name)}</div></div>`).join("");
+  k = 0;
+  const list = tab.groups.map((g,gi)=>`<section class="gl"><h4><span>${esc(g.name)}</span><small>group ${gi+1} of ${tab.groups.length}</small></h4><ol class="bl">${g.buttons.map((b,bi)=>{k++; return `<li id="rb-${gi}-${bi}"><i>${k}</i><div><b>${esc(b.n)}</b>${b.k?`<kbd>${esc(b.k)}</kbd>`:""}<p>${esc(b.d)}</p>${b.ex?exHTML(b.ex):""}</div></li>`;}).join("")}</ol></section>`).join("");
+  $("bx-main").innerHTML = `
+    <div class="bx-intro">${tile(ap)}<div><h3>${esc(a.name)}</h3><p>${esc(a.intro)}</p>${a.note?`<p class="muted small">${esc(a.note)}</p>`:""}</div></div>
+    <details class="bx-tour" open><summary>Screen tour: what's on the ${esc(a.name)} screen</summary>
+      <div class="tour-wrap"><div class="tour-pic">${tourHTML(a)}</div>
+      <ol class="tour-list">${a.tour.areas.map((x,i)=>`<li><i class="bdg">${i+1}</i><div><b>${esc(x[0])}</b><span>${esc(x[1])}</span></div></li>`).join("")}</ol></div></details>
+    <h3 class="bx-h">Tabs, left to right</h3>
+    <div class="bx-tabs" role="tablist">${a.tabs.map((t,i)=>`<button role="tab" class="${t.contextual?'ctx':''}" data-btab="${i}" aria-selected="${i===RBsel.tab}">${esc(t.name)}${t.contextual?'<small>pops up</small>':''}</button>`).join("")}</div>
+    <div class="bx-tabnote">${tab.contextual?`<span class="pill ctxp">Contextual tab</span> ${esc(tab.contextual)} `:""}${esc(tab.note)}</div>
+    <div class="ribbon-pic" aria-label="Drawing of the ${esc(tab.name)} tab"><div class="rp-tabs">${a.tabs.filter(t=>!t.contextual).slice(0,10).map(t=>`<span class="${t===tab?'on':''}">${esc(t.name)}</span>`).join("")}${tab.contextual?`<span class="on ctx">${esc(tab.name)}</span>`:""}</div><div class="rp-body">${groupsDrawn}</div></div>
+    <p class="muted small">Numbers go left to right, top to bottom. Click a number to jump to its explanation. Drawing is simplified; real icons look different.</p>
+    <div class="bx-list">${list}</div>`;
+}
+function buildRbIndex(){
+  RBidx = [];
+  RB.apps.forEach(a=>a.tabs.forEach((t,ti)=>t.groups.forEach((g,gi)=>g.buttons.forEach((b,bi)=>RBidx.push({a:a.id, app:a.name, ti, tab:t.name, gi, group:g.name, bi, b, hay:norm(b.n+" "+b.d+" "+g.name+" "+t.name+" "+a.name)})))));
+}
+function rbSearch(q, limit){
+  if (!RBidx) buildRbIndex();
+  const tok = tokens(q); if (!tok.base.length) return [];
+  return RBidx.map(x=>{ let s=0; const nm = norm(x.b.n);
+    for (const w of tok.base){ if (nm.includes(w)) s+=5; else if (x.hay.includes(w)) s+=1.5; }
+    for (const w of tok.all){ if (!tok.base.includes(w) && x.hay.includes(w)) s+=0.4; }
+    if (nm === norm(q).trim()) s += 6;
+    return {x,s}; }).filter(r=>r.s>=4).sort((p,q2)=>q2.s-p.s).slice(0,limit||8).map(r=>r.x);
+}
+function goButton(appId, ti, gi, bi){
+  RBsel.app = appId; RBsel.tab = ti;
+  if (location.hash !== "#basics") location.hash = "basics";
+  renderBasicsApps(); renderBasics();
+  setTimeout(()=>{ const el = document.getElementById(`rb-${gi}-${bi}`); if (el){ el.scrollIntoView({behavior:"smooth", block:"center"}); el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash"); } }, 60);
+}
+function renderFind(){
+  const q = $("bx-find").value.trim(), out = $("bx-found");
+  if (!q){ out.innerHTML = ""; return; }
+  const r = rbSearch(q, 8);
+  out.innerHTML = r.length ? r.map(x=>{ const ap = appById[x.a]; return `<button class="fd" style="--c:var(${ap.c})" data-go="${x.a}|${x.ti}|${x.gi}|${x.bi}">${tile(ap)}<span><b>${esc(x.b.n)}</b><em>${esc(x.app)} › ${esc(x.tab)} › ${esc(x.group)}</em><small>${esc(x.b.d)}</small></span></button>`; }).join("")
+    : `<p class="muted small">No button found. Try another word, e.g. "freeze", "merge", "page number", "reply".</p>`;
+}
+function renderGloss(){
+  const q = norm($("bx-gq").value).trim();
+  $("bx-gloss").innerHTML = RB.glossary.filter(g=>!q || norm(g[0]+" "+g[1]).includes(q)).map(g=>`<div class="gi"><b>${esc(g[0])}</b><span>${esc(g[1])}</span></div>`).join("") || `<p class="muted small">No word found.</p>`;
+}
+let basicsReady = false;
+function initBasics(){
+  if (basicsReady) return; basicsReady = true;
+  fetch("ribbon.json?v=" + Date.now(), {cache:"no-store"}).then(r=>r.json()).then(d=>{
+    RB = d; $("bx-loading").hidden = true;
+    $("bx-scope").textContent = d.scope;
+    $("bx-tips").innerHTML = d.tips.map(t=>`<div class="tip"><b>${esc(t[0])}</b><span>${esc(t[1])}</span></div>`).join("");
+    renderBasicsApps(); renderBasics(); renderGloss();
+  }).catch(()=>{ $("bx-loading").textContent = "Couldn't load the button guide (ribbon.json)."; });
+  $("bx-apps").addEventListener("click", e=>{ const b = e.target.closest("[data-bapp]"); if(!b) return; RBsel.app = b.dataset.bapp; RBsel.tab = 1; renderBasicsApps(); renderBasics(); });
+  $("bx-main").addEventListener("click", e=>{
+    const t = e.target.closest("[data-btab]"); if (t){ RBsel.tab = +t.dataset.btab; renderBasics(); return; }
+    const j = e.target.closest("[data-jump]"); if (j){ const el = document.getElementById("rb-"+j.dataset.jump); if (el){ el.scrollIntoView({behavior:"smooth", block:"center"}); el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash"); } }
+  });
+  $("bx-find").addEventListener("input", renderFind);
+  $("bx-found").addEventListener("click", e=>{ const b = e.target.closest("[data-go]"); if(!b) return; const [a,ti,gi,bi] = b.dataset.go.split("|"); goButton(a,+ti,+gi,+bi); });
+  $("bx-gq").addEventListener("input", renderGloss);
+}
+
 function start(data){
   DATA = data; LV = data.levels; items = data.features;
   appById = Object.fromEntries(data.apps.map(a=>[a.id,a]));
   $("loading").hidden = true;
-  wire(); wireBot();
+  wire(); wireBot(); initBasics();
   renderApps(); renderLv(); renderNotes(); renderProgress(); renderSizes(); renderTasks(); renderStatic();
   showView(location.hash.slice(1));
 }
