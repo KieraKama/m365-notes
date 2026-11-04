@@ -191,7 +191,17 @@
    "plain": "Styles are saved formats like 'Heading 1'. Word remembers which lines are headings, so it can build an outline and change all of them together.",
    "example": "You type 'Section 3: Accruals' and click Heading 1. It now shows in the Navigation pane. Click it there and Word jumps to that section.",
    "watch": "Making a line bold and big by hand is NOT a heading. Word can't see it, so it won't show in the outline or the table of contents.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "letter",
+    "title": "Closing SOP",
+    "lines": [
+     "1. Purpose  (Heading 1)",
+     "1.1 Scope  (Heading 2)",
+     "Normal text…",
+     "2. Steps  (Heading 1)"
+    ]
+   }
   },
   {
    "app": "w",
@@ -215,7 +225,17 @@
    "plain": "Word writes the contents page and table numbers for you, and keeps them correct when pages move.",
    "example": "Insert a table between Table 2 and Table 3. Press F9: the old Table 3 becomes Table 4, and every 'see Table 4' in the text updates too.",
    "watch": "It doesn't update by itself. Always select all and press F9 before printing or sending.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "letter",
+    "title": "Contents",
+    "lines": [
+     "1. Purpose ........ 1",
+     "2. Accruals ....... 3",
+     "Table 1: Accrual list ...... 4",
+     "(see Table 1 updates itself)"
+    ]
+   }
   },
   {
    "app": "w",
@@ -239,7 +259,21 @@
    "plain": "Write one letter with blanks. Word fills the blanks from an Excel list and makes one letter per row.",
    "example": "Excel: Ali Sdn Bhd | 12,500.00. Letter: 'Dear «Name», your balance is RM«Balance».' Result: 'Dear Ali Sdn Bhd, your balance is RM12,500.00.'",
    "watch": "Amounts may come out as 12500.1 with no commas. Fix it with the number format field switch, or format the column as text in Excel first.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "merge",
+    "template": "Dear «Name», your balance is RM«Balance».",
+    "out": [
+     [
+      "Ali Sdn Bhd",
+      "12,500.00"
+     ],
+     [
+      "Bina Trading",
+      "3,200.00"
+     ]
+    ]
+   }
   },
   {
    "app": "w",
@@ -262,7 +296,17 @@
    "plain": "A template is a blank starting file you reuse without overwriting it. Quick Parts are saved text blocks you insert in seconds.",
    "example": "Save your letterhead as 'Supplier Letter.dotx'. File › New gives you a fresh copy each time; the template itself never changes.",
    "watch": "Opening the .dotx file directly edits the template. Use File › New › Personal instead.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "letter",
+    "title": "[Letterhead]",
+    "lines": [
+     "Date: «today»",
+     "To: ________",
+     "Dear Sir/Madam,",
+     "[Quick Part: signature block]"
+    ]
+   }
   },
   {
    "app": "w",
@@ -284,7 +328,24 @@
    "plain": "Track Changes records every edit in colour so you can accept or reject each one. Compare finds the differences between two versions for you.",
    "example": "Legal changes '30 days' to '45 days'. You see '30' crossed out and '45' in colour, and you click Accept or Reject.",
    "watch": "Accepting all changes removes the history. Keep a copy of the tracked version for your records.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "sheet",
+    "before": true,
+    "cols": [
+     "Contract text"
+    ],
+    "rows": [
+     [
+      "Payment within 30 days"
+     ]
+    ],
+    "after": [
+     [
+      "Payment within 30 → 45 days (tracked)"
+     ]
+    ]
+   }
   },
   {
    "app": "w",
@@ -307,7 +368,17 @@
    "plain": "A form where people can only fill in the blanks and can't change your wording or layout.",
    "example": "A claim form with a drop-down for Department, a date picker for Date and a box for Amount. Everything else is locked.",
    "watch": "Turn on Restrict Editing last. While it's on, you can't edit the form either; stop protection first.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "letter",
+    "title": "Petty Cash Claim",
+    "lines": [
+     "Department: [Choose ▾]",
+     "Date: [date picker]",
+     "Amount: [ type here ]",
+     "☐ Receipt attached"
+    ]
+   }
   },
   {
    "app": "w",
@@ -330,7 +401,30 @@
    "plain": "A section break splits the document, so one part can have different page orientation, headers or page numbers.",
    "example": "Pages 1–4 portrait, page 5 a wide landscape ageing table, pages 6–8 back to portrait.",
    "watch": "A Page Break isn't a Section Break. Only Layout › Breaks › Next Page lets you change orientation for one part.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "board",
+    "cols": [
+     [
+      "Pages 1–4",
+      [
+       "Portrait"
+      ]
+     ],
+     [
+      "Page 5",
+      [
+       "Landscape table"
+      ]
+     ],
+     [
+      "Pages 6–8",
+      [
+       "Portrait"
+      ]
+     ]
+    ]
+   }
   },
   {
    "app": "w",
@@ -442,7 +536,15 @@
    "plain": "A tag like 'Confidential' that marks how sensitive a file is, and can lock it so only staff can open it.",
    "example": "Label the salary file 'Confidential'. A watermark appears, and it won't open for people outside the company.",
    "watch": "You only see this if IT has set it up. You can't create labels yourself.",
-   "minv": "365"
+   "minv": "365",
+   "pic": {
+    "k": "letter",
+    "title": "Salary review — CONFIDENTIAL",
+    "lines": [
+     "Watermark: Confidential",
+     "Only staff can open"
+    ]
+   }
   },
   {
    "app": "w",
@@ -465,7 +567,35 @@
    "plain": "Word tables can do simple sums, so totals in a Word form calculate themselves.",
    "example": "A column with 100, 250, 50. In the total cell: =SUM(ABOVE) gives 400.",
    "watch": "It doesn't recalculate live like Excel. Press F9 after changing numbers.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "sheet",
+    "cols": [
+     "Item",
+     "Amount"
+    ],
+    "rows": [
+     [
+      "A",
+      "100"
+     ],
+     [
+      "B",
+      "250"
+     ],
+     [
+      "C",
+      "50"
+     ],
+     [
+      "=SUM(ABOVE)",
+      "400"
+     ]
+    ],
+    "hl": [
+     3
+    ]
+   }
   },
   {
    "app": "w",
@@ -511,7 +641,39 @@
    "plain": "Turns a block of data into a smart list that grows by itself, with filters and named columns.",
    "example": "Rows A1:E100. After Ctrl+T, typing in row 101 adds it to the table, and =SUM(tblAP[Amount]) includes it automatically.",
    "watch": "Don't leave blank rows or columns inside the data before pressing Ctrl+T.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "sheet",
+    "before": true,
+    "cols": [
+     "Vendor",
+     "Amount"
+    ],
+    "rows": [
+     [
+      "ABC",
+      "12,500"
+     ],
+     [
+      "TNB",
+      "8,200"
+     ]
+    ],
+    "after": [
+     [
+      "ABC ▾",
+      "12,500"
+     ],
+     [
+      "TNB",
+      "8,200"
+     ],
+     [
+      "New row → joins table",
+      "3,100"
+     ]
+    ]
+   }
   },
   {
    "app": "x",
@@ -534,7 +696,36 @@
    "plain": "Change how a number looks without changing its value: brackets for negatives, a dash for zero, thousands.",
    "example": "-12345 shows as (12,345); 0 shows as -; with #,##0, then 1,250,000 shows as 1,250.",
    "watch": "It's display only. The cell still holds 1,250,000, so formulas use the full number.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "sheet",
+    "before": true,
+    "cols": [
+     "Amount"
+    ],
+    "rows": [
+     [
+      "-12345"
+     ],
+     [
+      "0"
+     ],
+     [
+      "1250000"
+     ]
+    ],
+    "after": [
+     [
+      "(12,345)"
+     ],
+     [
+      "-"
+     ],
+     [
+      "1,250"
+     ]
+    ]
+   }
   },
   {
    "app": "x",
@@ -557,7 +748,30 @@
    "plain": "Paste only part of what you copied (just values or formats), or do maths while pasting.",
    "example": "SAP gives credits as positive. Copy -1 › select the amounts › Paste Special › Multiply: 500 becomes -500.",
    "watch": "Paste Values removes the formulas. Do it on a copy if you still need them.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "sheet",
+    "before": true,
+    "cols": [
+     "Amount"
+    ],
+    "rows": [
+     [
+      "500"
+     ],
+     [
+      "1,200"
+     ]
+    ],
+    "after": [
+     [
+      "-500"
+     ],
+     [
+      "-1,200"
+     ]
+    ]
+   }
   },
   {
    "app": "x",
@@ -580,7 +794,51 @@
    "plain": "Select only the empty cells at once and fill each with the value above it.",
    "example": "Before: 1000, blank, blank, 2000, blank. After: 1000, 1000, 1000, 2000, 2000.",
    "watch": "Paste as values afterwards, or the cells keep '=A2' formulas that break when you sort.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "sheet",
+    "before": true,
+    "cols": [
+     "CoCode",
+     "Amount"
+    ],
+    "rows": [
+     [
+      "1000",
+      "500"
+     ],
+     [
+      "",
+      "200"
+     ],
+     [
+      "",
+      "300"
+     ],
+     [
+      "2000",
+      "400"
+     ]
+    ],
+    "after": [
+     [
+      "1000",
+      "500"
+     ],
+     [
+      "1000",
+      "200"
+     ],
+     [
+      "1000",
+      "300"
+     ],
+     [
+      "2000",
+      "400"
+     ]
+    ]
+   }
   },
   {
    "app": "x",
@@ -602,7 +860,30 @@
    "plain": "Split one column into several, or fix text that should be dates. Flash Fill copies a pattern you show it once.",
    "example": "'400100 - Freight' becomes 400100 | Freight. The text '31.10.2026' becomes a real date you can sort.",
    "watch": "Dates can turn into the wrong month. Choose DMY in the last step.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "sheet",
+    "before": true,
+    "cols": [
+     "Account"
+    ],
+    "rows": [
+     [
+      "400100 - Freight"
+     ],
+     [
+      "400200 - Utilities"
+     ]
+    ],
+    "after": [
+     [
+      "400100 | Freight"
+     ],
+     [
+      "400200 | Utilities"
+     ]
+    ]
+   }
   },
   {
    "app": "x",
@@ -625,7 +906,24 @@
    "plain": "Limit a cell to choices from a list, so people can't type wrong or different spellings.",
    "example": "The Status cell offers only Open, Pending HOD, Closed. Typing 'done' gives an error.",
    "watch": "Pasting over the cell removes the rule. Ask users to type or pick, not paste.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "sheet",
+    "cols": [
+     "Invoice",
+     "Status"
+    ],
+    "rows": [
+     [
+      "INV-101",
+      "Open ▾"
+     ],
+     [
+      "",
+      "Open / Pending HOD / Closed"
+     ]
+    ]
+   }
   },
   {
    "app": "x",
@@ -647,7 +945,28 @@
    "plain": "Colour numbers automatically by rules, so good and bad stand out.",
    "example": "DSO 72 turns red (target 60); 45 turns green.",
    "watch": "Rules on percentages use decimals (0.6), not 60.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "sheet",
+    "cols": [
+     "Customer",
+     "Days"
+    ],
+    "rows": [
+     [
+      "Ali Sdn Bhd",
+      "12"
+     ],
+     [
+      "Bina Trading",
+      "95 (red)"
+     ],
+     [
+      "Citra Bhd",
+      "121 (red)"
+     ]
+    ]
+   }
   },
   {
    "app": "x",
@@ -669,7 +988,40 @@
    "plain": "Add up (or count) only the rows that meet your conditions.",
    "example": "=SUMIFS(Amount, CoCode, \"1000\", Month, \"Oct\") adds only company 1000's October amounts.",
    "watch": "Text numbers don't match real numbers. '1000' as text won't match 1000 as a number.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "sheet",
+    "cols": [
+     "CoCode",
+     "Month",
+     "Amount"
+    ],
+    "rows": [
+     [
+      "1000",
+      "Oct",
+      "500"
+     ],
+     [
+      "1000",
+      "Oct",
+      "300"
+     ],
+     [
+      "2000",
+      "Oct",
+      "900"
+     ],
+     [
+      "SUMIFS 1000, Oct",
+      "",
+      "800"
+     ]
+    ],
+    "hl": [
+     3
+    ]
+   }
   },
   {
    "app": "x",
@@ -691,7 +1043,27 @@
    "plain": "Find a value in one list and bring back related information. It's the modern, easier VLOOKUP.",
    "example": "=XLOOKUP(\"V001\", VendorID, VendorName, \"Not found\") returns 'ABC Supplies'.",
    "watch": "Shows #NAME? in Excel 2019 and older. Use INDEX+MATCH if the file goes to old Excel.",
-   "minv": "2021"
+   "minv": "2021",
+   "pic": {
+    "k": "sheet",
+    "cols": [
+     "Invoice",
+     "VendorID",
+     "Name (XLOOKUP)"
+    ],
+    "rows": [
+     [
+      "INV-101",
+      "V002",
+      "Global Pack"
+     ],
+     [
+      "INV-102",
+      "V009",
+      "Not found"
+     ]
+    ]
+   }
   },
   {
    "app": "x",
@@ -713,7 +1085,24 @@
    "plain": "Two functions that together do a lookup. MATCH finds the row number, INDEX picks the value from that row.",
    "example": "MATCH(\"V001\", IDs, 0) → 3. INDEX(Names, 3) → 'ABC Supplies'.",
    "watch": "Forget the 0 in MATCH and it may return a wrong 'close' match.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "sheet",
+    "cols": [
+     "VendorID",
+     "Name (INDEX+MATCH)"
+    ],
+    "rows": [
+     [
+      "V001",
+      "ABC Supplies"
+     ],
+     [
+      "V003",
+      "Delta Freight"
+     ]
+    ]
+   }
   },
   {
    "app": "x",
@@ -736,7 +1125,32 @@
    "plain": "Formulas that turn a date into your fiscal month and year when the year starts in April.",
    "example": "15 May 2026 → period 2, FY2026. 10 Feb 2027 → period 11, FY2026.",
    "watch": "Check that the cell holds a real date (right-aligned), not text.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "sheet",
+    "cols": [
+     "Date",
+     "Period",
+     "FY"
+    ],
+    "rows": [
+     [
+      "15/05/2026",
+      "2",
+      "FY2026"
+     ],
+     [
+      "10/02/2027",
+      "11",
+      "FY2026"
+     ],
+     [
+      "01/04/2027",
+      "1",
+      "FY2027"
+     ]
+    ]
+   }
   },
   {
    "app": "x",
@@ -758,7 +1172,40 @@
    "plain": "Round at the right step so your totals match the system to the cent.",
    "example": "Ten lines of 33.333 add to 333.33, but rounded lines (33.33 × 10) add to 333.30. Decide which one SAP uses.",
    "watch": "Formatting to 2 decimals only hides the decimals. It doesn't round the value.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "sheet",
+    "cols": [
+     "Line",
+     "Not rounded",
+     "ROUND(x,2)"
+    ],
+    "rows": [
+     [
+      "1",
+      "33.333",
+      "33.33"
+     ],
+     [
+      "2",
+      "33.333",
+      "33.33"
+     ],
+     [
+      "3",
+      "33.333",
+      "33.33"
+     ],
+     [
+      "Total",
+      "100.00 (shows)",
+      "99.99"
+     ]
+    ],
+    "hl": [
+     3
+    ]
+   }
   },
   {
    "app": "x",
@@ -780,7 +1227,28 @@
    "plain": "Cleaner if-then logic. IFERROR replaces errors, IFS checks several conditions, SWITCH maps codes to names.",
    "example": "=IFS(D2<=30,\"0-30\",D2<=60,\"31-60\",TRUE,\">60\"). 45 days gives '31-60'.",
    "watch": "IFERROR hides real mistakes too. Use it only where an error is expected.",
-   "minv": "2019"
+   "minv": "2019",
+   "pic": {
+    "k": "sheet",
+    "cols": [
+     "Days",
+     "Bucket (IFS)"
+    ],
+    "rows": [
+     [
+      "12",
+      "0-30"
+     ],
+     [
+      "45",
+      "31-60"
+     ],
+     [
+      "95",
+      ">90"
+     ]
+    ]
+   }
   },
   {
    "app": "x",
@@ -802,7 +1270,42 @@
    "plain": "One formula returns a whole list that grows or shrinks by itself.",
    "example": "=UNIQUE(Customer) lists each customer once. Add a new customer to the data and it appears in the list.",
    "watch": "It needs empty cells below. If something is in the way you get #SPILL!.",
-   "minv": "2021"
+   "minv": "2021",
+   "pic": {
+    "k": "sheet",
+    "before": true,
+    "cols": [
+     "Customer"
+    ],
+    "rows": [
+     [
+      "Ali"
+     ],
+     [
+      "Bina"
+     ],
+     [
+      "Ali"
+     ],
+     [
+      "Citra"
+     ],
+     [
+      "Bina"
+     ]
+    ],
+    "after": [
+     [
+      "Ali"
+     ],
+     [
+      "Bina"
+     ],
+     [
+      "Citra"
+     ]
+    ]
+   }
   },
   {
    "app": "x",
@@ -823,7 +1326,20 @@
    "plain": "Give names to parts of a long formula, so it's shorter, easier to read and faster.",
    "example": "=LET(s, SUM(Sales), c, SUM(Cost), (s-c)/s) gives GP% without repeating SUM(Sales).",
    "watch": "Names can't look like cell addresses (A1, GP1). Use words like sales, cost.",
-   "minv": "2021"
+   "minv": "2021",
+   "pic": {
+    "k": "sheet",
+    "cols": [
+     "Formula",
+     "Result"
+    ],
+    "rows": [
+     [
+      "=LET(s,SUM(C:C),c,SUM(D:D),(s-c)/s)",
+      "28%"
+     ]
+    ]
+   }
   },
   {
    "app": "x",
@@ -868,7 +1384,31 @@
    "plain": "A pivot table made with a formula. It updates instantly, with no Refresh button.",
    "example": "=GROUPBY(Customer, Amount, SUM) gives each customer with their total sales.",
    "watch": "Only in Microsoft 365. People on Excel 2024 or older see #NAME?.",
-   "minv": "365"
+   "minv": "365",
+   "pic": {
+    "k": "sheet",
+    "cols": [
+     "Customer",
+     "Sum of Amount"
+    ],
+    "rows": [
+     [
+      "Ali Sdn Bhd",
+      "15,700"
+     ],
+     [
+      "Bina Trading",
+      "3,200"
+     ],
+     [
+      "Total",
+      "18,900"
+     ]
+    ],
+    "hl": [
+     2
+    ]
+   }
   },
   {
    "app": "x",
@@ -890,7 +1430,32 @@
    "plain": "Tools to stack, split and trim lists with formulas instead of copy-paste.",
    "example": "=VSTACK(CoA!A2:D100, CoB!A2:D100) puts both companies' rows into one list.",
    "watch": "Blank rows in the ranges come through as zeros. Trim the ranges or filter out blanks.",
-   "minv": "2024"
+   "minv": "2024",
+   "pic": {
+    "k": "sheet",
+    "cols": [
+     "Sheet",
+     "Invoice",
+     "Amount"
+    ],
+    "rows": [
+     [
+      "CoA",
+      "INV-1",
+      "500"
+     ],
+     [
+      "CoA",
+      "INV-2",
+      "300"
+     ],
+     [
+      "CoB",
+      "INV-9",
+      "900"
+     ]
+    ]
+   }
   },
   {
    "app": "x",
@@ -912,7 +1477,24 @@
    "plain": "Find text that follows a pattern, like 'INV followed by numbers', inside messy text.",
    "example": "From 'IBG CR ABC SDN BHD INV20456 REF' → =REGEXEXTRACT(A2,\"INV\\d+\") gives INV20456.",
    "watch": "Patterns are fussy. Test on a few rows before applying to all.",
-   "minv": "365"
+   "minv": "365",
+   "pic": {
+    "k": "sheet",
+    "before": true,
+    "cols": [
+     "Bank description"
+    ],
+    "rows": [
+     [
+      "IBG CR ABC SDN BHD INV20456 REF"
+     ]
+    ],
+    "after": [
+     [
+      "INV20456"
+     ]
+    ]
+   }
   },
   {
    "app": "x",
@@ -935,7 +1517,47 @@
    "plain": "Summarise thousands of rows into a small table by dragging fields, with no formulas.",
    "example": "50,000 GL lines become a table of account × company totals in 10 seconds.",
    "watch": "Without Auto Refresh (see next card), it does not update by itself: right-click › Refresh after the data changes.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "sheet",
+    "before": true,
+    "cols": [
+     "Account",
+     "Co",
+     "Amt"
+    ],
+    "rows": [
+     [
+      "Freight",
+      "1000",
+      "500"
+     ],
+     [
+      "Freight",
+      "2000",
+      "300"
+     ],
+     [
+      "Repairs",
+      "1000",
+      "200"
+     ]
+    ],
+    "after": [
+     [
+      "Freight",
+      "800"
+     ],
+     [
+      "Repairs",
+      "200"
+     ],
+     [
+      "Total",
+      "1,000"
+     ]
+    ]
+   }
   },
   {
    "app": "x",
@@ -959,7 +1581,27 @@
     "Refresh by hand any time: Alt+F5 (this pivot) or Ctrl+Alt+F5 (all)",
     "Need instant updates without the button? Use =GROUPBY or =PIVOTBY"
    ],
-   "minv": "365"
+   "minv": "365",
+   "pic": {
+    "k": "sheet",
+    "before": true,
+    "cols": [
+     "Freight (data)",
+     "Pivot total"
+    ],
+    "rows": [
+     [
+      "100",
+      "100"
+     ]
+    ],
+    "after": [
+     [
+      "118",
+      "118 (no Refresh click)"
+     ]
+    ]
+   }
   },
   {
    "app": "x",
@@ -980,7 +1622,32 @@
    "plain": "Show pivot numbers as % of total or change from last month, without extra columns.",
    "example": "Sales Oct 120, Nov 150. Show Values As › Difference From (previous) shows Nov +30.",
    "watch": "Calculated fields work on totals, not row by row. Ratios can look different from Excel formulas.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "sheet",
+    "cols": [
+     "Month",
+     "Sales",
+     "Diff vs prev"
+    ],
+    "rows": [
+     [
+      "Sep",
+      "120",
+      ""
+     ],
+     [
+      "Oct",
+      "150",
+      "+30"
+     ],
+     [
+      "Nov",
+      "140",
+      "-10"
+     ]
+    ]
+   }
   },
   {
    "app": "x",
@@ -1002,7 +1669,26 @@
    "plain": "Clickable buttons that filter pivots and tables. Easy for people who don't know Excel.",
    "example": "Click 'Company B' on the slicer; every connected pivot shows only Company B.",
    "watch": "A slicer controls only its own pivot unless you link others in Report Connections.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "board",
+    "cols": [
+     [
+      "Company slicer",
+      [
+       "1000 ✓",
+       "2000",
+       "3000"
+      ]
+     ],
+     [
+      "Pivot shows",
+      [
+       "Only company 1000"
+      ]
+     ]
+    ]
+   }
   },
   {
    "app": "x",
@@ -1070,7 +1756,32 @@
    "plain": "Waterfall shows how you got from one number to another. Combo mixes bars and a line. Sparklines are tiny trend charts in a cell.",
    "example": "Budget PBT 500 → +80 sales → -30 freight → -20 FX → Actual 530, as a waterfall.",
    "watch": "Set the first and last bars as 'total', or the waterfall looks wrong.",
-   "minv": "2016"
+   "minv": "2016",
+   "pic": {
+    "k": "dash",
+    "cards": [
+     [
+      "Budget PBT",
+      "500"
+     ],
+     [
+      "Actual PBT",
+      "530"
+     ]
+    ],
+    "bars": [
+     60,
+     72,
+     52,
+     64
+    ],
+    "labels": [
+     "Budget",
+     "+Sales",
+     "-Freight",
+     "Actual"
+    ]
+   }
   },
   {
    "app": "x",
@@ -1114,7 +1825,24 @@
    "plain": "Ask 'what input do I need?' (Goal Seek) or 'what if this changes?' (Data Table, Scenarios).",
    "example": "PBT target 1,000. Goal Seek finds sales must be 8,400.",
    "watch": "Data Tables recalculate constantly and slow big files. Set calculation to 'Automatic except data tables'.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "sheet",
+    "cols": [
+     "FX change",
+     "-5%",
+     "0%",
+     "+5%"
+    ],
+    "rows": [
+     [
+      "PBT",
+      "1,120",
+      "1,000",
+      "880"
+     ]
+    ]
+   }
   },
   {
    "app": "x",
@@ -1137,7 +1865,36 @@
    "plain": "Excel predicts future months from your past months, including seasonal patterns.",
    "example": "24 months of electricity cost give a forecast for the next 6 months with a high-low range.",
    "watch": "It only follows the past pattern. It can't know about a new tariff or new machine.",
-   "minv": "2016"
+   "minv": "2016",
+   "pic": {
+    "k": "dash",
+    "cards": [
+     [
+      "Next 6 months",
+      "forecast + range"
+     ]
+    ],
+    "bars": [
+     40,
+     45,
+     50,
+     48,
+     55,
+     58,
+     60,
+     62
+    ],
+    "labels": [
+     "Jan",
+     "Feb",
+     "Mar",
+     "Apr",
+     "May*",
+     "Jun*",
+     "Jul*",
+     "Aug*"
+    ]
+   }
   },
   {
    "app": "x",
@@ -1183,7 +1940,16 @@
    "plain": "Tools that show where a number comes from and calculate a formula step by step.",
    "example": "Trace Precedents draws arrows from the total to the 5 cells it adds, so you can spot the wrong one.",
    "watch": "Arrows stay on screen. Click Remove Arrows when done.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "flow",
+    "steps": [
+     "C10 =SUM(C2:C9)",
+     "Trace Precedents: arrows to C2…C9",
+     "C7 has typed 12,500 instead of a formula",
+     "Fix C7"
+    ]
+   }
   },
   {
    "app": "x",
@@ -1206,7 +1972,22 @@
    "plain": "Lock formulas so people can only type in the input cells you allow.",
    "example": "HODs can type in yellow cells C5:C20; clicking a formula cell shows 'protected'.",
    "watch": "It's not real security; passwords are easy to break. Don't rely on it for confidential data.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "sheet",
+    "cols": [
+     "Item",
+     "Input (yellow)",
+     "Calc (locked)"
+    ],
+    "rows": [
+     [
+      "Accrual",
+      "[ 12,000 ]",
+      "=B2*1.1 (locked)"
+     ]
+    ]
+   }
   },
   {
    "app": "x",
@@ -1229,7 +2010,23 @@
    "plain": "Several people edit the same file at the same time, and you can see who changed what and go back.",
    "example": "Two HODs fill the budget file at once. Show Changes: 'Aminah changed C12 from 500 to 750, 2:15 pm'.",
    "watch": "Works only for files saved in OneDrive or SharePoint, not email attachments or your C: drive.",
-   "minv": "365"
+   "minv": "365",
+   "pic": {
+    "k": "list",
+    "title": "Show Changes",
+    "items": [
+     [
+      "Aminah changed C12 500 → 750",
+      "2:15 pm",
+      1
+     ],
+     [
+      "Ali added row 41",
+      "2:20 pm",
+      0
+     ]
+    ]
+   }
   },
   {
    "app": "x",
@@ -1273,7 +2070,35 @@
    "plain": "A real tick box inside a cell that counts as TRUE or FALSE.",
    "example": "Ten tasks with boxes. =COUNTIF(B2:B11,TRUE) shows 7 done.",
    "watch": "People on older Excel see TRUE/FALSE text instead of boxes.",
-   "minv": "365"
+   "minv": "365",
+   "pic": {
+    "k": "sheet",
+    "cols": [
+     "Task",
+     "Done"
+    ],
+    "rows": [
+     [
+      "Bank rec",
+      "☑"
+     ],
+     [
+      "Accruals",
+      "☑"
+     ],
+     [
+      "FA dep",
+      "☐"
+     ],
+     [
+      "Done count",
+      "2"
+     ]
+    ],
+    "hl": [
+     3
+    ]
+   }
   },
   {
    "app": "x",
@@ -1296,7 +2121,20 @@
    "plain": "Excel pulls live exchange rates and stock prices from the internet into cells.",
    "example": "MYR/JPY › Data › Currencies › Price shows today's rate, and Refresh updates it.",
    "watch": "These are market rates with a delay. Not the bank or BNM rate for your books.",
-   "minv": "365"
+   "minv": "365",
+   "pic": {
+    "k": "sheet",
+    "cols": [
+     "Pair",
+     "Price"
+    ],
+    "rows": [
+     [
+      "MYR/JPY",
+      "35.6 (example)"
+     ]
+    ]
+   }
   },
   {
    "app": "x",
@@ -1318,7 +2156,12 @@
    "plain": "Excel suggests charts and patterns, and answers simple questions about your table.",
    "example": "Ask 'top 5 vendors by amount' and get a ready chart you can insert.",
    "watch": "Data is sent to Microsoft to analyse. Check your company allows it.",
-   "minv": "365"
+   "minv": "365",
+   "pic": {
+    "k": "chat",
+    "q": "Top 5 vendors by amount",
+    "a": "Bar chart ready to insert: ABC, TNB, XYZ, Delta, Global."
+   }
   },
   {
    "app": "x",
@@ -1383,7 +2226,23 @@
    "plain": "Shows what will break for people with older Excel, and removes hidden data before you send a file.",
    "example": "It lists 'XLOOKUP not supported in Excel 2019 (3 cells)' and finds 2 hidden sheets.",
    "watch": "Inspect › Remove All can't be undone. Run it on a copy.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "list",
+    "title": "Compatibility Checker",
+    "items": [
+     [
+      "XLOOKUP not in Excel 2019 (3 cells)",
+      "Find",
+      1
+     ],
+     [
+      "Hidden sheets: 2",
+      "Remove",
+      0
+     ]
+    ]
+   }
   },
   {
    "app": "x",
@@ -1428,7 +2287,16 @@
    "plain": "Code that repeats Excel steps for you. Record once, replay any time.",
    "example": "A macro opens each of 6 company exports, cleans them and saves each as PDF in one click.",
    "watch": "Recorded macros use fixed ranges. Adjust them or they break when data grows.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "flow",
+    "steps": [
+     "Open 6 company exports",
+     "Clean columns",
+     "Save each as PDF",
+     "Done in one click"
+    ]
+   }
   },
   {
    "app": "x",
@@ -1472,7 +2340,20 @@
    "plain": "Write Python inside an Excel cell to do advanced analysis and charts.",
    "example": "=PY(...) uses pandas to find journal entries more than 3 standard deviations from normal.",
    "watch": "It runs in Microsoft's cloud, so it needs internet, and IT may turn it off.",
-   "minv": "365"
+   "minv": "365",
+   "pic": {
+    "k": "sheet",
+    "cols": [
+     "=PY(…)",
+     "Result"
+    ],
+    "rows": [
+     [
+      "df.describe()",
+      "count 500 · mean 2,140 · max 98,000"
+     ]
+    ]
+   }
   },
   {
    "app": "q",
@@ -1495,7 +2376,16 @@
    "plain": "Power Query reads every file in a folder and stacks them into one table. New month = drop the file in and refresh.",
    "example": "Jan.xlsx, Feb.xlsx, Mar.xlsx (1,000 rows each) become one 3,000-row table. Add Apr.xlsx, Refresh, and it's 4,000 rows.",
    "watch": "All files need the same columns and layout. One odd file breaks the refresh.",
-   "minv": "2016"
+   "minv": "2016",
+   "pic": {
+    "k": "flow",
+    "steps": [
+     "Folder: Apr.xlsx, May.xlsx, Jun.xlsx",
+     "Combine & Transform",
+     "One table: 3,000 rows",
+     "Add Jul.xlsx → Refresh → 4,000 rows"
+    ]
+   }
   },
   {
    "app": "q",
@@ -1518,7 +2408,35 @@
    "plain": "Turns a wide table (months across) into a long table (one row per month), the shape pivots like.",
    "example": "Account | Apr | May becomes Account | Month | Amount, with Apr and May on separate rows.",
    "watch": "Select the columns to KEEP and choose Unpivot OTHER Columns, so new months are included automatically.",
-   "minv": "2016"
+   "minv": "2016",
+   "pic": {
+    "k": "sheet",
+    "before": true,
+    "cols": [
+     "Account",
+     "Apr",
+     "May"
+    ],
+    "rows": [
+     [
+      "Freight",
+      "120",
+      "135"
+     ]
+    ],
+    "after": [
+     [
+      "Freight",
+      "Apr",
+      "120"
+     ],
+     [
+      "Freight",
+      "May",
+      "135"
+     ]
+    ]
+   }
   },
   {
    "app": "q",
@@ -1541,7 +2459,28 @@
    "plain": "Join two tables on a common column, like a lookup for whole tables. 'Anti join' shows what's missing.",
    "example": "Bank 100 rows, books 98 rows. Left Anti join (Bank vs Books) shows the 2 bank items not in your books.",
    "watch": "Match on clean keys. Extra spaces or text-vs-number differences make good matches fail.",
-   "minv": "2016"
+   "minv": "2016",
+   "pic": {
+    "k": "rec",
+    "left": [
+     "Bank",
+     [
+      "12,500",
+      "800",
+      "45"
+     ]
+    ],
+    "right": [
+     "Books",
+     [
+      "12,500",
+      "800"
+     ]
+    ],
+    "out": [
+     "Left Anti result: 45 (not in books)"
+    ]
+   }
   },
   {
    "app": "q",
@@ -1563,7 +2502,31 @@
    "plain": "Stack tables with the same columns one under another.",
    "example": "Company A (500 rows) + Company B (300 rows) = one list of 800 rows.",
    "watch": "Columns are matched by name. 'Amount' and 'Amt' become two separate columns.",
-   "minv": "2016"
+   "minv": "2016",
+   "pic": {
+    "k": "sheet",
+    "before": true,
+    "cols": [
+     "Company",
+     "Amount"
+    ],
+    "rows": [
+     [
+      "A",
+      "500"
+     ]
+    ],
+    "after": [
+     [
+      "A",
+      "500"
+     ],
+     [
+      "B",
+      "900"
+     ]
+    ]
+   }
   },
   {
    "app": "q",
@@ -1585,7 +2548,24 @@
    "plain": "Tell Power Query how dates and numbers are written in the file, so it reads them correctly.",
    "example": "'03/04/2026' read as Malaysian format = 3 April. Read as US format = 4 March.",
    "watch": "Wrong locale gives silent errors: months swap without any warning.",
-   "minv": "2016"
+   "minv": "2016",
+   "pic": {
+    "k": "sheet",
+    "before": true,
+    "cols": [
+     "Date (text)"
+    ],
+    "rows": [
+     [
+      "03/04/2026"
+     ]
+    ],
+    "after": [
+     [
+      "3 April 2026 (Malaysia locale)"
+     ]
+    ]
+   }
   },
   {
    "app": "q",
@@ -1608,7 +2588,24 @@
    "plain": "Point-and-click fixes that repeat automatically every time you refresh.",
    "example": "Trim turns ' ABC Sdn Bhd ' into 'ABC Sdn Bhd', so lookups match.",
    "watch": "Steps run in order. Changing an early step can break later ones.",
-   "minv": "2016"
+   "minv": "2016",
+   "pic": {
+    "k": "sheet",
+    "before": true,
+    "cols": [
+     "Vendor"
+    ],
+    "rows": [
+     [
+      "  ABC Sdn Bhd "
+     ]
+    ],
+    "after": [
+     [
+      "ABC Sdn Bhd"
+     ]
+    ]
+   }
   },
   {
    "app": "q",
@@ -1629,7 +2626,39 @@
    "plain": "Summarise rows into totals before loading, so the result is small and fast.",
    "example": "10,000 invoice lines become 120 rows: one per vendor per month with the total.",
    "watch": "You lose the detail lines. Keep a separate detailed query if you need them.",
-   "minv": "2016"
+   "minv": "2016",
+   "pic": {
+    "k": "sheet",
+    "before": true,
+    "cols": [
+     "Vendor",
+     "Amount"
+    ],
+    "rows": [
+     [
+      "ABC",
+      "500"
+     ],
+     [
+      "ABC",
+      "300"
+     ],
+     [
+      "TNB",
+      "200"
+     ]
+    ],
+    "after": [
+     [
+      "ABC",
+      "800"
+     ],
+     [
+      "TNB",
+      "200"
+     ]
+    ]
+   }
   },
   {
    "app": "q",
@@ -1672,7 +2701,24 @@
    "plain": "Match text that is similar but not exactly the same.",
    "example": "'ABC Sdn. Bhd.' matches 'ABC SDN BHD' at 0.85 similarity.",
    "watch": "It can match wrong pairs. Always review the results.",
-   "minv": "365"
+   "minv": "365",
+   "pic": {
+    "k": "sheet",
+    "before": true,
+    "cols": [
+     "Bank name"
+    ],
+    "rows": [
+     [
+      "ABC Sdn. Bhd."
+     ]
+    ],
+    "after": [
+     [
+      "ABC SDN BHD (0.85 match)"
+     ]
+    ]
+   }
   },
   {
    "app": "q",
@@ -1693,7 +2739,30 @@
    "plain": "Shows how many errors, blanks and unique values each column has before you load.",
    "example": "Amount column: 98% valid, 2% error, so you fix the 20 bad rows first.",
    "watch": "By default it checks only the first 1,000 rows. Switch to the entire data set.",
-   "minv": "365"
+   "minv": "365",
+   "pic": {
+    "k": "sheet",
+    "cols": [
+     "Column",
+     "Valid",
+     "Error",
+     "Empty"
+    ],
+    "rows": [
+     [
+      "Amount",
+      "98%",
+      "2%",
+      "0%"
+     ],
+     [
+      "Date",
+      "100%",
+      "0%",
+      "0%"
+     ]
+    ]
+   }
   },
   {
    "app": "q",
@@ -1715,7 +2784,24 @@
    "plain": "Add your own calculated column, and see or edit the code Power Query writes for each click.",
    "example": "if [Amount] < 0 then \"Credit\" else \"Debit\" adds a Credit/Debit column.",
    "watch": "M is case-sensitive. 'amount' and 'Amount' aren't the same.",
-   "minv": "2016"
+   "minv": "2016",
+   "pic": {
+    "k": "sheet",
+    "cols": [
+     "Amount",
+     "Type (custom)"
+    ],
+    "rows": [
+     [
+      "-50",
+      "Credit"
+     ],
+     [
+      "120",
+      "Debit"
+     ]
+    ]
+   }
   },
   {
    "app": "q",
@@ -1760,7 +2846,15 @@
    "plain": "The master controls fonts, colours, logo and footer for every slide at once.",
    "example": "Change the title font in the master; all 40 slides update.",
    "watch": "Text typed on a normal slide doesn't come from the master. Put logos and footers on the master.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "slides",
+    "title": "[Master] Title font + logo",
+    "bullets": [
+     "Applies to all 40 slides",
+     "Footer: Confidential"
+    ]
+   }
   },
   {
    "app": "pp",
@@ -1783,7 +2877,16 @@
    "plain": "Paste a chart that stays connected to Excel and updates when the numbers change.",
    "example": "Change October sales in Excel; in PowerPoint, Update Links and the chart shows the new bar.",
    "watch": "Receivers without the Excel file see broken links. Break links on the copy you send.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "flow",
+    "steps": [
+     "Excel: Oct sales = 150",
+     "Slide chart linked",
+     "Excel changes to 165",
+     "Update Links → slide shows 165"
+    ]
+   }
   },
   {
    "app": "pp",
@@ -1804,7 +2907,24 @@
    "plain": "PowerPoint suggests ready-made layouts for your slide content.",
    "example": "A slide with 4 bullet points becomes 4 icon boxes in one click.",
    "watch": "Suggestions can ignore your company template. Check it still matches.",
-   "minv": "365"
+   "minv": "365",
+   "pic": {
+    "k": "sheet",
+    "before": true,
+    "cols": [
+     "Slide"
+    ],
+    "rows": [
+     [
+      "• A • B • C • D"
+     ]
+    ],
+    "after": [
+     [
+      "[A] [B] [C] [D] icon boxes"
+     ]
+    ]
+   }
   },
   {
    "app": "pp",
@@ -1848,7 +2968,27 @@
    "plain": "Clickable thumbnails that jump to other parts of the deck and come back.",
    "example": "One summary slide with 6 company tiles. Click Company C, go to its slides, and return automatically.",
    "watch": "Older PowerPoint shows them as static pictures.",
-   "minv": "2019"
+   "minv": "2019",
+   "pic": {
+    "k": "board",
+    "cols": [
+     [
+      "Summary slide",
+      [
+       "Co 1000",
+       "Co 2000",
+       "Co 3000"
+      ]
+     ],
+     [
+      "Click a tile",
+      [
+       "Jumps to section",
+       "Returns to summary"
+      ]
+     ]
+    ]
+   }
   },
   {
    "app": "pp",
@@ -1870,7 +3010,27 @@
    "plain": "You see notes and the next slide on your screen while the audience sees only the slide.",
    "example": "Your laptop shows 'Mention freight +12%' under the slide; the projector doesn't.",
    "watch": "Check which screen is the projector before you start (Display Settings).",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "board",
+    "cols": [
+     [
+      "Your screen",
+      [
+       "Slide",
+       "Notes: mention freight +12%",
+       "Next slide",
+       "Timer"
+      ]
+     ],
+     [
+      "Projector",
+      [
+       "Slide only"
+      ]
+     ]
+    ]
+   }
   },
   {
    "app": "pp",
@@ -1981,7 +3141,15 @@
    "plain": "Outlook automatically sorts incoming emails based on conditions you set.",
    "example": "Emails from the bank with 'Credit Advice' in the subject go straight to the Bank folder.",
    "watch": "Rules run top to bottom. A rule with 'stop processing' blocks the rules below it.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "flow",
+    "steps": [
+     "Email from bank, subject 'Credit Advice'",
+     "Rule matches",
+     "Moved to folder: Bank"
+    ]
+   }
   },
   {
    "app": "o",
@@ -2003,7 +3171,16 @@
    "plain": "One button that does several email actions at once.",
    "example": "'To AP' button: forward to the AP junior, mark as read, move to AP folder.",
    "watch": "It applies to the selected emails. Check your selection before clicking.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "flow",
+    "steps": [
+     "Click 'To AP'",
+     "Forward to AP junior",
+     "Mark as read",
+     "Move to AP folder"
+    ]
+   }
   },
   {
    "app": "o",
@@ -2025,7 +3202,16 @@
    "plain": "Saved email text you insert with a click, instead of retyping.",
    "example": "'Payment enquiry' inserts: 'Thank you for your email. Payment is scheduled on...'",
    "watch": "Personalise before sending. Templates still need names and dates.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "email",
+    "to": "vendor@supplier.com",
+    "subject": "RE: Payment status",
+    "body": [
+     "Thank you for your email.",
+     "Payment is scheduled on 15 Nov 2026."
+    ]
+   }
   },
   {
    "app": "o",
@@ -2047,7 +3233,16 @@
    "plain": "Write an email now and choose when it's sent.",
    "example": "Write at 10 pm, schedule for 8:00 am Monday.",
    "watch": "In classic Outlook, some setups need Outlook open at that time.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "email",
+    "to": "HODs",
+    "subject": "Reminder: accruals due",
+    "body": [
+     "(written Sun 10 pm)",
+     "Delivers Mon 8:00 am"
+    ]
+   }
   },
   {
    "app": "o",
@@ -2091,7 +3286,23 @@
    "plain": "One team mailbox many people can read and send from.",
    "example": "ap@company inbox: the team sees every vendor email even when you're on leave.",
    "watch": "Change From to the shared mailbox, or the email goes out from your name.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "list",
+    "title": "ap@ mailbox",
+    "items": [
+     [
+      "Vendor statement — ABC",
+      "Aminah",
+      0
+     ],
+     [
+      "Payment query — TNB",
+      "You",
+      1
+     ]
+    ]
+   }
   },
   {
    "app": "o",
@@ -2113,7 +3324,31 @@
    "plain": "See when people are free, or let them vote on a time, across time zones.",
    "example": "Your calendar shows your time and the overseas office time side by side, e.g. 9:00 here = 10:00 there.",
    "watch": "Free/busy shows only for people in your organisation.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "calendar",
+    "days": [
+     "Mon",
+     "Tue",
+     "Wed",
+     "Thu",
+     "Fri"
+    ],
+    "events": [
+     [
+      1,
+      "All free 10:00"
+     ],
+     [
+      2,
+      "Busy"
+     ],
+     [
+      3,
+      "All free 15:00"
+     ]
+    ]
+   }
   },
   {
    "app": "o",
@@ -2180,7 +3415,26 @@
    "plain": "Organise data as one central table of transactions linked to smaller lookup tables. Faster and easier.",
    "example": "Sales (amounts) in the middle, linked to Date, Customer, Company. Filter Company B and Sales follows.",
    "watch": "Avoid many-to-many links and double-direction filters unless you know why.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "board",
+    "cols": [
+     [
+      "Dimensions",
+      [
+       "Date",
+       "Customer",
+       "Company"
+      ]
+     ],
+     [
+      "Fact",
+      [
+       "Sales (amounts)"
+      ]
+     ]
+    ]
+   }
   },
   {
    "app": "b",
@@ -2203,7 +3457,32 @@
    "plain": "A calendar table that tells Power BI your year starts in April, so YTD and periods are right.",
    "example": "15 May 2026 → FY2026, period 2. YTD in May = April + May.",
    "watch": "Without 'Mark as date table', time functions can give wrong YTD.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "sheet",
+    "cols": [
+     "Date",
+     "FY",
+     "Period"
+    ],
+    "rows": [
+     [
+      "01/04/2026",
+      "FY2026",
+      "1"
+     ],
+     [
+      "15/05/2026",
+      "FY2026",
+      "2"
+     ],
+     [
+      "10/02/2027",
+      "FY2026",
+      "11"
+     ]
+    ]
+   }
   },
   {
    "app": "b",
@@ -2225,7 +3504,35 @@
    "plain": "Measures are formulas that recalculate for every filter. CALCULATE changes which data a measure looks at.",
    "example": "[Sales] = 10m total. Click Company A, it shows 4m. [Sales Co A] always shows 4m.",
    "watch": "A measure isn't a column. You can't see it in the table, only in visuals.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "sheet",
+    "cols": [
+     "Company",
+     "Sales",
+     "Sales Co A"
+    ],
+    "rows": [
+     [
+      "A",
+      "4.0m",
+      "4.0m"
+     ],
+     [
+      "B",
+      "3.5m",
+      "4.0m"
+     ],
+     [
+      "Total",
+      "10m",
+      "4.0m"
+     ]
+    ],
+    "hl": [
+     2
+    ]
+   }
   },
   {
    "app": "b",
@@ -2247,7 +3554,30 @@
    "plain": "Ready functions for comparisons like last year, YTD and previous month.",
    "example": "Oct 2026 sales 1.2m; Sales LY shows Oct 2025 = 1.0m, so +20%.",
    "watch": "They need a proper date table with no missing days.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "sheet",
+    "cols": [
+     "Month",
+     "Sales",
+     "Sales LY",
+     "Growth"
+    ],
+    "rows": [
+     [
+      "Oct 26",
+      "1.2m",
+      "1.0m",
+      "+20%"
+     ],
+     [
+      "Nov 26",
+      "1.1m",
+      "1.2m",
+      "-8%"
+     ]
+    ]
+   }
   },
   {
    "app": "b",
@@ -2269,7 +3599,32 @@
    "plain": "Calculations written for one chart, like running totals, without changing the data model.",
    "example": "Monthly collections 100, 120, 90 → running total 100, 220, 310.",
    "watch": "They exist only in that visual. Other visuals can't reuse them.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "sheet",
+    "cols": [
+     "Month",
+     "Collections",
+     "Running total"
+    ],
+    "rows": [
+     [
+      "Apr",
+      "100",
+      "100"
+     ],
+     [
+      "May",
+      "120",
+      "220"
+     ],
+     [
+      "Jun",
+      "90",
+      "310"
+     ]
+    ]
+   }
   },
   {
    "app": "b",
@@ -2291,7 +3646,26 @@
    "plain": "Let viewers choose what a chart shows with a slicer.",
    "example": "Slicer: Sales / Qty / GP. Pick GP and the same chart shows gross profit.",
    "watch": "Name the options clearly; viewers see those names.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "board",
+    "cols": [
+     [
+      "Slicer",
+      [
+       "Sales ✓",
+       "Qty",
+       "GP"
+      ]
+     ],
+     [
+      "Same chart shows",
+      [
+       "Sales by month"
+      ]
+     ]
+    ]
+   }
   },
   {
    "app": "b",
@@ -2335,7 +3709,24 @@
    "plain": "Save a view of a page and switch to it with a button, like a mini app.",
    "example": "'Summary' and 'Detail' buttons flip between a chart view and a table view.",
    "watch": "Bookmarks also save filters. Untick 'Data' if you don't want that.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "board",
+    "cols": [
+     [
+      "[Summary] button",
+      [
+       "Chart view"
+      ]
+     ],
+     [
+      "[Detail] button",
+      [
+       "Table view"
+      ]
+     ]
+    ]
+   }
   },
   {
    "app": "b",
@@ -2358,7 +3749,16 @@
    "plain": "Right-click a summary to jump to details for just that item, or hover to see a mini report.",
    "example": "Right-click 'Company C' › Drill through › see only Company C's overdue invoices.",
    "watch": "The detail page needs the drill-through field (e.g. Company) added to its filter well.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "flow",
+    "steps": [
+     "Right-click 'Company 3000'",
+     "Drill through › Invoice detail",
+     "Page shows only Company 3000 invoices",
+     "Back button returns"
+    ]
+   }
   },
   {
    "app": "b",
@@ -2402,7 +3802,16 @@
    "plain": "AI visuals that break a number down level by level, or find what affects it most.",
    "example": "Variable cost +15% → Plant 2 → Material X → Vendor Y explains most of it.",
    "watch": "It shows patterns, not causes. Confirm with real business reasons.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "flow",
+    "steps": [
+     "Variable cost +15%",
+     "Plant 2 (+12%)",
+     "Material X (+9%)",
+     "Vendor Y (+8%)"
+    ]
+   }
   },
   {
    "app": "b",
@@ -2424,7 +3833,12 @@
    "plain": "Type a question in plain English and Power BI draws the chart.",
    "example": "'Total sales by customer this year' gives a bar chart.",
    "watch": "It needs clear table and column names. Rename cryptic fields like 'ZFKN1'.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "chat",
+    "q": "total sales by customer this year",
+    "a": "Bar chart: Ali 15.7k, Bina 3.2k, Citra 0.9k"
+   }
   },
   {
    "app": "b",
@@ -2447,7 +3861,30 @@
    "plain": "Each viewer sees only their part of the data, in the same report.",
    "example": "Company A's manager opens the report and sees only Company A's numbers.",
    "watch": "Test with 'View as role'. Workspace admins still see everything.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "board",
+    "cols": [
+     [
+      "Manager Co 1000 sees",
+      [
+       "Company 1000 only"
+      ]
+     ],
+     [
+      "Manager Co 2000 sees",
+      [
+       "Company 2000 only"
+      ]
+     ],
+     [
+      "Same report",
+      [
+       "One file"
+      ]
+     ]
+    ]
+   }
   },
   {
    "app": "b",
@@ -2469,7 +3906,27 @@
    "plain": "A workspace is where you build reports; an app is the tidy package viewers open.",
    "example": "Top management opens 'F&A Reports' app and sees 3 reports, no draft pages.",
    "watch": "After changing reports, click Update app or viewers keep the old version.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "board",
+    "cols": [
+     [
+      "Workspace (builders)",
+      [
+       "Draft report",
+       "DSO report",
+       "Sales trend"
+      ]
+     ],
+     [
+      "App (viewers)",
+      [
+       "DSO report",
+       "Sales trend"
+      ]
+     ]
+    ]
+   }
   },
   {
    "app": "b",
@@ -2491,7 +3948,39 @@
    "plain": "Power BI online refreshes the data itself on a timetable.",
    "example": "At 7:00 am daily it reads the latest Excel from SharePoint; the report is fresh at 8:00.",
    "watch": "A file on your C: drive needs a gateway and your PC switched on. Use SharePoint.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "calendar",
+    "days": [
+     "Mon",
+     "Tue",
+     "Wed",
+     "Thu",
+     "Fri"
+    ],
+    "events": [
+     [
+      0,
+      "07:00 refresh"
+     ],
+     [
+      1,
+      "07:00 refresh"
+     ],
+     [
+      2,
+      "07:00 refresh"
+     ],
+     [
+      3,
+      "07:00 refresh"
+     ],
+     [
+      4,
+      "07:00 refresh"
+     ]
+    ]
+   }
   },
   {
    "app": "b",
@@ -2512,7 +4001,16 @@
    "plain": "Power BI emails a snapshot on a schedule, or alerts you when a number crosses a line.",
    "example": "Every Monday 8:00 the DSO page arrives by email. Alert when cash < RM1m.",
    "watch": "Alerts work only on cards, KPIs and gauges pinned to a dashboard.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "email",
+    "to": "Top Management",
+    "subject": "Weekly: DSO report (Mon 8:00)",
+    "body": [
+     "[snapshot of DSO page]",
+     "Open the report ›"
+    ]
+   }
   },
   {
    "app": "b",
@@ -2557,7 +4055,17 @@
    "plain": "Print-ready reports with exact layout that flow across many pages.",
    "example": "A statement of account per customer: header, invoice list, total, page numbers.",
    "watch": "Different tool from Power BI Desktop; layouts take longer to build.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "letter",
+    "title": "Statement of Account — Ali Sdn Bhd",
+    "lines": [
+     "INV-101  01/09  12,500.00",
+     "INV-118  15/09   3,200.00",
+     "Total due         15,700.00",
+     "Page 1 of 1"
+    ]
+   }
   },
   {
    "app": "b",
@@ -2622,7 +4130,28 @@
    "plain": "Measures how long each visual takes to load, and shows the query behind it.",
    "example": "Table visual 4.2 seconds; the cause is a slow measure. Fix it and it drops to 0.6 seconds.",
    "watch": "Test after clearing the cache (Refresh visuals) for real times.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "sheet",
+    "cols": [
+     "Visual",
+     "Time (ms)"
+    ],
+    "rows": [
+     [
+      "Table: invoices",
+      "4,200 (slow)"
+     ],
+     [
+      "Card: DSO",
+      "120"
+     ],
+     [
+      "After fix: table",
+      "600"
+     ]
+    ]
+   }
   },
   {
    "app": "b",
@@ -2711,7 +4240,15 @@
    "plain": "A flow watches your inbox and saves attachments from chosen senders into a folder.",
    "example": "An email from the bank with a PDF arrives; seconds later '2026-11-03 credit advice.pdf' is in the Bank folder.",
    "watch": "Signature images (logo.png) are attachments too. Add a condition to save only PDFs.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "flow",
+    "steps": [
+     "When a new email arrives (from bank)",
+     "For each attachment",
+     "Create file: Bank/2026-11-04 advice.pdf"
+    ]
+   }
   },
   {
    "app": "a",
@@ -2733,7 +4270,14 @@
    "plain": "A flow that runs by itself on a timetable.",
    "example": "On the 25th of each month at 9 am, an email reminds HODs to submit accruals.",
    "watch": "Set the time zone, or it runs on UTC time (8 hours earlier).",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "flow",
+    "steps": [
+     "Recurrence: 25th, 9:00",
+     "Send email to HODs: submit accruals"
+    ]
+   }
   },
   {
    "app": "a",
@@ -2755,7 +4299,15 @@
    "plain": "Send a request; the approver clicks Approve or Reject in Teams or email, and the decision is recorded.",
    "example": "Payment request RM45,000 → HOD approves on phone → requester is notified, with the record kept.",
    "watch": "The approval is a record only. It doesn't release the bank payment.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "flow",
+    "steps": [
+     "Payment request RM45,000",
+     "HOD gets Approve / Reject in Teams",
+     "Approved → requester notified + logged"
+    ]
+   }
   },
   {
    "app": "a",
@@ -2777,7 +4329,15 @@
    "plain": "When someone submits a form, the answers are saved and someone is notified automatically.",
    "example": "New vendor request submitted → row added to the tracker → you get an email.",
    "watch": "Choose the right form and responses in 'Get response details', or fields come out empty.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "flow",
+    "steps": [
+     "New form response",
+     "Add row to tracker",
+     "Email reviewer"
+    ]
+   }
   },
   {
    "app": "a",
@@ -2800,7 +4360,15 @@
    "plain": "Lets a flow read or add rows in an Excel table stored online.",
    "example": "For each overdue row in the ageing table, send a reminder email to that customer.",
    "watch": "The data must be a formatted Table, and the file must be closed by others to avoid lock errors.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "flow",
+    "steps": [
+     "List rows (Days > 60)",
+     "For each row",
+     "Send reminder email"
+    ]
+   }
   },
   {
    "app": "a",
@@ -2844,7 +4412,12 @@
    "plain": "A flow posts messages or interactive cards to a Teams chat or channel.",
    "example": "Daily 9 am post: '3 bank files received today ✓'.",
    "watch": "Posts come from 'Flow bot' or your name. Tell the team what it is.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "chat",
+    "q": "Flow bot · 9:00",
+    "a": "3 bank files received today ✓"
+   }
   },
   {
    "app": "a",
@@ -2888,7 +4461,17 @@
    "plain": "Make a flow tell you when something fails, instead of failing silently.",
    "example": "The save-attachment step fails → you get 'Bank flow failed at 10:02' with a link.",
    "watch": "Check your flows' run history monthly anyway.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "email",
+    "to": "You",
+    "subject": "Flow failed: Save bank PDFs",
+    "body": [
+     "Step: Create file",
+     "Time: 10:02",
+     "Open run ›"
+    ]
+   }
   },
   {
    "app": "a",
@@ -2933,7 +4516,16 @@
    "plain": "A robot that clicks and types on your PC for you, for systems without connectors.",
    "example": "It opens SAP, runs CN41N for 20 projects one by one, and saves each export.",
    "watch": "Screens that change (pop-ups, slow loading) break bots. Add waits.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "flow",
+    "steps": [
+     "Read project list (Excel)",
+     "Open SAP › CN41N",
+     "Enter project, export",
+     "Next project…"
+    ]
+   }
   },
   {
    "app": "a",
@@ -2976,7 +4568,24 @@
    "plain": "AI reads documents like invoices and pulls out fields for you.",
    "example": "A PDF invoice gives Invoice No INV-889, Date 02/11/2026, Amount 3,450.00 into your log.",
    "watch": "It makes mistakes on poor scans. Review before posting.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "sheet",
+    "before": true,
+    "cols": [
+     "Invoice PDF"
+    ],
+    "rows": [
+     [
+      "(scanned invoice)"
+     ]
+    ],
+    "after": [
+     [
+      "No INV-889 · 02/11/2026 · 3,450.00"
+     ]
+    ]
+   }
   },
   {
    "app": "a",
@@ -3020,7 +4629,23 @@
    "plain": "Turn a SharePoint list into a phone app in a few clicks.",
    "example": "Site staff open 'Petty Cash' app, enter the amount, snap the receipt, Submit.",
    "watch": "Share the app AND the list with users, or they can't see data.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "list",
+    "title": "Petty Cash app",
+    "items": [
+     [
+      "New claim: RM45 taxi",
+      "Submit",
+      1
+     ],
+     [
+      "Photo of receipt",
+      "Attached",
+      0
+     ]
+    ]
+   }
   },
   {
    "app": "p",
@@ -3086,7 +4711,28 @@
    "plain": "Each channel is a topic space, and its Files tab is a shared SharePoint folder.",
    "example": "The AR channel holds AR files and AR discussion together, not in emails.",
    "watch": "Files sent in a 1:1 chat are in your OneDrive, not the team. Post in the channel instead.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "board",
+    "cols": [
+     [
+      "F&A team",
+      [
+       "AP",
+       "AR",
+       "Closing",
+       "Reporting"
+      ]
+     ],
+     [
+      "Closing › Files",
+      [
+       "Oct close.xlsx",
+       "Checklist.docx"
+      ]
+     ]
+    ]
+   }
   },
   {
    "app": "t",
@@ -3108,7 +4754,21 @@
    "plain": "Pin files, reports or plans at the top of a channel for one-click access.",
    "example": "A 'Closing tracker' tab at the top of the Closing channel.",
    "watch": "People still need permission to the file itself.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "board",
+    "cols": [
+     [
+      "Closing channel tabs",
+      [
+       "Posts",
+       "Files",
+       "Close plan",
+       "DSO report"
+      ]
+     ]
+    ]
+   }
   },
   {
    "app": "t",
@@ -3130,7 +4790,21 @@
    "plain": "Record the meeting and get a searchable text of what everyone said.",
    "example": "Search the transcript for 'accrual' and jump to the minute it was agreed.",
    "watch": "Recordings may expire after some time. Download important ones.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "note",
+    "title": "Transcript search: 'accrual'",
+    "items": [
+     [
+      "12:04",
+      "Aminah: we post the accrual reversal tomorrow"
+     ],
+     [
+      "31:20",
+      "HOD: agreed, accrual RM12k"
+     ]
+    ]
+   }
   },
   {
    "app": "t",
@@ -3216,7 +4890,23 @@
    "plain": "Every save is kept, so you can open or restore an older version.",
    "example": "Someone overwrote the forecast at 3 pm; restore the 11 am version.",
    "watch": "Restoring replaces the current version. Download the current one first if needed.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "list",
+    "title": "Version history",
+    "items": [
+     [
+      "3:05 pm — overwritten",
+      "Ali",
+      0
+     ],
+     [
+      "11:00 am — good version",
+      "Restore",
+      1
+     ]
+    ]
+   }
   },
   {
    "app": "s",
@@ -3238,7 +4928,23 @@
    "plain": "Choose exactly who can open a link, and whether they can edit or download.",
    "example": "'Specific people: Aminah, view only, block download' for the payroll summary.",
    "watch": "'People in your organisation' links work for anyone in the company who gets the link.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "list",
+    "title": "Share settings",
+    "items": [
+     [
+      "Specific people: Aminah",
+      "Can view",
+      1
+     ],
+     [
+      "Block download",
+      "On",
+      0
+     ]
+    ]
+   }
   },
   {
    "app": "s",
@@ -3304,7 +5010,30 @@
    "plain": "Tag files with columns like Company, Vendor, Month, then filter instead of digging folders.",
    "example": "Filter Vendor = ABC, Month = Oct; 3 invoices appear from 2,000 files.",
    "watch": "Make columns required, or people skip tagging.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "folder",
+    "cols": [
+     "Name",
+     "Company",
+     "Vendor",
+     "Month"
+    ],
+    "rows": [
+     [
+      "INV-889.pdf",
+      "1000",
+      "ABC",
+      "Oct"
+     ],
+     [
+      "INV-901.pdf",
+      "2000",
+      "TNB",
+      "Oct"
+     ]
+    ]
+   }
   },
   {
    "app": "s",
@@ -3369,7 +5098,27 @@
    "plain": "A digital notebook: notebooks hold sections (tabs), sections hold pages.",
    "example": "Notebook 'Closing FY2026' › section 'Oct' › page 'Issue: GRNI difference'.",
    "watch": "Save notebooks in OneDrive, not on your PC, so they sync and are backed up.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "board",
+    "cols": [
+     [
+      "Notebook: Closing FY2026",
+      [
+       "Oct",
+       "Nov",
+       "Dec"
+      ]
+     ],
+     [
+      "Section Oct › pages",
+      [
+       "Issue: GRNI",
+       "Meeting 3 Nov"
+      ]
+     ]
+    ]
+   }
   },
   {
    "app": "n",
@@ -3390,7 +5139,25 @@
    "plain": "Mark lines as tasks or questions, then list all of them in one place.",
    "example": "Find Tags shows 8 open To Dos from 5 different meeting pages.",
    "watch": "Ticked To Dos stay on the page. Filter to unticked when reviewing.",
-   "minv": "all"
+   "minv": "all",
+   "pic": {
+    "k": "note",
+    "title": "Find Tags summary",
+    "items": [
+     [
+      "☐",
+      "Post accrual reversal"
+     ],
+     [
+      "☐",
+      "Check GRNI RM2,300"
+     ],
+     [
+      "?",
+      "Freight rate from Dec?"
+     ]
+    ]
+   }
   },
   {
    "app": "n",
@@ -3500,7 +5267,15 @@
    "plain": "Online forms and quizzes; answers can lead to different next questions.",
    "example": "Answer 'Yes' to 'Any accruals?' and the form shows the accrual details question; 'No' skips it.",
    "watch": "Set 'Who can fill in' correctly: only your organisation, or anyone.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "flow",
+    "steps": [
+     "Q1: Any accruals this month?",
+     "Yes → Q2: Amount and description",
+     "No → Submit"
+    ]
+   }
   },
   {
    "app": "f",
@@ -3564,7 +5339,23 @@
    "plain": "A shared, online table with columns, views and history, like a smarter Excel tracker.",
    "example": "Issue tracker: Issue, Owner, Status, Due date; everyone updates the same list.",
    "watch": "Plan the columns first. Changing types later can lose data.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "list",
+    "title": "Closing issue log",
+    "items": [
+     [
+      "GRNI difference",
+      "Open",
+      1
+     ],
+     [
+      "Bank charge",
+      "Resolved",
+      0
+     ]
+    ]
+   }
   },
   {
    "app": "l",
@@ -3586,7 +5377,30 @@
    "plain": "Different ways to look at the same list: board, calendar, grouped.",
    "example": "Board view with cards moving from Open → In progress → Done.",
    "watch": "Views are shared unless saved as personal.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "board",
+    "cols": [
+     [
+      "Open",
+      [
+       "GRNI diff"
+      ]
+     ],
+     [
+      "In progress",
+      [
+       "FA tagging"
+      ]
+     ],
+     [
+      "Done",
+      [
+       "Bank rec"
+      ]
+     ]
+    ]
+   }
   },
   {
    "app": "l",
@@ -3651,7 +5465,31 @@
    "plain": "A shared board of tasks with owners and due dates, grouped into columns.",
    "example": "Bucket 'D+2': Accruals (Ali, due 3rd), Bank rec (Siti, due 3rd). Repeats every month.",
    "watch": "Too many tiny tasks make the board useless. Keep it to key steps.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "board",
+    "cols": [
+     [
+      "D+1",
+      [
+       "Cut-off",
+       "Bank rec"
+      ]
+     ],
+     [
+      "D+2",
+      [
+       "Accruals"
+      ]
+     ],
+     [
+      "D+3",
+      [
+       "Intercompany"
+      ]
+     ]
+    ]
+   }
   },
   {
    "app": "pl",
@@ -3716,7 +5554,23 @@
    "plain": "A small table or checklist you paste in a chat that everyone edits live, everywhere it appears.",
    "example": "Paste a checklist in the team chat; ticks show instantly for everyone.",
    "watch": "People without Loop support see only a link.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "list",
+    "title": "Loop checklist (live)",
+    "items": [
+     [
+      "Bank rec — Siti",
+      "☑",
+      0
+     ],
+     [
+      "Accruals — Ali",
+      "☐",
+      1
+     ]
+    ]
+   }
   },
   {
    "app": "lp",
@@ -3760,7 +5614,12 @@
    "plain": "Microsoft's AI chat with your work account. Your data is protected and not used to train the AI.",
    "example": "Paste a formula and ask 'explain step by step'; it explains each part.",
    "watch": "AI can be wrong. Check numbers, and don't paste confidential data if policy says no.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "chat",
+    "q": "Explain =SUMIFS(D:D,A:A,\"1000\")",
+    "a": "It adds column D only where column A is 1000."
+   }
   },
   {
    "app": "c",
@@ -3781,7 +5640,12 @@
    "plain": "AI that summarises email threads and drafts replies in Outlook.",
    "example": "A 25-email thread becomes 5 bullet points: issue, amounts, who agreed what.",
    "watch": "Read the draft before sending; tone and facts may be off.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "chat",
+    "q": "Summarise this thread",
+    "a": "• ABC disputes INV-889 • Agreed credit note RM300 • Pay balance by 15 Nov"
+   }
   },
   {
    "app": "c",
@@ -3825,7 +5689,30 @@
    "plain": "An Excel formula that asks AI to classify or summarise text in cells.",
    "example": "'Grab taxi to client' → Travel. 'TNB bill Oct' → Utilities.",
    "watch": "Results can change when recalculated. Paste as values when final.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "pic": {
+    "k": "sheet",
+    "before": true,
+    "cols": [
+     "Description"
+    ],
+    "rows": [
+     [
+      "Grab taxi to client"
+     ],
+     [
+      "TNB bill Oct"
+     ]
+    ],
+    "after": [
+     [
+      "Travel"
+     ],
+     [
+      "Utilities"
+     ]
+    ]
+   }
   },
   {
    "app": "c",

@@ -633,6 +633,26 @@ footer .copy{font-size:14px;color:var(--ink);margin-bottom:4px}
   .hb-page{position:absolute;left:0;top:0;width:100%;border:0;background:#fff!important;padding:0}
   .hb-print,.hb-nav,.hb-quiz,.bot-fab{display:none!important}
 }
+
+/* stage 3 pictures */
+.uipic{display:grid;gap:8px;max-width:520px;padding:0;overflow:hidden}
+.uipic .ub{display:flex;align-items:center;gap:8px;background:var(--c);color:#fff;padding:6px 10px;font-weight:700;font-size:13px}
+.uipic .ub .tile{background:#fff;color:var(--c)}
+.uipic .up{display:flex;flex-wrap:wrap;gap:5px;align-items:center;padding:4px 10px;font-size:12.5px}
+.uipic .up span{background:#F3F4F8;border:1px solid #E1E4EA;border-radius:6px;padding:2px 8px}
+.uipic .up span.last{background:color-mix(in oklab,var(--c) 15%,white);border-color:var(--c);font-weight:700;color:color-mix(in oklab,var(--c) 75%,black)}
+.uipic .up i{font-style:normal;color:#999}
+.uipic .up .cur{font-style:normal;font-weight:800;color:#E5007E;font-size:12px}
+.uipic .ur{margin:0 10px 10px;background:#F4FBF6;border:1px solid #CDEBD8;border-radius:10px;padding:8px 10px;font-size:13px}
+.uipic .ur small,.fxp small{display:block;font-weight:700;color:var(--muted);font-size:11px;margin-bottom:2px}
+.fxp{display:grid;gap:8px}
+.fxbar{display:flex;align-items:center;gap:8px;border:1px solid #D5D8E2;border-radius:6px;padding:4px 8px;background:#fff;overflow-x:auto}
+.fxbar .fxn{font-style:italic;color:#888;font-weight:700}
+.fxbar code{font-family:var(--f-mono);font-size:12px;white-space:nowrap}
+.fxgrid{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.fxres b.one{display:inline-block;background:#E9F7EF;border:2px solid #1A8754;border-radius:6px;padding:4px 10px;font-size:14px}
+.pt.res td{background:#E9F7EF;border-color:#9DD1B2;font-weight:700}
+.fn .pic{margin-top:2px}
 </style>
 </head>
 <body>
@@ -993,6 +1013,7 @@ function openDrawer(idx){
     ${it.where?`<div class="d-sec"><div class="d-k">Where to find it</div><div class="d-where">${esc(it.where)}</div></div>`:""}
     ${it.steps && it.steps.length?`<div class="d-sec"><div class="d-k">Try it</div><ol class="d-steps">${it.steps.map(s=>`<li>${esc(s)}</li>`).join("")}</ol></div>`:""}
     ${it.example?`<div class="d-sec"><div class="d-k">Example</div><div class="d-ex">${esc(it.example)}</div></div>`:""}
+    <div class="d-sec"><div class="d-k">${it.pic?"What it looks like":"Where to click and the result"}</div>${it.pic?picHTML(it.pic):uiPic(it)}</div>
     ${it.watch?`<div class="d-watch"><span class="d-k">Watch out</span>${esc(it.watch)}</div>`:""}
     <div class="d-sec"><div class="d-k">F&amp;A use</div><div class="use">${esc(it.use)}</div></div>
     <div class="d-sec"><div class="d-k">Version</div><div class="ver">${esc(it.version)}</div>${verNote(it)}</div>
@@ -1066,6 +1087,7 @@ function loadComments(){
 const VIEWS = ["notes","basics","handbook","formulas","files","tools","sharing","it","learn","updates"];
 function showView(v){
   if (!VIEWS.includes(v)) v = "notes";
+  if ($("drawer") && !$("drawer").hidden){ $("dbg").hidden = true; $("drawer").hidden = true; document.body.classList.remove("lock"); }
   VIEWS.forEach(x=>{ $("v-"+x).hidden = x!==v; });
   document.querySelectorAll(".vtab").forEach(b=>b.setAttribute("aria-selected", b.dataset.view===v));
   if (v==="updates") loadComments();
@@ -1470,7 +1492,7 @@ function renderFormulas(){
     <div class="fn-h"><h3>${esc(f[0])}</h3><span class="vb v${f[2]}">${vlabel(f[2])}</span></div>
     <p>${esc(f[4])}</p>
     <code class="syn">${esc(f[3])}</code>
-    <div class="fn-ex"><code>${esc(f[5])}</code><span class="arr">→</span><span class="res">${esc(f[6])}</span></div>
+    ${fxPic(f)}
     ${f[7]?`<p class="tip2"><b>Tip:</b> ${esc(f[7])}</p>`:""}
     <div class="fn-f"><small>${esc(f[1])}</small>${ytLink("Excel "+f[0].split(" / ")[0]+" function tutorial","Watch")}</div></article>`).join("") || `<div class="empty">No function matches.</div>`;
   $("fx-src").innerHTML = FX.source.map(s=>`<li><a href="${esc(s[1])}" target="_blank" rel="noopener">${esc(s[0])}</a></li>`).join("");
@@ -1615,6 +1637,24 @@ function initHB(){
   $("hb-main").addEventListener("change", e=>{ if (e.target.id !== "hb-done") return; const k = hbKey(HBs.s,HBs.p); e.target.checked ? HBread.add(k) : HBread.delete(k); store.set("m365-hbread",[...HBread]); renderSideOnly(); });
 }
 function renderSideOnly(){ hbSide(); }
+
+
+// ---------- auto pictures ----------
+function uiPic(it){
+  const a = appById[it.app];
+  const path = String(it.where||"").split(/\s*[·]\s*/)[0].split(/\s*›\s*/).filter(Boolean).slice(0,5);
+  return `<div class="pic uipic" style="--c:var(${a.c})"><div class="ub">${tile(a)}<span>${esc(a.name)}</span></div>
+    <div class="up">${path.map((p,i)=>`${i?'<i>›</i>':''}<span class="${i===path.length-1?'last':''}">${esc(p)}</span>`).join("")}<em class="cur">↖ click</em></div>
+    <div class="ur"><small>Result</small>${esc(it.example||it.use||"")}</div></div>`;
+}
+function fxPic(f){
+  const p = f[8];
+  const bar = `<div class="fxbar"><span class="fxn">fx</span><code>${esc(f[5])}</code></div>`;
+  if (!p) return `<div class="pic fxp">${bar}<div class="fxres"><small>Result</small><b>${esc(f[6])}</b></div></div>`;
+  const grid = (cols, rows, cls) => rows.length ? `<table class="pt ${cls||''}">${cols.length?`<thead><tr>${cols.map(c=>`<th>${esc(c)}</th>`).join("")}</tr></thead>`:""}<tbody>${rows.map(r=>`<tr>${r.map(c=>`<td>${esc(c)}</td>`).join("")}</tr>`).join("")}</tbody></table>` : "";
+  const res = Array.isArray(p.res) ? grid([], p.res, "res") : `<b class="one">${esc(p.res)}</b>`;
+  return `<div class="pic fxp">${bar}<div class="fxgrid">${p.rows.length?`<div><small>Data</small>${grid(p.cols,p.rows)}</div><span class="arr">→</span>`:""}<div class="fxres"><small>Result</small>${res}</div></div></div>`;
+}
 
 function start(data){
   DATA = data; LV = data.levels; items = data.features;
