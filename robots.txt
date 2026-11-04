@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kierakama.github.io/m365-notes/sitemap.xml
