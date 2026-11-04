@@ -544,6 +544,95 @@ footer .copy{font-size:14px;color:var(--ink);margin-bottom:4px}
 .picker{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr));gap:8px}
 .pk{display:grid;gap:2px;text-align:left;border:1px solid color-mix(in oklab,var(--c) 30%,white);background:color-mix(in oklab,var(--c) 6%,white);border-radius:12px;padding:9px 11px;cursor:pointer}
 .pk span{font-size:13px;color:var(--muted)}.pk b{font-size:14px;color:color-mix(in oklab,var(--c) 75%,black)}
+
+/* Handbook */
+.vtab[data-view="handbook"]{--vc:#0B7A5A}
+.hb-wrap{display:grid;grid-template-columns:290px minmax(0,1fr);gap:18px;align-items:start}
+@media (max-width:900px){.hb-wrap{grid-template-columns:1fr}.hb-side{display:none}.hb-pickw{display:block!important}}
+.hb-pickw{display:none;margin-bottom:10px}
+.hb-pickw select{width:100%;border:1px solid #D9D0F5;border-radius:12px;padding:10px;font-size:14px;background:#fff}
+.hb-side{position:sticky;top:calc(64px + env(safe-area-inset-top,0px));max-height:calc(100vh - 90px);overflow-y:auto;display:grid;gap:8px}
+.hb-side details{background:#fff;border:1px solid color-mix(in oklab,var(--c) 25%,white);border-radius:14px;overflow:hidden}
+.hb-side summary{display:flex;align-items:center;gap:8px;padding:9px 11px;cursor:pointer;font-weight:700;background:color-mix(in oklab,var(--c) 8%,white)}
+.hb-side summary em{margin-left:auto;font-style:normal;font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.hb-side ol{list-style:none;margin:0;padding:4px}
+.hb-side li button{display:grid;grid-template-columns:26px 1fr auto;gap:6px;align-items:center;width:100%;text-align:left;border:0;background:transparent;border-radius:9px;padding:6px 8px;font-size:13.5px;cursor:pointer}
+.hb-side li button:hover{background:color-mix(in oklab,var(--c) 8%,white)}
+.hb-side li button.on{background:var(--c);color:#fff}
+.hb-side li button i{font-style:normal;font-family:var(--f-mono);font-size:11.5px;font-weight:700;opacity:.75}
+.hb-side li button b{color:#1A8754}.hb-side li button.on b{color:#fff}
+.hb-page{background:#fff;border:1px solid color-mix(in oklab,var(--c) 25%,white);border-radius:20px;padding:20px 22px;display:grid;gap:16px;
+  background-image:linear-gradient(color-mix(in oklab,var(--c) 5%,white) 1px,transparent 1px),linear-gradient(90deg,color-mix(in oklab,var(--c) 5%,white) 1px,transparent 1px);background-size:24px 24px}
+.hb-h{display:grid;gap:6px;border-bottom:2px dashed color-mix(in oklab,var(--c) 30%,white);padding-bottom:12px}
+.hb-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-weight:700;font-size:13px;color:var(--muted)}
+.hb-tag{background:var(--c);color:#fff;border-radius:6px;padding:2px 8px;font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+.hb-n{margin-left:auto;font-family:var(--f-mono)}
+.hb-h h2{font-size:clamp(26px,3.6vw,38px);font-weight:800;color:color-mix(in oklab,var(--c) 80%,black);line-height:1.1}
+.hb-intro{margin:0;font-size:16px;font-style:italic;color:color-mix(in oklab,var(--c) 55%,black)}
+.hb-about{margin:0;font-size:13.5px;color:var(--muted)}
+.hb-print{justify-self:start;border:0;background:var(--c);color:#fff;border-radius:10px;padding:8px 14px;font-weight:700;cursor:pointer}
+.hb-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;counter-reset:hb}
+@media (max-width:700px){.hb-grid{grid-template-columns:1fr}}
+.hb-b{background:#fff;border:1px solid #E3E6EF;border-radius:14px;padding:12px 14px;display:grid;gap:8px;align-content:start;min-width:0}
+.hb-b.wide{grid-column:1/-1}
+.hb-b h4{margin:0;display:flex;align-items:center;gap:8px;font-family:var(--f-display);font-size:17px}
+.hb-b h4::before{counter-increment:hb;content:counter(hb);display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;border:2px solid #F2B705;color:#9A6B00;font-size:12px;font-weight:800;flex:none}
+.hb-flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.hb-flow span{border:2px solid var(--c);border-radius:10px;padding:4px 10px;font-weight:700;font-size:13px;background:color-mix(in oklab,var(--c) 8%,white)}
+.hb-flow i{font-style:normal;color:#E0A400;font-weight:800}
+.hb-tw{overflow-x:auto}
+.hb-t{border-collapse:collapse;width:100%;font-size:13px;min-width:0}
+.hb-t th{background:var(--c);color:#fff;text-align:left;padding:6px 8px;font-weight:700}
+.hb-t td{padding:5px 8px;border-bottom:1px solid #EDEFF4}
+.hb-t tr:nth-child(even) td{background:#FAFBFD}
+.hb-t tr.hl td{font-weight:800;color:color-mix(in oklab,var(--c) 80%,black);border-top:2px solid var(--c)}
+.hb-code{margin:0;background:#14202E;color:#E4F5EC;border-radius:10px;padding:10px 12px;font-family:var(--f-mono);font-size:12.5px;line-height:1.55;overflow-x:auto;white-space:pre;border-left:4px solid var(--c)}
+.hb-ul,.hb-ck{margin:0;padding:0;list-style:none;display:grid;gap:5px;font-size:13.5px}
+.hb-ul li{padding-left:14px;position:relative}.hb-ul li::before{content:"•";position:absolute;left:0;color:var(--c);font-weight:800}
+.hb-ck li{padding-left:22px;position:relative}.hb-ck li::before{content:"☑";position:absolute;left:0;color:var(--c)}
+.hb-p{margin:0;font-size:13.5px}
+.hb-note{margin:0;font-size:12.5px;color:var(--muted)}
+.hb-qa{display:grid;gap:8px}
+.qa{display:grid;grid-template-columns:42px 1fr;gap:10px;border-bottom:1px dashed #E3E6EF;padding-bottom:8px}
+.qa .qn{background:var(--c);color:#fff;border-radius:8px;font-weight:800;font-size:12px;display:grid;place-items:center;height:26px}
+.qa b{font-size:14.5px}.qa p{margin:2px 0 0;font-size:13.5px}
+.hb-star{position:relative;height:200px}
+.hb-star svg{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.hb-star .d,.hb-star .f{position:absolute;z-index:1;border-radius:10px;text-align:center;font-weight:700;font-size:13px}
+.hb-star .d{background:#fff;border:2px solid var(--c);padding:6px 10px;width:28%}
+.hb-star .d1{left:2%;top:4%}.hb-star .d2{right:2%;top:4%}.hb-star .d3{left:2%;bottom:4%}.hb-star .d4{right:2%;bottom:4%}
+.hb-star .f{left:30%;right:30%;top:36%;background:var(--c);color:#fff;padding:8px}
+.hb-star .f small{display:block;font-weight:400;font-size:10.5px;opacity:.9}
+.hb-dash{display:grid;grid-template-columns:1fr 1.2fr 1.2fr 1.2fr 1.2fr;grid-template-rows:auto auto 70px 46px;gap:5px;font-size:11px;font-weight:700;text-align:center}
+.hb-dash div{border:1.5px solid var(--c);border-radius:6px;padding:5px;display:grid;place-items:center;color:color-mix(in oklab,var(--c) 70%,black);background:#fff}
+.hb-dash .t{grid-column:1/-1;background:var(--c);color:#fff}
+.hb-dash .s{grid-row:2/5;background:color-mix(in oklab,var(--c) 12%,white)}
+.hb-dash .m{grid-column:2/4}.hb-dash .b{grid-column:4/6}.hb-dash .d{grid-column:2/6}
+.hb-boxes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:12px}
+.hb-key,.hb-mis,.hb-tip{border-radius:14px;padding:10px 14px;font-size:13.5px;border:2px dashed}
+.hb-key{border-color:#7AC79B;background:#F0FAF4}.hb-key b{color:#1A8754}
+.hb-mis{border-color:#EFA3A3;background:#FFF5F5}.hb-mis b{color:#B42323}
+.hb-tip{border-color:#EBC45B;background:#FFFBEA}.hb-tip b{color:#9A6B00}
+.hb-key p,.hb-tip p{margin:4px 0 0}.hb-mis ul{margin:4px 0 0;padding-left:18px}
+.hb-quiz{background:#F6F4FF;border:1px solid #DCD3F3;border-radius:14px;padding:12px 14px;display:grid;gap:10px}
+.hb-quiz h4{margin:0;font-family:var(--f-display);font-size:17px;color:#4337B8}
+.qz p{margin:0 0 6px;font-size:14px}
+.qo{display:flex;gap:6px;flex-wrap:wrap}
+.qo button{border:1px solid #CFC6F1;background:#fff;border-radius:10px;padding:6px 12px;font-size:13.5px;cursor:pointer}
+.qo button:disabled{cursor:default}
+.qo button.right{background:#E3F5EA;border-color:#1A8754;color:#14653F;font-weight:700}
+.qo button.wrong{background:#FDE7E7;border-color:#C62828;color:#9C1C1C}
+.qr{font-size:13px;margin-top:6px!important}
+.hb-nav{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.hb-nav button{border:1px solid color-mix(in oklab,var(--c) 40%,white);background:#fff;border-radius:12px;padding:9px 16px;font-weight:700;cursor:pointer;color:color-mix(in oklab,var(--c) 80%,black)}
+.hb-nav button:disabled{opacity:.4;cursor:default}
+.hb-copy{margin:0;text-align:right;font-size:11.5px;color:var(--muted)}
+@media print{
+  body *{visibility:hidden!important}
+  .hb-page,.hb-page *{visibility:visible!important}
+  .hb-page{position:absolute;left:0;top:0;width:100%;border:0;background:#fff!important;padding:0}
+  .hb-print,.hb-nav,.hb-quiz,.bot-fab{display:none!important}
+}
 </style>
 </head>
 <body>
@@ -583,6 +672,7 @@ footer .copy{font-size:14px;color:var(--ink);margin-bottom:4px}
   <div class="wrap" role="tablist">
     <button class="vtab" role="tab" data-view="notes" aria-selected="true">Feature notes</button>
     <button class="vtab" role="tab" data-view="basics" aria-selected="false">Start here: basics</button>
+    <button class="vtab" role="tab" data-view="handbook" aria-selected="false">Handbook</button>
     <button class="vtab" role="tab" data-view="formulas" aria-selected="false">Excel formulas</button>
     <button class="vtab" role="tab" data-view="files" aria-selected="false">Save as types</button>
     <button class="vtab" role="tab" data-view="tools" aria-selected="false">Which tool for the job?</button>
@@ -648,6 +738,14 @@ footer .copy{font-size:14px;color:var(--ink);margin-bottom:4px}
   <h2 class="sec-title">New functions and what they do</h2>
   <div class="fns" id="fx-fns"></div>
   <div class="box" style="margin-top:14px"><h3>Version information from</h3><ul id="fx-src"></ul></div>
+</section>
+
+<section class="panel" id="v-handbook" hidden>
+  <div class="bx-hero" style="background:linear-gradient(135deg,#E9F8F1,#F3F0FF);margin-bottom:14px"><h2>Handbook</h2>
+    <p>Learn one topic per page, in order. Each page has tables, formulas, an example result, a key takeaway, common mistakes, an interview tip and a quick check. Finish with the Interview Q&amp;A and the printable cheat sheet.</p></div>
+  <div class="hb-pickw"><select id="hb-pick" aria-label="Choose a page"></select></div>
+  <p id="hb-loading" class="empty">Loading handbook…</p>
+  <div class="hb-wrap"><nav class="hb-side" id="hb-side" aria-label="Handbook pages"></nav><div id="hb-main"></div></div>
 </section>
 
 <section class="panel" id="v-files" hidden>
@@ -965,7 +1063,7 @@ function loadComments(){
 }
 
 // views
-const VIEWS = ["notes","basics","formulas","files","tools","sharing","it","learn","updates"];
+const VIEWS = ["notes","basics","handbook","formulas","files","tools","sharing","it","learn","updates"];
 function showView(v){
   if (!VIEWS.includes(v)) v = "notes";
   VIEWS.forEach(x=>{ $("v-"+x).hidden = x!==v; });
@@ -974,6 +1072,7 @@ function showView(v){
   if (v==="basics") initBasics();
   if (v==="formulas") initFormulas();
   if (v==="files") initFiles();
+  if (v==="handbook") initHB();
 }
 
 function wire(){
@@ -1432,6 +1531,90 @@ function initFiles(){
     const i = FT.apps[FTapp].findIndex(r=>r[0].toLowerCase().replace(" ★","").startsWith(key) || (ext && r[1]===ext && r[0].toLowerCase().includes(key.split(" ")[0])));
     const el = document.getElementById(`ft-${FTapp}-${i}`); if (el){ el.scrollIntoView({behavior:"smooth", block:"center"}); el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash"); } });
 }
+
+
+// ---------- Handbook ----------
+let HB = null, HBs = store.get("m365-hbpos", {s:0, p:0}), HBread = new Set(store.get("m365-hbread", []));
+const hbKey = (s,p) => HB.subjects[s].id + ":" + p;
+function hbBlock(b){
+  const h = b.h ? `<h4>${esc(b.h)}</h4>` : "";
+  const note = b.note ? `<p class="hb-note">${esc(b.note)}</p>` : "";
+  let body = "";
+  switch(b.k){
+    case "flow": body = `<div class="hb-flow">${b.steps.map((s,i)=>`${i?'<i>→</i>':''}<span>${esc(s)}</span>`).join("")}</div>`; break;
+    case "table": body = `<div class="hb-tw"><table class="hb-t"><thead><tr>${b.cols.map(c=>`<th>${esc(c)}</th>`).join("")}</tr></thead><tbody>${b.rows.map((r,i)=>`<tr class="${(b.hl||[]).includes(i)?'hl':''}">${r.map(c=>`<td>${esc(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`; break;
+    case "code": body = `<pre class="hb-code">${esc(b.code)}</pre>`; break;
+    case "list": body = `<ul class="hb-ul">${b.items.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`; break;
+    case "check": body = `<ul class="hb-ck">${b.items.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`; break;
+    case "text": body = `<p class="hb-p">${esc(b.body)}</p>`; break;
+    case "qa": body = `<div class="hb-qa">${b.items.map((q,i)=>`<div class="qa"><span class="qn">Q${i+1}</span><div><b>${esc(q[0])}</b><p>${esc(q[1])}</p></div></div>`).join("")}</div>`; break;
+    case "model":
+      if (b.layout) body = `<div class="hb-dash"><div class="t">Title · last refresh · page buttons</div><div class="s">Slicers</div><div class="k">KPI 1</div><div class="k">KPI 2</div><div class="k">KPI 3</div><div class="k">KPI 4</div><div class="m">Main trend (line)</div><div class="b">Breakdown (bar)</div><div class="d">Detail table / matrix</div></div><p class="hb-note">Read like a page: top-left → right → down.</p>`;
+      else body = `<div class="hb-star"><div class="d d1">${esc(b.dims[0])}</div><div class="d d2">${esc(b.dims[1])}</div><div class="f">${esc(b.fact).replace(/\n/,"<small>")}</small></div><div class="d d3">${esc(b.dims[2])}</div><div class="d d4">${esc(b.dims[3])}</div><svg viewBox="0 0 100 60" preserveAspectRatio="none" aria-hidden="true"><path d="M18 12 L50 30 M82 12 L50 30 M18 48 L50 30 M82 48 L50 30" stroke="#D2463C" stroke-width=".6" fill="none" stroke-dasharray="2 1.2"/></svg></div><p class="hb-note">Dimensions (1) filter the fact (*), single direction.</p>`;
+      break;
+  }
+  return `<section class="hb-b ${b.w?'wide':''} k-${b.k}">${h}${body}${note}</section>`;
+}
+function renderHB(){
+  if (!HB) return;
+  const S0 = HB.subjects;
+  if (!S0[HBs.s]) HBs = {s:0,p:0};
+  const sub = S0[HBs.s]; if (!sub.pages[HBs.p]) HBs.p = 0;
+  const pg = sub.pages[HBs.p], ap = appById[sub.app];
+  store.set("m365-hbpos", HBs);
+  hbSide();
+  $("hb-pick").innerHTML = S0.map((s,si)=>s.pages.map((p,pi)=>`<option value="${si}|${pi}" ${si===HBs.s&&pi===HBs.p?'selected':''}>${esc(s.name)} · ${pi+1}. ${esc(p.t)}</option>`).join("")).join("");
+  const quiz = (pg.quiz||[]).length ? `<section class="hb-quiz"><h4>Quick check</h4>${pg.quiz.map((q,qi)=>`<div class="qz" data-q="${qi}"><p><b>${qi+1}.</b> ${esc(q[0])}</p><div class="qo">${q[1].map((o,oi)=>`<button data-qa="${qi}|${oi}">${esc(o)}</button>`).join("")}</div><p class="qr" hidden></p></div>`).join("")}</section>` : "";
+  const first = HBs.s===0 && HBs.p===0, last = HBs.s===S0.length-1 && HBs.p===sub.pages.length-1;
+  $("hb-main").style.setProperty("--c", `var(${ap.c})`);
+  $("hb-main").innerHTML = `<article class="hb-page ${pg.cheat?'cheat':''}">
+    <header class="hb-h"><div class="hb-meta">${tile(ap)}<span>${esc(sub.name)}</span><span class="hb-tag">${esc(pg.tag)}</span><span class="hb-n">${HBs.p+1} / ${sub.pages.length}</span></div>
+      <h2>${esc(pg.t)}</h2><p class="hb-intro">${esc(pg.intro)}</p>${HBs.p===0?`<p class="hb-about">${esc(sub.about)}</p>`:""}
+      ${pg.cheat?`<button class="hb-print" id="hb-print">Print or save as PDF</button>`:""}</header>
+    <div class="hb-grid">${pg.blocks.map(hbBlock).join("")}</div>
+    <div class="hb-boxes">${pg.key?`<div class="hb-key"><b>★ Key takeaway</b><p>${esc(pg.key)}</p></div>`:""}
+      ${pg.mistakes&&pg.mistakes.length?`<div class="hb-mis"><b>⚠ Common mistakes</b><ul>${pg.mistakes.map(m=>`<li>${esc(m)}</li>`).join("")}</ul></div>`:""}
+      ${pg.tip?`<div class="hb-tip"><b>✦ Interview tip</b><p>${esc(pg.tip)}</p></div>`:""}</div>
+    ${quiz}
+    <footer class="hb-nav"><button data-hbstep="-1" ${first?'disabled':''}>‹ Previous</button>
+      <label class="tried"><input type="checkbox" id="hb-done" ${HBread.has(hbKey(HBs.s,HBs.p))?'checked':''}> I've read this page</label>
+      <button data-hbstep="1" ${last?'disabled':''}>Next ›</button></footer>
+    <p class="hb-copy">© KieraKama · M365 Field Notes</p></article>`;
+}
+function hbSide(){
+  const S0 = HB.subjects;
+  $("hb-side").innerHTML = S0.map((s,si)=>{ const a = appById[s.app]; const done = s.pages.filter((_,pi)=>HBread.has(s.id+":"+pi)).length;
+    return `<details ${si===HBs.s?'open':''} style="--c:var(${a.c})"><summary>${tile(a)}<span>${esc(s.name)}</span><em>${done}/${s.pages.length}</em></summary><ol>${s.pages.map((p,pi)=>`<li><button data-hb="${si}|${pi}" class="${si===HBs.s&&pi===HBs.p?'on':''}"><i>${String(pi+1).padStart(2,"0")}</i><span>${esc(p.t)}</span>${HBread.has(s.id+":"+pi)?'<b>✓</b>':''}</button></li>`).join("")}</ol></details>`; }).join("");
+}
+function hbGo(s,p){ HBs = {s,p}; renderHB(); const m = $("hb-main"); if (m) m.scrollIntoView({behavior:"smooth", block:"start"}); }
+function hbStep(d){
+  const S0 = HB.subjects; let {s,p} = HBs; p += d;
+  if (p < 0){ s--; if (s < 0) return; p = S0[s].pages.length-1; }
+  if (p >= S0[s].pages.length){ s++; if (s >= S0.length) return; p = 0; }
+  HBread.add(hbKey(HBs.s,HBs.p)); store.set("m365-hbread",[...HBread]);
+  hbGo(s,p);
+}
+let hbReady = false;
+function initHB(){
+  if (hbReady) return; hbReady = true;
+  fetch("handbook.json?v=" + Date.now(), {cache:"no-store"}).then(r=>r.json()).then(d=>{ HB = d; $("hb-loading").hidden = true; renderHB(); })
+    .catch(()=>{ $("hb-loading").textContent = "Couldn't load handbook.json."; });
+  $("hb-side").addEventListener("click", e=>{ const b = e.target.closest("[data-hb]"); if(!b) return; const [s,p] = b.dataset.hb.split("|").map(Number); hbGo(s,p); });
+  $("hb-pick").addEventListener("change", e=>{ const [s,p] = e.target.value.split("|").map(Number); hbGo(s,p); });
+  $("hb-main").addEventListener("click", e=>{
+    const st = e.target.closest("[data-hbstep]"); if (st){ hbStep(+st.dataset.hbstep); return; }
+    if (e.target.id === "hb-print"){ try{ window.print(); }catch(err){} return; }
+    const qa = e.target.closest("[data-qa]"); if (qa){
+      const [qi,oi] = qa.dataset.qa.split("|").map(Number), q = HB.subjects[HBs.s].pages[HBs.p].quiz[qi], box = qa.closest(".qz");
+      box.querySelectorAll("button").forEach((b,i)=>{ b.disabled = true; if (i===q[2]) b.classList.add("right"); });
+      if (oi !== q[2]) qa.classList.add("wrong");
+      const r = box.querySelector(".qr"); r.hidden = false; r.innerHTML = `<b>${oi===q[2]?'Correct.':'Not quite.'}</b> ${esc(q[3])}`;
+      if ([...$("hb-main").querySelectorAll(".qz")].every(z=>!z.querySelector(".qr").hidden)){ HBread.add(hbKey(HBs.s,HBs.p)); store.set("m365-hbread",[...HBread]); $("hb-done").checked = true; renderSideOnly(); }
+    }
+  });
+  $("hb-main").addEventListener("change", e=>{ if (e.target.id !== "hb-done") return; const k = hbKey(HBs.s,HBs.p); e.target.checked ? HBread.add(k) : HBread.delete(k); store.set("m365-hbread",[...HBread]); renderSideOnly(); });
+}
+function renderSideOnly(){ hbSide(); }
 
 function start(data){
   DATA = data; LV = data.levels; items = data.features;
