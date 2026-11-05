@@ -665,6 +665,17 @@ footer .copy{font-size:14px;color:var(--ink);margin-bottom:4px}
 .fxres b.one{display:inline-block;background:#E9F7EF;border:2px solid #1A8754;border-radius:6px;padding:4px 10px;font-size:14px}
 .pt.res td{background:#E9F7EF;border-color:#9DD1B2;font-weight:700}
 .fn .pic{margin-top:2px}
+
+/* coloured filter toggles */
+.toggle{--tc:#5546D6;border-color:color-mix(in oklab,var(--tc) 35%,white);color:color-mix(in oklab,var(--tc) 80%,black);background:color-mix(in oklab,var(--tc) 6%,white)}
+.toggle input{accent-color:var(--tc)}
+.toggle:has(#f-core){--tc:#B8860B}
+.toggle:has(#f-safe){--tc:#4E5A70}
+.toggle:has(#f-free){--tc:#B83163}
+.toggle:has(#f-todo){--tc:#1A8754}
+.toggle:has(#f-mine){--tc:#5546D6}
+.toggle:has(input:checked){background:var(--tc);border-color:var(--tc);color:#fff}
+.toggle:has(input:checked) input{accent-color:#fff}
 </style>
 </head>
 <body>
