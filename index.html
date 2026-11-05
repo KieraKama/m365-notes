@@ -233,7 +233,20 @@ body.lock{overflow:hidden}
 .chg{background:#fff;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:var(--r);padding:12px 16px}
 .chg-d{font-family:var(--f-display);font-weight:700}
 .chg ul{margin:6px 0 0;padding-left:20px;font-size:14px;display:grid;gap:4px}
-.comments{min-height:120px}
+.comments{min-height:120px;display:grid;gap:16px}
+.cmt-form{display:grid;gap:10px}
+.cmt-form label{display:grid;gap:4px;font-weight:700;font-size:14px}
+.cmt-form small{font-weight:400;color:var(--muted)}
+.cmt-form input,.cmt-form textarea{font:inherit;font-weight:400;border:1px solid #D9D0F5;border-radius:12px;padding:10px 12px;outline:none;background:#fff;min-width:0;width:100%;box-sizing:border-box;resize:vertical}
+.cmt-form input:focus,.cmt-form textarea:focus{border-color:var(--accent)}
+.cmt-hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0}
+.cmt-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.cmt-row button{border:0;background:var(--accent);color:#fff;border-radius:12px;padding:10px 20px;font-weight:700;cursor:pointer}
+.cmt-row button:disabled{opacity:.6;cursor:default}
+.cmt-list{display:grid;gap:10px}
+.cmt{border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:10px 14px;background:var(--accent-soft)}
+.cmt b{font-size:14px}.cmt time{color:var(--muted);font-size:12px;margin-left:8px}
+.cmt p{margin:6px 0 0;white-space:pre-wrap;overflow-wrap:anywhere}
 .muted{color:var(--muted);margin:0}
 .d-plain{background:linear-gradient(135deg,color-mix(in oklab,var(--c) 14%,white),#FFF8E1);border-radius:12px;padding:11px 13px;font-size:15px;line-height:1.5;display:grid;gap:4px}
 .d-ex{background:#F4FBF6;border:1px solid #CDEBD8;border-radius:10px;padding:9px 11px;font-size:14px;overflow-wrap:anywhere}
@@ -916,8 +929,17 @@ footer .copy{font-size:14px;color:var(--ink);margin-bottom:4px}
   <div id="changes" class="changes"></div>
   <div class="box" style="margin-top:14px"><h3>Main sources checked</h3><ul id="sources"></ul></div>
   <h2 class="sec-title">Suggestions &amp; comments</h2>
-  <p class="lead2">Found a mistake, a better way, or want a feature added? Leave a note. Anyone can read the comments. To post, sign in with a free GitHub account.</p>
-  <div class="box comments"><div id="cmt-thread" class="giscus"></div><p id="cmt-off" class="muted" hidden>The comment box will appear here once it's connected.</p></div>
+  <p class="lead2">Found a mistake, a better way, or want a feature added? Leave a note. No login needed. Comments show here after the owner checks them.</p>
+  <div class="box comments">
+    <form id="cmt-form" class="cmt-form" autocomplete="off">
+      <label>Your name <small>(optional)</small><input id="cmt-name" type="text" maxlength="60" placeholder="e.g. Aina, AP team"></label>
+      <label>Comment or suggestion<textarea id="cmt-text" rows="4" maxlength="1500" required placeholder="What should be added or fixed?"></textarea></label>
+      <input id="cmt-hp" type="text" tabindex="-1" aria-hidden="true" class="cmt-hp">
+      <div class="cmt-row"><button type="submit" id="cmt-send">Send</button><span id="cmt-msg" class="muted" role="status"></span></div>
+    </form>
+    <div id="cmt-list" class="cmt-list"></div>
+    <p id="cmt-off" class="muted" hidden>The comment box will appear here once it's connected.</p>
+  </div><p id="cmt-off" class="muted" hidden>The comment box will appear here once it's connected.</p></div>
 </section>
 </main>
 
@@ -1107,18 +1129,43 @@ function renderStatic(){
   $("yr").textContent = String(new Date().getFullYear()) === "2026" ? "2026" : "2026–"+new Date().getFullYear();
 }
 let cmtLoaded = false;
+function parseCSV(t){
+  const rows=[]; let r=[], f="", q=false;
+  for (let i=0;i<t.length;i++){ const c=t[i];
+    if (q){ if (c==='"'){ if (t[i+1]==='"'){ f+='"'; i++; } else q=false; } else f+=c; }
+    else if (c==='"') q=true; else if (c===','){ r.push(f); f=""; }
+    else if (c==='\n'||c==='\r'){ if (c==='\r'&&t[i+1]==='\n') i++; r.push(f); rows.push(r); r=[]; f=""; }
+    else f+=c; }
+  if (f!==""||r.length){ r.push(f); rows.push(r); }
+  return rows;
+}
+function showComments(){
+  const C = DATA.comments || {};
+  if (!C.csv) return;
+  fetch(C.csv + (C.csv.includes("?")?"&":"?") + "t=" + Date.now()).then(r=>r.text()).then(t=>{
+    const rows = parseCSV(t).filter(r=>r.length>=3 && r[2].trim() && !/^timestamp$/i.test(r[0].trim()) && !/^#N\/A/.test(r[0]));
+    $("cmt-list").innerHTML = rows.length ? rows.reverse().map(r=>`<div class="cmt"><b>${esc(r[1].trim()||"Anonymous")}</b><time>${esc(r[0].split(" ")[0])}</time><p>${esc(r[2].trim())}</p></div>`).join("")
+      : `<p class="muted">No comments yet. Be the first.</p>`;
+  }).catch(()=>{ $("cmt-list").innerHTML = `<p class="muted">Comments couldn't load right now.</p>`; });
+}
 function loadComments(){
   if (cmtLoaded) return; cmtLoaded = true;
-  const g = DATA.giscus || {};
-  if (!g.repoId || !g.categoryId){ $("cmt-off").hidden = false; return; }
-  const s = document.createElement("script");
-  s.src = "https://giscus.app/client.js"; s.async = true; s.crossOrigin = "anonymous";
-  const at = {"data-repo":g.repo||"KieraKama/m365-notes","data-repo-id":g.repoId,"data-category":g.category||"General","data-category-id":g.categoryId,
-    "data-mapping":"specific","data-term":"Suggestions & comments","data-strict":"1","data-reactions-enabled":"1","data-emit-metadata":"0",
-    "data-input-position":"top","data-theme":"light","data-lang":"en","data-loading":"lazy"};
-  for (const k in at) s.setAttribute(k, at[k]);
-  s.onerror = () => { $("cmt-off").hidden = false; $("cmt-off").textContent = "Comments couldn't load. Try again later or open the page in a normal browser tab."; };
-  $("cmt-thread").appendChild(s);
+  const C = DATA.comments || {};
+  if (!C.form){ $("cmt-form").hidden = true; $("cmt-off").hidden = false; return; }
+  showComments();
+  $("cmt-form").addEventListener("submit", e=>{
+    e.preventDefault();
+    const txt = $("cmt-text").value.trim(), msg = $("cmt-msg");
+    if (!txt) return;
+    if ($("cmt-hp").value){ msg.textContent = "Thanks!"; return; }
+    const fd = new FormData(); fd.append(C.name, $("cmt-name").value.trim()); fd.append(C.text, txt);
+    $("cmt-send").disabled = true; msg.textContent = "Sending…";
+    fetch(C.form, {method:"POST", mode:"no-cors", body:fd}).then(()=>{
+      msg.textContent = "Thanks! Your comment will show here after it's checked.";
+      $("cmt-text").value = ""; 
+    }).catch(()=>{ msg.textContent = "Couldn't send. Check your internet and try again."; })
+      .finally(()=>{ $("cmt-send").disabled = false; });
+  });
 }
 
 // views
