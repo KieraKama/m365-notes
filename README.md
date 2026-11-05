@@ -1,4 +1,4 @@
-# M365 Field Notes
+# M365 & Power Platform Notes
 
 Self-learning notes on Microsoft 365 for finance & accounts work.
 
