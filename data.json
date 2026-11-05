@@ -1,7 +1,7 @@
 {
  "title": "M365 & Power Platform Notes",
  "owner": "KieraKama",
- "lastChecked": "2026-11-03",
+ "lastChecked": "2026-11-05",
  "comments": {
   "form": "https://docs.google.com/forms/d/e/1FAIpQLSdtIgut17BVFtAITvMYYZnwiQdvjVV7Ump489MsSoJRyP9weQ/formResponse",
   "name": "entry.2035312363",
@@ -10,25 +10,27 @@
  },
  "changes": [
   {
-   "date": "2026-11-03",
+   "date": "2026-11-05",
    "items": [
-    "Added card: Auto-refresh PivotTables. Microsoft says Auto Refresh is Insider only for now; card lists the other ways to keep pivots updated (Microsoft Support: Refresh PivotTable data)."
+    "New: Common questions tab with 37 answers to things people often ask (Microsoft Support pages).",
+    "New apps: Windows & files, Security & safety, More Microsoft apps (Access, Visio, Project, Publisher).",
+    "Added 24 cards, incl. more Outlook, Teams, Forms, Lists, Planner and Power Apps.",
+    "Office 2016 and 2019 support ended 14 Oct 2025; Office 2021 and LTSC 2021 ended 13 Oct 2026 (Microsoft Support KB5002369; Microsoft Lifecycle: Ending support in 2026).",
+    "Publisher retired in October 2026: convert .pub files to Word or PowerPoint (Microsoft Support).",
+    "Copilot source now points to the official Microsoft Support page."
    ]
   },
   {
    "date": "2026-11-03",
    "items": [
+    "Added card: Auto-refresh PivotTables. Microsoft says Auto Refresh is Insider only for now; card lists the other ways to keep pivots updated (Microsoft Support: Refresh PivotTable data).",
     "First public version: 166 features, 30 tasks.",
-    "Copilot inside Word/Excel/PowerPoint/OneNote now needs the paid Microsoft 365 Copilot licence (change rolled out April–May 2026).",
+    "Copilot inside Word/Excel/PowerPoint/OneNote now needs the paid Microsoft 365 Copilot licence (change from April 2026; Microsoft Support: What Copilot license do I have).",
     "Power BI: Copilot needs Fabric F64+ or a Copilot capacity; Pro alone doesn't include it."
    ]
   }
  ],
  "sources": [
-  [
-   "Microsoft 365 Copilot Chat changes (Tech Community)",
-   "https://techcommunity.microsoft.com/discussions/microsoft-copilot/removal-of-copilot-chat-availability-in-m365-apps/4502990"
-  ],
   [
    "Power Automate licensing FAQ (Microsoft Learn)",
    "https://learn.microsoft.com/power-platform/admin/power-automate-licensing/faqs"
@@ -40,6 +42,30 @@
   [
    "Refresh PivotTable data (Microsoft Support)",
    "https://support.microsoft.com/en-us/excel/refresh-pivottable-data"
+  ],
+  [
+   "What Copilot license do I have (Microsoft Support)",
+   "https://support.microsoft.com/en-us/microsoft-365-copilot/what-copilot-license-do-i-have"
+  ],
+  [
+   "End of support for Office 2016 and Office 2019 (Microsoft Support)",
+   "https://support.microsoft.com/KB/5002369"
+  ],
+  [
+   "Ending support in 2026 (Microsoft Lifecycle)",
+   "https://learn.microsoft.com/en-us/lifecycle/end-of-support/end-of-support-2026"
+  ],
+  [
+   "Microsoft Publisher will no longer be supported after October 2026 (Microsoft Support)",
+   "https://support.microsoft.com/en-us/office/microsoft-publisher-will-no-longer-be-supported-after-october-2026-ee6302a2-4bc7-4841-babf-8e9be3acbfd7"
+  ],
+  [
+   "Excel functions (by category) (Microsoft Support)",
+   "https://support.microsoft.com/en-us/office/excel-functions-by-category-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb"
+  ],
+  [
+   "Microsoft 365 Roadmap",
+   "https://www.microsoft.com/microsoft-365/roadmap"
   ]
  ],
  "apps": [
@@ -154,6 +180,27 @@
    "t": "Cp",
    "c": "--a-c",
    "sub": "AI assistant. Free Chat vs paid in-app Copilot"
+  },
+  {
+   "id": "win",
+   "name": "Windows & files",
+   "t": "Win",
+   "c": "--a-win",
+   "sub": "File Explorer, screenshots, zip files, window tricks"
+  },
+  {
+   "id": "sec",
+   "name": "Security & safety",
+   "t": "Sec",
+   "c": "--a-sec",
+   "sub": "Sign-in, phishing, protecting files, support end dates"
+  },
+  {
+   "id": "m",
+   "name": "More Microsoft apps",
+   "t": "+",
+   "c": "--a-m",
+   "sub": "Access, Visio, Project, Publisher"
   }
  ],
  "levels": {
@@ -5762,6 +5809,579 @@
    "example": "Analyst finds the 20 most unusual journal entries in a 100k-row file.",
    "watch": "Paid licence only. Verify findings before acting.",
    "minv": "cloud"
+  },
+  {
+   "app": "p",
+   "name": "What Power Apps is (start here)",
+   "level": "B",
+   "core": false,
+   "plain": "Build a simple phone or PC app on top of a list or table, without being a programmer.",
+   "what": "Power Apps makes small business apps (forms, trackers, check-in screens) that read and save data in SharePoint lists, Excel or Dataverse.",
+   "use": "Simple request or check-in apps on top of a SharePoint list, used from a phone.",
+   "example": "A claim or petty-cash request app on a SharePoint list, used from the phone.",
+   "watch": "Start with a SharePoint list as the data. Prototype first and agree who owns the app before rolling it out.",
+   "version": "Microsoft 365 work account (web)",
+   "minv": "cloud",
+   "it": "Some companies limit who can create apps or which connectors can be used.",
+   "licence": "Standard connectors (SharePoint, Excel, Outlook) are included with most Microsoft 365 work plans. Premium connectors or Dataverse need Power Apps Premium.",
+   "oldVersion": "",
+   "where": "make.powerapps.com › Create › Start with data",
+   "steps": [
+    "Make a SharePoint list with the columns you need",
+    "Open make.powerapps.com › Create › Start with data › pick the list",
+    "Power Apps builds a 3-screen app: browse, view, edit",
+    "Change labels and colours, then Save and Publish",
+    "Test on your phone with the Power Apps mobile app"
+   ]
+  },
+  {
+   "app": "p",
+   "name": "Share an app & who needs access",
+   "level": "I",
+   "core": false,
+   "plain": "Sharing the app is not enough. People also need access to the list or file behind it.",
+   "what": "Use Share on the app to give colleagues use or co-owner rights, and give them access to the data source too.",
+   "use": "Roll out a team app so colleagues can open it without access errors.",
+   "example": "Share the claim app with your team, and give them Edit on the claims list.",
+   "watch": "If someone sees an error when opening, check their access to the data source first. Apps using premium connectors need a Premium licence for every user.",
+   "version": "Microsoft 365 work account (web)",
+   "minv": "cloud",
+   "it": "Sharing with people outside the company is usually blocked.",
+   "licence": "Every user of an app with premium connectors needs Power Apps Premium (or a per-app licence).",
+   "oldVersion": "",
+   "where": "make.powerapps.com › Apps › … › Share",
+   "steps": [
+    "Open make.powerapps.com › Apps",
+    "Click … next to your app › Share",
+    "Type the colleague or a group name",
+    "Tick Co-owner only for people who will edit the app",
+    "Share the SharePoint list with the same people"
+   ]
+  },
+  {
+   "app": "o",
+   "name": "Automatic replies (out of office)",
+   "level": "B",
+   "core": true,
+   "plain": "An automatic email reply while you're on leave.",
+   "what": "Sends a set reply to people who email you during the dates you choose. You can write a different message for people outside the company.",
+   "use": "Tell vendors and colleagues who to contact for payments while you're on leave.",
+   "example": "On leave 3 days: 'I'm out until Monday. For urgent payment matters, contact the AP team.'",
+   "watch": "Set an end date so it switches off by itself. Keep the external reply short and don't share personal details.",
+   "version": "All versions (classic and new Outlook)",
+   "minv": "all",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Classic: File › Automatic Replies · New Outlook: Settings › Account › Automatic replies",
+   "steps": [
+    "Classic Outlook: File › Automatic Replies",
+    "Choose 'Send automatic replies' and tick 'Only send during this time range'",
+    "Write the 'Inside My Organization' message",
+    "Write a shorter 'Outside My Organization' message",
+    "Click OK. It turns off at the end time"
+   ]
+  },
+  {
+   "app": "o",
+   "name": "Search like a pro",
+   "level": "I",
+   "core": false,
+   "plain": "Type short search words to find any email fast.",
+   "what": "Outlook search understands words like from:, subject:, hasattachments:yes and received: to narrow results.",
+   "use": "Find a vendor's invoice email or bank advice in seconds during month-end.",
+   "example": "from:ahmad hasattachments:yes received:last month › all files Ahmad sent last month.",
+   "watch": "Check which folder the search covers (current folder or all mailboxes) at the top of the results.",
+   "version": "All versions",
+   "minv": "all",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Search box at the top › type a search word, or use the Filter button",
+   "steps": [
+    "Click the search box at the top",
+    "Type from:name or subject:word",
+    "Add hasattachments:yes to show only emails with files",
+    "Use the filter button to pick dates, folders or attachments",
+    "Press Esc to clear the search"
+   ]
+  },
+  {
+   "app": "o",
+   "name": "Share your calendar & open others'",
+   "level": "I",
+   "core": false,
+   "plain": "Let a colleague see when you're free, or open their calendar beside yours.",
+   "what": "Share your calendar with View or Edit rights, and add a colleague's or a shared calendar to see free/busy times.",
+   "use": "See your team's leave and meetings before booking closing reviews.",
+   "example": "Your manager sees your leave and meetings before booking month-end reviews.",
+   "watch": "Choose 'Can view when I'm busy' if you don't want details shown. Only give Edit to people you trust.",
+   "version": "All versions (classic and new Outlook)",
+   "minv": "all",
+   "it": "Sharing outside the company may be blocked.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Classic: Calendar › Home › Share Calendar · New Outlook: Calendar › right-click your calendar › Sharing and permissions",
+   "steps": [
+    "Go to Calendar",
+    "Classic: Home › Share Calendar. New Outlook: right-click your calendar › Sharing and permissions",
+    "Type the colleague's name",
+    "Choose the level: busy only, titles and locations, all details, or edit",
+    "To open someone else's: Add calendar › From directory"
+   ]
+  },
+  {
+   "app": "o",
+   "name": "Conditional formatting for emails",
+   "level": "I",
+   "core": false,
+   "plain": "Colour emails automatically, like red for your manager or bank emails.",
+   "what": "Classic Outlook can show emails in a colour or font when they match a rule (sender, words, importance).",
+   "use": "Make approval and auditor emails stand out in a busy inbox.",
+   "example": "Emails from your approver show in bold red, so you never miss an approval.",
+   "watch": "This is in classic Outlook only. Use categories with rules if you're on new Outlook.",
+   "version": "Classic Outlook only",
+   "minv": "all",
+   "it": "",
+   "licence": "",
+   "oldVersion": "New Outlook doesn't have this. Use Rules + categories instead.",
+   "where": "View › View Settings › Conditional Formatting",
+   "steps": [
+    "View › View Settings",
+    "Click Conditional Formatting › Add",
+    "Name it and pick a font colour",
+    "Click Condition › set From or words",
+    "OK. Matching emails change colour"
+   ]
+  },
+  {
+   "app": "t",
+   "name": "Meeting options: lobby & presenters",
+   "level": "I",
+   "core": false,
+   "plain": "Control who waits in the lobby and who can share their screen.",
+   "what": "Meeting options let the organiser decide who can skip the lobby, who can present, and whether attendees can unmute or chat.",
+   "use": "Keep external auditors or banks in the lobby until you're ready.",
+   "example": "Audit or bank meeting: outsiders wait in the lobby and only you present.",
+   "watch": "Set options before the meeting starts. Only the organiser (and co-organisers) can change them.",
+   "version": "Teams (work account)",
+   "minv": "cloud",
+   "it": "Your company may set defaults you can't change.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Open the meeting in Calendar › Meeting options (or during the meeting: More › Settings › Meeting options)",
+   "steps": [
+    "Open the meeting in your Teams calendar",
+    "Click Meeting options",
+    "Set 'Who can bypass the lobby'",
+    "Set 'Who can present' to 'Only me and co-organizers'",
+    "Save"
+   ]
+  },
+  {
+   "app": "t",
+   "name": "Breakout rooms",
+   "level": "I",
+   "core": false,
+   "plain": "Split a big meeting into small groups, then bring everyone back.",
+   "what": "The organiser creates rooms, assigns people (automatic or manual), opens the rooms and closes them to return everyone to the main meeting.",
+   "use": "Small-group practice when training juniors or interns.",
+   "example": "Training session: 3 groups practise a bank rec, then come back to share.",
+   "watch": "Use Teams on desktop to manage rooms. Set a timer so groups know when time is up.",
+   "version": "Teams desktop (work account)",
+   "minv": "cloud",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "During the meeting › Rooms (Breakout rooms) in the top bar",
+   "steps": [
+    "Start the meeting as organiser",
+    "Click Rooms › choose number of rooms",
+    "Assign people automatically or manually",
+    "Click Open to start the rooms",
+    "Click Close to bring everyone back"
+   ]
+  },
+  {
+   "app": "f",
+   "name": "Form settings: who, once, deadline",
+   "level": "I",
+   "core": false,
+   "plain": "Control who can answer, how many times, and until when.",
+   "what": "Settings let you limit to people in your company, record names, allow one response per person and set start and end dates.",
+   "use": "Collect one confirmation per department by the closing deadline.",
+   "example": "Year-end confirmation from all departments: one response each, closes on 15 April.",
+   "watch": "'Anyone can respond' makes the form public. Use it only when you need outside answers.",
+   "version": "Microsoft 365 work account (web)",
+   "minv": "cloud",
+   "it": "Sharing with outside people may be blocked.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "forms.office.com › open the form › … › Settings",
+   "steps": [
+    "Open the form › click … at the top right › Settings",
+    "Choose 'Only people in my organization can respond'",
+    "Tick 'Record name' and 'One response per person'",
+    "Set Start date and End date",
+    "Share the link"
+   ]
+  },
+  {
+   "app": "l",
+   "name": "Choice, lookup & required columns",
+   "level": "I",
+   "core": false,
+   "plain": "Make a list tidy by giving people drop-downs instead of free typing.",
+   "what": "Choice columns give a fixed drop-down. Lookup columns pull values from another list. 'Require that this column contains information' stops blanks.",
+   "use": "Clean invoice or claims trackers without spelling mix-ups.",
+   "example": "Invoice tracker: Status (Pending / Approved / Paid) as a choice, Vendor as a lookup to the vendor list.",
+   "watch": "Plan columns before people start entering data. Renaming a column later doesn't change its internal name.",
+   "version": "Microsoft 365 work account (web)",
+   "minv": "cloud",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Lists › + Add column › Choice / Lookup › More options › Require",
+   "steps": [
+    "Open the list › + Add column",
+    "Pick Choice and type the options",
+    "Or pick Lookup and choose the other list and column",
+    "Open More options › turn on 'Require that this column contains information'",
+    "Save"
+   ]
+  },
+  {
+   "app": "pl",
+   "name": "Planner tab in a Teams channel",
+   "level": "I",
+   "core": false,
+   "plain": "Put the team's task board inside the Teams channel everyone already uses.",
+   "what": "Add a Planner tab to a channel so tasks, owners and due dates sit beside the chat and files.",
+   "use": "Month-end close board with owners and due dates in the team channel.",
+   "example": "Month-end close channel with a Planner tab: each closing task has an owner and due date.",
+   "watch": "Everyone in the team can see and edit the plan. Keep personal tasks in To Do instead.",
+   "version": "Teams (work account)",
+   "minv": "cloud",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Teams channel › + (Add a tab) › Planner",
+   "steps": [
+    "Open the channel › click + at the top",
+    "Choose Planner",
+    "Create a new plan or use an existing one",
+    "Add buckets like Week 1, Week 2",
+    "Add tasks, assign owners and due dates"
+   ]
+  },
+  {
+   "app": "win",
+   "name": "File Explorer: copy path & show extensions",
+   "level": "B",
+   "core": true,
+   "plain": "See the real file type (.xlsx, .pdf) and copy a file's full address.",
+   "what": "Showing file name extensions stops mix-ups between files with the same name. Copy as path gives the full address to paste into Power Query or an email.",
+   "use": "Point Power Query or a macro to the right file and avoid opening the wrong version.",
+   "example": "Paste C:\\Finance\\2026\\Bank.xlsx into Power Query 'From File' instead of browsing again.",
+   "watch": "Don't change an extension by renaming (.xls to .xlsx). Use Save As in the app instead.",
+   "version": "Windows 10 and 11",
+   "minv": "all",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Windows 11: View › Show › File name extensions · Right-click file › Copy as path (or Ctrl+Shift+C)",
+   "steps": [
+    "Open File Explorer (Win+E)",
+    "Windows 11: View › Show › File name extensions. Windows 10: View tab › tick File name extensions",
+    "Select a file",
+    "Windows 11: right-click › Copy as path. Windows 10: Shift+right-click › Copy as path",
+    "Paste where you need it"
+   ]
+  },
+  {
+   "app": "win",
+   "name": "Zip & unzip files",
+   "level": "B",
+   "core": false,
+   "plain": "Squeeze many files into one .zip file to send, and open zip files you receive.",
+   "what": "A zip file holds many files in one, often smaller. Extract All unpacks it into a normal folder.",
+   "use": "Send a month's supporting documents to auditors as one file.",
+   "example": "Send 12 monthly reports as one zip instead of 12 attachments.",
+   "watch": "Work on extracted files, not inside the zip, or your changes may not save. Some email systems block zip files, so a OneDrive link is safer.",
+   "version": "Windows 10 and 11",
+   "minv": "all",
+   "it": "Some companies block zip attachments in email.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Windows 11: right-click › Compress to ZIP file · Windows 10: right-click › Send to › Compressed (zipped) folder",
+   "steps": [
+    "Select the files (Ctrl+click)",
+    "Right-click › Compress to ZIP file (Windows 10: Send to › Compressed (zipped) folder)",
+    "Rename the zip",
+    "To open one: right-click › Extract All › Extract"
+   ]
+  },
+  {
+   "app": "win",
+   "name": "Screenshots with Snipping Tool",
+   "level": "B",
+   "core": true,
+   "plain": "Take a picture of part of the screen in two seconds.",
+   "what": "Win+Shift+S lets you drag a box around anything on screen. The picture is copied, ready to paste into email, Word or Teams.",
+   "use": "Show IT an error or capture a figure for an email, fast.",
+   "example": "Show IT the exact error message, or paste a pivot into an email.",
+   "watch": "Hide or crop customer names, bank details and amounts before you send a screenshot.",
+   "version": "Windows 10 and 11",
+   "minv": "all",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Press Win+Shift+S (or open the Snipping Tool app)",
+   "steps": [
+    "Press Win+Shift+S",
+    "Drag a box around the area",
+    "Paste it (Ctrl+V) into email, Teams or Word",
+    "Or click the pop-up to draw on it and save"
+   ]
+  },
+  {
+   "app": "win",
+   "name": "Clipboard history (Win+V)",
+   "level": "B",
+   "core": false,
+   "plain": "Copy many things, then choose which one to paste.",
+   "what": "Clipboard history keeps your recent copies. Win+V shows the list so you can paste any of them.",
+   "use": "Copy several values from SAP and paste them into Excel one by one.",
+   "example": "Copy 5 account numbers from SAP, then paste each into Excel without switching windows.",
+   "watch": "It's off until you turn it on. Pinned items stay after restart; others clear. Avoid copying passwords.",
+   "version": "Windows 10 and 11",
+   "minv": "all",
+   "it": "Your company may turn clipboard history off.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Press Win+V › Turn on (first time)",
+   "steps": [
+    "Press Win+V",
+    "Click Turn on (first time only)",
+    "Copy several items as normal (Ctrl+C)",
+    "Press Win+V and click the item to paste",
+    "Pin items you use often"
+   ]
+  },
+  {
+   "app": "win",
+   "name": "Snap windows & virtual desktops",
+   "level": "B",
+   "core": false,
+   "plain": "Put two windows side by side, or keep separate desktops for different jobs.",
+   "what": "Win+Left/Right snaps a window to half the screen. Win+Tab shows virtual desktops, so you can keep month-end work on one and email on another.",
+   "use": "SAP and Excel side by side while checking postings.",
+   "example": "SAP on the left, Excel on the right while you check postings.",
+   "watch": "Win+Ctrl+D makes a new desktop. Win+Ctrl+Left/Right switches. Closing a desktop moves its windows, it doesn't close them.",
+   "version": "Windows 10 and 11",
+   "minv": "all",
+   "it": "",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Win+Left / Win+Right · Win+Tab",
+   "steps": [
+    "Click a window › press Win+Left",
+    "Pick the second window for the other half",
+    "Press Win+Tab › New desktop",
+    "Move between desktops with Win+Ctrl+Left/Right"
+   ]
+  },
+  {
+   "app": "sec",
+   "name": "Sign-in with MFA (Authenticator)",
+   "level": "B",
+   "core": true,
+   "plain": "Your password plus a second check on your phone, so stolen passwords don't work.",
+   "what": "Multi-factor authentication (MFA) asks for a code or an approve tap in the Microsoft Authenticator app after your password.",
+   "use": "Protects access to finance files and email, even if a password leaks.",
+   "example": "Signing in from a new laptop: type your password, then type the number shown into your phone.",
+   "watch": "Never approve a sign-in you didn't start. If you get surprise prompts, deny them and tell IT, because someone may have your password.",
+   "version": "Microsoft 365 work account",
+   "minv": "cloud",
+   "it": "Set up and rules are decided by your IT team.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Your IT sets it up. To check: mysignins.microsoft.com/security-info",
+   "steps": [
+    "Install Microsoft Authenticator on your phone",
+    "Follow IT's set-up steps or open mysignins.microsoft.com/security-info",
+    "Add your work account by scanning the QR code",
+    "When you sign in, enter the number shown into the app",
+    "Deny any request you didn't make and report it"
+   ]
+  },
+  {
+   "app": "sec",
+   "name": "Spot phishing & report it",
+   "level": "B",
+   "core": true,
+   "plain": "Fake emails try to steal passwords or money. Check before you click.",
+   "what": "Warning signs: urgent payment requests, changed bank details, odd sender addresses, links asking you to sign in. Use the Report button in Outlook.",
+   "use": "Stops fake bank-detail change requests and payment fraud.",
+   "example": "'Vendor' emails new bank details for this week's payment. Call the vendor on the number you already have before changing anything.",
+   "watch": "Never change payee bank details based on an email alone. Hover over links to see the real address before clicking.",
+   "version": "All versions",
+   "minv": "all",
+   "it": "Your company may have its own report button or process.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "Outlook › select the email › Report (Home tab) › Report phishing",
+   "steps": [
+    "Check the real sender address, not just the name",
+    "Hover over links to see where they really go",
+    "Be extra careful with urgent payment or bank-change requests",
+    "Select the email › Report › Report phishing",
+    "If you clicked a link or entered a password, tell IT straight away"
+   ]
+  },
+  {
+   "app": "sec",
+   "name": "Password-protect a file",
+   "level": "I",
+   "core": false,
+   "plain": "Lock a file so only people with the password can open it.",
+   "what": "Encrypt with Password locks Word, Excel and PowerPoint files. Sensitivity labels (if your company has them) are better because no password needs sharing.",
+   "use": "Send payroll or bonus files more safely.",
+   "example": "Salary or bonus schedule sent to HR: encrypt and send the password by a different channel (phone or Teams).",
+   "watch": "If the password is lost, Microsoft can't recover the file. Never put the password in the same email as the file.",
+   "version": "All versions",
+   "minv": "all",
+   "it": "Your company may prefer sensitivity labels instead.",
+   "licence": "",
+   "oldVersion": "",
+   "where": "File › Info › Protect Workbook / Protect Document › Encrypt with Password",
+   "steps": [
+    "File › Info",
+    "Protect Workbook (or Protect Document) › Encrypt with Password",
+    "Type a strong password twice",
+    "Save the file",
+    "Send the password separately"
+   ]
+  },
+  {
+   "app": "sec",
+   "name": "Office 2016, 2019 & 2021 support has ended",
+   "level": "B",
+   "core": true,
+   "plain": "These versions still open, but they no longer get security fixes from Microsoft.",
+   "what": "Support for Office 2016 and Office 2019 ended on 14 October 2025. Office 2021 and Office LTSC 2021 ended on 13 October 2026. No more security updates or bug fixes.",
+   "use": "Know when a colleague's old Office is a risk for shared finance files.",
+   "example": "A colleague on Office 2019 should ask IT about Microsoft 365 or Office 2024. Files still open, but the computer is less protected.",
+   "watch": "Old versions keep working, but security risks grow over time. Check your version in File › Account.",
+   "version": "Office 2016, 2019, 2021",
+   "minv": "all",
+   "it": "Upgrades are handled by IT.",
+   "licence": "Moving to Microsoft 365 or Office 2024 may need a new licence.",
+   "oldVersion": "",
+   "where": "Excel or Word › File › Account › Product Information",
+   "steps": [
+    "Open Excel › File › Account",
+    "Read the product name under Product Information",
+    "If it says 2016, 2019 or 2021, tell IT",
+    "Save important files to OneDrive or SharePoint",
+    "Avoid opening unknown attachments on old versions"
+   ]
+  },
+  {
+   "app": "m",
+   "name": "Access (desktop database)",
+   "level": "B",
+   "core": false,
+   "plain": "A database app for bigger lists than Excel likes, with forms and reports.",
+   "what": "Access stores data in related tables and builds data-entry forms, queries and printed reports. Windows desktop only.",
+   "use": "Understand older Access trackers before moving them to Lists or Power BI.",
+   "example": "An old fixed-asset register kept in Access, with a monthly depreciation report.",
+   "watch": "For new team tools, Microsoft Lists or Power Apps are usually easier to share. Access files don't co-author well on OneDrive.",
+   "version": "Windows desktop",
+   "minv": "all",
+   "it": "",
+   "licence": "Included in many business Microsoft 365 plans. Check your Start menu or File › Account.",
+   "oldVersion": "Not on Mac or web.",
+   "where": "Start menu › Access",
+   "steps": [
+    "Open Access › Blank database",
+    "Create a table and set field types",
+    "Add a form with Create › Form",
+    "Build a query with Create › Query Wizard",
+    "Make a printable report with Create › Report"
+   ]
+  },
+  {
+   "app": "m",
+   "name": "Visio (diagrams & flowcharts)",
+   "level": "B",
+   "core": false,
+   "plain": "Draw clean process maps, flowcharts and org charts.",
+   "what": "Visio has shapes and connectors that snap together. A web version is included in many work plans; the full desktop app is a paid add-on.",
+   "use": "Process maps for audit walkthroughs and SOPs.",
+   "example": "Draw the P2P (purchase to pay) process for an audit walkthrough.",
+   "watch": "Check which version you have before building big diagrams. For quick sketches, PowerPoint SmartArt or Whiteboard also work.",
+   "version": "Web (work account) and desktop",
+   "minv": "cloud",
+   "it": "",
+   "licence": "Full desktop Visio needs a Visio plan licence.",
+   "oldVersion": "",
+   "where": "microsoft365.com › Apps › Visio",
+   "steps": [
+    "Open microsoft365.com › Apps › Visio",
+    "Pick a template like Basic flowchart",
+    "Drag shapes onto the page",
+    "Drag from a shape's arrow to connect the next step",
+    "Share the link or export as PDF"
+   ]
+  },
+  {
+   "app": "m",
+   "name": "Project (plans & Gantt charts)",
+   "level": "B",
+   "core": false,
+   "plain": "Plan big projects with dates, dependencies and a Gantt chart.",
+   "what": "Project handles tasks that depend on each other, resources and timelines. For most team plans, Planner (Premium has timelines) is simpler.",
+   "use": "Plan system go-lives or year-end audit timelines with dependencies.",
+   "example": "System go-live plan: data migration must finish before user testing starts.",
+   "watch": "Project needs its own licence. Check Microsoft's current Project and Planner pages before buying, because features are moving into Planner.",
+   "version": "Desktop and web (licence needed)",
+   "minv": "cloud",
+   "it": "",
+   "licence": "Needs a Project or Planner Premium licence.",
+   "oldVersion": "",
+   "where": "Start menu › Project, or planner.cloud.microsoft for Planner",
+   "steps": [
+    "Decide if Planner is enough (most team plans)",
+    "For complex plans, ask IT about a Project licence",
+    "List tasks with start dates and durations",
+    "Link tasks that depend on each other",
+    "Review the Gantt chart and the critical path"
+   ]
+  },
+  {
+   "app": "m",
+   "name": "Publisher is retired: move your files",
+   "level": "B",
+   "core": true,
+   "plain": "Publisher has stopped. Convert your .pub files to Word or PowerPoint.",
+   "what": "Microsoft 365 users can no longer open .pub files in Publisher after October 2026. Support for one-time-purchase Publisher ended on 13 October 2026.",
+   "use": "Re-make old letterhead, certificate or newsletter files before they can't be opened.",
+   "example": "Old newsletter or certificate templates in .pub: re-make them in Word or PowerPoint.",
+   "watch": "If you still have Publisher, save each file as PDF or Word now. Microsoft suggests Word for letterheads and newsletters, PowerPoint for posters and banners.",
+   "version": "Retired",
+   "minv": "all",
+   "it": "",
+   "licence": "",
+   "oldVersion": "Files made in Publisher can't be opened without it.",
+   "where": "Publisher › File › Save As › PDF or Word",
+   "steps": [
+    "Find your .pub files",
+    "If Publisher still opens: File › Save As › PDF (and keep a copy)",
+    "Re-create the design in Word (letters, newsletters) or PowerPoint (posters, banners)",
+    "Save the new version as a template",
+    "Delete the .pub only after checking the new file"
+   ]
   }
  ],
  "tasks": [
@@ -7475,6 +8095,351 @@
    "name": "Microsoft templates & Designer",
    "how": "File › New",
    "note": "Open a template and reverse-engineer its Slide Master."
+  }
+ ],
+ "faq": [
+  {
+   "app": "x",
+   "q": "How do I get back a file I didn't save?",
+   "a": [
+    "Open the app › File › Info › Manage Workbook (Excel) or Manage Document (Word) › Recover Unsaved",
+    "Or reopen the app: the Document Recovery pane shows files it saved",
+    "Save it straight away with a new name"
+   ],
+   "tip": "Turn on AutoSave by saving files in OneDrive or SharePoint."
+  },
+  {
+   "app": "s",
+   "q": "How do I go back to an older version of a file?",
+   "a": [
+    "Files in OneDrive or SharePoint: File › Info › Version History",
+    "Pick a date and click Open version",
+    "Click Restore, or copy the parts you need"
+   ],
+   "tip": "Works only for files saved in OneDrive or SharePoint."
+  },
+  {
+   "app": "w",
+   "q": "How do I turn a PDF into Word?",
+   "a": [
+    "Word › File › Open › pick the PDF",
+    "Click OK when Word says it will convert",
+    "Check tables and page breaks, then save as .docx"
+   ],
+   "tip": "Scanned PDFs (pictures of pages) may not convert well."
+  },
+  {
+   "app": "x",
+   "q": "How do I get a table from a PDF into Excel?",
+   "a": [
+    "Excel › Data › Get Data › From File › From PDF",
+    "Pick the PDF › choose the table in Navigator",
+    "Load, or Transform Data to clean it first"
+   ],
+   "tip": "From PDF is in Microsoft 365 for Windows."
+  },
+  {
+   "app": "x",
+   "q": "My Excel file is too big or slow. What can I do?",
+   "a": [
+    "Review › Check Performance (Microsoft 365) to remove unused formatting",
+    "Avoid whole-column ranges like A:A in heavy formulas",
+    "Save as .xlsb for big data files",
+    "Delete unused sheets and compress pictures"
+   ]
+  },
+  {
+   "app": "x",
+   "q": "Why does it say the file is read-only or locked?",
+   "a": [
+    "Someone else may have it open: ask them to close it, or save the file in OneDrive or SharePoint so you can both edit",
+    "If there's a yellow bar, click Enable Editing",
+    "Check the file isn't marked read-only (right-click › Properties)"
+   ]
+  },
+  {
+   "app": "x",
+   "q": "Why does VLOOKUP give #N/A?",
+   "a": [
+    "The value isn't found exactly. Check for extra spaces (use TRIM)",
+    "Check numbers stored as text vs real numbers",
+    "Use FALSE (exact match) as the last part of VLOOKUP",
+    "Or use XLOOKUP with an 'if not found' message"
+   ]
+  },
+  {
+   "app": "x",
+   "q": "How do I fix numbers stored as text?",
+   "a": [
+    "Select the cells › click the green warning sign › Convert to Number",
+    "Or Data › Text to Columns › Finish",
+    "Or use =VALUE(A2) in a new column"
+   ],
+   "tip": "Common after SAP or system exports."
+  },
+  {
+   "app": "x",
+   "q": "How do I remove duplicates?",
+   "a": [
+    "Select the data › Data › Remove Duplicates",
+    "Tick the columns that make a row a duplicate › OK",
+    "Or use =UNIQUE(range) to keep the original data"
+   ],
+   "tip": "Copy the data first. Remove Duplicates can't be undone after saving."
+  },
+  {
+   "app": "x",
+   "q": "How do I keep the top row showing when I scroll?",
+   "a": [
+    "View › Freeze Panes › Freeze Top Row",
+    "For rows and columns: click the cell below and right of them › View › Freeze Panes › Freeze Panes"
+   ]
+  },
+  {
+   "app": "x",
+   "q": "How do I print a sheet on one page?",
+   "a": [
+    "Page Layout › Scale to Fit › Width: 1 page, Height: Automatic",
+    "Page Layout › Print Titles › 'Rows to repeat at top' for headings on every page",
+    "File › Print to check the preview"
+   ]
+  },
+  {
+   "app": "x",
+   "q": "Why is my formula showing as text, not a result?",
+   "a": [
+    "The cell may be formatted as Text: change to General, then press F2 and Enter",
+    "Check Formulas › Calculation Options is Automatic",
+    "Press Ctrl+` if all formulas are showing"
+   ]
+  },
+  {
+   "app": "x",
+   "q": "Why are my dates wrong or not sorting?",
+   "a": [
+    "They may be text. Select the column › Data › Text to Columns › Next › Next › Date: DMY › Finish",
+    "Then format as a date (Ctrl+1)",
+    "In Power Query use Change Type › Using Locale"
+   ],
+   "tip": "Happens often with exports that use a different date order."
+  },
+  {
+   "app": "x",
+   "q": "How do I lock formulas but let people type in some cells?",
+   "a": [
+    "Select the input cells › Ctrl+1 › Protection › untick Locked",
+    "Review › Protect Sheet › set a password if needed",
+    "Only the unlocked cells can now be changed"
+   ]
+  },
+  {
+   "app": "x",
+   "q": "How do I count unique values?",
+   "a": [
+    "Microsoft 365 / Office 2021 and later: =COUNTA(UNIQUE(A2:A100))",
+    "Older versions: use a PivotTable with Distinct Count (add to Data Model)"
+   ]
+  },
+  {
+   "app": "x",
+   "q": "How do I join text from two cells?",
+   "a": [
+    "=A2&\" \"&B2",
+    "Or =TEXTJOIN(\", \",TRUE,A2:C2) to join many with a separator"
+   ]
+  },
+  {
+   "app": "x",
+   "q": "What can I use instead of Merge Cells?",
+   "a": [
+    "Select the cells › Ctrl+1 › Alignment › Horizontal: Center Across Selection",
+    "It looks merged but sorting and copying still work"
+   ]
+  },
+  {
+   "app": "w",
+   "q": "How do I delete a blank page at the end?",
+   "a": [
+    "Home › click ¶ (Show/Hide) to see marks",
+    "Delete the extra paragraph marks or page break",
+    "After a table: select the last ¶ and set font size to 1"
+   ]
+  },
+  {
+   "app": "w",
+   "q": "How do I start page numbers from page 2 or 3?",
+   "a": [
+    "Put a Section Break (Layout › Breaks › Next Page) before the page",
+    "Double-click the footer › untick Link to Previous",
+    "Page Number › Format Page Numbers › Start at 1"
+   ]
+  },
+  {
+   "app": "w",
+   "q": "How do I remove comments and tracked changes before sending?",
+   "a": [
+    "Review › Accept › Accept All Changes",
+    "Review › Delete › Delete All Comments",
+    "File › Info › Check for Issues › Inspect Document"
+   ]
+  },
+  {
+   "app": "w",
+   "q": "How do I make just one page landscape?",
+   "a": [
+    "Put the cursor at the start of that page › Layout › Breaks › Next Page",
+    "Layout › Orientation › Landscape",
+    "Add another Next Page break after it and switch back to Portrait"
+   ]
+  },
+  {
+   "app": "o",
+   "q": "How do I set out of office?",
+   "a": [
+    "Classic Outlook: File › Automatic Replies",
+    "New Outlook: Settings › Account › Automatic replies",
+    "Set the date range and write inside and outside messages"
+   ]
+  },
+  {
+   "app": "o",
+   "q": "How do I unsend an email?",
+   "a": [
+    "Open the sent email › Recall Message (works only inside your company)",
+    "For outside people, send a short correction quickly"
+   ],
+   "tip": "Next time, use Schedule send or delay delivery to get a few minutes to change your mind."
+  },
+  {
+   "app": "o",
+   "q": "My attachment is too big. How do I send it?",
+   "a": [
+    "Save the file in OneDrive or SharePoint",
+    "Attach it as a link (Share › Copy link) instead of a copy",
+    "Set the link to Specific people"
+   ]
+  },
+  {
+   "app": "o",
+   "q": "How do I add or change my email signature?",
+   "a": [
+    "Classic Outlook: File › Options › Mail › Signatures",
+    "New Outlook: Settings › Account › Signatures",
+    "Set it as default for new emails and replies"
+   ]
+  },
+  {
+   "app": "o",
+   "q": "My mailbox is full. What should I clear?",
+   "a": [
+    "Empty Deleted Items and Junk",
+    "Search for emails with attachments and sort by size",
+    "Save big attachments to OneDrive, then delete the emails",
+    "Use Archive for old emails"
+   ]
+  },
+  {
+   "app": "t",
+   "q": "How do I blur my background in Teams?",
+   "a": [
+    "Before joining: turn on video › Effects and avatars (or Background filters) › Blur",
+    "During a meeting: More › Video effects › Blur"
+   ]
+  },
+  {
+   "app": "t",
+   "q": "How do I share my screen with sound?",
+   "a": [
+    "In the meeting click Share",
+    "Turn on Include sound",
+    "Pick the screen or window"
+   ]
+  },
+  {
+   "app": "t",
+   "q": "How do I find an old message or file in Teams?",
+   "a": [
+    "Use the search box at the top and filter by Messages or Files",
+    "In a chat, open the Shared (or Files) tab",
+    "In a channel, open the Files tab"
+   ]
+  },
+  {
+   "app": "pp",
+   "q": "How do I change the font on all slides at once?",
+   "a": [
+    "Home › Replace (arrow) › Replace Fonts",
+    "Or View › Slide Master › change the fonts on the top slide",
+    "Close Master View"
+   ]
+  },
+  {
+   "app": "pp",
+   "q": "How do I save slides with notes as PDF?",
+   "a": [
+    "File › Print",
+    "Change 'Full Page Slides' to Notes Pages",
+    "Choose Microsoft Print to PDF as the printer › Print"
+   ]
+  },
+  {
+   "app": "s",
+   "q": "How do I share a file safely?",
+   "a": [
+    "Save it in OneDrive or SharePoint › Share",
+    "Choose Specific people",
+    "Untick 'Can edit' if they only need to read",
+    "Set an expiry date if available"
+   ]
+  },
+  {
+   "app": "s",
+   "q": "OneDrive isn't syncing. What do I try?",
+   "a": [
+    "Click the OneDrive cloud icon near the clock",
+    "Pause syncing, then Resume",
+    "Check for a red X on files and rename very long file names",
+    "Sign out and in again, or ask IT"
+   ]
+  },
+  {
+   "app": "x",
+   "q": "Which version of Office do I have?",
+   "a": [
+    "Open Excel or Word › File › Account",
+    "Read Product Information: 'Microsoft 365 Apps' = subscription",
+    "'Office 2021', '2019' or '2016' = one-time purchase (support has ended)"
+   ]
+  },
+  {
+   "app": "c",
+   "q": "Is Copilot free at work?",
+   "a": [
+    "Copilot Chat (web) is included with a Microsoft 365 work account",
+    "Copilot inside Word, Excel, PowerPoint and OneNote needs the paid Microsoft 365 Copilot licence",
+    "Check with IT which one you have"
+   ],
+   "tip": "Microsoft Support: What Copilot license do I have."
+  },
+  {
+   "app": "win",
+   "q": "What are the most useful keyboard shortcuts?",
+   "a": [
+    "Ctrl+C / Ctrl+V / Ctrl+Z: copy, paste, undo",
+    "Win+Shift+S: screenshot · Win+V: clipboard history",
+    "Win+L: lock your PC when you walk away",
+    "In Office apps press Alt to see the letters for every button"
+   ]
+  },
+  {
+   "app": "sec",
+   "q": "I clicked a suspicious link. What now?",
+   "a": [
+    "Don't enter any more details",
+    "Tell IT straight away",
+    "Change your password if you typed it",
+    "Report the email with Report › Report phishing"
+   ]
   }
  ]
 }

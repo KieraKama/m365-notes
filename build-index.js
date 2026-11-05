@@ -14,6 +14,7 @@ h += '<section><h3>Feature notes</h3>' + d.apps.map(a => {
   const list = d.features.filter(f => f.app === a.id);
   return list.length ? `<p><b>${esc(a.name)}:</b> ${list.map(f => `<a href="#notes" data-siq="${esc(f.name)}">${esc(f.name)}</a>`).join(' · ')}</p>` : '';
 }).join('') + '</section>';
+h += '<section><h3>Common questions</h3><p>' + (d.faq||[]).map(f => `<a href="#faq" data-sifaq="${esc(f.q)}">${esc(f.q)}</a>`).join(' · ') + '</p></section>';
 h += '<section><h3>Handbook</h3>' + hb.subjects.map((s, si) => `<p><b>${esc(s.name)}:</b> ${s.pages.map((p, pi) => `<a href="#handbook" data-sihb="${si}|${pi}">${esc(p.t)}</a>`).join(' · ')}</p>`).join('') + '</section>';
 h += '<section><h3>Excel formulas</h3><p><b>New functions:</b> ' + fx.fns.map(f => `<a href="#formulas" data-sifx="${esc(f[0])}">${esc(f[0])}</a>`).join(' · ') + '</p>';
 h += '<p><b>Old → new:</b> ' + fx.swaps.map(s => `<a href="#formulas" data-sifx="${esc(s[1].split(' ')[0])}">${esc(s[0])} → ${esc(s[1])}</a>`).join(' · ') + '</p></section>';
