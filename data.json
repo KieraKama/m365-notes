@@ -17,7 +17,8 @@
     "Added 24 cards, incl. more Outlook, Teams, Forms, Lists, Planner and Power Apps.",
     "Office 2016 and 2019 support ended 14 Oct 2025; Office 2021 and LTSC 2021 ended 13 Oct 2026 (Microsoft Support KB5002369; Microsoft Lifecycle: Ending support in 2026).",
     "Publisher retired in October 2026: convert .pub files to Word or PowerPoint (Microsoft Support).",
-    "Copilot source now points to the official Microsoft Support page."
+    "Copilot source now points to the official Microsoft Support page.",
+    "Power Automate: new Handbook page, card and common question on when to use a cloud flow or a desktop flow (Microsoft Learn: Premium RPA features; Prerequisites and limitations)."
    ]
   },
   {
@@ -66,6 +67,18 @@
   [
    "Microsoft 365 Roadmap",
    "https://www.microsoft.com/microsoft-365/roadmap"
+  ],
+  [
+   "Premium RPA features (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/power-automate/desktop-flows/premium-features"
+  ],
+  [
+   "Power Automate for desktop: prerequisites and limitations (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/power-automate/desktop-flows/requirements"
+  ],
+  [
+   "Trigger desktop flows from cloud flows (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/power-automate/desktop-flows/trigger-desktop-flows"
   ]
  ],
  "apps": [
@@ -4273,6 +4286,39 @@
   },
   {
    "app": "a",
+   "name": "Cloud flow or desktop flow?",
+   "level": "B",
+   "core": true,
+   "plain": "Cloud flows join online apps. Desktop flows click and type on your PC like a person.",
+   "what": "Two kinds of flow. Cloud flows run in Microsoft's cloud using connectors. Desktop flows (RPA) run on your Windows PC and copy mouse clicks and typing.",
+   "use": "Bank advice from email to SharePoint = cloud. SAP GUI downloads (e.g. CN41N) = desktop. Email arrives, then SAP runs = both.",
+   "example": "Ask: where does the work happen? In Outlook, SharePoint, Teams or Forms → cloud flow. Inside SAP GUI or files on your C: drive → desktop flow.",
+   "watch": "Desktop flows need the PC on and signed in, and break when screens change. Use a cloud flow whenever a connector exists.",
+   "version": "Cloud: web · Desktop: Windows 10/11",
+   "minv": "cloud",
+   "it": "Installing Power Automate for desktop or using SAP GUI scripting may need IT.",
+   "licence": "Cloud with standard connectors: most Microsoft 365 work plans. Desktop started by a cloud flow: Power Automate Premium. Unattended (nobody signed in): Process plan.",
+   "oldVersion": "",
+   "where": "Cloud: make.powerautomate.com › My flows › Cloud flows · Desktop: Power Automate for desktop app › My flows",
+   "steps": [
+    "Write down where each step of the job happens",
+    "Online Microsoft app with a connector → build a cloud flow",
+    "PC program with no connector → build a desktop flow",
+    "Need both → cloud flow with 'Run a flow built with Power Automate for desktop' (Premium)",
+    "See the Handbook page 'Cloud flow or desktop flow?' for examples"
+   ],
+   "pic": {
+    "k": "flow",
+    "steps": [
+     "Where does the work happen?",
+     "Online app → Cloud flow",
+     "PC program → Desktop flow",
+     "Both → Cloud starts Desktop"
+    ]
+   }
+  },
+  {
+   "app": "a",
    "name": "Save email attachments to SharePoint/OneDrive",
    "level": "B",
    "core": true,
@@ -8440,6 +8486,17 @@
     "Change your password if you typed it",
     "Report the email with Report › Report phishing"
    ]
+  },
+  {
+   "app": "a",
+   "q": "Should I use a cloud flow or a desktop flow?",
+   "a": [
+    "Work happens in Outlook, SharePoint, Teams, Forms or Excel Online → cloud flow",
+    "You'd have to click inside a PC program like SAP GUI → desktop flow",
+    "Need both → a cloud flow that starts a desktop flow (needs Premium)",
+    "Your PC is off at night? Only cloud flows can still run"
+   ],
+   "tip": "See Handbook › Power Automate › Cloud flow or desktop flow?"
   }
  ]
 }
