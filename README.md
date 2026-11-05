@@ -7,6 +7,7 @@ Self-learning notes on Microsoft 365 for finance & accounts work.
 - `ribbon.json` – 'Start here: basics' button guide for 16 apps, file types, tips, word list, YouTube channels
 - `formulas.json` – new Excel functions and old → new replacements
 - `handbook.json` – Handbook pages (Excel, Power Query, Power BI, Power Automate, Word, PowerPoint, Outlook, Teams) with quizzes, interview Q&A and cheat sheets
+- `build-index.js` – rebuilds the folded Site index at the bottom of index.html (run: node build-index.js)
 - `filetypes.json` – every Save-as type with what it is, when to use it, pros and cons
 
 The page reads `data.json`, so content updates only touch that file.
