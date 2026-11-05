@@ -2,7 +2,12 @@
  "title": "M365 & Power Platform Notes",
  "owner": "KieraKama",
  "lastChecked": "2026-11-03",
- "cusdisAppId": "",
+ "giscus": {
+  "repo": "KieraKama/m365-notes",
+  "repoId": "R_kgDOVhGm8Q",
+  "category": "General",
+  "categoryId": ""
+ },
  "changes": [
   {
    "date": "2026-11-03",

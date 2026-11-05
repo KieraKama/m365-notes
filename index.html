@@ -916,8 +916,8 @@ footer .copy{font-size:14px;color:var(--ink);margin-bottom:4px}
   <div id="changes" class="changes"></div>
   <div class="box" style="margin-top:14px"><h3>Main sources checked</h3><ul id="sources"></ul></div>
   <h2 class="sec-title">Suggestions &amp; comments</h2>
-  <p class="lead2">Found a mistake, a better way, or want a feature added? Leave a note. Comments appear after the owner approves them.</p>
-  <div class="box comments"><div id="cusdis_thread"></div><p id="cusdis-off" class="muted" hidden>The comment box will appear here once it's connected.</p></div>
+  <p class="lead2">Found a mistake, a better way, or want a feature added? Leave a note. Anyone can read the comments. To post, sign in with a free GitHub account.</p>
+  <div class="box comments"><div id="cmt-thread" class="giscus"></div><p id="cmt-off" class="muted" hidden>The comment box will appear here once it's connected.</p></div>
 </section>
 </main>
 
@@ -1106,20 +1106,19 @@ function renderStatic(){
   $("last-checked").textContent = fmtDate(DATA.lastChecked);
   $("yr").textContent = String(new Date().getFullYear()) === "2026" ? "2026" : "2026–"+new Date().getFullYear();
 }
-let cusdisLoaded = false;
+let cmtLoaded = false;
 function loadComments(){
-  if (cusdisLoaded) return; cusdisLoaded = true;
-  if (!DATA.cusdisAppId){ $("cusdis-off").hidden = false; return; }
-  const el = $("cusdis_thread");
-  el.setAttribute("data-host","https://cusdis.com");
-  el.setAttribute("data-app-id", DATA.cusdisAppId);
-  el.setAttribute("data-page-id","m365-field-notes");
-  el.setAttribute("data-page-url", location.origin + location.pathname);
-  el.setAttribute("data-page-title", DATA.title || "M365 & Power Platform Notes");
+  if (cmtLoaded) return; cmtLoaded = true;
+  const g = DATA.giscus || {};
+  if (!g.repoId || !g.categoryId){ $("cmt-off").hidden = false; return; }
   const s = document.createElement("script");
-  s.src = "https://cusdis.com/js/cusdis.es.js"; s.async = true; s.defer = true;
-  s.onerror = () => { $("cusdis-off").hidden = false; $("cusdis-off").textContent = "Comments couldn't load here. Open the page in a normal browser tab."; };
-  document.body.appendChild(s);
+  s.src = "https://giscus.app/client.js"; s.async = true; s.crossOrigin = "anonymous";
+  const at = {"data-repo":g.repo||"KieraKama/m365-notes","data-repo-id":g.repoId,"data-category":g.category||"General","data-category-id":g.categoryId,
+    "data-mapping":"specific","data-term":"Suggestions & comments","data-strict":"1","data-reactions-enabled":"1","data-emit-metadata":"0",
+    "data-input-position":"top","data-theme":"light","data-lang":"en","data-loading":"lazy"};
+  for (const k in at) s.setAttribute(k, at[k]);
+  s.onerror = () => { $("cmt-off").hidden = false; $("cmt-off").textContent = "Comments couldn't load. Try again later or open the page in a normal browser tab."; };
+  $("cmt-thread").appendChild(s);
 }
 
 // views

@@ -12,7 +12,7 @@ Self-learning notes on Microsoft 365 for finance & accounts work.
 
 The page reads `data.json`, so content updates only touch that file.
 `lastChecked` and `changes` in `data.json` show on the page under "Updates & suggestions".
-`cusdisAppId` turns on the comment box (from cusdis.com).
+`giscus.categoryId` turns on the comment box (Giscus, stored in this repo's GitHub Discussions).
 
 © 2026 KieraKama. All rights reserved.
 Microsoft product names are trademarks of the Microsoft group of companies. Not affiliated with Microsoft.
