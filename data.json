@@ -1,7 +1,7 @@
 {
  "title": "M365 & Power Platform Notes",
  "owner": "KieraKama",
- "lastChecked": "2026-11-05",
+ "lastChecked": "2026-11-11",
  "comments": {
   "form": "https://docs.google.com/forms/d/e/1FAIpQLSdtIgut17BVFtAITvMYYZnwiQdvjVV7Ump489MsSoJRyP9weQ/formResponse",
   "name": "entry.2035312363",
@@ -9,6 +9,16 @@
   "csv": ""
  },
  "changes": [
+  {
+   "date": "2026-11-11",
+   "items": [
+    "Copilot section rewritten around Microsoft's three labels: Copilot Chat (Basic), M365 Copilot (Basic) and M365 Copilot (Premium) (Microsoft Support: What Copilot license do I have).",
+    "New cards: Which Copilot do I have, Copilot Chat with your work data, Edit with Copilot (was Agent Mode), Copilot in Teams meetings, Copilot Notebooks (Microsoft Support pages; Microsoft Copilot Blog 22 Apr 2026).",
+    "Updated cards: Copilot in Outlook (Coaching, Schedule with Copilot), Copilot inside Word/Excel/PowerPoint/OneNote, Researcher & Analyst (new steps).",
+    "Licence table: Microsoft 365 Copilot is now listed as Premium, $30/user/month paid yearly (Microsoft pricing page).",
+    "Two new common questions: how to check Basic or Premium, and what you can do after an upgrade to Premium."
+   ]
+  },
   {
    "date": "2026-11-05",
    "items": [
@@ -79,6 +89,46 @@
   [
    "Trigger desktop flows from cloud flows (Microsoft Learn)",
    "https://learn.microsoft.com/en-us/power-automate/desktop-flows/trigger-desktop-flows"
+  ],
+  [
+   "How Copilot Chat works with and without a Microsoft 365 Copilot license (Microsoft Support)",
+   "https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-with-and-without-a-microsoft-365-copilot-license"
+  ],
+  [
+   "How Copilot Chat works in Microsoft 365 apps (Microsoft Support)",
+   "https://support.microsoft.com/en-us/topic/how-copilot-chat-works-in-microsoft-365-apps-676db5e8-9568-4bdb-bf0b-e207e29e056b"
+  ],
+  [
+   "Microsoft 365 Copilot plans and pricing: Enterprise (Microsoft)",
+   "https://www.microsoft.com/en-us/copilot/pricing/enterprise"
+  ],
+  [
+   "Get started editing with Copilot in Office (Microsoft Support)",
+   "https://support.microsoft.com/en-us/office/copilot-frontier/get-started-editing-with-copilot-in-office"
+  ],
+  [
+   "Copilot's agentic capabilities in Word, Excel, and PowerPoint are generally available (Microsoft Copilot Blog, 22 Apr 2026)",
+   "https://www.microsoft.com/en-us/copilot/blog/2026/04/22/copilots-agentic-capabilities-in-word-excel-and-powerpoint-are-generally-available/"
+  ],
+  [
+   "Get started with Researcher (Microsoft Support)",
+   "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-researcher-in-microsoft-365-copilot"
+  ],
+  [
+   "Get started with Analyst (Microsoft Support)",
+   "https://support.microsoft.com/en-us/topic/get-started-with-analyst-in-microsoft-365-copilot-ff505b9c-a06c-4be9-b855-69d89b1d25d2"
+  ],
+  [
+   "Catch up on meetings with Copilot in Teams (Microsoft Support)",
+   "https://support.microsoft.com/en-us/teams/copilot/catch-up-on-meetings-with-microsoft-365-copilot-in-teams"
+  ],
+  [
+   "Get started with Copilot Notebooks (Microsoft Support)",
+   "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-notebooks"
+  ],
+  [
+   "Frequently asked questions about Copilot in Outlook (Microsoft Support)",
+   "https://support.microsoft.com/en-us/outlook/frequently-asked-questions-about-copilot-in-outlook"
   ]
  ],
  "apps": [
@@ -192,7 +242,7 @@
    "name": "Copilot",
    "t": "Cp",
    "c": "--a-c",
-   "sub": "AI assistant. Free Chat vs paid in-app Copilot"
+   "sub": "AI assistant. Basic (free) vs Premium (paid licence)"
   },
   {
    "id": "win",
@@ -5693,6 +5743,52 @@
    "minv": "cloud"
   },
   {
+   "level": "B",
+   "core": true,
+   "version": "Web / app",
+   "it": "IT assigns the licence. You can't switch it on yourself.",
+   "oldVersion": "",
+   "minv": "cloud",
+   "app": "c",
+   "name": "Which Copilot do I have? Basic or Premium",
+   "what": "Your work account shows one of three labels: Copilot Chat (Basic), M365 Copilot (Basic) or M365 Copilot (Premium). The label tells you what Copilot can do for you.",
+   "use": "Check before following a how-to: many Copilot steps only work with Premium.",
+   "licence": "Premium = the paid Microsoft 365 Copilot add-on licence (about $30/user/month).",
+   "where": "microsoft365.com › bottom of the home page › under your name",
+   "steps": [
+    "Sign in to Copilot at microsoft365.com with your work account",
+    "Scroll to the bottom of the home page to see your account",
+    "Read the label under your name",
+    "Copilot Chat (Basic): chat only, no Copilot inside Word, Excel, PowerPoint, OneNote",
+    "M365 Copilot (Basic): limited Copilot Chat inside the apps",
+    "M365 Copilot (Premium): full Copilot in the apps, your work data, Researcher and Analyst"
+   ],
+   "plain": "A label under your name says Basic or Premium. Premium is the full, paid Copilot.",
+   "example": "Label says M365 Copilot (Premium): the Copilot button in Excel now does the full job.",
+   "watch": "The Copilot app is changing (a new Home screen is rolling out), so your screen may look a little different.",
+   "pic": {
+    "k": "list",
+    "title": "Label under your name",
+    "items": [
+     [
+      "Copilot Chat (Basic)",
+      "chat only",
+      0
+     ],
+     [
+      "M365 Copilot (Basic)",
+      "limited in apps",
+      0
+     ],
+     [
+      "M365 Copilot (Premium)",
+      "full Copilot",
+      1
+     ]
+    ]
+   }
+  },
+  {
    "app": "c",
    "name": "Copilot Chat (Basic, free)",
    "level": "B",
@@ -5711,7 +5807,7 @@
    ],
    "plain": "Microsoft's AI chat with your work account. Your data is protected and not used to train the AI.",
    "example": "Paste a formula and ask 'explain step by step'; it explains each part.",
-   "watch": "AI can be wrong. Check numbers, and don't paste confidential data if policy says no.",
+   "watch": "AI can be wrong. Check numbers, and don't paste confidential data if policy says no. Basic only reads files you upload; it can't search your emails, meetings or chats.",
    "minv": "cloud",
    "pic": {
     "k": "chat",
@@ -5720,24 +5816,53 @@
    }
   },
   {
+   "level": "B",
+   "core": false,
+   "version": "Web / app",
+   "it": "Copilot only sees what you already have permission to open.",
+   "oldVersion": "",
+   "minv": "cloud",
+   "app": "c",
+   "name": "Copilot Chat with your work data (Premium)",
+   "what": "With Premium, Copilot Chat can use your own emails, meetings, chats and files to answer, not only what you upload.",
+   "use": "'What did the vendor agree about INV-889?' or 'Summarise what I missed this week on the audit.'",
+   "licence": "Microsoft 365 Copilot licence (Premium). Basic only uses files you upload.",
+   "where": "Microsoft 365 Copilot app, or Copilot in Teams",
+   "steps": [
+    "Open Copilot Chat with your work account",
+    "Ask about your own work, naming the person, topic or file",
+    "Open the sources it lists to check the answer"
+   ],
+   "plain": "Ask Copilot about your own emails, meetings and files. It finds and summarises them for you.",
+   "example": "'List open points from my emails with ABC Sdn Bhd this month' gives a short list with links to the emails.",
+   "watch": "It can miss an email or mix up two topics. Open the source before you rely on an amount or a date.",
+   "pic": {
+    "k": "chat",
+    "q": "What did ABC agree about INV-889?",
+    "a": "Credit note RM300, balance paid by 15 Nov (source: email 3 Nov)"
+   }
+  },
+  {
    "app": "c",
    "name": "Copilot in Outlook",
    "level": "B",
    "core": false,
-   "what": "Summarise long threads, draft replies.",
+   "what": "Summarise long threads, draft replies, get coaching on your draft, and book a meeting from an email.",
    "use": "Catch up on a long vendor dispute thread after leave.",
    "version": "Outlook (classic/new)",
    "it": "",
-   "licence": "Basic Chat still works in Outlook without the paid licence.",
+   "licence": "Included for everyone with a work account. With Premium, it also uses your chats and company data, e.g. to prioritise email and prepare meeting agendas.",
    "oldVersion": "",
-   "where": "Open an email thread › Summarize · New email › Draft with Copilot",
+   "where": "Open an email thread › Summarize · New email › Copilot button on the ribbon › Draft with Copilot",
    "steps": [
     "Summarize a long thread",
-    "Draft a reply, set tone and length"
+    "Draft a reply: Copilot button, or type / and choose Draft with Copilot",
+    "Coaching by Copilot: checks tone and clarity of your own draft",
+    "Schedule with Copilot: turns an email thread into a meeting invite"
    ],
    "plain": "AI that summarises email threads and drafts replies in Outlook.",
    "example": "A 25-email thread becomes 5 bullet points: issue, amounts, who agreed what.",
-   "watch": "Read the draft before sending; tone and facts may be off.",
+   "watch": "Read the draft before sending; tone and facts may be off. It doesn't work on encrypted or signed emails.",
    "minv": "cloud",
    "pic": {
     "k": "chat",
@@ -5750,22 +5875,50 @@
    "name": "Copilot inside Word / Excel / PowerPoint / OneNote",
    "level": "I",
    "core": false,
-   "what": "Draft from notes, analyse a table, build a deck from a Word document, inside the app.",
+   "what": "Copilot in a side pane inside the app: ask about the file, summarise, rewrite, draft, find trends in a table.",
    "use": "Turn closing notes into a first-draft memo; first-draft deck from a Word report.",
    "version": "365",
    "it": "IT decides who gets the licence.",
-   "licence": "Since April–May 2026 in-app Copilot needs the paid Microsoft 365 Copilot licence (about $30/user/month).",
+   "licence": "Depends on the label under your name. M365 Copilot (Premium): full Copilot. M365 Copilot (Basic): limited Copilot Chat in the apps. Copilot Chat (Basic): no Copilot in these apps. Premium is about $30/user/month.",
    "oldVersion": "",
-   "where": "Copilot button on the Home ribbon (if licensed)",
+   "where": "Copilot button on the Home tab (if licensed)",
    "steps": [
-    "Click Copilot",
-    "Ask, e.g. 'Draft a memo from these notes'",
-    "Review and edit the draft"
+    "Click Copilot on the Home tab",
+    "Ask, e.g. 'Summarise this document' or 'What trends are in this table?'",
+    "Review and edit the result"
    ],
-   "plain": "AI working directly inside your document, spreadsheet or deck (paid licence).",
+   "plain": "AI working directly inside your document, spreadsheet or deck. The full version needs the Premium licence.",
    "example": "'Create 8 slides from this Word report' gives a first-draft deck in a minute.",
    "watch": "It drafts; you still own accuracy.",
    "minv": "cloud"
+  },
+  {
+   "level": "I",
+   "core": false,
+   "version": "365",
+   "it": "IT decides who gets the licence.",
+   "oldVersion": "",
+   "minv": "cloud",
+   "app": "c",
+   "name": "Edit with Copilot (was Agent Mode) in Word, Excel, PowerPoint",
+   "what": "Copilot does a multi-step job inside the file for you: builds the table, formulas and chart, restructures a document, or creates and updates slides.",
+   "use": "'Build a monthly variance table with a chart from this data' or 'Update this deck with October figures.'",
+   "licence": "Microsoft 365 Copilot licence (Premium). Generally available since 22 April 2026.",
+   "where": "Copilot on the Home tab › Tools › Edit with Copilot (some screens still say Agent Mode)",
+   "steps": [
+    "Open the file and click Copilot on the Home tab",
+    "In the Copilot prompt box, choose Tools › Edit with Copilot",
+    "Describe clearly what you want, with details",
+    "Watch it build, then review every change"
+   ],
+   "plain": "Tell Copilot the result you want and it makes the changes in the file, step by step.",
+   "example": "'Add a summary sheet with totals by cost centre and a bar chart' builds the sheet, formulas and chart.",
+   "watch": "Microsoft says it is still improving accuracy for complex work such as finance spreadsheets. Check every formula and total, and keep a copy of the original file.",
+   "pic": {
+    "k": "chat",
+    "q": "Add a summary by cost centre with a chart",
+    "a": "Done: new sheet 'Summary', SUMIFS totals, bar chart. Review changes."
+   }
   },
   {
    "app": "c",
@@ -5776,7 +5929,7 @@
    "use": "Classify expense descriptions into categories; sentiment of customer feedback.",
    "version": "365",
    "it": "Needs admin enablement.",
-   "licence": "Microsoft 365 Copilot licence.",
+   "licence": "Microsoft 365 Copilot licence (Premium).",
    "oldVersion": "Other users see #NAME? or stored values.",
    "where": "Type in a cell (if licensed)",
    "steps": [
@@ -5839,22 +5992,96 @@
    "name": "Agents: Researcher & Analyst",
    "level": "A",
    "core": false,
-   "what": "Researcher does multi-step research across work data and web; Analyst runs Python on your data.",
+   "what": "Researcher does multi-step research across the web and your work files, emails, meetings and chats, then writes a report with sources. Analyst combines data, finds trends and outliers, and gives charts and tables.",
    "use": "Analyst on a large SAP extract to find unusual postings.",
    "version": "365 Copilot app",
-   "it": "Admin controls agents.",
-   "licence": "Microsoft 365 Copilot licence.",
+   "it": "Admin controls agents. If you can't see them, IT hasn't turned them on.",
+   "licence": "Microsoft 365 Copilot licence (Premium).",
    "oldVersion": "",
-   "where": "Microsoft 365 Copilot app › Agents",
+   "where": "Microsoft 365 Copilot app › left menu › Agents › Researcher or Analyst",
    "steps": [
-    "Open Researcher or Analyst",
-    "Give the data and question",
+    "Open Agents › Researcher or Analyst",
+    "Type your question",
+    "Analyst: click + › Attach content to add an Excel or CSV file",
+    "Researcher may ask a few questions first; answer them",
     "Check sources and results"
    ],
-   "plain": "Paid Copilot helpers: one researches across sources, one analyses data with Python.",
+   "plain": "Premium Copilot helpers: one researches across sources, one analyses data.",
    "example": "Analyst finds the 20 most unusual journal entries in a 100k-row file.",
-   "watch": "Paid licence only. Verify findings before acting.",
+   "watch": "Premium licence only. Researcher takes longer than normal chat. Verify findings before acting.",
    "minv": "cloud"
+  },
+  {
+   "level": "B",
+   "core": false,
+   "version": "Teams",
+   "it": "The organiser sets 'Allow Copilot and Facilitator' in the meeting options. It doesn't work in meetings hosted by another company.",
+   "oldVersion": "",
+   "minv": "cloud",
+   "app": "c",
+   "name": "Copilot in Teams meetings",
+   "what": "Ask Copilot about a meeting while it is running or after it ends: what was decided, who owns which action, what you missed.",
+   "use": "Joined the closing meeting late: ask for a catch-up. After the meeting: ask for the action list.",
+   "licence": "Microsoft 365 Copilot licence (Premium). The Recap tab also works with Teams Premium.",
+   "where": "In the meeting: Copilot in the meeting controls · After: meeting chat › Open Copilot, or the Recap tab",
+   "steps": [
+    "During the meeting, click Copilot in the meeting controls",
+    "Click View prompts, or type your own question",
+    "After the meeting, open the meeting chat › Open Copilot",
+    "Or open the Recap tab (transcription must have been on)"
+   ],
+   "plain": "A private AI helper in the meeting. Only you see your questions and its answers.",
+   "example": "'Create a table with the ideas discussed and their pros and cons.'",
+   "watch": "To ask after the meeting, transcription must be on during it. Check names and amounts; it can mishear.",
+   "pic": {
+    "k": "chat",
+    "q": "What are the action items?",
+    "a": "• Aminah: post accrual reversal • Ali: send aging by Fri"
+   }
+  },
+  {
+   "level": "B",
+   "core": false,
+   "version": "Web / app, OneNote",
+   "it": "",
+   "oldVersion": "",
+   "minv": "cloud",
+   "app": "c",
+   "name": "Copilot Notebooks",
+   "what": "A workspace for one topic. Put files, emails, meetings, pages and links in as references, then ask Copilot questions answered only from them.",
+   "use": "One notebook per audit, project or month-end issue, holding the files and emails that matter.",
+   "licence": "Microsoft says a Microsoft 365 Copilot or Copilot Chat licence, plus OneDrive or SharePoint. If you don't see Notebooks, ask IT.",
+   "where": "m365.cloud.microsoft › left menu › Notebooks › New notebook",
+   "steps": [
+    "Open Notebooks in the left menu (or from the app launcher)",
+    "Click New notebook and name it",
+    "Under 'Add content to References', search, upload or drag in files",
+    "Click Create, then ask questions about the references"
+   ],
+   "plain": "A folder of references with an AI that answers from those references only.",
+   "example": "Notebook 'FY2026 audit': add the audit plan, PBC list and key emails, then ask 'What is still outstanding?'",
+   "watch": "The same notebook also opens in OneNote. Share it only with people allowed to see the references.",
+   "pic": {
+    "k": "list",
+    "title": "Notebook: FY2026 audit",
+    "items": [
+     [
+      "Audit plan.docx",
+      "reference",
+      0
+     ],
+     [
+      "PBC list.xlsx",
+      "reference",
+      0
+     ],
+     [
+      "Ask: what is outstanding?",
+      "answer from references",
+      1
+     ]
+    ]
+   }
   },
   {
    "app": "p",
@@ -7495,7 +7722,7 @@
    "scope": "fin",
    "app": "c",
    "why": "Copilot Chat: upload a non-confidential extract or paste a formula to explain.",
-   "alt": "Power BI Q&A on the published model; Excel Analyze Data.",
+   "alt": "Power BI Q&A on the published model; Excel Analyze Data; Analyst agent if you have Copilot Premium.",
    "pic": {
     "k": "chat",
     "q": "Explain =SUMIFS(D:D,A:A,\"1000\",B:B,\"Oct\")",
@@ -7509,7 +7736,8 @@
    ],
    "related": [
     "Copilot Chat (Basic, free)",
-    "Formula auditing & Evaluate Formula"
+    "Formula auditing & Evaluate Formula",
+    "Agents: Researcher & Analyst"
    ]
   },
   {
@@ -7988,7 +8216,7 @@
     "Word, Excel, PowerPoint, Outlook, Teams, OneDrive, SharePoint, OneNote, Forms, Lists, Planner basic, Loop (if enabled)",
     "Power Automate cloud flows with standard connectors (about 6,000 actions/day)",
     "Power Apps with standard connectors",
-    "Copilot Chat (Basic) in app, web, Teams, Outlook"
+    "Copilot Chat (Basic) in app, web, Teams, Outlook. Some accounts show M365 Copilot (Basic): limited chat inside Word, Excel, PowerPoint, OneNote"
    ],
    "highlight": true
   },
@@ -8041,12 +8269,14 @@
    "highlight": false
   },
   {
-   "name": "Microsoft 365 Copilot",
+   "name": "Microsoft 365 Copilot (Premium)",
    "price": "~$30",
    "items": [
-    "Copilot inside Word, Excel, PowerPoint, OneNote",
-    "=COPILOT() function, agents (Researcher, Analyst)",
-    "Teams meeting recap"
+    "Shows as 'M365 Copilot (Premium)' under your name",
+    "Copilot inside Word, Excel, PowerPoint, Outlook, OneNote, Teams",
+    "Chat that uses your work emails, meetings, chats and files",
+    "Edit with Copilot, =COPILOT() function, agents (Researcher, Analyst)",
+    "Priority access at busy times"
    ],
    "highlight": false
   },
@@ -8461,11 +8691,34 @@
    "app": "c",
    "q": "Is Copilot free at work?",
    "a": [
-    "Copilot Chat (web) is included with a Microsoft 365 work account",
-    "Copilot inside Word, Excel, PowerPoint and OneNote needs the paid Microsoft 365 Copilot licence",
-    "Check with IT which one you have"
+    "Copilot Chat (Basic) is included with a Microsoft 365 work account, and so is Copilot in Outlook",
+    "Full Copilot inside Word, Excel, PowerPoint, OneNote and Teams needs the paid Microsoft 365 Copilot licence, shown as Premium",
+    "Some accounts show M365 Copilot (Basic): limited Copilot Chat inside the apps",
+    "Check the label under your name, or ask IT"
    ],
    "tip": "Microsoft Support: What Copilot license do I have."
+  },
+  {
+   "app": "c",
+   "q": "How do I know if my Copilot is Basic or Premium?",
+   "a": [
+    "Sign in to Copilot at microsoft365.com with your work account",
+    "Scroll to the bottom of the home page",
+    "Read the label under your name: Copilot Chat (Basic), M365 Copilot (Basic) or M365 Copilot (Premium)"
+   ],
+   "tip": "Premium means you have the paid Microsoft 365 Copilot add-on licence."
+  },
+  {
+   "app": "c",
+   "q": "I've been upgraded to Copilot Premium. What can I do now?",
+   "a": [
+    "Use full Copilot inside Word, Excel, PowerPoint, OneNote and Teams",
+    "Ask Copilot Chat about your own emails, meetings, chats and files",
+    "Let Copilot change the file for you: Tools › Edit with Copilot",
+    "Use the Researcher and Analyst agents, and the =COPILOT() function in Excel",
+    "Get faster answers at busy times (priority access)"
+   ],
+   "tip": "Start small: ask Copilot to summarise a long email thread or a meeting you missed, then check it against the source."
   },
   {
    "app": "win",
