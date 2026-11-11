@@ -16,7 +16,8 @@
     "New cards: Which Copilot do I have, Copilot Chat with your work data, Edit with Copilot (was Agent Mode), Copilot in Teams meetings, Copilot Notebooks (Microsoft Support pages; Microsoft Copilot Blog 22 Apr 2026).",
     "Updated cards: Copilot in Outlook (Coaching, Schedule with Copilot), Copilot inside Word/Excel/PowerPoint/OneNote, Researcher & Analyst (new steps).",
     "Licence table: Microsoft 365 Copilot is now listed as Premium, $30/user/month paid yearly (Microsoft pricing page).",
-    "Two new common questions: how to check Basic or Premium, and what you can do after an upgrade to Premium."
+    "Two new common questions: how to check Basic or Premium, and what you can do after an upgrade to Premium.",
+    "New Handbook subject: Copilot for beginners, 9 pages covering Basic and Premium, prompt writing, safe use, and a cheat sheet (Microsoft Support pages). Direct link: add #handbook-cp to the site address."
    ]
   },
   {
@@ -129,6 +130,22 @@
   [
    "Frequently asked questions about Copilot in Outlook (Microsoft Support)",
    "https://support.microsoft.com/en-us/outlook/frequently-asked-questions-about-copilot-in-outlook"
+  ],
+  [
+   "Get better Copilot responses with great prompting (Microsoft Support)",
+   "https://support.microsoft.com/en-us/microsoft-365-copilot/get-better-copilot-responses-with-great-prompting"
+  ],
+  [
+   "Get started with Microsoft 365 Copilot Chat (Microsoft Support)",
+   "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat"
+  ],
+  [
+   "Data protection when using Copilot Chat for work or school (Microsoft Support)",
+   "https://support.microsoft.com/en-us/privacy/data-protection-when-using-microsoft-365-copilot-chat-for-work-or-school"
+  ],
+  [
+   "Frequently asked questions about Microsoft 365 Copilot Chat (Microsoft Support)",
+   "https://support.microsoft.com/en-us/microsoft-365-copilot/frequently-asked-questions-about-microsoft-365-copilot-chat"
   ]
  ],
  "apps": [
@@ -8686,6 +8703,16 @@
     "Read Product Information: 'Microsoft 365 Apps' = subscription",
     "'Office 2021', '2019' or '2016' = one-time purchase (support has ended)"
    ]
+  },
+  {
+   "app": "c",
+   "q": "I'm new to Copilot. Where do I start?",
+   "a": [
+    "Open the Handbook tab and choose Copilot",
+    "Read 'Copilot at a glance', then 'Your first 10 minutes (Basic)'",
+    "Try one small job a day: explain a formula, shorten an email, summarise a document"
+   ],
+   "tip": "Everything in the first four Handbook pages works with the free Copilot Chat (Basic)."
   },
   {
    "app": "c",
