@@ -1498,8 +1498,22 @@ function askCopilot(q, btn){
   const done = ok => { btn.textContent = ok ? "Copied ✓ Paste it in Copilot (Ctrl+V)" : "Copy the question below, then paste in Copilot"; if(!ok){ const ta = document.createElement("textarea"); ta.value = text; ta.className="copybox"; ta.readOnly = true; btn.after(ta); ta.select(); } };
   try{ navigator.clipboard.writeText(text).then(()=>done(true), ()=>done(false)); }catch(e){ done(false); }
 }
+const APP_ALIAS = {x:["excel","spreadsheet"], w:["word"], pp:["powerpoint","ppt","slides"], o:["outlook","email","mail"], q:["power query","powerquery"], b:["power bi","powerbi","pbi"], a:["power automate","flow","flows"], p:["power apps","powerapps"], t:["teams","ms teams"], s:["onedrive","sharepoint","one drive"], n:["onenote","one note"], f:["forms","form","ms forms"], l:["lists","list","ms lists","microsoft lists"], pl:["planner","to do","todo","to-do","tasks"], lp:["loop"], c:["copilot","ai"], win:["windows","file explorer"], sec:["security"], m:["more apps","other apps"]};
+function appMatch(q){
+  const n = norm(q).replace(/^(microsoft|ms)\s+/,"").trim(); if (!n || n.split(/\s+/).length > 3) return null;
+  for (const a of DATA.apps){ const al = (APP_ALIAS[a.id]||[]).concat(norm(a.name)); if (al.includes(n)) return a; }
+  return null;
+}
 function answer(q){
   const r = search(q), parts = [];
+  const am = appMatch(q);
+  if (am){
+    const list = items.map((it,i)=>({it,i})).filter(x=>x.it.app===am.id);
+    const pick = list.filter(x=>x.it.core).concat(list.filter(x=>!x.it.core)).slice(0,4);
+    if (list.length){
+      parts.push(`<p><b>${esc(am.name)}</b>: ${list.length} cards in these notes.</p><div class="b-cards">` + pick.map(x=>`<button class="b-card" data-open="${x.i}" style="--c:var(${am.c})">${tile(am)}<span><b>${esc(x.it.name)}</b><em>${esc(x.it.where||x.it.version)}</em></span></button>`).join("") + `</div><p><button class="b-link" data-app="${am.id}">See all ${list.length} ${esc(am.name)} cards ›</button></p>`);
+    }
+  }
   const intent = INTENTS.find(([re])=>re.test(q));
   const fq = faqSearch(q);
   if (fq) parts.push(`<div class="b-faq"><b>${esc(fq.q)}</b><ol>${fq.a.map(x=>`<li>${esc(x)}</li>`).join("")}</ol>${fq.tip?`<span>${esc(fq.tip)}</span>`:""}</div>`);
@@ -1509,7 +1523,7 @@ function answer(q){
     parts.push(`<div class="b-rec" style="--c:var(${a.c})">${tile(a)}<div><small>For "${esc(strongTask.task)}", use ${esc(a.name)}</small>${esc(strongTask.why)}<div class="b-alt">Also possible: ${esc(strongTask.alt)}</div></div></div>`);
   }
   const good = r.f.filter(x=>x.s >= (r.f[0] ? r.f[0].s*0.45 : 0) && x.s >= 12);
-  if (good.length){
+  if (good.length && !am){
     parts.push(`<p>${strongTask ? "Related cards" : "These cards cover it"}. Tap one for the steps:</p><div class="b-cards">` + good.map(x=>{
       const it = items[x.i], a = appById[it.app];
       return `<button class="b-card" data-open="${x.i}" style="--c:var(${a.c})">${tile(a)}<span><b>${esc(it.name)}${verOk(it)?"":`<i class="nab">Not in ${esc(verShort(S.ver))}</i>`}</b><em>${esc(it.where||it.version)}</em></span></button>`;
@@ -1560,6 +1574,7 @@ function wireBot(){
   $("bot").addEventListener("click", e=>{
     const o = e.target.closest("[data-open]"); if (o){ openDrawer(+o.dataset.open); return; }
     const g = e.target.closest("[data-go]"); if (g){ const [a,ti,gi,bi] = g.dataset.go.split("|"); goButton(a,+ti,+gi,+bi); return; }
+    const ap = e.target.closest("[data-app]"); if (ap && ap.closest("#bot-log")){ S.app = ap.dataset.app; S.q = ""; $("q").value = ""; renderApps(); renderNotes(); if (location.hash !== "#notes" && location.hash) location.hash = "notes"; const hd = $("apps"); if (hd) hd.scrollIntoView({behavior:"smooth", block:"start"}); return; }
     const t = e.target.closest("[data-tab]"); if (t){ location.hash = t.dataset.tab; return; }
     const c = e.target.closest(".b-copilot"); if (c){ askCopilot(c.dataset.q, c); return; }
     const a = e.target.closest(".b-ai"); if (a){ askAI(a.dataset.q, a); return; }
