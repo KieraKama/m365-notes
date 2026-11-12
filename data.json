@@ -14,7 +14,9 @@
    "items": [
     "New cards and common questions: the Work IQ switch (replaced the Work and Web tabs) and the model menu: Auto, Quick response, Think deeper, Claude, GPT (Microsoft Support: What information does Copilot use; Get started with Copilot Chat).",
     "Claude in Copilot: Anthropic works as a Microsoft subprocessor and admins control access (Microsoft Learn: Claude models from Anthropic in Microsoft Online Services).",
-    "New Handbook page under Copilot: The top of the chat: Work IQ and the model menu."
+    "New Handbook page under Copilot: The top of the chat: Work IQ and the model menu.",
+    "New cards under More Microsoft apps: Sway, Bookings personal booking page, Bookings shared booking page; two common questions and two 'Which tool for the job?' tasks (Microsoft Support and Microsoft Learn).",
+    "Sway: the Windows desktop app was retired on 1 June 2026; use sway.cloud.microsoft (Microsoft 365 message center MC1213784, public copy at mc.merill.net)."
    ]
   },
   {
@@ -170,6 +172,30 @@
   [
    "Available today: GPT-5.3 Instant in Microsoft 365 Copilot (Microsoft 365 Copilot Blog)",
    "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/available-today-gpt-5-3-instant-in-microsoft-365-copilot/4496567"
+  ],
+  [
+   "Getting started with Sway (Microsoft Support)",
+   "https://support.microsoft.com/en-us/office/getting-started-with-sway-2076c468-63f4-4a89-ae5f-424796714a8a"
+  ],
+  [
+   "Share your Sway (Microsoft Support)",
+   "https://support.microsoft.com/en-US/sway/share-your-sway"
+  ],
+  [
+   "MC1213784: Retirement of the Sway Windows desktop app on 1 June 2026 (Microsoft 365 message center, public copy at mc.merill.net)",
+   "https://mc.merill.net/message/MC1213784"
+  ],
+  [
+   "Microsoft Bookings overview (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/microsoft-365/bookings/bookings-overview?view=o365-worldwide"
+  ],
+  [
+   "Personal Bookings frequently asked questions (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/microsoft-365/bookings/personal-bookings-faq?view=o365-worldwide"
+  ],
+  [
+   "Set up your shared booking page in Microsoft Bookings (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/microsoft-365/bookings/enter-business-information?view=o365-worldwide"
   ]
  ],
  "apps": [
@@ -304,7 +330,7 @@
    "name": "More Microsoft apps",
    "t": "+",
    "c": "--a-m",
-   "sub": "Access, Visio, Project, Publisher"
+   "sub": "Access, Visio, Project, Publisher, Sway, Bookings"
   }
  ],
  "levels": {
@@ -6787,6 +6813,137 @@
     "Save the new version as a template",
     "Delete the .pub only after checking the new file"
    ]
+  },
+  {
+   "app": "m",
+   "level": "B",
+   "core": false,
+   "minv": "cloud",
+   "oldVersion": "",
+   "name": "Sway (newsletters & web-style reports)",
+   "plain": "Make a scrolling web page from text and pictures. Sway does the layout for you.",
+   "what": "Sway builds newsletters, reports, presentations and photo stories that open in a browser. You add content as cards in a Storyline and Sway designs the page.",
+   "use": "Monthly department newsletter, closing highlights for management, or a training guide people read on their phone.",
+   "example": "'Finance update: October' with 5 cards: headline numbers, a chart picture, key dates, reminders, contacts. Share one link.",
+   "watch": "It isn't for figures you need to calculate or audit; keep those in Excel or Power BI. Check who the link is shared with before sending. The Sway Windows desktop app was retired on 1 June 2026; use the web version.",
+   "version": "Web only",
+   "it": "Your admin may have Sway turned off, or limit sharing outside the company.",
+   "licence": "Free with a Microsoft account or work account. A Microsoft 365 subscription gives more content options.",
+   "where": "sway.cloud.microsoft › Create New",
+   "steps": [
+    "Go to sway.cloud.microsoft and sign in",
+    "On My Sways, click Create New",
+    "Type a title on the first card",
+    "Click + under a card to add text, pictures or headings; Insert adds content from other places",
+    "Design › Styles to pick a look, or Remix! for a random one",
+    "Play to preview, then Share and choose who can open the link"
+   ],
+   "pic": {
+    "k": "letter",
+    "title": "Finance update: October",
+    "lines": [
+     "[Title card + picture]",
+     "Headline: Sales +4% vs forecast",
+     "Key dates: closing 5 Nov",
+     "Reminders · Contacts"
+    ]
+   }
+  },
+  {
+   "app": "m",
+   "level": "B",
+   "core": false,
+   "minv": "cloud",
+   "oldVersion": "",
+   "name": "Bookings: personal booking page",
+   "plain": "A link where people pick a free time in your calendar. No emails back and forth.",
+   "what": "Your personal booking page (Bookings with me) shows your free slots from Outlook. Someone picks a meeting type and a time, and it goes into both calendars.",
+   "use": "Let colleagues book a 30-minute slot for month-end questions, or auditors book a walkthrough.",
+   "example": "Put your booking link in your email signature. A vendor picks Thursday 10:00; it appears in your Outlook calendar.",
+   "watch": "Public meeting types can be seen by anyone who has your page link. Use a private meeting type for selected people. Block focus time in Outlook so it isn't offered.",
+   "version": "Web, Outlook, Teams",
+   "it": "Admins can turn Bookings on or off for the organisation.",
+   "licence": "Included in most Microsoft 365 business and enterprise plans (e.g. Business Basic/Standard/Premium, E1, E3, E5). People who book with you need no account or licence.",
+   "where": "book.ms › Personal booking page (or add the Bookings app in Outlook or Teams)",
+   "steps": [
+    "Go to book.ms and sign in with your work account",
+    "Open the Personal booking page section",
+    "Your page starts with two meeting types: 15 minutes and 30 minutes",
+    "Edit one or create a new meeting type; set it public or private",
+    "Set the days and times you can be booked",
+    "Share: copy the link, email it, or add it to your signature"
+   ],
+   "pic": {
+    "k": "calendar",
+    "days": [
+     "Mon",
+     "Tue",
+     "Wed",
+     "Thu",
+     "Fri"
+    ],
+    "events": [
+     [
+      0,
+      "Free 10:00"
+     ],
+     [
+      1,
+      "Booked: Ali 30 min"
+     ],
+     [
+      3,
+      "Free 14:30"
+     ]
+    ]
+   }
+  },
+  {
+   "app": "m",
+   "level": "I",
+   "core": false,
+   "minv": "cloud",
+   "oldVersion": "",
+   "name": "Bookings: shared booking page for a team",
+   "plain": "One booking page for a team: people choose a service and a time, and Bookings assigns a staff member.",
+   "what": "A shared booking page lists your services, staff and business hours. Bookings sends confirmations and reminders, and can add a Teams meeting link.",
+   "use": "Finance helpdesk slots for claims questions, or bookings for a shared resource such as a meeting room or pool car.",
+   "example": "Service 'Claims clinic, 20 min', staff: 3 AP colleagues, hours Mon–Fri 9:00–12:00. Staff see bookings in their own calendars.",
+   "watch": "Each shared page stores its data in a shared mailbox in Exchange, so ask IT before creating many. Decide in the last setup step who is allowed to book.",
+   "version": "Web, Outlook, Teams",
+   "it": "Admins can turn Bookings on or off, and may limit who can create shared pages.",
+   "licence": "Included in most Microsoft 365 business and enterprise plans (e.g. Business Basic/Standard/Premium, E1, E3, E5).",
+   "where": "book.ms › Shared Bookings › Create booking page",
+   "steps": [
+    "Go to book.ms › Shared Bookings › Create booking page",
+    "Choose Create from scratch",
+    "Enter the page name, logo and business hours",
+    "Invite staff",
+    "Add a service, or keep the default one for now",
+    "Choose who can book, then click Create",
+    "Share the page link"
+   ],
+   "pic": {
+    "k": "list",
+    "title": "Claims clinic (20 min)",
+    "items": [
+     [
+      "Mon 9:00",
+      "Aminah",
+      1
+     ],
+     [
+      "Mon 9:20",
+      "Ali",
+      0
+     ],
+     [
+      "Tue 10:00",
+      "open",
+      0
+     ]
+    ]
+   }
   }
  ],
  "tasks": [
@@ -8030,6 +8187,76 @@
     "PivotTable",
     "Charts: waterfall, combo & sparklines"
    ]
+  },
+  {
+   "task": "Let people book a time with me",
+   "size": "Small",
+   "scope": "fin",
+   "app": "m",
+   "why": "Bookings personal booking page: people pick a free slot from your Outlook calendar.",
+   "alt": "Outlook Scheduling Assistant or a scheduling poll for a single meeting.",
+   "pic": {
+    "k": "calendar",
+    "days": [
+     "Mon",
+     "Tue",
+     "Wed",
+     "Thu",
+     "Fri"
+    ],
+    "events": [
+     [
+      0,
+      "Free 10:00"
+     ],
+     [
+      1,
+      "Booked: Ali 30 min"
+     ],
+     [
+      3,
+      "Free 14:30"
+     ]
+    ]
+   },
+   "steps": [
+    "Go to book.ms › Personal booking page",
+    "Edit a meeting type and your available hours",
+    "Share the link or add it to your signature",
+    "Bookings appear in your Outlook calendar"
+   ],
+   "related": [
+    "Bookings: personal booking page",
+    "Bookings: shared booking page for a team",
+    "Scheduling Assistant, polls & time zones"
+   ]
+  },
+  {
+   "task": "Team newsletter or monthly update",
+   "size": "Small",
+   "scope": "fin",
+   "app": "m",
+   "why": "Sway: add text and pictures as cards and share one link that reads well on a phone.",
+   "alt": "Word for a printed newsletter; a Teams channel post for a short update.",
+   "pic": {
+    "k": "letter",
+    "title": "Finance update: October",
+    "lines": [
+     "[Title card + picture]",
+     "Headline: Sales +4% vs forecast",
+     "Key dates: closing 5 Nov",
+     "Reminders · Contacts"
+    ]
+   },
+   "steps": [
+    "Go to sway.cloud.microsoft › Create New",
+    "Add a title card, then one card per topic",
+    "Design › Styles to pick a look",
+    "Share with people in your organisation"
+   ],
+   "related": [
+    "Sway (newsletters & web-style reports)"
+   ]
   }
  ],
  "versions": [
@@ -8345,7 +8572,7 @@
    "name": "Microsoft 365 business plans",
    "price": "Included",
    "items": [
-    "Word, Excel, PowerPoint, Outlook, Teams, OneDrive, SharePoint, OneNote, Forms, Lists, Planner basic, Loop (if enabled)",
+    "Word, Excel, PowerPoint, Outlook, Teams, OneDrive, SharePoint, OneNote, Forms, Lists, Planner basic, Loop (if enabled), Sway, Bookings",
     "Power Automate cloud flows with standard connectors (about 6,000 actions/day)",
     "Power Apps with standard connectors",
     "Copilot Chat (Basic) in app, web, Teams, Outlook. Some accounts show M365 Copilot (Basic): limited chat inside Word, Excel, PowerPoint, OneNote"
@@ -8914,6 +9141,28 @@
     "Your PC is off at night? Only cloud flows can still run"
    ],
    "tip": "See Handbook › Power Automate › Cloud flow or desktop flow?"
+  },
+  {
+   "app": "m",
+   "q": "What is Microsoft Sway, and when should I use it instead of PowerPoint?",
+   "a": [
+    "Sway makes a scrolling web page from your text and pictures and designs the layout for you",
+    "Use Sway for newsletters, updates and guides that people read by themselves from a link",
+    "Use PowerPoint when you present live or need exact control of each slide",
+    "Open it at sway.cloud.microsoft; it works in the browser only"
+   ],
+   "tip": "The Sway Windows desktop app was retired on 1 June 2026. Your Sways are still there on the web."
+  },
+  {
+   "app": "m",
+   "q": "How can people book a meeting with me without emailing back and forth?",
+   "a": [
+    "Use Microsoft Bookings: go to book.ms and open Personal booking page",
+    "Edit a meeting type and set when you can be booked",
+    "Share the link or put it in your email signature",
+    "The booking goes straight into your Outlook calendar"
+   ],
+   "tip": "For a whole team, create a shared booking page with services and staff."
   }
  ]
 }
