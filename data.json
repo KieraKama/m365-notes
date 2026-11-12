@@ -16,7 +16,10 @@
     "Claude in Copilot: Anthropic works as a Microsoft subprocessor and admins control access (Microsoft Learn: Claude models from Anthropic in Microsoft Online Services).",
     "New Handbook page under Copilot: The top of the chat: Work IQ and the model menu.",
     "New cards under More Microsoft apps: Sway, Bookings personal booking page, Bookings shared booking page; two common questions and two 'Which tool for the job?' tasks (Microsoft Support and Microsoft Learn).",
-    "Sway: the Windows desktop app was retired on 1 June 2026; use sway.cloud.microsoft (Microsoft 365 message center MC1213784, public copy at mc.merill.net)."
+    "Sway: the Windows desktop app was retired on 1 June 2026; use sway.cloud.microsoft (Microsoft 365 message center MC1213784, public copy at mc.merill.net).",
+    "New cards under More Microsoft apps: Whiteboard, Org Explorer, Viva Connections, Viva Engage, Viva Insights, Viva Learning, Learning Activities, Power Pages. New card under Copilot: Copilot Studio (Microsoft Support and Microsoft Learn pages).",
+    "Whiteboard: the separate Windows, iOS and Android apps were retired on 16 Oct 2026; use Teams or the web (Microsoft Support).",
+    "New common question: where to find an app that has no button of its own."
    ]
   },
   {
@@ -196,6 +199,62 @@
   [
    "Set up your shared booking page in Microsoft Bookings (Microsoft Learn)",
    "https://learn.microsoft.com/en-us/microsoft-365/bookings/enter-business-information?view=o365-worldwide"
+  ],
+  [
+   "Org Explorer (Microsoft Support)",
+   "https://support.microsoft.com/en-us/people-skills/org-explorer"
+  ],
+  [
+   "Overview: Viva Connections (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/viva/connections/viva-connections-overview"
+  ],
+  [
+   "Get started with Viva Engage (Microsoft Support)",
+   "https://support.microsoft.com/en-us/viva/engage/get-started-with-viva-engage"
+  ],
+  [
+   "Join a community in Viva Engage (Microsoft Support)",
+   "https://support.microsoft.com/en-us/viva/engage/join-a-community-in-viva-engage"
+  ],
+  [
+   "Focus with Viva Insights (Microsoft Support)",
+   "https://support.microsoft.com/en-us/viva/insights/focus-with-viva-insights"
+  ],
+  [
+   "Overview of Viva Learning (Microsoft Support)",
+   "https://support.microsoft.com/en-us/topic/viva-learning-overview-01bfed12-c327-41e0-a68f-7fa527dcc98a"
+  ],
+  [
+   "Microsoft Viva service description (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/office365/servicedescriptions/microsoft-viva-service-description"
+  ],
+  [
+   "Learning Activities (Microsoft Support)",
+   "https://support.microsoft.com/en-us/education/copilot/learning-activities"
+  ],
+  [
+   "What is Power Pages? (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/power-pages/introduction"
+  ],
+  [
+   "Copilot Studio overview (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/microsoft-copilot-studio/fundamentals-what-is-copilot-studio"
+  ],
+  [
+   "Copilot Studio plans and pricing (Microsoft)",
+   "https://www.microsoft.com/en-us/microsoft-365-copilot/pricing/copilot-studio"
+  ],
+  [
+   "Share a whiteboard in Microsoft Teams (Microsoft Support)",
+   "https://support.microsoft.com/en-us/whiteboard/share-a-whiteboard-in-microsoft-teams"
+  ],
+  [
+   "Insert templates in Whiteboard (Microsoft Support)",
+   "https://support.microsoft.com/en-us/whiteboard/insert-templates-in-whiteboard"
+  ],
+  [
+   "Retirement of the standalone Microsoft Whiteboard apps (Microsoft Support)",
+   "https://support.microsoft.com/en-us/whiteboard/retirement-standalone-microsoft-whiteboard-apps"
   ]
  ],
  "apps": [
@@ -330,7 +389,7 @@
    "name": "More Microsoft apps",
    "t": "+",
    "c": "--a-m",
-   "sub": "Access, Visio, Project, Publisher, Sway, Bookings"
+   "sub": "Access, Visio, Project, Publisher, Sway, Bookings, Whiteboard, Org Explorer, Viva, Power Pages"
   }
  ],
  "levels": {
@@ -6170,6 +6229,35 @@
    "minv": "cloud"
   },
   {
+   "level": "A",
+   "core": false,
+   "version": "Web",
+   "minv": "cloud",
+   "it": "IT controls who can build and publish agents.",
+   "oldVersion": "",
+   "app": "c",
+   "name": "Copilot Studio (build your own AI agent)",
+   "plain": "A low-code tool for building your own AI helper that answers from your documents and does tasks.",
+   "what": "You describe the agent in plain words, connect knowledge sources (e.g. SharePoint files) and add tools so it can act. Then publish it to Teams or Copilot.",
+   "use": "An agent that answers colleagues' questions from the finance SOPs and claim policy.",
+   "example": "'Claims helper' agent: staff ask 'What is the mileage rate?' and it answers from the policy PDF on SharePoint, with the source.",
+   "watch": "The agent is only as good as the documents behind it. Keep them current, and test with real questions before sharing.",
+   "licence": "With Microsoft 365 Copilot (Premium) you can build agents for internal use at no extra cost. Otherwise Copilot Studio is paid by Copilot Credits: $200 per pack of 25,000 credits a month, or pay-as-you-go.",
+   "where": "copilotstudio.microsoft.com",
+   "steps": [
+    "Open Copilot Studio and sign in with your work account",
+    "Create an agent by describing what it should do",
+    "Add knowledge: the files or sites it should answer from",
+    "Add tools if it needs to take action",
+    "Test it, then publish to Teams or Copilot"
+   ],
+   "pic": {
+    "k": "chat",
+    "q": "What is the mileage claim rate?",
+    "a": "Per the Claims Policy (section 4): see the rate table. Source: Claims Policy.pdf"
+   }
+  },
+  {
    "level": "B",
    "core": false,
    "version": "Teams",
@@ -6944,6 +7032,291 @@
      ]
     ]
    }
+  },
+  {
+   "level": "B",
+   "core": false,
+   "version": "365",
+   "minv": "cloud",
+   "it": "IT can turn Whiteboard off.",
+   "oldVersion": "",
+   "app": "m",
+   "name": "Whiteboard (shared drawing board)",
+   "plain": "A big online board where everyone can write, draw and stick notes at the same time.",
+   "what": "A shared canvas with sticky notes, shapes and ready templates for brainstorming, planning and retrospectives. Works on the web and inside Teams.",
+   "use": "Map the month-end closing steps with the team, or collect ideas in a process-improvement meeting.",
+   "example": "In a closing review, everyone adds sticky notes under 'Went well' and 'To fix' on a Retrospective template.",
+   "watch": "The separate Whiteboard apps for Windows, iOS and Android were retired on 16 Oct 2026. Use Whiteboard in Teams or on the web. Your boards are kept in OneDrive as .whiteboard files.",
+   "licence": "",
+   "where": "Teams meeting › Share › Microsoft Whiteboard · or the Whiteboard app in Teams or on the web",
+   "steps": [
+    "In a Teams meeting, select Share",
+    "Under Whiteboard, choose Microsoft Whiteboard",
+    "Open an existing board or start a new one",
+    "Click Create (+) › Templates to add a ready layout",
+    "Drag the template onto the board and start adding notes"
+   ],
+   "pic": {
+    "k": "board",
+    "cols": [
+     [
+      "Went well",
+      [
+       "Bank rec on time",
+       "Accruals complete"
+      ]
+     ],
+     [
+      "To fix",
+      [
+       "Late GRN",
+       "Manual FX rates"
+      ]
+     ],
+     [
+      "Actions",
+      [
+       "Automate FX table"
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "level": "B",
+   "core": false,
+   "version": "365",
+   "minv": "cloud",
+   "it": "IT can turn it off.",
+   "oldVersion": "",
+   "app": "m",
+   "name": "Org Explorer (company org chart)",
+   "plain": "A live org chart: see who reports to whom and find the right person.",
+   "what": "Search for a person and see their manager chain, peers, direct reports, job title and contact details.",
+   "use": "Find who approves for another department, or who to contact at another group company.",
+   "example": "Search a name › see their manager and team › open the profile card to chat or email.",
+   "watch": "The chart comes from your company's directory. If managers aren't recorded there, the chart is empty or wrong; tell IT or HR.",
+   "licence": "Available to organisations with an Enterprise or Education licence.",
+   "where": "Outlook › Org Explorer icon in the left navigation bar · Teams › Apps › Org Explorer",
+   "steps": [
+    "Open Org Explorer in Outlook or Teams",
+    "Search a name in the search box",
+    "Read the manager chain above and the reports below",
+    "Expand a team to see the next level",
+    "Click a person to open their profile card"
+   ],
+   "pic": {
+    "k": "list",
+    "title": "Org Explorer",
+    "items": [
+     [
+      "HOD Finance",
+      "manager",
+      0
+     ],
+     [
+      "You",
+      "Senior Executive",
+      1
+     ],
+     [
+      "AP Executive · Intern",
+      "reports / peers",
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "level": "B",
+   "core": false,
+   "version": "365",
+   "minv": "cloud",
+   "it": "Set up by IT or Corporate Communications.",
+   "oldVersion": "",
+   "app": "m",
+   "name": "Viva Connections (company home in Teams)",
+   "plain": "Your company's intranet front page inside Teams: news, quick links and handy cards.",
+   "what": "A company-branded start page with a dashboard of cards (quick actions), a news reader and a list of resource links. Your company builds it; you just use it.",
+   "use": "Read company announcements and open HR, IT or leave links from one place.",
+   "example": "Open Connections in Teams › read today's company news › tap the 'Apply leave' card.",
+   "watch": "You only see it if your company has set it up. What appears is chosen by your company's intranet owners.",
+   "licence": "Included with Microsoft 365 enterprise plans.",
+   "where": "Teams › the Connections app (it may carry your company's name and logo)",
+   "steps": [
+    "Open the Connections app in Teams (desktop or mobile)",
+    "Dashboard: tap a card for a quick action",
+    "News: read company and site news",
+    "Resources: open the links your company chose"
+   ]
+  },
+  {
+   "level": "B",
+   "core": false,
+   "version": "365",
+   "minv": "cloud",
+   "it": "IT can turn off storylines.",
+   "oldVersion": "",
+   "app": "m",
+   "name": "Viva Engage (company social network, was Yammer)",
+   "plain": "A company-wide social feed: join communities, ask questions, follow leaders.",
+   "what": "Communities by topic, role or interest; a personal storyline for sharing; and announcements from leaders. It reaches the whole company, not just your team.",
+   "use": "Join an Excel or Power BI user community to ask questions; follow announcements from management.",
+   "example": "Join 'Power BI users' › post 'How do I show Apr–Mar fiscal year on a chart?' › colleagues from other sites answer.",
+   "watch": "Posts in public communities and on your storyline can be seen by everyone in the company. Use Teams chat for anything private.",
+   "licence": "Communities, conversations, storylines and events are included with enterprise plans. Answers needs the paid Viva Suite.",
+   "where": "Teams › Apps › Viva Engage › Add",
+   "steps": [
+    "In Teams, select Apps, find Viva Engage and select Add",
+    "Open the Communities tab",
+    "Filter by Recommended, Official, Alphabetical or Community size",
+    "Select Join (a padlock means private: an admin must approve)",
+    "Post a question or reply in the community"
+   ]
+  },
+  {
+   "level": "B",
+   "core": false,
+   "version": "365",
+   "minv": "cloud",
+   "it": "",
+   "oldVersion": "",
+   "app": "m",
+   "name": "Viva Insights (focus time & work habits)",
+   "plain": "A personal helper that protects time on your calendar for focused work.",
+   "what": "Books focus time, sets quiet time and shows your own work patterns. Focus mode gives a timer, your To Do tasks for today and short breaks.",
+   "use": "Block two quiet hours a day during closing week so meetings don't fill your calendar.",
+   "example": "Wellbeing tab › Book focus time › pick 9–11 am. Your calendar shows the block and Teams status changes to Focusing.",
+   "watch": "During focus time only priority contacts can notify you in Teams. Tell your team how to reach you for urgent items.",
+   "licence": "Personal insights, focus plan, quiet time and the briefing and digest emails are included with enterprise plans. Premium insights need a paid Viva licence.",
+   "where": "Teams › Apps › Viva Insights › Wellbeing tab",
+   "steps": [
+    "Open Viva Insights in Teams",
+    "Go to the Wellbeing tab › Act with intention",
+    "Under Focus, find Book focus time",
+    "Use the arrows to pick a day",
+    "Select Book on the time you want"
+   ],
+   "pic": {
+    "k": "calendar",
+    "days": [
+     "Mon",
+     "Tue",
+     "Wed",
+     "Thu",
+     "Fri"
+    ],
+    "events": [
+     [
+      0,
+      "Focus 9–11"
+     ],
+     [
+      1,
+      "Closing mtg"
+     ],
+     [
+      2,
+      "Focus 9–11"
+     ],
+     [
+      3,
+      "Focus 14–15"
+     ]
+    ]
+   }
+  },
+  {
+   "level": "B",
+   "core": false,
+   "version": "365",
+   "minv": "cloud",
+   "it": "IT can turn it off.",
+   "oldVersion": "",
+   "app": "m",
+   "name": "Viva Learning (courses inside Teams)",
+   "plain": "A learning hub in Teams: find courses, save them and share them with colleagues.",
+   "what": "One place to search training from Microsoft Learn, Microsoft 365 Training, LinkedIn Learning and your company's own content.",
+   "use": "Find a short Excel, Power BI or Copilot course and share it with the intern or a junior.",
+   "example": "Search 'Power Query' › open a Microsoft Learn module › share it in your team chat.",
+   "watch": "If you don't see it, your company may have turned it off. Some course libraries need a separate subscription.",
+   "licence": "The Teams app, Microsoft Learn, Microsoft 365 Training and selected LinkedIn Learning courses are included with enterprise plans. Recommendations, tracking and learning-system links need a paid Viva Learning licence.",
+   "where": "Teams › More (…) › Viva Learning · or aka.ms/VivaLearningWeb",
+   "steps": [
+    "In Teams, select More (…) and choose Viva Learning",
+    "Search a topic, e.g. 'Excel PivotTable'",
+    "Open a course to see its length and provider",
+    "Share or recommend it to a colleague"
+   ]
+  },
+  {
+   "level": "B",
+   "core": false,
+   "version": "Web",
+   "minv": "cloud",
+   "it": "Mainly an education tool; IT may not have it switched on for your company.",
+   "oldVersion": "",
+   "app": "m",
+   "name": "Learning Activities (AI flashcards & practice)",
+   "plain": "Turns your own notes into flashcards and practice games using AI.",
+   "what": "Creates Flashcards, Fill in the Blanks and Matching activities from your content. Built for schools, but Microsoft says work users can use it for training and onboarding too.",
+   "use": "Make flashcards of GL account codes, SAP transaction codes or closing steps for a new joiner.",
+   "example": "Paste your list of SAP T-codes › choose Flashcards › share the join code with the intern.",
+   "watch": "AI writes the cards, so check each one before sharing. Don't paste confidential data. Quizzes are for students only.",
+   "licence": "Creating an activity needs Copilot Chat access. People practising a shared activity don't need it.",
+   "where": "learningactivities.edu.cloud.microsoft",
+   "steps": [
+    "Open Learning Activities and sign in with your work account",
+    "Select + New Activity (top right)",
+    "Choose a type: Flashcards, Fill in the Blanks or Matching",
+    "Add your content and check the result",
+    "Open the three-dot menu to copy a join code or share link"
+   ],
+   "pic": {
+    "k": "list",
+    "title": "Flashcards: SAP T-codes",
+    "items": [
+     [
+      "FB60",
+      "Enter vendor invoice",
+      0
+     ],
+     [
+      "F110",
+      "Payment run",
+      0
+     ],
+     [
+      "FBL1N",
+      "Vendor line items",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "level": "A",
+   "core": false,
+   "version": "Power Platform",
+   "minv": "cloud",
+   "it": "IT must create the environment and approve an external site.",
+   "oldVersion": "",
+   "app": "m",
+   "name": "Power Pages (websites for people outside the company)",
+   "plain": "A low-code tool for building a secure website that outsiders can use, linked to your business data.",
+   "what": "Part of Power Platform. You build an external-facing site from templates in a visual design studio; the data sits in Microsoft Dataverse.",
+   "use": "A vendor portal where suppliers submit forms or check status, built with IT.",
+   "example": "Vendors sign in to a portal to update their bank letter and contact details; the data lands in a Dataverse table.",
+   "watch": "An external site handles outside users and company data, so this is an IT project, not a personal tool. For internal forms, use Forms, Lists or Power Apps.",
+   "licence": "Needs its own Power Pages licence for a live site. A 30-day free trial is available.",
+   "where": "Power Pages home › create a site from a template",
+   "steps": [
+    "Start a trial or open Power Pages with IT's approval",
+    "Choose a template",
+    "Edit pages in the design studio",
+    "Connect forms and lists to Dataverse tables",
+    "Set who can sign in, then publish"
+   ]
   }
  ],
  "tasks": [
@@ -9163,6 +9536,17 @@
     "The booking goes straight into your Outlook calendar"
    ],
    "tip": "For a whole team, create a shared booking page with services and staff."
+  },
+  {
+   "app": "m",
+   "q": "I can't find an app in the app buttons. Where is it?",
+   "a": [
+    "Type the app name in the search box on Feature notes; it searches every card",
+    "Planner and To Do are under 'Planner & To Do'. Forms, Lists and Loop have their own buttons",
+    "Sway, Bookings, Visio, Access, Project, Whiteboard, Org Explorer, Power Pages and the Viva apps (Connections, Engage, Insights, Learning) are under 'More Microsoft apps'",
+    "Copilot Studio is under 'Copilot'"
+   ],
+   "tip": "Still missing? Leave a note in Updates & suggestions."
   }
  ]
 }
