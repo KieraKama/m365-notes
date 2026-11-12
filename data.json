@@ -13,7 +13,9 @@
    "date": "2026-11-13",
    "items": [
     "Find an answer box: typing an app name (e.g. To Do, Lists, OneNote, Teams) now shows that app's cards and a button to see them all.",
-    "New card and common question under Power BI: Microsoft Fabric, what it is and when you need a capacity (Microsoft Learn: What is Microsoft Fabric; Fabric licenses and capacity)."
+    "New card and common question under Power BI: Microsoft Fabric, what it is and when you need a capacity (Microsoft Learn: What is Microsoft Fabric; Fabric licenses and capacity).",
+    "App check: new cards for Clipchamp (replaces Stream), Shifts, Updates app, Microsoft Places, other Viva apps (Glint, Pulse, Amplify), Dynamics 365, Copilot Pages, and IT names (Entra ID, Intune, Defender, Purview, Exchange Online) (Microsoft Support and Microsoft Learn pages).",
+    "New card on retired apps and what to use instead: Delve (16 Dec 2024), Microsoft Lens (scanning ended 9 Mar 2026), Stream (Classic), Viva Goals (31 Dec 2025) (Microsoft Learn; Microsoft Support)."
    ]
   },
   {
@@ -274,6 +276,66 @@
   [
    "Enable Microsoft Fabric for your organization (Microsoft Learn)",
    "https://learn.microsoft.com/en-us/fabric/admin/fabric-switch"
+  ],
+  [
+   "Overview of Clipchamp's video player, camera and homepage (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/stream/streamnew/overview"
+  ],
+  [
+   "How to access Clipchamp with your work or school account (Microsoft Support)",
+   "https://support.microsoft.com/en-us/clipchamp/how-to-access-microsoft-clipchamp-with-your-work-or-school-account"
+  ],
+  [
+   "Get started in Shifts (Microsoft Support)",
+   "https://support.microsoft.com/en-us/teams/shifts/get-started-in-shifts"
+  ],
+  [
+   "Get started in Updates (Microsoft Support)",
+   "https://support.microsoft.com/en-us/teams/updates-app/get-started-in-updates"
+  ],
+  [
+   "What is Microsoft Places? (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/microsoft-365/places/places-overview"
+  ],
+  [
+   "Microsoft Viva overview (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/viva/microsoft-viva-overview"
+  ],
+  [
+   "Viva Goals retirement (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/viva/goals/goals-retirement"
+  ],
+  [
+   "Guidance for retiring Delve (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/sharepoint/delve-retirement"
+  ],
+  [
+   "Retirement of Microsoft Lens (Microsoft Support)",
+   "https://support.microsoft.com/en-us/lens/retirement-of-microsoft-lens"
+  ],
+  [
+   "What is Dynamics 365? (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/dynamics365/get-started/intro-crossapp-index"
+  ],
+  [
+   "What is Microsoft Entra? (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/entra/fundamentals/what-is-entra"
+  ],
+  [
+   "What is Microsoft Intune? (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/intune/fundamentals/what-is-intune"
+  ],
+  [
+   "What is Microsoft Defender XDR? (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/defender-xdr/microsoft-365-defender"
+  ],
+  [
+   "Microsoft Purview: where to start (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/purview/purview-where-to-start"
+  ],
+  [
+   "Exchange Online (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/exchange/exchange-online"
   ]
  ],
  "apps": [
@@ -408,7 +470,7 @@
    "name": "More Microsoft apps",
    "t": "+",
    "c": "--a-m",
-   "sub": "Access, Visio, Project, Publisher, Sway, Bookings, Whiteboard, Org Explorer, Viva, Power Pages"
+   "sub": "Access, Visio, Project, Sway, Bookings, Whiteboard, Clipchamp, Org Explorer, Viva, Places, Shifts, Power Pages, Dynamics 365, retired apps"
   }
  ],
  "levels": {
@@ -6382,6 +6444,30 @@
    }
   },
   {
+   "level": "B",
+   "core": false,
+   "version": "Web / app",
+   "minv": "cloud",
+   "it": "",
+   "oldVersion": "",
+   "licence": "Microsoft says Pages needs a Microsoft 365 Copilot or Microsoft 365 licence.",
+   "app": "c",
+   "name": "Copilot Pages (turn an answer into an editable page)",
+   "plain": "Keep a good Copilot answer as a page you can edit and share.",
+   "what": "Select Edit in page on a Copilot response. It opens beside the chat as a page where you can edit, add more and share with colleagues.",
+   "use": "Turn a Copilot draft of closing notes or a procedure into a page the team can refine together.",
+   "example": "Ask Copilot for a month-end checklist › Edit in page › tidy it up › share it with the AP team.",
+   "watch": "Check the content before sharing; it started as an AI draft.",
+   "where": "Copilot Chat › on a response, Edit in page · earlier pages are under Library",
+   "steps": [
+    "Ask Copilot your question",
+    "On the response, select Edit in page",
+    "Edit and add to the page beside the chat",
+    "Share it",
+    "Find it again under Library in the left menu"
+   ]
+  },
+  {
    "app": "p",
    "name": "What Power Apps is (start here)",
    "level": "B",
@@ -6571,6 +6657,30 @@
     "Assign people automatically or manually",
     "Click Open to start the rooms",
     "Click Close to bring everyone back"
+   ]
+  },
+  {
+   "level": "B",
+   "core": false,
+   "version": "365",
+   "minv": "cloud",
+   "it": "",
+   "oldVersion": "",
+   "licence": "",
+   "app": "t",
+   "name": "Updates app (status reports in Teams)",
+   "plain": "A Teams app for sending and collecting regular status updates with a fixed form.",
+   "what": "Create an update request from a template, choose who submits and who views, set a due date or make it repeat. Replies are collected in one place.",
+   "use": "Weekly closing-status check-in from each PIC, or a daily bank-balance update, without chasing by email.",
+   "example": "Request 'Month-end status' repeats every Friday › each PIC fills three questions › HOD sees all replies under Review updates.",
+   "watch": "Agree one way of reporting. If people also report by chat and email, the app adds work instead of saving it.",
+   "where": "Teams › Updates in the left bar (or + Apps › search Updates)",
+   "steps": [
+    "Open Updates in Teams",
+    "Pick a template or start from a blank form",
+    "Edit the questions in Edit form",
+    "Assign Submitters and Viewers; set a due date or recurrence",
+    "Select Publish. Submitters find it under 'Needing your updates'"
    ]
   },
   {
@@ -6856,6 +6966,29 @@
     "If it says 2016, 2019 or 2021, tell IT",
     "Save important files to OneDrive or SharePoint",
     "Avoid opening unknown attachments on old versions"
+   ]
+  },
+  {
+   "level": "B",
+   "core": false,
+   "version": "365",
+   "minv": "cloud",
+   "it": "All of these are controlled by IT.",
+   "oldVersion": "",
+   "licence": "",
+   "app": "sec",
+   "name": "IT names you may hear: Entra ID, Intune, Defender, Purview, Exchange Online",
+   "plain": "Tools that IT runs in the background. You don't open them, but they explain a lot of what you see.",
+   "what": "Entra ID (was Azure Active Directory): your sign-in and access. Intune: manages and secures company devices and apps. Defender: security against threats in email, devices and apps. Purview: protects and governs data with sensitivity labels, data loss prevention and retention. Exchange Online: the email and calendar service behind Outlook.",
+   "use": "Understand an IT reply such as 'blocked by a DLP policy' or 'your device must be enrolled in Intune'.",
+   "example": "Outlook warns before you email a file with bank account numbers outside the company: that is a Purview data loss prevention policy.",
+   "watch": "These are set by company policy. Don't try to work around a block; ask IT what is allowed.",
+   "where": "Nothing to open. You see the results: sign-in prompts, labels on files, warnings when sharing",
+   "steps": [
+    "Sign-in or MFA problem: tell IT it is an Entra ID sign-in issue",
+    "Phone or laptop not allowed: ask IT about enrolling the device (Intune)",
+    "Sharing blocked or a warning appears: ask IT which Purview label or policy applies",
+    "Suspicious email: report it; Defender handles the rest"
    ]
   },
   {
@@ -7368,6 +7501,145 @@
     "Edit pages in the design studio",
     "Connect forms and lists to Dataverse tables",
     "Set who can sign in, then publish"
+   ]
+  },
+  {
+   "level": "B",
+   "core": false,
+   "version": "365",
+   "minv": "cloud",
+   "it": "IT can turn Clipchamp on or off for users.",
+   "oldVersion": "",
+   "licence": "The Clipchamp editor is included with Microsoft 365 E3, E5, Business Standard and Business Premium. If you can't open it, ask IT.",
+   "app": "m",
+   "name": "Clipchamp (video editor; replaces Stream)",
+   "plain": "Microsoft's video tool at work: record, edit, store and share videos.",
+   "what": "Clipchamp is now the video experience in Microsoft 365. It records and edits video, plays it, and lists your recordings and Teams meeting recordings. The old Stream (Classic) portal is deprecated.",
+   "use": "Record a short how-to video for a junior, e.g. how to run a SAP report, or trim a Teams meeting recording before sharing.",
+   "example": "Record your screen showing the month-end upload steps › trim the start › share the link with the team.",
+   "watch": "Videos are files in OneDrive or SharePoint, so normal sharing permissions apply. A personal Clipchamp account is separate; personal projects can't be moved into the work version.",
+   "where": "m365.cloud.microsoft/launch/clipchamp · or OneDrive › select a video › Open › Edit in Clipchamp",
+   "steps": [
+    "Open the Clipchamp home page from the Microsoft 365 apps page",
+    "Start a new recording or upload a video",
+    "To edit an existing video: in OneDrive or SharePoint select it › Open › Edit in Clipchamp",
+    "Export; the video saves to OneDrive or SharePoint",
+    "Share it like any other file"
+   ]
+  },
+  {
+   "level": "B",
+   "core": false,
+   "version": "365",
+   "minv": "cloud",
+   "it": "",
+   "oldVersion": "",
+   "licence": "Free with Microsoft Teams.",
+   "app": "m",
+   "name": "Shifts (staff schedules in Teams)",
+   "plain": "A schedule app in Teams for teams that work shifts.",
+   "what": "Managers build and publish a shift schedule; workers see their shifts, clock in and out, request time off and swap shifts. Built for frontline teams.",
+   "use": "Mostly for production, warehouse or security teams. Useful to know when a plant schedule is shared with you.",
+   "example": "A supervisor publishes next week's schedule; an operator offers a shift swap from the phone and the supervisor approves it.",
+   "watch": "Features depend on how your company set up Shifts. Managers do most tasks on desktop; phones mainly handle requests.",
+   "where": "Teams › Shifts in the app bar (or the more-apps menu)",
+   "steps": [
+    "Open Shifts in Teams",
+    "Manager: create the team schedule and add people",
+    "Add shifts and open shifts (or import from Excel)",
+    "Publish the schedule",
+    "Workers: view shifts, request time off or swap"
+   ]
+  },
+  {
+   "level": "B",
+   "core": false,
+   "version": "365",
+   "minv": "cloud",
+   "it": "IT must set up buildings and rooms first.",
+   "oldVersion": "",
+   "licence": "Work plans, room booking and the Places finder are included with Microsoft 365 plans. Booking a specific desk needs an extra space licence bought by the company.",
+   "app": "m",
+   "name": "Microsoft Places (office days, desks & rooms)",
+   "plain": "Shows who is in the office on which day and helps book rooms and desks.",
+   "what": "Set your work plan (office or remote) so colleagues can see it, find when teammates are in, and book rooms or desk areas with photos and floor plans.",
+   "use": "Check which day the team is in before setting a face-to-face closing review, then book the room.",
+   "example": "Set Tuesday and Thursday as office days › see that the HOD is in on Thursday › book the meeting room for Thursday.",
+   "watch": "It only helps if the company has loaded its buildings, floors and rooms, and people keep their work plans updated.",
+   "where": "Calendar in new Outlook or Teams · or aka.ms/places",
+   "steps": [
+    "Open Places from Outlook, Teams or aka.ms/places",
+    "Set your work plan for the week",
+    "See who else plans to be in",
+    "Use the Places finder to pick a room or desk area",
+    "Book it"
+   ]
+  },
+  {
+   "level": "B",
+   "core": false,
+   "version": "365",
+   "minv": "cloud",
+   "it": "",
+   "oldVersion": "",
+   "licence": "Glint, Pulse and Amplify are not in the normal Microsoft 365 plans; they need a Viva Suite or separate Viva licence.",
+   "app": "m",
+   "name": "Other Viva apps: Glint, Pulse, Amplify (Goals is retired)",
+   "plain": "Viva apps used mainly by HR, managers and communications teams.",
+   "what": "Viva Glint: company-wide employee surveys with recommended actions. Viva Pulse: short surveys a manager sends to their own team. Viva Amplify: plan a campaign and publish it to Outlook, Teams and SharePoint from one place.",
+   "use": "You will mostly meet these as the person answering a survey, not building one.",
+   "example": "HR sends the yearly engagement survey through Viva Glint; your manager sends a five-question Pulse after closing.",
+   "watch": "Viva Goals (OKR tracking) retired on 31 Dec 2025.",
+   "where": "Links sent by HR or your manager, or the Viva apps in Teams",
+   "steps": [
+    "Open the survey or campaign link you were sent",
+    "Answer the questions",
+    "Managers with a licence: open Viva Pulse in Teams to send a team survey"
+   ]
+  },
+  {
+   "level": "B",
+   "core": false,
+   "version": "365",
+   "minv": "cloud",
+   "it": "",
+   "oldVersion": "",
+   "licence": "",
+   "app": "m",
+   "name": "Retired Microsoft apps: Delve, Lens, Stream (Classic), Viva Goals",
+   "plain": "Apps you may still see in old guides that Microsoft has closed, and what to use now.",
+   "what": "Delve retired on 16 Dec 2024. Microsoft Lens stopped scanning on 9 Mar 2026. Stream (Classic) is deprecated. Viva Goals retired on 31 Dec 2025. The separate Whiteboard apps retired on 16 Oct 2026, and Publisher in October 2026.",
+   "use": "If a guide or a colleague mentions one of these, use the replacement instead.",
+   "example": "Old SOP says 'scan the receipt with Lens'. Now: OneDrive mobile app › + › Scan photo.",
+   "watch": "Files and people data were not deleted when Delve closed; only Delve's own favourites and settings went.",
+   "where": "Replacements: profile card and people search (Delve) · OneDrive mobile scan (Lens) · Clipchamp (Stream) · Whiteboard in Teams or web · Word or PowerPoint (Publisher)",
+   "steps": [
+    "Delve: search a person on microsoft365.com and open their profile card",
+    "Lens: in the OneDrive mobile app tap + › Scan photo; the scan saves to OneDrive",
+    "Stream: open the Clipchamp home page for your videos and recordings",
+    "Whiteboard app: use Whiteboard in Teams or on the web",
+    "Publisher: convert .pub files to Word or PowerPoint"
+   ]
+  },
+  {
+   "level": "B",
+   "core": false,
+   "version": "365",
+   "minv": "cloud",
+   "it": "",
+   "oldVersion": "",
+   "licence": "Ask IT whether your company has it.",
+   "app": "m",
+   "name": "Dynamics 365 (Microsoft's business apps)",
+   "plain": "Microsoft's own business software family, for example Dynamics 365 Business Central. It is not part of Office.",
+   "what": "A set of business applications that work together. A company can use one, some or all of them. Think of it as Microsoft's answer to systems like SAP.",
+   "use": "Know the name. If your company runs SAP, you won't use Dynamics; a customer, vendor or sister company might.",
+   "example": "A vendor says 'we invoice from Business Central'. That is their accounting system, a Dynamics 365 app.",
+   "watch": "Dynamics 365 is a different thing from 'dynamic arrays' in Excel.",
+   "where": "Not in the normal Microsoft 365 app list unless your company uses it",
+   "steps": [
+    "Nothing to set up as a normal Microsoft 365 user",
+    "If your company uses it, IT or the system owner gives you access and training"
    ]
   }
  ],
@@ -9604,10 +9876,11 @@
    "app": "m",
    "q": "I can't find an app in the app buttons. Where is it?",
    "a": [
-    "Type the app name in the search box on Feature notes; it searches every card",
+    "Type the app name in the search box on Feature notes, or in Find an answer",
     "Planner and To Do are under 'Planner & To Do'. Forms, Lists and Loop have their own buttons",
-    "Sway, Bookings, Visio, Access, Project, Whiteboard, Org Explorer, Power Pages and the Viva apps (Connections, Engage, Insights, Learning) are under 'More Microsoft apps'",
-    "Copilot Studio is under 'Copilot'"
+    "Under 'More Microsoft apps': Access, Visio, Project, Sway, Bookings, Whiteboard, Clipchamp (Stream), Org Explorer, Places, Shifts, Power Pages, Dynamics 365, the Viva apps, and retired apps such as Delve, Lens and Publisher",
+    "Copilot Studio and Copilot Pages are under 'Copilot'. Fabric is under 'Power BI'. The Updates app is under 'Teams'",
+    "IT tools (Entra ID, Intune, Defender, Purview, Exchange Online) are under 'Security & safety'"
    ],
    "tip": "Still missing? Leave a note in Updates & suggestions."
   }
