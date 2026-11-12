@@ -1,7 +1,7 @@
 {
  "title": "M365 & Power Platform Notes",
  "owner": "KieraKama",
- "lastChecked": "2026-11-11",
+ "lastChecked": "2026-11-12",
  "comments": {
   "form": "https://docs.google.com/forms/d/e/1FAIpQLSdtIgut17BVFtAITvMYYZnwiQdvjVV7Ump489MsSoJRyP9weQ/formResponse",
   "name": "entry.2035312363",
@@ -9,6 +9,14 @@
   "csv": ""
  },
  "changes": [
+  {
+   "date": "2026-11-12",
+   "items": [
+    "New cards and common questions: the Work IQ switch (replaced the Work and Web tabs) and the model menu: Auto, Quick response, Think deeper, Claude, GPT (Microsoft Support: What information does Copilot use; Get started with Copilot Chat).",
+    "Claude in Copilot: Anthropic works as a Microsoft subprocessor and admins control access (Microsoft Learn: Claude models from Anthropic in Microsoft Online Services).",
+    "New Handbook page under Copilot: The top of the chat: Work IQ and the model menu."
+   ]
+  },
   {
    "date": "2026-11-11",
    "items": [
@@ -146,6 +154,22 @@
   [
    "Frequently asked questions about Microsoft 365 Copilot Chat (Microsoft Support)",
    "https://support.microsoft.com/en-us/microsoft-365-copilot/frequently-asked-questions-about-microsoft-365-copilot-chat"
+  ],
+  [
+   "What information does Copilot use to answer my prompt? (Microsoft Support)",
+   "https://support.microsoft.com/en-us/microsoft-365-copilot/what-information-does-copilot-use-to-answer-my-prompt"
+  ],
+  [
+   "Claude models from Anthropic in Microsoft Online Services (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/microsoft-365/copilot/connect-to-ai-subprocessor"
+  ],
+  [
+   "Choosing the right AI model in Microsoft 365 (Microsoft 365 Insider Blog, 25 Jun 2026)",
+   "https://techcommunity.microsoft.com/blog/microsoft365insiderblog/choosing-the-right-ai-model-in-microsoft-365-flexibility-control-and-confidence/4530762"
+  ],
+  [
+   "Available today: GPT-5.3 Instant in Microsoft 365 Copilot (Microsoft 365 Copilot Blog)",
+   "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/available-today-gpt-5-3-instant-in-microsoft-365-copilot/4496567"
   ]
  ],
  "apps": [
@@ -5844,9 +5868,10 @@
    "what": "With Premium, Copilot Chat can use your own emails, meetings, chats and files to answer, not only what you upload.",
    "use": "'What did the vendor agree about INV-889?' or 'Summarise what I missed this week on the audit.'",
    "licence": "Microsoft 365 Copilot licence (Premium). Basic only uses files you upload.",
-   "where": "Microsoft 365 Copilot app, or Copilot in Teams",
+   "where": "Microsoft 365 Copilot app, or Copilot in Teams. Work IQ must be on (top left of the chat)",
    "steps": [
     "Open Copilot Chat with your work account",
+    "Check Work IQ is on at the top left",
     "Ask about your own work, naming the person, topic or file",
     "Open the sources it lists to check the answer"
    ],
@@ -5857,6 +5882,96 @@
     "k": "chat",
     "q": "What did ABC agree about INV-889?",
     "a": "Credit note RM300, balance paid by 15 Nov (source: email 3 Nov)"
+   }
+  },
+  {
+   "level": "B",
+   "core": false,
+   "version": "Web / app",
+   "it": "IT can also turn off web content.",
+   "oldVersion": "",
+   "minv": "cloud",
+   "app": "c",
+   "name": "Work IQ switch: use my work data or not",
+   "what": "A button at the top left of Copilot Chat. On: Copilot can use your work emails, files, chats and meetings. Off: it uses only the web and what you attach.",
+   "use": "On for 'what did the vendor agree?'. Off for a general question, e.g. 'explain accrual vs prepayment', so work files don't mix into the answer.",
+   "licence": "Work IQ needs the Microsoft 365 Copilot licence (Premium). It is on by default when you have it.",
+   "where": "Copilot Chat › top left › Work IQ (next to Auto)",
+   "steps": [
+    "Open Copilot Chat",
+    "Look at the top left: Work IQ",
+    "Click it to switch on or off",
+    "On: answers can come from your work data, the web and attached files",
+    "Off: web and attached files only"
+   ],
+   "plain": "One switch that decides whether Copilot looks at your own work data.",
+   "example": "Work IQ on: 'Summarise my emails from ABC this week'. Work IQ off: 'What is the latest SST rate?' answered from the web.",
+   "watch": "This switch replaced the old Work and Web tabs. Even when off, Copilot may still use your profile and saved preferences.",
+   "pic": {
+    "k": "list",
+    "title": "Work IQ",
+    "items": [
+     [
+      "On",
+      "work data + web + attached files",
+      1
+     ],
+     [
+      "Off",
+      "web + attached files only",
+      0
+     ]
+    ]
+   }
+  },
+  {
+   "level": "B",
+   "core": false,
+   "version": "Web / app",
+   "it": "IT decides which models appear. Claude shows only if your admin allows Anthropic models.",
+   "oldVersion": "",
+   "minv": "cloud",
+   "app": "c",
+   "name": "Model menu: Auto, Quick response, Think deeper, Claude, GPT",
+   "what": "The menu next to Work IQ. It sets how long Copilot thinks, and lets you pick a Claude (Anthropic) or GPT (OpenAI) model yourself.",
+   "use": "Leave it on Auto for daily work. Use Think deeper for a tricky variance explanation or a multi-step formula.",
+   "licence": "Menu options depend on your licence and what IT has turned on. Premium gets priority access; Basic gets standard access.",
+   "where": "Copilot Chat › top left › Auto",
+   "steps": [
+    "Click Auto at the top of the chat",
+    "Auto: Copilot decides how long to think (the default)",
+    "Quick response: answers right away, for simple questions",
+    "Think deeper: thinks longer, for harder questions",
+    "Claude or GPT: open the arrow to choose a specific model"
+   ],
+   "plain": "Choose speed or depth. Auto chooses for you.",
+   "example": "Quick response: 'shorten this email'. Think deeper: 'compare these two forecast methods and recommend one'.",
+   "watch": "Think deeper is slower. Model names in the Claude and GPT lists change often. If a model says it requires Anthropic data retention, different data terms apply: ask IT before using it for company data.",
+   "pic": {
+    "k": "list",
+    "title": "Auto ▾",
+    "items": [
+     [
+      "Auto",
+      "decides how long to think",
+      1
+     ],
+     [
+      "Quick response",
+      "answers right away",
+      0
+     ],
+     [
+      "Think deeper",
+      "thinks longer",
+      0
+     ],
+     [
+      "Claude · GPT",
+      "pick a model",
+      0
+     ]
+    ]
    }
   },
   {
@@ -8734,6 +8849,28 @@
     "Read the label under your name: Copilot Chat (Basic), M365 Copilot (Basic) or M365 Copilot (Premium)"
    ],
    "tip": "Premium means you have the paid Microsoft 365 Copilot add-on licence."
+  },
+  {
+   "app": "c",
+   "q": "What is Work IQ in Copilot Chat?",
+   "a": [
+    "A switch at the top left of Copilot Chat",
+    "On: Copilot can use your work emails, files, chats and meetings, plus the web",
+    "Off: Copilot uses only the web and files you attach",
+    "It needs the Microsoft 365 Copilot licence (Premium) and is on by default"
+   ],
+   "tip": "Turn it off for general questions so work files don't mix into the answer."
+  },
+  {
+   "app": "c",
+   "q": "Auto, Quick response, Think deeper, Claude or GPT: which do I pick?",
+   "a": [
+    "Auto: the default; Copilot decides how long to think",
+    "Quick response: simple questions, rewrites, short drafts",
+    "Think deeper: harder questions with several steps; it is slower",
+    "Claude or GPT: pick a specific model if you want to compare answers"
+   ],
+   "tip": "Microsoft says no single model suits every task. If an answer is weak, try Think deeper or the other model and compare."
   },
   {
    "app": "c",
