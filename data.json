@@ -12,7 +12,8 @@
   {
    "date": "2026-11-13",
    "items": [
-    "Find an answer box: typing an app name (e.g. To Do, Lists, OneNote, Teams) now shows that app's cards and a button to see them all."
+    "Find an answer box: typing an app name (e.g. To Do, Lists, OneNote, Teams) now shows that app's cards and a button to see them all.",
+    "New card and common question under Power BI: Microsoft Fabric, what it is and when you need a capacity (Microsoft Learn: What is Microsoft Fabric; Fabric licenses and capacity)."
    ]
   },
   {
@@ -261,6 +262,18 @@
   [
    "Retirement of the standalone Microsoft Whiteboard apps (Microsoft Support)",
    "https://support.microsoft.com/en-us/whiteboard/retirement-standalone-microsoft-whiteboard-apps"
+  ],
+  [
+   "What is Microsoft Fabric? (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/fabric/fundamentals/microsoft-fabric-overview"
+  ],
+  [
+   "Microsoft Fabric licenses and capacity (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/fabric/enterprise/licenses"
+  ],
+  [
+   "Enable Microsoft Fabric for your organization (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/fabric/admin/fabric-switch"
   ]
  ],
  "apps": [
@@ -4465,6 +4478,39 @@
    "example": "Edit in Dev, check in Test, then Deploy to Production; users never see half-done work.",
    "watch": "Needs Premium Per User or Fabric capacity.",
    "minv": "cloud"
+  },
+  {
+   "app": "b",
+   "name": "Microsoft Fabric (the data platform behind Power BI)",
+   "level": "A",
+   "core": false,
+   "version": "Power BI service",
+   "minv": "cloud",
+   "oldVersion": "",
+   "plain": "One Microsoft platform for all data work: bringing data in, storing it, transforming it and reporting on it. Power BI is one part of it.",
+   "what": "Fabric combines Power BI with Data Factory (ingest and transform, using Power Query), Data Warehouse, Data Engineering, Data Science, Real-Time Intelligence and Databases. All of them share one storage layer called OneLake, so data isn't copied between tools.",
+   "use": "Know the word when IT or a vendor mentions it. For a normal finance dashboard, Power BI Pro is enough; Fabric matters when the company wants one central data store feeding many reports.",
+   "example": "IT loads SAP data once into a lakehouse in OneLake. Finance, Sales and Production each build Power BI reports on the same data instead of separate exports.",
+   "watch": "Power BI Pro or PPU alone can't create Fabric items such as lakehouses, warehouses or notebooks. Those need a Fabric capacity (F SKU) or a trial capacity.",
+   "it": "A Fabric administrator turns it on with the tenant setting 'Users can create Fabric items', for everyone or for chosen groups.",
+   "licence": "Needs a capacity (F SKU, billed through Azure; smallest is F2) plus per-user licences. On F64 or larger, Free users can view Power BI reports; below F64 every viewer needs Pro or PPU. A Fabric trial lasts 60 days and equals F64.",
+   "where": "The Power BI service (Microsoft now calls it the Fabric portal) › a workspace on a Fabric capacity",
+   "steps": [
+    "Ask IT whether Fabric is turned on and whether there is a capacity",
+    "Open the Power BI service and go to a workspace on that capacity",
+    "Create a Fabric item, e.g. a lakehouse or a Dataflow Gen2",
+    "Load data into OneLake",
+    "Build the Power BI report on top of it"
+   ],
+   "pic": {
+    "k": "flow",
+    "steps": [
+     "SAP / files",
+     "Data Factory",
+     "OneLake",
+     "Power BI report"
+    ]
+   }
   },
   {
    "app": "a",
@@ -9112,6 +9158,17 @@
   }
  ],
  "faq": [
+  {
+   "app": "b",
+   "q": "What is Microsoft Fabric? Do I need it for Power BI?",
+   "a": [
+    "Fabric is Microsoft's data platform; Power BI is one part of it",
+    "You don't need Fabric to build and share reports: Power BI Pro is enough",
+    "Fabric adds central storage (OneLake), data pipelines, warehouses and notebooks",
+    "Those need a Fabric capacity (F SKU) that IT buys; Pro alone can't create them"
+   ],
+   "tip": "On F64 or larger, colleagues with a Free licence can view your reports. Below F64 they need Pro."
+  },
   {
    "app": "x",
    "q": "How do I get back a file I didn't save?",
