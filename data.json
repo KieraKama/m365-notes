@@ -9907,8 +9907,8 @@
   "state": "ongoing",
   "hideAfter": "",
   "title": "Microsoft 365 outage: still in progress",
-  "asOf": "Fri 13 Nov 2026, 10:40 am Malaysia time",
-  "status": "Not resolved yet. Microsoft's latest update (about 10:00 am Malaysia time) says restarting the affected servers in isolated groups is giving positive results, and it is watching whether they stay stable. No time has been given for full recovery.",
+  "asOf": "Fri 13 Nov 2026, 11:20 am Malaysia time",
+  "status": "Not resolved yet. Microsoft's latest update (about 10:00 am Malaysia time) says restarting the affected servers in isolated groups is giving positive results, and it is watching whether they stay stable. No time has been given for full recovery. No newer update from Microsoft.",
   "means": "Outlook email, Teams, SharePoint and other Microsoft 365 services may fail to open, sign in or sync, in any region. Service may come back slowly, and delayed emails may arrive late.",
   "affected": [
    "Outlook / Exchange Online (email and calendar)",
