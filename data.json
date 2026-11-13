@@ -9907,9 +9907,9 @@
   "state": "ongoing",
   "hideAfter": "",
   "title": "Microsoft 365 outage: still in progress",
-  "asOf": "Sat 14 Nov 2026, 12:45 am Malaysia time",
-  "status": "Not resolved yet, but close to normal. Microsoft's latest update (Fri 10:17 pm Malaysia time) says service availability keeps improving and email queues are significantly reduced and approaching normal levels. Some users may still have intermittent access issues or delayed email. Microsoft has not declared the outage resolved and has given no time for full recovery.",
-  "means": "Outlook email, Teams, SharePoint and other Microsoft 365 services are working again for many users, but may still fail now and then to open, sign in or sync. Delayed emails are still being delivered and may arrive late; Microsoft has extended the email timeout to 48 hours to help preserve them.",
+  "asOf": "Sat 14 Nov 2026, 4:24 am Malaysia time",
+  "status": "Not declared resolved yet, but mostly recovered. In its latest statement (Sat 12:40 am Malaysia time, repeated by Microsoft 365 Status at 2:05 am), Microsoft says it is seeing broad recovery and stability across its services, has addressed the underlying issue, and continues to restore service to remaining customers and regions. Microsoft has given no time for full recovery.",
+  "means": "Outlook email, Teams, SharePoint and other Microsoft 365 services should be working again for most users. A few users and regions may still have problems opening, signing in or syncing until Microsoft finishes restoring service. Delayed emails may still arrive late; Microsoft extended the email timeout to 48 hours to help preserve them.",
   "affected": [
    "Outlook / Exchange Online (email and calendar)",
    "Teams",
@@ -9918,7 +9918,7 @@
    "Planner and To Do",
    "IT tools: Defender, Purview, Intune"
   ],
-  "cause": "Root cause not confirmed. Microsoft says a large number of servers became unavailable after failing automated health checks, which overloaded the remaining servers. It says the load was not caused by more users, and that there is no indication of malicious or cyber activity. Microsoft says it will publish a full report with the root cause after recovery is complete.",
+  "cause": "Microsoft says this was a technical issue, not related to cyber activity or to AI / agents. It says the incident was introduced by an issue during an earlier network capacity upgrade and surfaced following a recent network change. Earlier updates said a large number of servers became unavailable after failing automated health checks, which overloaded the remaining servers. Microsoft says it has addressed the underlying issue and will publish a full post-incident report once its review is complete.",
   "timeline": [
    [
     "about 2:00 am",
@@ -10007,9 +10007,17 @@
    [
     "10:17 pm",
     "Service availability keeps improving. Microsoft says email queues are significantly reduced and approaching normal levels. Some users may still see intermittent access issues or delayed email."
+   ],
+   [
+    "11:39 pm",
+    "Microsoft again reports encouraging recovery progress, with service availability and email delivery improving across a growing part of the affected infrastructure. It says it regrets the impact on customers."
+   ],
+   [
+    "Sat 12:40 am",
+    "Microsoft apologises for the disruption. It reports broad recovery and stability across its services, and says the issue was technical and came from an earlier network capacity upgrade. It says the underlying issue is addressed and it continues to restore service to remaining customers and regions. Microsoft 365 Status repeats the statement at 2:05 am."
    ]
   ],
-  "timelineNote": "Times are Malaysia time (UTC+8), Friday 13 November 2026, taken from the posting times of Microsoft 365 Status updates.",
+  "timelineNote": "Times are Malaysia time (UTC+8), taken from the posting times of Microsoft and Microsoft 365 Status updates. Entries without a day are Friday 13 November 2026; 'Sat' is Saturday 14 November 2026.",
   "todo": [
    "Don't reinstall Office, reset your password or clear your Outlook profile. The problem is on Microsoft's side.",
    "If the Outlook app won't connect, try Outlook on the web or your phone. If Teams is down, call or use another channel your company allows.",
@@ -10025,6 +10033,10 @@
    [
     "Microsoft 365 Status on X (official updates)",
     "https://x.com/MSFT365Status"
+   ],
+   [
+    "Microsoft's statement on X (apology and cause)",
+    "https://x.com/Microsoft/status/2121282013600907325"
    ]
   ]
  }
