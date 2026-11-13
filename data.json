@@ -9907,9 +9907,9 @@
   "state": "ongoing",
   "hideAfter": "",
   "title": "Microsoft 365 outage: still in progress",
-  "asOf": "Fri 13 Nov 2026, 8:25 pm Malaysia time",
-  "status": "Not resolved yet, but recovering. Microsoft's latest update (7:11 pm Malaysia time) says it has completed recovery actions on parts of the affected infrastructure and is gradually restoring traffic. It sees improvements in mailbox access and delayed email processing. Microsoft has not declared the outage resolved and has given no time for full recovery.",
-  "means": "Outlook email, Teams, SharePoint and other Microsoft 365 services are starting to come back but may still fail to open, sign in or sync, in any region. Service may work for a while and then drop again. Delayed emails may arrive late; Microsoft has extended the email timeout to 48 hours to help preserve them.",
+  "asOf": "Sat 14 Nov 2026, 12:45 am Malaysia time",
+  "status": "Not resolved yet, but close to normal. Microsoft's latest update (Fri 10:17 pm Malaysia time) says service availability keeps improving and email queues are significantly reduced and approaching normal levels. Some users may still have intermittent access issues or delayed email. Microsoft has not declared the outage resolved and has given no time for full recovery.",
+  "means": "Outlook email, Teams, SharePoint and other Microsoft 365 services are working again for many users, but may still fail now and then to open, sign in or sync. Delayed emails are still being delivered and may arrive late; Microsoft has extended the email timeout to 48 hours to help preserve them.",
   "affected": [
    "Outlook / Exchange Online (email and calendar)",
    "Teams",
@@ -9918,7 +9918,7 @@
    "Planner and To Do",
    "IT tools: Defender, Purview, Intune"
   ],
-  "cause": "Root cause not confirmed. Microsoft says a large number of servers became unavailable after failing automated health checks, which overloaded the remaining servers. It says the load was not caused by more users. It is reviewing a small number of recent configuration updates as a possible factor.",
+  "cause": "Root cause not confirmed. Microsoft says a large number of servers became unavailable after failing automated health checks, which overloaded the remaining servers. It says the load was not caused by more users, and that there is no indication of malicious or cyber activity. Microsoft says it will publish a full report with the root cause after recovery is complete.",
   "timeline": [
    [
     "about 2:00 am",
@@ -9995,6 +9995,18 @@
    [
     "7:11 pm",
     "More progress: recovery actions are complete on parts of the affected infrastructure and traffic is being gradually restored. Microsoft sees improvements in mailbox access and delayed email processing."
+   ],
+   [
+    "8:09 pm",
+    "Microsoft sees encouraging recovery progress. Service availability and email delivery are improving across a growing part of the affected infrastructure. Some users may still have intermittent issues."
+   ],
+   [
+    "9:32 pm",
+    "Recovery continues across regions: broader improvements in North America, sustained improvements across much of Europe, and encouraging recovery signals in Asia Pacific."
+   ],
+   [
+    "10:17 pm",
+    "Service availability keeps improving. Microsoft says email queues are significantly reduced and approaching normal levels. Some users may still see intermittent access issues or delayed email."
    ]
   ],
   "timelineNote": "Times are Malaysia time (UTC+8), Friday 13 November 2026, taken from the posting times of Microsoft 365 Status updates.",
