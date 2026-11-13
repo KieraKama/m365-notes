@@ -9907,9 +9907,9 @@
   "state": "ongoing",
   "hideAfter": "",
   "title": "Microsoft 365 outage: still in progress",
-  "asOf": "Fri 13 Nov 2026, 4:23 pm Malaysia time",
-  "status": "Not resolved yet, but improving. Microsoft's latest update (3:44 pm Malaysia time) says its latest traffic changes are giving positive results for service stability and capacity, and it is applying them more widely across affected regions to reach a lasting recovery. No time has been given for full recovery.",
-  "means": "Outlook email, Teams, SharePoint and other Microsoft 365 services may fail to open, sign in or sync, in any region. Service may work for a while and then drop again. Delayed emails may arrive late.",
+  "asOf": "Fri 13 Nov 2026, 8:25 pm Malaysia time",
+  "status": "Not resolved yet, but recovering. Microsoft's latest update (7:11 pm Malaysia time) says it has completed recovery actions on parts of the affected infrastructure and is gradually restoring traffic. It sees improvements in mailbox access and delayed email processing. Microsoft has not declared the outage resolved and has given no time for full recovery.",
+  "means": "Outlook email, Teams, SharePoint and other Microsoft 365 services are starting to come back but may still fail to open, sign in or sync, in any region. Service may work for a while and then drop again. Delayed emails may arrive late; Microsoft has extended the email timeout to 48 hours to help preserve them.",
   "affected": [
    "Outlook / Exchange Online (email and calendar)",
    "Teams",
@@ -9983,6 +9983,18 @@
    [
     "3:44 pm",
     "Microsoft reports positive results for stability and capacity from its latest traffic changes. It is applying them more widely across affected regions to reach a lasting recovery."
+   ],
+   [
+    "5:24 pm",
+    "Microsoft sees early stabilization and capacity improvements. To help preserve delayed emails, it extends the email timeout to 48 hours."
+   ],
+   [
+    "6:28 pm",
+    "Recovery is progressing in phases. Several services are improving bit by bit, but Microsoft says service health remains variable and capacity is not yet back to normal."
+   ],
+   [
+    "7:11 pm",
+    "More progress: recovery actions are complete on parts of the affected infrastructure and traffic is being gradually restored. Microsoft sees improvements in mailbox access and delayed email processing."
    ]
   ],
   "timelineNote": "Times are Malaysia time (UTC+8), Friday 13 November 2026, taken from the posting times of Microsoft 365 Status updates.",
