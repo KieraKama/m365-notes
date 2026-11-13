@@ -235,6 +235,9 @@ body.lock{overflow:hidden}
 /* service notice (outage etc.), driven by data.json "notice" */
 .notice{position:relative;z-index:1;background:#FFF8E1;border:1px solid #F3E2A9;border-left:6px solid #D98A00;border-radius:var(--r);padding:14px 16px;margin-bottom:18px;display:grid;gap:8px;font-size:14.5px;max-width:980px}
 .notice[hidden]{display:none}
+.notice.ok{background:#EAF7EE;border-color:#BFE3CB;border-left-color:#2E8B57}
+.notice.ok .nt-badge{background:#2E8B57}
+.notice.ok details{border-top-color:#BFE3CB}
 .nt-h{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px}
 .nt-badge{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:#D98A00;color:#fff;border-radius:99px;padding:3px 9px}
 .nt-t{font-family:var(--f-display);font-weight:800;font-size:18px;margin:0}
@@ -1344,12 +1347,13 @@ function renderStatic(){
   $("sources").innerHTML = (DATA.sources||[]).map(s=>`<li><a href="${esc(s[1])}" target="_blank" rel="noopener">${esc(s[0])}</a></li>`).join("");
   $("last-checked").textContent = fmtDate(DATA.lastChecked);
   const nt = DATA.notice, nb = $("notice");
-  if (nt && nt.active && nb){
+  if (nt && nt.active && nb && !(nt.hideAfter && Date.now() > Date.parse(nt.hideAfter))){
+    const ok = nt.state === "resolved"; nb.classList.toggle("ok", ok);
     const li = a => (a||[]).map(x=>`<li>${esc(x)}</li>`).join("");
-    nb.innerHTML = `<div class="nt-h"><span class="nt-badge">Service notice</span><h2 class="nt-t">${esc(nt.title)}</h2><span class="nt-asof">Updated ${esc(nt.asOf)}</span></div>
+    nb.innerHTML = `<div class="nt-h"><span class="nt-badge">${ok?"Resolved":"Service notice"}</span><h2 class="nt-t">${esc(nt.title)}</h2><span class="nt-asof">Updated ${esc(nt.asOf)}</span></div>
       <p><b>Current status:</b> ${esc(nt.status)}</p>
       <p><b>What it means for you:</b> ${esc(nt.means)}</p>
-      <details><summary>What to do meanwhile</summary><ul>${li(nt.todo)}</ul></details>
+      <details><summary>${ok?"What to do now":"What to do meanwhile"}</summary><ul>${li(nt.todo)}</ul></details>
       <details><summary>What is affected and why</summary><ul>${li(nt.affected)}</ul><p class="nt-note" style="color:var(--ink);font-size:14px"><b>Cause:</b> ${esc(nt.cause)}</p></details>
       <details><summary>What happened, step by step</summary><ol class="nt-tl">${(nt.timeline||[]).map(t=>`<li><b>${esc(t[0])}</b><span>${esc(t[1])}</span></li>`).join("")}</ol><p class="nt-note">${esc(nt.timelineNote||"")}</p></details>
       <div class="nt-links">${(nt.links||[]).map(l=>`<a href="${esc(l[1])}" target="_blank" rel="noopener">${esc(l[0])} ↗</a>`).join("")}</div>`;

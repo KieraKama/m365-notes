@@ -9904,6 +9904,8 @@
  ],
  "notice": {
   "active": true,
+  "state": "ongoing",
+  "hideAfter": "",
   "title": "Microsoft 365 outage: still in progress",
   "asOf": "Fri 13 Nov 2026, 10:40 am Malaysia time",
   "status": "Not resolved yet. Microsoft's latest update (about 10:00 am Malaysia time) says restarting the affected servers in isolated groups is giving positive results, and it is watching whether they stay stable. No time has been given for full recovery.",
