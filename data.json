@@ -12,6 +12,7 @@
   {
    "date": "2026-11-13",
    "items": [
+    "Notice added at the top of the site: Microsoft 365 outage of 13 Nov 2026 (incidents EX1550543 and MO1550821) with timeline, affected services and current status, plus a new common question 'Is Microsoft 365 down? How do I check?' (Microsoft 365 Status updates; status.cloud.microsoft).",
     "Find an answer box: typing an app name (e.g. To Do, Lists, OneNote, Teams) now shows that app's cards and a button to see them all.",
     "New card and common question under Power BI: Microsoft Fabric, what it is and when you need a capacity (Microsoft Learn: What is Microsoft Fabric; Fabric licenses and capacity).",
     "App check: new cards for Clipchamp (replaces Stream), Shifts, Updates app, Microsoft Places, other Viva apps (Glint, Pulse, Amplify), Dynamics 365, Copilot Pages, and IT names (Entra ID, Intune, Defender, Purview, Exchange Online) (Microsoft Support and Microsoft Learn pages).",
@@ -336,6 +337,10 @@
   [
    "Exchange Online (Microsoft Learn)",
    "https://learn.microsoft.com/en-us/exchange/exchange-online"
+  ],
+  [
+   "Microsoft 365 service status (Microsoft)",
+   "https://status.cloud.microsoft"
   ]
  ],
  "apps": [
@@ -9431,6 +9436,18 @@
  ],
  "faq": [
   {
+   "app": "sec",
+   "q": "Is Microsoft 365 down? How do I check?",
+   "a": [
+    "Open status.cloud.microsoft in your browser: Microsoft's public status page, no sign-in needed",
+    "Look for an incident number such as EX… (Exchange/Outlook), TM… (Teams) or MO… (Microsoft 365 in general)",
+    "Microsoft also posts updates on its Microsoft 365 Status account on X (@MSFT365Status)",
+    "IT admins see full details in the Microsoft 365 admin center under Health › Service health",
+    "If nothing is listed, the problem is likely on your side: check your internet, restart the app, then ask IT"
+   ],
+   "tip": "During an outage, don't reinstall Office or reset your password. Try the web or phone version and wait for Microsoft's update."
+  },
+  {
    "app": "b",
    "q": "What is Microsoft Fabric? Do I need it for Power BI?",
    "a": [
@@ -9884,5 +9901,89 @@
    ],
    "tip": "Still missing? Leave a note in Updates & suggestions."
   }
- ]
+ ],
+ "notice": {
+  "active": true,
+  "title": "Microsoft 365 outage: still in progress",
+  "asOf": "Fri 13 Nov 2026, 10:40 am Malaysia time",
+  "status": "Not resolved yet. Microsoft's latest update (about 10:00 am Malaysia time) says restarting the affected servers in isolated groups is giving positive results, and it is watching whether they stay stable. No time has been given for full recovery.",
+  "means": "Outlook email, Teams, SharePoint and other Microsoft 365 services may fail to open, sign in or sync, in any region. Service may come back slowly, and delayed emails may arrive late.",
+  "affected": [
+   "Outlook / Exchange Online (email and calendar)",
+   "Teams",
+   "SharePoint Online and OneDrive",
+   "Microsoft 365 Copilot",
+   "Planner and To Do",
+   "IT tools: Defender, Purview, Intune"
+  ],
+  "cause": "Root cause not confirmed. Microsoft says a large number of servers became unavailable after failing automated health checks, which overloaded the remaining servers. It says the load was not caused by more users. It is reviewing a small number of recent configuration updates as a possible factor.",
+  "timeline": [
+   [
+    "about 2:00 am",
+    "Microsoft reports problems opening Exchange Online mailboxes in the Americas (incident EX1550543). Shortly after, it says users in any region may be affected."
+   ],
+   [
+    "3:12 am",
+    "All deployments paused. Traffic moved away from the affected servers, and server restarts begin. A second incident, MO1550821, covers the wider Microsoft 365 impact."
+   ],
+   [
+    "3:31 am",
+    "Microsoft says the high load comes from servers being unexpectedly unavailable, not from extra traffic."
+   ],
+   [
+    "3:50 am",
+    "A configuration change is tested for servers failing automated health checks. All affected servers are being restarted."
+   ],
+   [
+    "4:19 am",
+    "No recent change found that matches the start of the problem. The failed health checks may come from a component that processes server health."
+   ],
+   [
+    "about 5:00 am",
+    "A different health-check method works, and some servers return to service."
+   ],
+   [
+    "5:40 am",
+    "Microsoft considers reverting a small number of recent configuration updates to speed up recovery."
+   ],
+   [
+    "6:09 am",
+    "Microsoft says its actions so far have not given the expected relief. A core process on the affected servers is being overwhelmed."
+   ],
+   [
+    "7:04 am",
+    "Some servers are back and stable. Limited recovery seen. Microsoft warns recovery will be gradual."
+   ],
+   [
+    "about 8:30 am",
+    "Setback: servers that were brought back can stop responding again once they receive traffic."
+   ],
+   [
+    "9:01 am",
+    "Microsoft revises its list of affected services and features."
+   ],
+   [
+    "about 10:00 am",
+    "Positive results from restarting servers in isolated groups. Microsoft is monitoring stability."
+   ]
+  ],
+  "timelineNote": "Times are Malaysia time (UTC+8), Friday 13 November 2026, taken from the posting times of Microsoft 365 Status updates.",
+  "todo": [
+   "Don't reinstall Office, reset your password or clear your Outlook profile. The problem is on Microsoft's side.",
+   "If the Outlook app won't connect, try Outlook on the web or your phone. If Teams is down, call or use another channel your company allows.",
+   "Emails you send may be delayed, not lost. Avoid sending the same email many times.",
+   "For anything urgent (payments, approvals), confirm by phone that the other side received it.",
+   "Check the official status page below before reporting it to IT."
+  ],
+  "links": [
+   [
+    "Microsoft 365 service status (official)",
+    "https://status.cloud.microsoft"
+   ],
+   [
+    "Microsoft 365 Status on X (official updates)",
+    "https://x.com/MSFT365Status"
+   ]
+  ]
+ }
 }
