@@ -10,6 +10,12 @@
  },
  "changes": [
   {
+   "date": "2026-11-16",
+   "items": [
+    "Microsoft 365 outage of 13 Nov 2026 resolved: service restored for all remaining customers on Sat 14 Nov at 2:09 pm Malaysia time, after about 36 hours; Microsoft says it came from an issue during an earlier network capacity upgrade (Microsoft 365 Status updates; status.cloud.microsoft)."
+   ]
+  },
+  {
    "date": "2026-11-13",
    "items": [
     "Notice added at the top of the site: Microsoft 365 outage of 13 Nov 2026 (incidents EX1550543 and MO1550821) with timeline, affected services and current status, plus a new common question 'Is Microsoft 365 down? How do I check?' (Microsoft 365 Status updates; status.cloud.microsoft).",
@@ -9904,12 +9910,12 @@
  ],
  "notice": {
   "active": true,
-  "state": "ongoing",
-  "hideAfter": "",
-  "title": "Microsoft 365 outage: still in progress",
-  "asOf": "Sat 14 Nov 2026, 12:23 pm Malaysia time",
-  "status": "Not declared resolved yet, but mostly recovered. In its latest statement (Sat 12:40 am Malaysia time, repeated by Microsoft 365 Status at 2:05 am), Microsoft says it is seeing broad recovery and stability across its services, has addressed the underlying issue, and continues to restore service to remaining customers and regions. Microsoft has given no time for full recovery. No newer update from Microsoft.",
-  "means": "Outlook email, Teams, SharePoint and other Microsoft 365 services should be working again for most users. A few users and regions may still have problems opening, signing in or syncing until Microsoft finishes restoring service. Delayed emails may still arrive late; Microsoft extended the email timeout to 48 hours to help preserve them.",
+  "state": "resolved",
+  "hideAfter": "2026-11-19T04:23:00+08:00",
+  "title": "Microsoft 365 outage: resolved",
+  "asOf": "Mon 16 Nov 2026, 4:23 am Malaysia time",
+  "status": "Resolved. Microsoft 365 Status confirmed on Sat 14 Nov 2026 at 2:09 pm Malaysia time that it had completed its efforts to address the underlying issue and restored service to the remaining impacted customers and regions. The outage lasted about 36 hours, from about 2:00 am Friday. Microsoft says the incident was introduced by an issue during an earlier network capacity upgrade and was not related to cyber activity or to AI / agents.",
+  "means": "Outlook email, Teams, SharePoint and other Microsoft 365 services should work normally again. A few delayed emails may still be arriving. If Outlook or Teams still does not connect, close and restart the app.",
   "affected": [
    "Outlook / Exchange Online (email and calendar)",
    "Teams",
@@ -9918,7 +9924,7 @@
    "Planner and To Do",
    "IT tools: Defender, Purview, Intune"
   ],
-  "cause": "Microsoft says this was a technical issue, not related to cyber activity or to AI / agents. It says the incident was introduced by an issue during an earlier network capacity upgrade and surfaced following a recent network change. Earlier updates said a large number of servers became unavailable after failing automated health checks, which overloaded the remaining servers. Microsoft says it has addressed the underlying issue and will publish a full post-incident report once its review is complete.",
+  "cause": "Microsoft says this was a technical issue, not related to cyber activity or to AI / agents. It says the incident was introduced by an issue during an earlier network capacity upgrade and surfaced following a recent network change. Earlier updates said a large number of servers became unavailable after failing automated health checks, which overloaded the remaining servers. Microsoft says it has addressed the underlying issue. It has not yet published its full post-incident report.",
   "timeline": [
    [
     "about 2:00 am",
@@ -10015,15 +10021,26 @@
    [
     "Sat 12:40 am",
     "Microsoft apologises for the disruption. It reports broad recovery and stability across its services, and says the issue was technical and came from an earlier network capacity upgrade. It says the underlying issue is addressed and it continues to restore service to remaining customers and regions. Microsoft 365 Status repeats the statement at 2:05 am."
+   ],
+   [
+    "Sat 5:55 am",
+    "Microsoft continues to see sustained service recovery across the previously affected environments. It says it is monitoring for an extended period to make sure no further action is needed."
+   ],
+   [
+    "Sat about 12:17 pm",
+    "Microsoft's service health record for the incidents is updated to 'service restored'. Microsoft says it will provide a preliminary post-incident report within two business days."
+   ],
+   [
+    "Sat 2:09 pm",
+    "Resolved: Microsoft 365 Status says it has completed its efforts to address the underlying issue and restored service to the remaining impacted customers and regions."
    ]
   ],
   "timelineNote": "Times are Malaysia time (UTC+8), taken from the posting times of Microsoft and Microsoft 365 Status updates. Entries without a day are Friday 13 November 2026; 'Sat' is Saturday 14 November 2026.",
   "todo": [
-   "Don't reinstall Office, reset your password or clear your Outlook profile. The problem is on Microsoft's side.",
-   "If the Outlook app won't connect, try Outlook on the web or your phone. If Teams is down, call or use another channel your company allows.",
-   "Emails you send may be delayed, not lost. Avoid sending the same email many times.",
-   "For anything urgent (payments, approvals), confirm by phone that the other side received it.",
-   "Check the official status page below before reporting it to IT."
+   "If Outlook or Teams still will not connect, close the app fully and open it again (or restart your computer).",
+   "Check your Sent Items and resend only the emails that did not arrive. Do not resend everything.",
+   "Re-run any Power Automate flow or scheduled refresh that failed during the outage.",
+   "Be careful with phishing emails that use the outage as a reason to ask you to sign in again or 'verify' your account."
   ],
   "links": [
    [
@@ -10037,6 +10054,10 @@
    [
     "Microsoft's statement on X (apology and cause)",
     "https://x.com/Microsoft/status/2121282013600907325"
+   ],
+   [
+    "Microsoft 365 Status on X: service restored",
+    "https://x.com/MSFT365Status/status/2121485746334777593"
    ]
   ]
  }
