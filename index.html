@@ -222,6 +222,11 @@ tbody tr:nth-child(even) td{background:#FBF9FF}
 .drawer h2{font-size:24px;color:color-mix(in oklab,var(--c) 75%,black)}
 .d-what{margin:0;font-size:15px}
 .d-sec{display:grid;gap:6px}
+.d-meta{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;font-size:13px;color:var(--muted)}
+.d-meta code{font-size:12px;background:var(--accent-soft);color:var(--ink);padding:1px 6px;border-radius:6px}
+.d-link{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:4px 12px;font:inherit;font-size:13px;color:var(--accent);cursor:pointer}
+.d-link:hover{background:var(--accent-soft)}
+.d-src{font-size:13px;color:var(--muted)} .d-src a{color:var(--accent)}
 .d-k{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .d-where{font-family:var(--f-mono);font-size:13px;background:color-mix(in oklab,var(--c) 10%,white);border:1px dashed color-mix(in oklab,var(--c) 40%,white);border-radius:10px;padding:9px 11px;overflow-wrap:anywhere}
 .d-steps{margin:0;padding:0;list-style:none;counter-reset:st;display:grid;gap:8px}
@@ -1164,7 +1169,7 @@ body{background-image:radial-gradient(var(--dot) 1px, transparent 1.2px),url("da
 <!--SITE-INDEX:END--></div>
 <div class="wrap"><footer>
   <p class="copy">© <span id="yr">2026</span> <b>KieraKama</b>. All rights reserved. Personal learning notes, shared for reference.</p>
-  <p>Microsoft, Microsoft 365, Excel, Word, PowerPoint, Outlook, Teams, SharePoint, OneDrive, OneNote, Power BI, Power Automate, Power Apps and Copilot are trademarks of the Microsoft group of companies. This site is not affiliated with or endorsed by Microsoft. Features, versions and prices change; confirm with your IT before buying or relying on a feature. "Tried it" ticks are saved only in your own browser.</p>
+  <p>Microsoft, Microsoft 365, Excel, Word, PowerPoint, Outlook, Teams, SharePoint, OneDrive, OneNote, Power BI, Power Automate, Power Apps and Copilot are trademarks of the Microsoft group of companies. This is an independent learning site. It is not affiliated with, endorsed by or sponsored by Microsoft Corporation. Features, versions and prices change; confirm with your IT before buying or relying on a feature. "Tried it" ticks are saved only in your own browser.</p>
 </footer></div>
 
 <script>
@@ -1298,6 +1303,7 @@ function openDrawer(idx){
     ${it.watch?`<div class="d-watch"><span class="d-k">Watch out</span>${esc(it.watch)}</div>`:""}
     <div class="d-sec"><div class="d-k">F&amp;A use</div><div class="use">${esc(it.use)}</div></div>
     <div class="d-sec"><div class="d-k">Version</div><div class="ver">${esc(it.version)}</div>${verNote(it)}</div>
+    <div class="d-sec"><div class="d-k">Checked</div><div class="d-meta"><span>Last updated ${it.updated?esc(fmtDate(it.updated)):"not recorded"}</span>${it.id?`<span>Card ID <code>${esc(it.id)}</code></span><button type="button" class="d-link" data-cardlink="${esc(it.id)}">Copy link to this card</button>`:""}</div>${srcHtml(it)}</div>
     ${notesHtml(it)?`<div class="d-sec notes">${notesHtml(it)}</div>`:""}
     <div class="d-sec">${ytLink(appById[it.app].name+" "+it.name.split(" (")[0]+" tutorial")}</div>
     <label class="tried big"><input type="checkbox" data-tried="${esc(it.name)}" ${S.tried.has(it.name)?"checked":""}> I've tried this</label>`;
@@ -1305,7 +1311,18 @@ function openDrawer(idx){
   document.body.classList.add("lock");
   $("d-close").focus();
 }
+function srcHtml(it){
+  if (Array.isArray(it.src) && it.src.length) return `<div class="d-src">Official source: ${it.src.map(x=>`<a href="${esc(x[1])}" target="_blank" rel="noopener">${esc(x[0])}</a>`).join(" · ")}</div>`;
+  return `<div class="d-src">Checked against official Microsoft pages. See <a href="#updates">Main sources checked</a>.</div>`;
+}
+function copyCardLink(btn){
+  const url = location.origin + location.pathname + "#card-" + btn.dataset.cardlink;
+  const done = ok => { if (ok){ btn.textContent = "Link copied ✓"; return; } const ta = document.createElement("textarea"); ta.value = url; ta.className = "copybox"; ta.readOnly = true; btn.after(ta); ta.select(); };
+  try{ navigator.clipboard.writeText(url).then(()=>done(true), ()=>done(false)); }catch(e){ done(false); }
+}
+document.addEventListener("click", e=>{ const b = e.target.closest("[data-cardlink]"); if (b) copyCardLink(b); });
 function closeDrawer(){
+  if (/^#card-/i.test(location.hash)) history.replaceState(null, "", "#notes");
   $("dbg").hidden = true; $("drawer").hidden = true;
   document.body.classList.remove("lock");
   if (lastFocus) lastFocus.focus();
@@ -1405,12 +1422,15 @@ function loadComments(){
 const VIEWS = ["notes","basics","faq","handbook","formulas","files","tools","sharing","it","learn","updates"];
 function showView(v){
   if (/^handbook-/.test(v)){ hbWant = v.slice(9).toLowerCase(); v = "handbook"; }
+  let cardWant = "";
+  if (/^card-/i.test(v)){ cardWant = decodeURIComponent(v.slice(5)).toUpperCase(); v = "notes"; }
   if (!VIEWS.includes(v)) v = "notes";
   if ($("drawer") && !$("drawer").hidden){ $("dbg").hidden = true; $("drawer").hidden = true; document.body.classList.remove("lock"); }
   VIEWS.forEach(x=>{ $("v-"+x).hidden = x!==v; });
   document.querySelectorAll(".vtab").forEach(b=>b.setAttribute("aria-selected", b.dataset.view===v));
   const cur = document.querySelector(`.vtab[data-view="${v}"]`); if (cur && $("vcur")) $("vcur").textContent = cur.textContent;
   $("views").classList.remove("open"); $("vmenu").setAttribute("aria-expanded","false");
+  if (cardWant && items){ const ci = items.findIndex(x=>x.id===cardWant); if (ci >= 0) setTimeout(()=>openDrawer(ci), 0); }
   if (v==="faq") initFAQ();
   if (v==="updates") loadComments();
   if (v==="basics") initBasics();
@@ -1677,6 +1697,7 @@ function flyToNote(done){
 
 // ---------- Greeting ----------
 function hello(){
+  if (/^#card-/i.test(location.hash)) return;
   let off = false, seen = "";
   try{ off = localStorage.getItem("m365-hello-off") === "1"; seen = localStorage.getItem("m365-hello-day") || ""; }catch(e){}
   const today = new Date().toDateString();

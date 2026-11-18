@@ -504,6 +504,7 @@
  },
  "features": [
   {
+   "id": "FEAT-WORD-001",
    "app": "w",
    "name": "Styles + Navigation pane",
    "level": "B",
@@ -534,9 +535,11 @@
      "Normal text…",
      "2. Steps  (Heading 1)"
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-WORD-002",
    "app": "w",
    "name": "Auto table of contents, captions & cross-references",
    "level": "I",
@@ -568,9 +571,11 @@
      "Table 1: Accrual list ...... 4",
      "(see Table 1 updates itself)"
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-WORD-003",
    "app": "w",
    "name": "Mail Merge from Excel",
    "level": "I",
@@ -606,9 +611,11 @@
       "3,200.00"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-WORD-004",
    "app": "w",
    "name": "Templates (.dotx) & Quick Parts",
    "level": "B",
@@ -639,9 +646,11 @@
      "Dear Sir/Madam,",
      "[Quick Part: signature block]"
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-WORD-005",
    "app": "w",
    "name": "Track Changes & Compare Documents",
    "level": "B",
@@ -678,9 +687,11 @@
       "Payment within 30 → 45 days (tracked)"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-WORD-006",
    "app": "w",
    "name": "Fill-in forms (content controls + Restrict Editing)",
    "level": "I",
@@ -711,9 +722,11 @@
      "Amount: [ type here ]",
      "☐ Receipt attached"
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-WORD-007",
    "app": "w",
    "name": "Sections, landscape pages & different headers",
    "level": "I",
@@ -757,9 +770,11 @@
       ]
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-WORD-008",
    "app": "w",
    "name": "Paste Link from Excel",
    "level": "I",
@@ -780,9 +795,11 @@
    "plain": "Paste numbers from Excel that stay connected, so the Word report updates when the Excel file changes.",
    "example": "Excel shows Revenue 1,250. You change it to 1,300; in Word, right-click › Update Link and it shows 1,300.",
    "watch": "If you rename or move the Excel file, the link breaks. Keep both files in the same folder.",
-   "minv": "all"
+   "minv": "all",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-WORD-009",
    "app": "w",
    "name": "Open & edit PDF in Word",
    "level": "B",
@@ -802,9 +819,11 @@
    "plain": "Word can turn a PDF into an editable Word document, so you don't retype it.",
    "example": "Open the bank's PDF letter in Word, copy the paragraph you need, and paste it into your reply.",
    "watch": "Tables and columns may shift. Check the numbers against the original PDF.",
-   "minv": "all"
+   "minv": "all",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-WORD-010",
    "app": "w",
    "name": "Dictate & Transcribe",
    "level": "B",
@@ -824,9 +843,11 @@
    "plain": "Speak and Word types for you (Dictate), or upload a recording and Word turns it into text (Transcribe).",
    "example": "Say 'The variance is due to higher freight cost full stop'. Word types: 'The variance is due to higher freight cost.'",
    "watch": "Numbers and names often come out wrong. Always proofread.",
-   "minv": "365"
+   "minv": "365",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-WORD-011",
    "app": "w",
    "name": "Editor & Translate",
    "level": "B",
@@ -847,9 +868,11 @@
    "plain": "Editor checks spelling, grammar and clarity. Translate turns text into another language inside Word.",
    "example": "Select a paragraph › Translate › Japanese. The translation appears on the right, ready to insert.",
    "watch": "Machine translation can be wrong in tone or meaning. Use it to understand; get a person to check formal letters.",
-   "minv": "2019"
+   "minv": "2019",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-WORD-012",
    "app": "w",
    "name": "Sensitivity labels",
    "level": "B",
@@ -877,9 +900,11 @@
      "Watermark: Confidential",
      "Only staff can open"
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-WORD-013",
    "app": "w",
    "name": "Word table formulas & fields",
    "level": "A",
@@ -928,9 +953,11 @@
     "hl": [
      3
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-WORD-014",
    "app": "w",
    "name": "Word macros (VBA)",
    "level": "C",
@@ -951,9 +978,11 @@
    "plain": "A macro is a recorded set of steps you can replay with one click, or code that repeats a task many times.",
    "example": "Record: Save As PDF. Then a short loop runs it on 50 letters in a folder, saving 50 PDFs.",
    "watch": "Files with macros from email are blocked by default. Keep macros in your own trusted files.",
-   "minv": "all"
+   "minv": "all",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-001",
    "app": "x",
    "name": "Excel Tables (Ctrl+T)",
    "level": "B",
@@ -1006,9 +1035,11 @@
       "3,100"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-002",
    "app": "x",
    "name": "Custom number formats",
    "level": "B",
@@ -1058,9 +1089,11 @@
       "1,250"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-003",
    "app": "x",
    "name": "Paste Special tricks",
    "level": "B",
@@ -1104,9 +1137,11 @@
       "-1,200"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-004",
    "app": "x",
    "name": "Go To Special: fill the blanks",
    "level": "B",
@@ -1171,9 +1206,11 @@
       "400"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-005",
    "app": "x",
    "name": "Text to Columns & Flash Fill",
    "level": "B",
@@ -1216,9 +1253,11 @@
       "400200 | Utilities"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-006",
    "app": "x",
    "name": "Data validation drop-downs",
    "level": "B",
@@ -1256,9 +1295,11 @@
       "Open / Pending HOD / Closed"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-007",
    "app": "x",
    "name": "Conditional formatting",
    "level": "B",
@@ -1299,9 +1340,11 @@
       "121 (red)"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-16"
   },
   {
+   "id": "FEAT-EXCEL-008",
    "app": "x",
    "name": "SUMIFS / COUNTIFS / AVERAGEIFS",
    "level": "B",
@@ -1354,9 +1397,11 @@
     "hl": [
      3
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-009",
    "app": "x",
    "name": "XLOOKUP",
    "level": "I",
@@ -1396,9 +1441,11 @@
       "Not found"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-010",
    "app": "x",
    "name": "INDEX + MATCH",
    "level": "I",
@@ -1435,9 +1482,11 @@
       "Delta Freight"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-011",
    "app": "x",
    "name": "Fiscal-year date formulas",
    "level": "I",
@@ -1483,9 +1532,11 @@
       "FY2027"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-012",
    "app": "x",
    "name": "ROUND & precision control",
    "level": "B",
@@ -1538,9 +1589,11 @@
     "hl": [
      3
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-013",
    "app": "x",
    "name": "IFERROR, IFS, SWITCH",
    "level": "I",
@@ -1581,9 +1634,11 @@
       ">90"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-014",
    "app": "x",
    "name": "Dynamic arrays: FILTER, SORT, UNIQUE, SEQUENCE",
    "level": "I",
@@ -1638,9 +1693,11 @@
       "Citra"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-015",
    "app": "x",
    "name": "LET",
    "level": "A",
@@ -1672,9 +1729,11 @@
       "28%"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-016",
    "app": "x",
    "name": "LAMBDA (make your own function)",
    "level": "A",
@@ -1695,9 +1754,11 @@
    "plain": "Create your own Excel function once and reuse it everywhere by name.",
    "example": "Define FYPERIOD once. Then =FYPERIOD(A2) gives 2 for a May date, in any cell of that workbook.",
    "watch": "It exists only in that workbook. Copy the name to other files that need it.",
-   "minv": "2024"
+   "minv": "2024",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-017",
    "app": "x",
    "name": "GROUPBY & PIVOTBY",
    "level": "I",
@@ -1741,9 +1802,11 @@
     "hl": [
      2
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-018",
    "app": "x",
    "name": "VSTACK, HSTACK, TEXTSPLIT, TAKE, DROP, CHOOSECOLS",
    "level": "A",
@@ -1788,9 +1851,11 @@
       "900"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-019",
    "app": "x",
    "name": "REGEX functions",
    "level": "A",
@@ -1827,9 +1892,11 @@
       "INV20456"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-020",
    "app": "x",
    "name": "PivotTable",
    "level": "B",
@@ -1890,9 +1957,11 @@
       "1,000"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-021",
    "app": "x",
    "name": "Auto-refresh PivotTables",
    "level": "B",
@@ -1934,9 +2003,11 @@
       "118 (no Refresh click)"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-022",
    "app": "x",
    "name": "Pivot 'Show Values As' & calculated fields",
    "level": "I",
@@ -1980,9 +2051,11 @@
       "-10"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-023",
    "app": "x",
    "name": "Slicers & Timeline",
    "level": "B",
@@ -2021,9 +2094,11 @@
       ]
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-024",
    "app": "x",
    "name": "GETPIVOTDATA",
    "level": "I",
@@ -2043,9 +2118,11 @@
    "plain": "A formula that reads one number from a pivot table, even if the pivot layout changes.",
    "example": "=GETPIVOTDATA(\"Amount\",$A$3,\"Account\",\"Freight\") returns freight's total.",
    "watch": "If the item isn't in the pivot (e.g. filtered out), it returns #REF!. Wrap with IFERROR.",
-   "minv": "all"
+   "minv": "all",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-025",
    "app": "x",
    "name": "Data Model & Power Pivot (DAX in Excel)",
    "level": "A",
@@ -2066,9 +2143,11 @@
    "plain": "Connect several tables inside Excel, like a mini database, and build pivots across them without VLOOKUP.",
    "example": "GL table + Account master linked by account number. A pivot shows amounts by account group straight away.",
    "watch": "Relationships need one unique row per key in the master table. Duplicates cause errors.",
-   "minv": "all"
+   "minv": "all",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-026",
    "app": "x",
    "name": "Charts: waterfall, combo & sparklines",
    "level": "I",
@@ -2114,9 +2193,11 @@
      "-Freight",
      "Actual"
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-027",
    "app": "x",
    "name": "Linked picture (Camera)",
    "level": "I",
@@ -2136,9 +2217,11 @@
    "plain": "A live picture of cells that you can place anywhere, like on a dashboard.",
    "example": "A KPI box on Sheet3 appears as a picture on the Dashboard sheet and updates when Sheet3 changes.",
    "watch": "It shows the cells' formatting too. Tidy the source range first.",
-   "minv": "all"
+   "minv": "all",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-028",
    "app": "x",
    "name": "What-If: Goal Seek, Scenario Manager, Data Table",
    "level": "I",
@@ -2175,9 +2258,11 @@
       "880"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-029",
    "app": "x",
    "name": "Forecast Sheet & FORECAST.ETS",
    "level": "I",
@@ -2227,9 +2312,11 @@
      "Jul*",
      "Aug*"
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-030",
    "app": "x",
    "name": "Solver",
    "level": "A",
@@ -2250,9 +2337,11 @@
    "plain": "Finds the best answer when several inputs can change and there are limits.",
    "example": "Split a cost across 3 plants to minimise total cost, with each plant at most 40%.",
    "watch": "Results depend on correct constraints. Check the answer makes business sense.",
-   "minv": "all"
+   "minv": "all",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-031",
    "app": "x",
    "name": "Formula auditing & Evaluate Formula",
    "level": "B",
@@ -2282,9 +2371,11 @@
      "C7 has typed 12,500 instead of a formula",
      "Fix C7"
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-032",
    "app": "x",
    "name": "Protect sheet & Allow Edit Ranges",
    "level": "B",
@@ -2320,9 +2411,11 @@
       "=B2*1.1 (locked)"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-033",
    "app": "x",
    "name": "Co-authoring, Version History & Show Changes",
    "level": "B",
@@ -2359,9 +2452,11 @@
       0
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-034",
    "app": "x",
    "name": "Sheet View",
    "level": "I",
@@ -2381,9 +2476,11 @@
    "plain": "Your own sort and filter while sharing a file, without disturbing other people's view.",
    "example": "You filter Company A; your colleague still sees all companies.",
    "watch": "Changes to values still affect everyone. Only sort and filter are personal.",
-   "minv": "365"
+   "minv": "365",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-035",
    "app": "x",
    "name": "Checkboxes in cells",
    "level": "B",
@@ -2431,9 +2528,11 @@
     "hl": [
      3
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-036",
    "app": "x",
    "name": "Data types: Currencies & Stocks",
    "level": "I",
@@ -2467,9 +2566,11 @@
       "35.6 (example)"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-037",
    "app": "x",
    "name": "Analyze Data",
    "level": "B",
@@ -2494,9 +2595,11 @@
     "k": "chat",
     "q": "Top 5 vendors by amount",
     "a": "Bar chart ready to insert: ABC, TNB, XYZ, Delta, Global."
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-038",
    "app": "x",
    "name": "Check Performance & Workbook Statistics",
    "level": "B",
@@ -2515,9 +2618,11 @@
    "plain": "Finds hidden waste that makes a file slow, like formatting on millions of empty cells.",
    "example": "A 25 MB file drops to 6 MB after Optimize all.",
    "watch": "Save a copy first. Large changes are hard to undo.",
-   "minv": "365"
+   "minv": "365",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-039",
    "app": "x",
    "name": "Spreadsheet Compare / Inquire",
    "level": "I",
@@ -2537,9 +2642,11 @@
    "plain": "Compares two Excel files and shows every changed number and formula.",
    "example": "v1 vs v2 shows that cell F20 changed from =SUM(F5:F19) to a typed 12,500.",
    "watch": "Not in every Office edition. If you can't find it, your licence doesn't include it.",
-   "minv": "all"
+   "minv": "all",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-040",
    "app": "x",
    "name": "Check Compatibility & Inspect Document",
    "level": "B",
@@ -2575,9 +2682,11 @@
       0
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-041",
    "app": "x",
    "name": "Alt key tips",
    "level": "B",
@@ -2597,9 +2706,11 @@
    "plain": "Use the keyboard to reach any ribbon button, faster than the mouse.",
    "example": "Alt, H, O, I autofits a column. Alt, A, T turns filters on or off.",
    "watch": "Press and release Alt first; don't hold it.",
-   "minv": "all"
+   "minv": "all",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-042",
    "app": "x",
    "name": "VBA macros",
    "level": "C",
@@ -2629,9 +2740,11 @@
      "Save each as PDF",
      "Done in one click"
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-043",
    "app": "x",
    "name": "Office Scripts",
    "level": "C",
@@ -2651,9 +2764,11 @@
    "plain": "Like macros, but for Excel online. Can run automatically on a schedule with Power Automate.",
    "example": "Every morning a flow runs your script: format the export, add totals, email it.",
    "watch": "Can't control other apps (like SAP) the way VBA can.",
-   "minv": "365"
+   "minv": "365",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-EXCEL-044",
    "app": "x",
    "name": "Python in Excel",
    "level": "C",
@@ -2686,9 +2801,11 @@
       "count 500 · mean 2,140 · max 98,000"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PQ-001",
    "app": "q",
    "name": "Get Data from Folder (combine files)",
    "level": "I",
@@ -2718,9 +2835,11 @@
      "One table: 3,000 rows",
      "Add Jul.xlsx → Refresh → 4,000 rows"
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PQ-002",
    "app": "q",
    "name": "Unpivot columns",
    "level": "I",
@@ -2769,9 +2888,11 @@
       "135"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PQ-003",
    "app": "q",
    "name": "Merge queries (joins), incl. anti join",
    "level": "I",
@@ -2813,9 +2934,11 @@
     "out": [
      "Left Anti result: 45 (not in books)"
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PQ-004",
    "app": "q",
    "name": "Append queries",
    "level": "B",
@@ -2859,9 +2982,11 @@
       "900"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PQ-005",
    "app": "q",
    "name": "Change type with Locale",
    "level": "B",
@@ -2898,9 +3023,11 @@
       "3 April 2026 (Malaysia locale)"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PQ-006",
    "app": "q",
    "name": "Clean basics: Fill Down, Split, Trim, Replace",
    "level": "B",
@@ -2938,9 +3065,11 @@
       "ABC Sdn Bhd"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PQ-007",
    "app": "q",
    "name": "Group By",
    "level": "I",
@@ -2991,9 +3120,11 @@
       "200"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PQ-008",
    "app": "q",
    "name": "Parameters (file path, period)",
    "level": "A",
@@ -3013,9 +3144,11 @@
    "plain": "A single setting reused by all your queries, so you change it in one place.",
    "example": "FolderPath = 'C:\\Data\\2026'. Change it to the SharePoint folder and every query follows.",
    "watch": "Avoid personal paths like C:\\Users\\yourname. They break on colleagues' PCs.",
-   "minv": "2016"
+   "minv": "2016",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PQ-009",
    "app": "q",
    "name": "Fuzzy merge",
    "level": "A",
@@ -3051,9 +3184,11 @@
       "ABC SDN BHD (0.85 match)"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PQ-010",
    "app": "q",
    "name": "Column quality & profile",
    "level": "B",
@@ -3095,9 +3230,11 @@
       "0%"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PQ-011",
    "app": "q",
    "name": "Custom column & Advanced Editor (M code)",
    "level": "C",
@@ -3134,9 +3271,11 @@
       "Debit"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PQ-012",
    "app": "q",
    "name": "Query Dependencies & refresh settings",
    "level": "B",
@@ -3156,9 +3295,11 @@
    "plain": "A map of how your queries connect, plus settings for when data refreshes.",
    "example": "The diagram shows Folder → Clean → Merge with Master → Final Report.",
    "watch": "Refresh on open can make big files slow to open. Use it only where needed.",
-   "minv": "2016"
+   "minv": "2016",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PPT-001",
    "app": "pp",
    "name": "Slide Master & layouts",
    "level": "I",
@@ -3187,9 +3328,11 @@
      "Applies to all 40 slides",
      "Footer: Confidential"
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PPT-002",
    "app": "pp",
    "name": "Paste-link Excel charts & tables",
    "level": "I",
@@ -3219,9 +3362,11 @@
      "Excel changes to 165",
      "Update Links → slide shows 165"
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PPT-003",
    "app": "pp",
    "name": "Designer (Design Ideas)",
    "level": "B",
@@ -3257,9 +3402,11 @@
       "[A] [B] [C] [D] icon boxes"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PPT-004",
    "app": "pp",
    "name": "Morph transition",
    "level": "B",
@@ -3279,9 +3426,11 @@
    "plain": "Smooth animation that moves and resizes objects between two slides.",
    "example": "Slide 1: small group chart. Slide 2: the same chart large. Morph zooms in smoothly.",
    "watch": "Objects must be the same object (duplicated slide), or Morph just fades.",
-   "minv": "2019"
+   "minv": "2019",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PPT-005",
    "app": "pp",
    "name": "Zoom (summary / section / slide)",
    "level": "I",
@@ -3321,9 +3470,11 @@
       ]
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PPT-006",
    "app": "pp",
    "name": "Presenter view, Rehearse & Speaker Coach",
    "level": "B",
@@ -3363,9 +3514,11 @@
       ]
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PPT-007",
    "app": "pp",
    "name": "Record slide show / Export to video",
    "level": "B",
@@ -3385,9 +3538,11 @@
    "plain": "Record yourself talking through slides and save it as a video anyone can play.",
    "example": "A 6-minute MP4 on 'How to read the AR report' for new staff.",
    "watch": "Large videos are hard to email. Share via OneDrive or Teams.",
-   "minv": "2016"
+   "minv": "2016",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PPT-008",
    "app": "pp",
    "name": "Live subtitles & translation",
    "level": "B",
@@ -3407,9 +3562,11 @@
    "plain": "PowerPoint shows live captions of what you say, and can translate them.",
    "example": "You speak English; the screen shows Japanese subtitles.",
    "watch": "Accuracy drops with accents and jargon. Speak clearly and slowly.",
-   "minv": "365"
+   "minv": "365",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PPT-009",
    "app": "pp",
    "name": "Reuse slides & sections",
    "level": "B",
@@ -3429,9 +3586,11 @@
    "plain": "Insert slides from other decks without opening them, and group slides into named sections.",
    "example": "Pull slides 3–7 from Oct and Nov decks into the quarterly deck.",
    "watch": "Without 'Keep source formatting', slides take the new deck's design.",
-   "minv": "all"
+   "minv": "all",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PPT-010",
    "app": "pp",
    "name": "Selection pane, align & distribute",
    "level": "B",
@@ -3451,9 +3610,11 @@
    "plain": "See every object on the slide in a list, and line them up perfectly.",
    "example": "Four boxes at slightly different heights › Align Middle › all exactly in line.",
    "watch": "Hidden objects in the Selection pane still exist. Delete what you don't need.",
-   "minv": "all"
+   "minv": "all",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-OUTLOOK-001",
    "app": "o",
    "name": "Rules",
    "level": "B",
@@ -3482,9 +3643,11 @@
      "Rule matches",
      "Moved to folder: Bank"
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-OUTLOOK-002",
    "app": "o",
    "name": "Quick Steps",
    "level": "B",
@@ -3513,9 +3676,11 @@
      "Mark as read",
      "Move to AP folder"
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-OUTLOOK-003",
    "app": "o",
    "name": "My Templates / Quick Parts",
    "level": "B",
@@ -3544,9 +3709,11 @@
      "Thank you for your email.",
      "Payment is scheduled on 15 Nov 2026."
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-OUTLOOK-004",
    "app": "o",
    "name": "Schedule send / delay delivery",
    "level": "B",
@@ -3575,9 +3742,11 @@
      "(written Sun 10 pm)",
      "Delivers Mon 8:00 am"
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-OUTLOOK-005",
    "app": "o",
    "name": "Categories, flags & search folders",
    "level": "B",
@@ -3597,9 +3766,11 @@
    "plain": "Colour labels, follow-up flags, and saved searches that act like folders.",
    "example": "Search folder 'From HOD, unread' always shows those emails, wherever they're filed.",
    "watch": "Categories are personal. Others in a shared mailbox may not see yours.",
-   "minv": "all"
+   "minv": "all",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-OUTLOOK-006",
    "app": "o",
    "name": "Shared mailbox & delegate access",
    "level": "I",
@@ -3635,9 +3806,11 @@
       1
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-OUTLOOK-007",
    "app": "o",
    "name": "Scheduling Assistant, polls & time zones",
    "level": "B",
@@ -3681,9 +3854,11 @@
       "All free 15:00"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-OUTLOOK-008",
    "app": "o",
    "name": "Classic vs new Outlook",
    "level": "B",
@@ -3703,9 +3878,11 @@
    "plain": "Two versions of Outlook. 'New' is simpler but lacks some older features.",
    "example": "A VBA macro that works in classic Outlook doesn't run in new Outlook.",
    "watch": "Check before building rules or add-ins that only work in classic.",
-   "minv": "365"
+   "minv": "365",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-OUTLOOK-009",
    "app": "o",
    "name": "Recall message",
    "level": "B",
@@ -3725,9 +3902,11 @@
    "plain": "Tries to pull back an email you already sent.",
    "example": "Sent the wrong file to a colleague › Recall › it disappears if they haven't opened it.",
    "watch": "Doesn't work for external email addresses. Check before you hit send.",
-   "minv": "all"
+   "minv": "all",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PBI-001",
    "app": "b",
    "name": "Star schema & relationships",
    "level": "I",
@@ -3767,9 +3946,11 @@
       ]
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PBI-002",
    "app": "b",
    "name": "Date table with fiscal year Apr–Mar",
    "level": "I",
@@ -3815,9 +3996,11 @@
       "11"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PBI-003",
    "app": "b",
    "name": "DAX measures & CALCULATE",
    "level": "A",
@@ -3865,9 +4048,11 @@
     "hl": [
      2
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PBI-004",
    "app": "b",
    "name": "Time intelligence",
    "level": "A",
@@ -3910,9 +4095,11 @@
       "-8%"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PBI-005",
    "app": "b",
    "name": "Visual calculations",
    "level": "I",
@@ -3957,9 +4144,11 @@
       "310"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PBI-006",
    "app": "b",
    "name": "Field parameters",
    "level": "I",
@@ -3998,9 +4187,11 @@
       ]
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PBI-007",
    "app": "b",
    "name": "Calculation groups",
    "level": "A",
@@ -4020,9 +4211,11 @@
    "plain": "Write Actual, LY, YTD logic once and apply it to every measure.",
    "example": "One switch turns Sales, GP and Cost into their YTD versions together.",
    "watch": "Measures with fixed formats may lose formatting. Set format strings in the group.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PBI-008",
    "app": "b",
    "name": "Bookmarks, buttons & page navigation",
    "level": "I",
@@ -4059,9 +4252,11 @@
       ]
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PBI-009",
    "app": "b",
    "name": "Drill-through & tooltip pages",
    "level": "I",
@@ -4091,9 +4286,11 @@
      "Page shows only Company 3000 invoices",
      "Back button returns"
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PBI-010",
    "app": "b",
    "name": "Conditional formatting",
    "level": "B",
@@ -4113,9 +4310,11 @@
    "plain": "Colour numbers automatically by rules, so good and bad stand out.",
    "example": "DSO 72 turns red (target 60); 45 turns green.",
    "watch": "Rules on percentages use decimals (0.6), not 60.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-16"
   },
   {
+   "id": "FEAT-PBI-011",
    "app": "b",
    "name": "Decomposition tree & Key influencers",
    "level": "B",
@@ -4144,9 +4343,11 @@
      "Material X (+9%)",
      "Vendor Y (+8%)"
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PBI-012",
    "app": "b",
    "name": "Q&A visual",
    "level": "B",
@@ -4171,9 +4372,11 @@
     "k": "chat",
     "q": "total sales by customer this year",
     "a": "Bar chart: Ali 15.7k, Bina 3.2k, Citra 0.9k"
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PBI-013",
    "app": "b",
    "name": "Row-level security (RLS)",
    "level": "A",
@@ -4217,9 +4420,11 @@
       ]
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PBI-014",
    "app": "b",
    "name": "Workspaces & Apps",
    "level": "B",
@@ -4259,9 +4464,11 @@
       ]
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PBI-015",
    "app": "b",
    "name": "Scheduled refresh & gateway",
    "level": "I",
@@ -4313,9 +4520,11 @@
       "07:00 refresh"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PBI-016",
    "app": "b",
    "name": "Subscriptions & data alerts",
    "level": "B",
@@ -4343,9 +4552,11 @@
      "[snapshot of DSO page]",
      "Open the report ›"
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PBI-017",
    "app": "b",
    "name": "Analyze in Excel & export data",
    "level": "B",
@@ -4365,9 +4576,11 @@
    "plain": "Open the Power BI data in Excel and build your own pivots on it.",
    "example": "Accountants pivot the same model by account and month in Excel.",
    "watch": "Export may be turned off by IT. Respect data sharing rules.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PBI-018",
    "app": "b",
    "name": "Paginated reports (Report Builder)",
    "level": "A",
@@ -4398,9 +4611,11 @@
      "Total due         15,700.00",
      "Page 1 of 1"
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PBI-019",
    "app": "b",
    "name": "Power BI in PowerPoint & Teams",
    "level": "B",
@@ -4420,9 +4635,11 @@
    "plain": "Show a live, clickable Power BI page inside a slide or a Teams tab.",
    "example": "In the meeting, filter the slide to Company B live while presenting.",
    "watch": "Viewers need a Power BI licence and access, or they see nothing.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PBI-020",
    "app": "b",
    "name": "Publish to web",
    "level": "B",
@@ -4441,9 +4658,11 @@
    "plain": "Creates a public link anyone on the internet can see, with no login.",
    "example": "Only for public data, like a published annual summary.",
    "watch": "Never use it for company data. Anyone with the link can see everything.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PBI-021",
    "app": "b",
    "name": "Performance analyzer & DAX query view",
    "level": "A",
@@ -4484,9 +4703,11 @@
       "600"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PBI-022",
    "app": "b",
    "name": "Dataflows",
    "level": "I",
@@ -4506,9 +4727,11 @@
    "plain": "Power Query that runs online, cleaned once and reused by many reports.",
    "example": "One 'Clean Sales' dataflow feeds 3 reports; fix a rule once, all 3 get it.",
    "watch": "Refresh order matters. The dataflow must refresh before the reports.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PBI-023",
    "app": "b",
    "name": "TMDL view & external tools",
    "level": "C",
@@ -4528,9 +4751,11 @@
    "plain": "See and edit the data model as text, or use expert tools for bulk changes.",
    "example": "Change the format of 40 measures to #,##0 in one edit.",
    "watch": "Text edits can break the model. Save a copy first.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PBI-024",
    "app": "b",
    "name": "Deployment pipelines",
    "level": "A",
@@ -4550,9 +4775,11 @@
    "plain": "Separate test and live versions of a report, and move changes forward safely.",
    "example": "Edit in Dev, check in Test, then Deploy to Production; users never see half-done work.",
    "watch": "Needs Premium Per User or Fabric capacity.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PBI-025",
    "app": "b",
    "name": "Microsoft Fabric (the data platform behind Power BI)",
    "level": "A",
@@ -4583,9 +4810,11 @@
      "OneLake",
      "Power BI report"
     ]
-   }
+   },
+   "updated": "2026-11-13"
   },
   {
+   "id": "FEAT-FLOW-001",
    "app": "a",
    "name": "Cloud flow or desktop flow?",
    "level": "B",
@@ -4616,9 +4845,11 @@
      "PC program → Desktop flow",
      "Both → Cloud starts Desktop"
     ]
-   }
+   },
+   "updated": "2026-11-05"
   },
   {
+   "id": "FEAT-FLOW-002",
    "app": "a",
    "name": "Save email attachments to SharePoint/OneDrive",
    "level": "B",
@@ -4647,9 +4878,11 @@
      "For each attachment",
      "Create file: Bank/2026-11-04 advice.pdf"
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-FLOW-003",
    "app": "a",
    "name": "Scheduled (recurrence) flows",
    "level": "B",
@@ -4676,9 +4909,11 @@
      "Recurrence: 25th, 9:00",
      "Send email to HODs: submit accruals"
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-FLOW-004",
    "app": "a",
    "name": "Approvals",
    "level": "I",
@@ -4706,9 +4941,11 @@
      "HOD gets Approve / Reject in Teams",
      "Approved → requester notified + logged"
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-FLOW-005",
    "app": "a",
    "name": "Forms → Excel/Lists → email",
    "level": "B",
@@ -4736,9 +4973,11 @@
      "Add row to tracker",
      "Email reviewer"
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-FLOW-006",
    "app": "a",
    "name": "Excel Online (Business) connector",
    "level": "I",
@@ -4767,9 +5006,11 @@
      "For each row",
      "Send reminder email"
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-FLOW-007",
    "app": "a",
    "name": "Conditions, Apply to each & expressions",
    "level": "A",
@@ -4789,9 +5030,11 @@
    "plain": "Logic for flows: if-then branches, loops, and small formulas like dates.",
    "example": "If Amount > 10,000 then get HOD approval, else get supervisor approval.",
    "watch": "Apply to each over many rows is slow. Filter first.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-FLOW-008",
    "app": "a",
    "name": "Teams posts & adaptive cards",
    "level": "I",
@@ -4816,9 +5059,11 @@
     "k": "chat",
     "q": "Flow bot · 9:00",
     "a": "3 bank files received today ✓"
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-FLOW-009",
    "app": "a",
    "name": "Run Office Script from a flow",
    "level": "C",
@@ -4838,9 +5083,11 @@
    "plain": "A flow runs your Excel script automatically, even with Excel closed.",
    "example": "Every morning: script formats the new export, then the flow emails it as an attachment.",
    "watch": "Scripts have time limits. Very large files may time out.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-FLOW-010",
    "app": "a",
    "name": "Error handling: Configure run after, Scope",
    "level": "A",
@@ -4870,9 +5117,11 @@
      "Time: 10:02",
      "Open run ›"
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-FLOW-011",
    "app": "a",
    "name": "Shared mailbox triggers",
    "level": "I",
@@ -4892,9 +5141,11 @@
    "plain": "Start a flow when an email arrives in a team mailbox, not just yours.",
    "example": "Every email to ap@ is logged in a List with sender, subject and date.",
    "watch": "You need access to the shared mailbox first, granted by IT.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-FLOW-012",
    "app": "a",
    "name": "Power Automate for desktop (RPA)",
    "level": "A",
@@ -4924,9 +5175,11 @@
      "Enter project, export",
      "Next project…"
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-FLOW-013",
    "app": "a",
    "name": "Premium connectors (HTTP, SQL, SAP ERP, Dataverse)",
    "level": "A",
@@ -4945,9 +5198,11 @@
    "plain": "Connections to systems outside Microsoft 365, which need a paid licence.",
    "example": "Pull data directly from a SQL database into a flow.",
    "watch": "Using one makes the whole flow premium. Check with IT before building.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-FLOW-014",
    "app": "a",
    "name": "AI Builder (invoice / document reading)",
    "level": "A",
@@ -4984,9 +5239,11 @@
       "No INV-889 · 02/11/2026 · 3,450.00"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-FLOW-015",
    "app": "a",
    "name": "Workflows app in Teams",
    "level": "B",
@@ -5006,9 +5263,11 @@
    "plain": "Ready-made automations you start inside Teams, no building from scratch.",
    "example": "Template: notify the channel when a file is added to the Closing folder.",
    "watch": "It still uses Power Automate behind the scenes, with the same licence rules.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-APPS-001",
    "app": "p",
    "name": "Canvas app from a SharePoint list",
    "level": "I",
@@ -5044,9 +5303,11 @@
       0
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-APPS-002",
    "app": "p",
    "name": "Power Fx formulas",
    "level": "C",
@@ -5066,9 +5327,11 @@
    "plain": "Excel-like formulas that control what an app does.",
    "example": "If(Amount > 500, show 'Needs HOD approval').",
    "watch": "Some functions don't work with large lists (delegation). Test with real data size.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-APPS-003",
    "app": "p",
    "name": "Dataverse & model-driven apps",
    "level": "A",
@@ -5088,9 +5351,11 @@
    "plain": "A proper database with security, for bigger business apps.",
    "example": "A vendor onboarding app with stages, roles and audit history.",
    "watch": "Needs Premium licences for every user.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-TEAMS-001",
    "app": "t",
    "name": "Channels + Files tab",
    "level": "B",
@@ -5131,9 +5396,11 @@
       ]
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-TEAMS-002",
    "app": "t",
    "name": "Pinned tabs",
    "level": "B",
@@ -5167,9 +5434,11 @@
       ]
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-TEAMS-003",
    "app": "t",
    "name": "Meeting recording & transcript",
    "level": "B",
@@ -5203,9 +5472,11 @@
       "HOD: agreed, accrual RM12k"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-TEAMS-004",
    "app": "t",
    "name": "Live captions & translated captions",
    "level": "B",
@@ -5225,9 +5496,11 @@
    "plain": "Live subtitles during a Teams meeting; translation needs a Premium licence.",
    "example": "You speak English; a colleague reads captions in their language (if Premium).",
    "watch": "Set the spoken language correctly, or captions come out wrong.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-TEAMS-005",
    "app": "t",
    "name": "External chat & shared channels",
    "level": "I",
@@ -5246,9 +5519,11 @@
    "plain": "Chat or work in a channel with people from other companies.",
    "example": "A shared channel with the auditors for queries and files during audit.",
    "watch": "Check what's in the channel before inviting outsiders.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-TEAMS-006",
    "app": "t",
    "name": "Intelligent recap",
    "level": "B",
@@ -5267,9 +5542,11 @@
    "plain": "AI meeting notes and follow-up tasks after a meeting.",
    "example": "After the closing meeting: 5 action items with names, created automatically.",
    "watch": "Needs Teams Premium or Copilot. Review the notes for accuracy.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-SP-001",
    "app": "s",
    "name": "Version history & restore",
    "level": "B",
@@ -5305,9 +5582,11 @@
       1
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-SP-002",
    "app": "s",
    "name": "Sharing link types",
    "level": "B",
@@ -5343,9 +5622,11 @@
       0
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-SP-003",
    "app": "s",
    "name": "Sync & Files On-Demand",
    "level": "B",
@@ -5365,9 +5646,11 @@
    "plain": "See online team folders in File Explorer, downloading files only when you open them.",
    "example": "The Finance site appears as a folder; files show a cloud icon until opened.",
    "watch": "Deleting in File Explorer deletes for everyone. Be careful.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-SP-004",
    "app": "s",
    "name": "Request files",
    "level": "B",
@@ -5387,9 +5670,11 @@
    "plain": "Send a link so others can upload files to your folder, without seeing what's there.",
    "example": "Department heads upload their accrual support into one folder by Friday.",
    "watch": "You only get files, not a message. Ask them to name files clearly.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-SP-005",
    "app": "s",
    "name": "Library metadata columns & views",
    "level": "I",
@@ -5432,9 +5717,11 @@
       "Oct"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-SP-006",
    "app": "s",
    "name": "Permissions for sensitive folders",
    "level": "I",
@@ -5454,9 +5741,11 @@
    "plain": "Limit a folder to named people so others in the team can't see it.",
    "example": "Payroll folder: only HOD and payroll staff can open it.",
    "watch": "Stopping inheritance makes permissions harder to manage. Keep a list of exceptions.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-SP-007",
    "app": "s",
    "name": "Retention labels",
    "level": "A",
@@ -5475,9 +5764,11 @@
    "plain": "Rules that keep files for a set period and stop early deletion.",
    "example": "Invoices labelled 'Keep 7 years' can't be deleted before 2033.",
    "watch": "Only IT/compliance can set these up.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-ONENOTE-001",
    "app": "n",
    "name": "Notebook structure",
    "level": "B",
@@ -5517,9 +5808,11 @@
       ]
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-ONENOTE-002",
    "app": "n",
    "name": "Tags & To Do tags",
    "level": "B",
@@ -5556,9 +5849,11 @@
       "Freight rate from Dec?"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-ONENOTE-003",
    "app": "n",
    "name": "Copy text from picture",
    "level": "B",
@@ -5578,9 +5873,11 @@
    "plain": "OneNote reads text in an image so you can copy it.",
    "example": "A screenshot of a statement › Copy Text from Picture › paste the amounts into Excel.",
    "watch": "Check numbers carefully. 8 and 3, 1 and 7 can be misread.",
-   "minv": "all"
+   "minv": "all",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-ONENOTE-004",
    "app": "n",
    "name": "Insert file printout & embedded Excel",
    "level": "B",
@@ -5599,9 +5896,11 @@
    "plain": "Put a PDF's pages or a small Excel sheet directly on a OneNote page.",
    "example": "A SAP steps page with the PDF guide printed onto it, plus your notes beside it.",
    "watch": "Printouts are images. Edit the original file, not the printout.",
-   "minv": "all"
+   "minv": "all",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-ONENOTE-005",
    "app": "n",
    "name": "Audio recording linked to notes",
    "level": "B",
@@ -5621,9 +5920,11 @@
    "plain": "Record audio while typing; each note links to the moment it was typed.",
    "example": "Click the note 'Discount 5%?' and hear exactly what was said then.",
    "watch": "Ask permission before recording people.",
-   "minv": "all"
+   "minv": "all",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-ONENOTE-006",
    "app": "n",
    "name": "Page templates",
    "level": "B",
@@ -5643,9 +5944,11 @@
    "plain": "Ready layouts for pages, so every meeting note looks the same.",
    "example": "'Meeting minutes' template with Attendees, Decisions, Actions already set.",
    "watch": "Templates apply to new pages only.",
-   "minv": "all"
+   "minv": "all",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-FORMS-001",
    "app": "f",
    "name": "Surveys & quizzes with branching",
    "level": "B",
@@ -5674,9 +5977,11 @@
      "Yes → Q2: Amount and description",
      "No → Submit"
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-FORMS-002",
    "app": "f",
    "name": "Responses in Excel",
    "level": "B",
@@ -5695,9 +6000,11 @@
    "plain": "Form answers flow into an Excel file automatically.",
    "example": "20 HODs submit; the Excel sheet has 20 rows ready to analyse.",
    "watch": "Don't add columns inside the response table; add them beside it.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-FORMS-003",
    "app": "f",
    "name": "File upload question",
    "level": "B",
@@ -5716,9 +6023,11 @@
    "plain": "Let people attach files in the form.",
    "example": "Departments upload their quotation PDFs with the form.",
    "watch": "Uploaded files go into your OneDrive and use your storage.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-LISTS-001",
    "app": "l",
    "name": "Lists from templates",
    "level": "B",
@@ -5754,9 +6063,11 @@
       0
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-LISTS-002",
    "app": "l",
    "name": "Views, grouping & formatting",
    "level": "B",
@@ -5799,9 +6110,11 @@
       ]
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-LISTS-003",
    "app": "l",
    "name": "Rules & alerts",
    "level": "B",
@@ -5821,9 +6134,11 @@
    "plain": "Simple 'when this changes, notify someone' rules, with no flow needed.",
    "example": "When Status becomes 'Pending HOD', the HOD gets an email.",
    "watch": "Rules only send notifications; they can't edit items.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-LISTS-004",
    "app": "l",
    "name": "Item version history",
    "level": "B",
@@ -5842,9 +6157,11 @@
    "plain": "Every change to a row is kept with who changed it and when.",
    "example": "Amount changed from 5,000 to 7,500 by Ali on 2 Nov, 4:10 pm.",
    "watch": "Versioning must be on in list settings (it usually is).",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PLANNER-001",
    "app": "pl",
    "name": "Plans, buckets & recurring tasks",
    "level": "B",
@@ -5888,9 +6205,11 @@
       ]
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PLANNER-002",
    "app": "pl",
    "name": "Timeline, dependencies (Planner Premium)",
    "level": "I",
@@ -5909,9 +6228,11 @@
    "plain": "Gantt-style planning where one task waits for another.",
    "example": "'Audit fieldwork' can't start until 'Trial balance final' is done.",
    "watch": "Needs a paid Planner Premium licence.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-PLANNER-003",
    "app": "pl",
    "name": "To Do + flagged emails",
    "level": "B",
@@ -5931,9 +6252,11 @@
    "plain": "One personal list that collects your flagged emails and Planner tasks.",
    "example": "Flag 3 emails; they appear in To Do next to your 2 Planner tasks.",
    "watch": "Unflagging the email removes it from To Do.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-LOOP-001",
    "app": "lp",
    "name": "Loop components in chat & email",
    "level": "B",
@@ -5969,9 +6292,11 @@
       1
      ]
     ]
-   }
+   },
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-LOOP-002",
    "app": "lp",
    "name": "Loop workspaces",
    "level": "I",
@@ -5991,9 +6316,11 @@
    "plain": "Shared pages that collect notes, tasks and Loop components for a project.",
    "example": "'New DSO report' workspace with requirements, a task list and meeting notes.",
    "watch": "May be turned off by IT.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-COPILOT-001",
    "level": "B",
    "core": true,
    "version": "Web / app",
@@ -6037,9 +6364,11 @@
       1
      ]
     ]
-   }
+   },
+   "updated": "2026-11-11"
   },
   {
+   "id": "FEAT-COPILOT-002",
    "app": "c",
    "name": "Copilot Chat (Basic, free)",
    "level": "B",
@@ -6064,9 +6393,11 @@
     "k": "chat",
     "q": "Explain =SUMIFS(D:D,A:A,\"1000\")",
     "a": "It adds column D only where column A is 1000."
-   }
+   },
+   "updated": "2026-11-11"
   },
   {
+   "id": "FEAT-COPILOT-003",
    "level": "B",
    "core": false,
    "version": "Web / app",
@@ -6092,9 +6423,11 @@
     "k": "chat",
     "q": "What did ABC agree about INV-889?",
     "a": "Credit note RM300, balance paid by 15 Nov (source: email 3 Nov)"
-   }
+   },
+   "updated": "2026-11-12"
   },
   {
+   "id": "FEAT-COPILOT-004",
    "level": "B",
    "core": false,
    "version": "Web / app",
@@ -6132,9 +6465,11 @@
       0
      ]
     ]
-   }
+   },
+   "updated": "2026-11-12"
   },
   {
+   "id": "FEAT-COPILOT-005",
    "level": "B",
    "core": false,
    "version": "Web / app",
@@ -6182,9 +6517,11 @@
       0
      ]
     ]
-   }
+   },
+   "updated": "2026-11-12"
   },
   {
+   "id": "FEAT-COPILOT-006",
    "app": "c",
    "name": "Copilot in Outlook",
    "level": "B",
@@ -6210,9 +6547,11 @@
     "k": "chat",
     "q": "Summarise this thread",
     "a": "• ABC disputes INV-889 • Agreed credit note RM300 • Pay balance by 15 Nov"
-   }
+   },
+   "updated": "2026-11-11"
   },
   {
+   "id": "FEAT-COPILOT-007",
    "app": "c",
    "name": "Copilot inside Word / Excel / PowerPoint / OneNote",
    "level": "I",
@@ -6232,9 +6571,11 @@
    "plain": "AI working directly inside your document, spreadsheet or deck. The full version needs the Premium licence.",
    "example": "'Create 8 slides from this Word report' gives a first-draft deck in a minute.",
    "watch": "It drafts; you still own accuracy.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-11"
   },
   {
+   "id": "FEAT-COPILOT-008",
    "level": "I",
    "core": false,
    "version": "365",
@@ -6260,9 +6601,11 @@
     "k": "chat",
     "q": "Add a summary by cost centre with a chart",
     "a": "Done: new sheet 'Summary', SUMIFS totals, bar chart. Review changes."
-   }
+   },
+   "updated": "2026-11-11"
   },
   {
+   "id": "FEAT-COPILOT-009",
    "app": "c",
    "name": "=COPILOT() function in Excel",
    "level": "I",
@@ -6305,9 +6648,11 @@
       "Utilities"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-11"
   },
   {
+   "id": "FEAT-COPILOT-010",
    "app": "c",
    "name": "Copilot in Power BI",
    "level": "I",
@@ -6327,9 +6672,11 @@
    "plain": "AI that helps write measures, build pages, and summarise reports.",
    "example": "'Summarise this page' gives 3 sentences on the main movements.",
    "watch": "Needs special capacity. Most Pro-only setups won't have it.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-04"
   },
   {
+   "id": "FEAT-COPILOT-011",
    "app": "c",
    "name": "Agents: Researcher & Analyst",
    "level": "A",
@@ -6351,9 +6698,11 @@
    "plain": "Premium Copilot helpers: one researches across sources, one analyses data.",
    "example": "Analyst finds the 20 most unusual journal entries in a 100k-row file.",
    "watch": "Premium licence only. Researcher takes longer than normal chat. Verify findings before acting.",
-   "minv": "cloud"
+   "minv": "cloud",
+   "updated": "2026-11-11"
   },
   {
+   "id": "FEAT-COPILOT-012",
    "level": "A",
    "core": false,
    "version": "Web",
@@ -6380,9 +6729,11 @@
     "k": "chat",
     "q": "What is the mileage claim rate?",
     "a": "Per the Claims Policy (section 4): see the rate table. Source: Claims Policy.pdf"
-   }
+   },
+   "updated": "2026-11-12"
   },
   {
+   "id": "FEAT-COPILOT-013",
    "level": "B",
    "core": false,
    "version": "Teams",
@@ -6408,9 +6759,11 @@
     "k": "chat",
     "q": "What are the action items?",
     "a": "• Aminah: post accrual reversal • Ali: send aging by Fri"
-   }
+   },
+   "updated": "2026-11-11"
   },
   {
+   "id": "FEAT-COPILOT-014",
    "level": "B",
    "core": false,
    "version": "Web / app, OneNote",
@@ -6452,9 +6805,11 @@
       1
      ]
     ]
-   }
+   },
+   "updated": "2026-11-11"
   },
   {
+   "id": "FEAT-COPILOT-015",
    "level": "B",
    "core": false,
    "version": "Web / app",
@@ -6476,9 +6831,11 @@
     "Edit and add to the page beside the chat",
     "Share it",
     "Find it again under Library in the left menu"
-   ]
+   ],
+   "updated": "2026-11-13"
   },
   {
+   "id": "FEAT-APPS-004",
    "app": "p",
    "name": "What Power Apps is (start here)",
    "level": "B",
@@ -6500,9 +6857,11 @@
     "Power Apps builds a 3-screen app: browse, view, edit",
     "Change labels and colours, then Save and Publish",
     "Test on your phone with the Power Apps mobile app"
-   ]
+   ],
+   "updated": "2026-11-05"
   },
   {
+   "id": "FEAT-APPS-005",
    "app": "p",
    "name": "Share an app & who needs access",
    "level": "I",
@@ -6524,9 +6883,11 @@
     "Type the colleague or a group name",
     "Tick Co-owner only for people who will edit the app",
     "Share the SharePoint list with the same people"
-   ]
+   ],
+   "updated": "2026-11-05"
   },
   {
+   "id": "FEAT-OUTLOOK-010",
    "app": "o",
    "name": "Automatic replies (out of office)",
    "level": "B",
@@ -6548,9 +6909,11 @@
     "Write the 'Inside My Organization' message",
     "Write a shorter 'Outside My Organization' message",
     "Click OK. It turns off at the end time"
-   ]
+   ],
+   "updated": "2026-11-05"
   },
   {
+   "id": "FEAT-OUTLOOK-011",
    "app": "o",
    "name": "Search like a pro",
    "level": "I",
@@ -6572,9 +6935,11 @@
     "Add hasattachments:yes to show only emails with files",
     "Use the filter button to pick dates, folders or attachments",
     "Press Esc to clear the search"
-   ]
+   ],
+   "updated": "2026-11-05"
   },
   {
+   "id": "FEAT-OUTLOOK-012",
    "app": "o",
    "name": "Share your calendar & open others'",
    "level": "I",
@@ -6596,9 +6961,11 @@
     "Type the colleague's name",
     "Choose the level: busy only, titles and locations, all details, or edit",
     "To open someone else's: Add calendar › From directory"
-   ]
+   ],
+   "updated": "2026-11-05"
   },
   {
+   "id": "FEAT-OUTLOOK-013",
    "app": "o",
    "name": "Conditional formatting for emails",
    "level": "I",
@@ -6620,9 +6987,11 @@
     "Name it and pick a font colour",
     "Click Condition › set From or words",
     "OK. Matching emails change colour"
-   ]
+   ],
+   "updated": "2026-11-05"
   },
   {
+   "id": "FEAT-TEAMS-007",
    "app": "t",
    "name": "Meeting options: lobby & presenters",
    "level": "I",
@@ -6644,9 +7013,11 @@
     "Set 'Who can bypass the lobby'",
     "Set 'Who can present' to 'Only me and co-organizers'",
     "Save"
-   ]
+   ],
+   "updated": "2026-11-05"
   },
   {
+   "id": "FEAT-TEAMS-008",
    "app": "t",
    "name": "Breakout rooms",
    "level": "I",
@@ -6668,9 +7039,11 @@
     "Assign people automatically or manually",
     "Click Open to start the rooms",
     "Click Close to bring everyone back"
-   ]
+   ],
+   "updated": "2026-11-05"
   },
   {
+   "id": "FEAT-TEAMS-009",
    "level": "B",
    "core": false,
    "version": "365",
@@ -6692,9 +7065,11 @@
     "Edit the questions in Edit form",
     "Assign Submitters and Viewers; set a due date or recurrence",
     "Select Publish. Submitters find it under 'Needing your updates'"
-   ]
+   ],
+   "updated": "2026-11-13"
   },
   {
+   "id": "FEAT-FORMS-004",
    "app": "f",
    "name": "Form settings: who, once, deadline",
    "level": "I",
@@ -6716,9 +7091,11 @@
     "Tick 'Record name' and 'One response per person'",
     "Set Start date and End date",
     "Share the link"
-   ]
+   ],
+   "updated": "2026-11-05"
   },
   {
+   "id": "FEAT-LISTS-005",
    "app": "l",
    "name": "Choice, lookup & required columns",
    "level": "I",
@@ -6740,9 +7117,11 @@
     "Or pick Lookup and choose the other list and column",
     "Open More options › turn on 'Require that this column contains information'",
     "Save"
-   ]
+   ],
+   "updated": "2026-11-05"
   },
   {
+   "id": "FEAT-PLANNER-004",
    "app": "pl",
    "name": "Planner tab in a Teams channel",
    "level": "I",
@@ -6764,9 +7143,11 @@
     "Create a new plan or use an existing one",
     "Add buckets like Week 1, Week 2",
     "Add tasks, assign owners and due dates"
-   ]
+   ],
+   "updated": "2026-11-05"
   },
   {
+   "id": "FEAT-WIN-001",
    "app": "win",
    "name": "File Explorer: copy path & show extensions",
    "level": "B",
@@ -6788,9 +7169,11 @@
     "Select a file",
     "Windows 11: right-click › Copy as path. Windows 10: Shift+right-click › Copy as path",
     "Paste where you need it"
-   ]
+   ],
+   "updated": "2026-11-05"
   },
   {
+   "id": "FEAT-WIN-002",
    "app": "win",
    "name": "Zip & unzip files",
    "level": "B",
@@ -6811,9 +7194,11 @@
     "Right-click › Compress to ZIP file (Windows 10: Send to › Compressed (zipped) folder)",
     "Rename the zip",
     "To open one: right-click › Extract All › Extract"
-   ]
+   ],
+   "updated": "2026-11-05"
   },
   {
+   "id": "FEAT-WIN-003",
    "app": "win",
    "name": "Screenshots with Snipping Tool",
    "level": "B",
@@ -6834,9 +7219,11 @@
     "Drag a box around the area",
     "Paste it (Ctrl+V) into email, Teams or Word",
     "Or click the pop-up to draw on it and save"
-   ]
+   ],
+   "updated": "2026-11-05"
   },
   {
+   "id": "FEAT-WIN-004",
    "app": "win",
    "name": "Clipboard history (Win+V)",
    "level": "B",
@@ -6858,9 +7245,11 @@
     "Copy several items as normal (Ctrl+C)",
     "Press Win+V and click the item to paste",
     "Pin items you use often"
-   ]
+   ],
+   "updated": "2026-11-05"
   },
   {
+   "id": "FEAT-WIN-005",
    "app": "win",
    "name": "Snap windows & virtual desktops",
    "level": "B",
@@ -6881,9 +7270,11 @@
     "Pick the second window for the other half",
     "Press Win+Tab › New desktop",
     "Move between desktops with Win+Ctrl+Left/Right"
-   ]
+   ],
+   "updated": "2026-11-05"
   },
   {
+   "id": "FEAT-SEC-001",
    "app": "sec",
    "name": "Sign-in with MFA (Authenticator)",
    "level": "B",
@@ -6905,9 +7296,11 @@
     "Add your work account by scanning the QR code",
     "When you sign in, enter the number shown into the app",
     "Deny any request you didn't make and report it"
-   ]
+   ],
+   "updated": "2026-11-05"
   },
   {
+   "id": "FEAT-SEC-002",
    "app": "sec",
    "name": "Spot phishing & report it",
    "level": "B",
@@ -6929,9 +7322,11 @@
     "Be extra careful with urgent payment or bank-change requests",
     "Select the email › Report › Report phishing",
     "If you clicked a link or entered a password, tell IT straight away"
-   ]
+   ],
+   "updated": "2026-11-05"
   },
   {
+   "id": "FEAT-SEC-003",
    "app": "sec",
    "name": "Password-protect a file",
    "level": "I",
@@ -6953,9 +7348,11 @@
     "Type a strong password twice",
     "Save the file",
     "Send the password separately"
-   ]
+   ],
+   "updated": "2026-11-05"
   },
   {
+   "id": "FEAT-SEC-004",
    "app": "sec",
    "name": "Office 2016, 2019 & 2021 support has ended",
    "level": "B",
@@ -6977,9 +7374,11 @@
     "If it says 2016, 2019 or 2021, tell IT",
     "Save important files to OneDrive or SharePoint",
     "Avoid opening unknown attachments on old versions"
-   ]
+   ],
+   "updated": "2026-11-05"
   },
   {
+   "id": "FEAT-SEC-005",
    "level": "B",
    "core": false,
    "version": "365",
@@ -7000,9 +7399,11 @@
     "Phone or laptop not allowed: ask IT about enrolling the device (Intune)",
     "Sharing blocked or a warning appears: ask IT which Purview label or policy applies",
     "Suspicious email: report it; Defender handles the rest"
-   ]
+   ],
+   "updated": "2026-11-13"
   },
   {
+   "id": "FEAT-MORE-001",
    "app": "m",
    "name": "Access (desktop database)",
    "level": "B",
@@ -7024,9 +7425,11 @@
     "Add a form with Create › Form",
     "Build a query with Create › Query Wizard",
     "Make a printable report with Create › Report"
-   ]
+   ],
+   "updated": "2026-11-05"
   },
   {
+   "id": "FEAT-MORE-002",
    "app": "m",
    "name": "Visio (diagrams & flowcharts)",
    "level": "B",
@@ -7048,9 +7451,11 @@
     "Drag shapes onto the page",
     "Drag from a shape's arrow to connect the next step",
     "Share the link or export as PDF"
-   ]
+   ],
+   "updated": "2026-11-05"
   },
   {
+   "id": "FEAT-MORE-003",
    "app": "m",
    "name": "Project (plans & Gantt charts)",
    "level": "B",
@@ -7072,9 +7477,11 @@
     "List tasks with start dates and durations",
     "Link tasks that depend on each other",
     "Review the Gantt chart and the critical path"
-   ]
+   ],
+   "updated": "2026-11-05"
   },
   {
+   "id": "FEAT-MORE-004",
    "app": "m",
    "name": "Publisher is retired: move your files",
    "level": "B",
@@ -7096,9 +7503,11 @@
     "Re-create the design in Word (letters, newsletters) or PowerPoint (posters, banners)",
     "Save the new version as a template",
     "Delete the .pub only after checking the new file"
-   ]
+   ],
+   "updated": "2026-11-05"
   },
   {
+   "id": "FEAT-MORE-005",
    "app": "m",
    "level": "B",
    "core": false,
@@ -7131,9 +7540,11 @@
      "Key dates: closing 5 Nov",
      "Reminders · Contacts"
     ]
-   }
+   },
+   "updated": "2026-11-12"
   },
   {
+   "id": "FEAT-MORE-006",
    "app": "m",
    "level": "B",
    "core": false,
@@ -7180,9 +7591,11 @@
       "Free 14:30"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-12"
   },
   {
+   "id": "FEAT-MORE-007",
    "app": "m",
    "level": "I",
    "core": false,
@@ -7227,9 +7640,11 @@
       0
      ]
     ]
-   }
+   },
+   "updated": "2026-11-12"
   },
   {
+   "id": "FEAT-MORE-008",
    "level": "B",
    "core": false,
    "version": "365",
@@ -7276,9 +7691,11 @@
       ]
      ]
     ]
-   }
+   },
+   "updated": "2026-11-12"
   },
   {
+   "id": "FEAT-MORE-009",
    "level": "B",
    "core": false,
    "version": "365",
@@ -7321,9 +7738,11 @@
       0
      ]
     ]
-   }
+   },
+   "updated": "2026-11-12"
   },
   {
+   "id": "FEAT-MORE-010",
    "level": "B",
    "core": false,
    "version": "365",
@@ -7344,9 +7763,11 @@
     "Dashboard: tap a card for a quick action",
     "News: read company and site news",
     "Resources: open the links your company chose"
-   ]
+   ],
+   "updated": "2026-11-12"
   },
   {
+   "id": "FEAT-MORE-011",
    "level": "B",
    "core": false,
    "version": "365",
@@ -7368,9 +7789,11 @@
     "Filter by Recommended, Official, Alphabetical or Community size",
     "Select Join (a padlock means private: an admin must approve)",
     "Post a question or reply in the community"
-   ]
+   ],
+   "updated": "2026-11-12"
   },
   {
+   "id": "FEAT-MORE-012",
    "level": "B",
    "core": false,
    "version": "365",
@@ -7420,9 +7843,11 @@
       "Focus 14–15"
      ]
     ]
-   }
+   },
+   "updated": "2026-11-12"
   },
   {
+   "id": "FEAT-MORE-013",
    "level": "B",
    "core": false,
    "version": "365",
@@ -7443,9 +7868,11 @@
     "Search a topic, e.g. 'Excel PivotTable'",
     "Open a course to see its length and provider",
     "Share or recommend it to a colleague"
-   ]
+   ],
+   "updated": "2026-11-12"
   },
   {
+   "id": "FEAT-MORE-014",
    "level": "B",
    "core": false,
    "version": "Web",
@@ -7488,9 +7915,11 @@
       1
      ]
     ]
-   }
+   },
+   "updated": "2026-11-12"
   },
   {
+   "id": "FEAT-MORE-015",
    "level": "A",
    "core": false,
    "version": "Power Platform",
@@ -7512,9 +7941,11 @@
     "Edit pages in the design studio",
     "Connect forms and lists to Dataverse tables",
     "Set who can sign in, then publish"
-   ]
+   ],
+   "updated": "2026-11-12"
   },
   {
+   "id": "FEAT-MORE-016",
    "level": "B",
    "core": false,
    "version": "365",
@@ -7536,9 +7967,11 @@
     "To edit an existing video: in OneDrive or SharePoint select it › Open › Edit in Clipchamp",
     "Export; the video saves to OneDrive or SharePoint",
     "Share it like any other file"
-   ]
+   ],
+   "updated": "2026-11-13"
   },
   {
+   "id": "FEAT-MORE-017",
    "level": "B",
    "core": false,
    "version": "365",
@@ -7560,9 +7993,11 @@
     "Add shifts and open shifts (or import from Excel)",
     "Publish the schedule",
     "Workers: view shifts, request time off or swap"
-   ]
+   ],
+   "updated": "2026-11-13"
   },
   {
+   "id": "FEAT-MORE-018",
    "level": "B",
    "core": false,
    "version": "365",
@@ -7584,9 +8019,11 @@
     "See who else plans to be in",
     "Use the Places finder to pick a room or desk area",
     "Book it"
-   ]
+   ],
+   "updated": "2026-11-13"
   },
   {
+   "id": "FEAT-MORE-019",
    "level": "B",
    "core": false,
    "version": "365",
@@ -7606,9 +8043,11 @@
     "Open the survey or campaign link you were sent",
     "Answer the questions",
     "Managers with a licence: open Viva Pulse in Teams to send a team survey"
-   ]
+   ],
+   "updated": "2026-11-13"
   },
   {
+   "id": "FEAT-MORE-020",
    "level": "B",
    "core": false,
    "version": "365",
@@ -7630,9 +8069,11 @@
     "Stream: open the Clipchamp home page for your videos and recordings",
     "Whiteboard app: use Whiteboard in Teams or on the web",
     "Publisher: convert .pub files to Word or PowerPoint"
-   ]
+   ],
+   "updated": "2026-11-13"
   },
   {
+   "id": "FEAT-MORE-021",
    "level": "B",
    "core": false,
    "version": "365",
@@ -7651,7 +8092,8 @@
    "steps": [
     "Nothing to set up as a normal Microsoft 365 user",
     "If your company uses it, IT or the system owner gives you access and training"
-   ]
+   ],
+   "updated": "2026-11-13"
   }
  ],
  "tasks": [
