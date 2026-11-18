@@ -209,6 +209,18 @@ tbody tr:nth-child(even) td{background:#FBF9FF}
 .card:hover{transform:translateY(-2px);box-shadow:0 10px 24px -14px color-mix(in oklab,var(--c) 60%,black)}
 .flags{display:flex;gap:5px;flex-wrap:wrap}
 .cfoot .open{font-weight:700;color:color-mix(in oklab,var(--c) 80%,black);font-size:12.5px}
+.hero>div{min-width:0}
+.howdo{margin:16px 0 0;max-width:640px;min-width:0}
+.howdo-l{display:block;font-weight:700;font-size:15px;color:var(--ink);margin:0 0 6px}
+.howdo-row{display:flex;gap:8px;background:var(--paper);border:1.5px solid #D9D0F5;border-radius:14px;padding:5px 5px 5px 12px;box-shadow:0 2px 10px rgba(85,70,214,.08)}
+.howdo-row:focus-within{border-color:var(--accent)}
+.howdo-row svg{flex:none;align-self:center;color:var(--muted)}
+.howdo-row input{flex:1;min-width:0;width:100%;border:0;outline:none;background:transparent;font:inherit;font-size:16px;padding:8px 0;color:var(--ink)}
+.howdo-row button{border:0;background:var(--accent);color:#fff;border-radius:10px;padding:0 18px;font-weight:700;font-size:15px;cursor:pointer}
+.howdo-pop{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:10px}
+.howdo-pop span{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-right:2px}
+.howdo-pop button{border:1px solid #D9D0F5;background:#F3F0FF;color:#4337B8;border-radius:99px;padding:5px 11px;font-size:13px;font-weight:600;cursor:pointer}
+.howdo-pop button:hover{background:#E9E4FF}
 .checked{margin:10px 0 0;font-size:13px;color:var(--muted)}
 .checked b{color:var(--ink)}
 .drawer-bg{position:fixed;inset:0;background:rgba(30,25,60,.35);z-index:20}
@@ -854,6 +866,18 @@ body{background-image:radial-gradient(var(--dot) 1px, transparent 1.2px),url("da
       <div class="eyebrow">Microsoft 365, Office 2016–2024 &amp; Power Platform · self-learning notes for Finance &amp; Accounts</div>
       <h1><span class="mark">M365</span> &amp; Power Platform Notes</h1>
       <p class="lede">One card = one feature. Click any card to see where to find it and how to try it. Each card also shows the version it needs, whether IT might block it, and whether it needs a paid licence.</p>
+      <form class="howdo" id="howdo" role="search" autocomplete="off">
+        <label class="howdo-l" for="howdo-in">What do you need to do today?</label>
+        <div class="howdo-row"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="howdo-in" type="search" placeholder="e.g. remove duplicates" enterkeyhint="search"><button type="submit">Search</button></div>
+        <div class="howdo-pop" aria-label="Popular searches"><span>Popular</span>
+          <button type="button" data-howdo="Combine monthly SAP files">Combine monthly files</button>
+          <button type="button" data-howdo="Bank reconciliation">Bank reconciliation</button>
+          <button type="button" data-howdo="XLOOKUP">XLOOKUP</button>
+          <button type="button" data-howdo="Pivot table">Pivot table</button>
+          <button type="button" data-howdo="Save email attachments automatically">Save email attachments</button>
+          <button type="button" data-howdo="Which Copilot do I have?">Which Copilot do I have?</button>
+        </div>
+      </form>
       <p class="checked">Last checked <b id="last-checked">–</b> · <a href="#updates" class="jump">What changed</a></p>
     </div>
     <div class="hero-side">
@@ -1614,8 +1638,17 @@ async function askAI(q, btn){
     btn.textContent = "Answered";
   }catch(e){ botAdd(`<p>${esc(e.message || "The AI service didn't respond.")} You can still use Copilot.</p>`, "bot"); btn.textContent = "Ask AI here"; btn.disabled = false; }
 }
+let botPending = "";
+function howdoAsk(q){
+  q = (q||"").trim(); if (!q) return;
+  if ($("bot").hidden) $("bot-fab").click();
+  if (!S.ver){ botPending = q; return; }
+  $("bot-in").value = q; $("bot-form").requestSubmit();
+}
 function wireBot(){
   let asked = false;
+  $("howdo").addEventListener("submit", e=>{ e.preventDefault(); const q = $("howdo-in").value; $("howdo-in").value = ""; $("howdo-in").blur(); howdoAsk(q); });
+  $("howdo").addEventListener("click", e=>{ const b = e.target.closest("[data-howdo]"); if (b) howdoAsk(b.dataset.howdo); });
   const askVersion = () => { asked = true; botAdd(`<p><b>First, which Microsoft version do you use?</b> I'll only suggest what works for you.</p><div class="b-starts">${VOPTS.map(o=>`<button data-setver="${o[0]}">${esc(o[1])}</button>`).join("")}</div><details class="b-how"><summary>How do I check?</summary>Open Excel or Word › File › Account. Under Product Information: "Microsoft 365 Apps…" = Microsoft 365. "Office LTSC 2021" or "Professional Plus 2021" = Office 2021.</details>`, "bot"); };
   const open = on => { $("bot").hidden = !on; $("bot-fab").setAttribute("aria-expanded", on); if (on){ if (!S.ver && !asked) askVersion(); if (S.ver) $("bot-in").focus(); } };
   $("bot-ver").addEventListener("click", askVersion);
@@ -1632,7 +1665,7 @@ function wireBot(){
     const t = e.target.closest("[data-tab]"); if (t){ location.hash = t.dataset.tab; return; }
     const c = e.target.closest(".b-copilot"); if (c){ askCopilot(c.dataset.q, c); return; }
     const a = e.target.closest(".b-ai"); if (a){ askAI(a.dataset.q, a); return; }
-    const sv = e.target.closest("[data-setver]"); if (sv){ setVersion(sv.dataset.setver); botAdd(`<p>Got it: <b>${esc(verName(S.ver))}</b>. I'll mark anything your version can't use. Ask your question below.</p>`, "bot"); $("bot-in").focus(); return; }
+    const sv = e.target.closest("[data-setver]"); if (sv){ setVersion(sv.dataset.setver); botAdd(`<p>Got it: <b>${esc(verName(S.ver))}</b>. I'll mark anything your version can't use. Ask your question below.</p>`, "bot"); $("bot-in").focus(); if (botPending){ $("bot-in").value = botPending; botPending = ""; $("bot-form").requestSubmit(); } return; }
     const s = e.target.closest("[data-ask]"); if (s){ if (!S.ver){ askVersion(); return; } $("bot-in").value = s.dataset.ask; $("bot-form").requestSubmit(); }
   });
 }
@@ -1662,7 +1695,14 @@ function initFAQ(){
 function faqSearch(q){
   const tok = tokens(q); if (!tok.base.length) return null;
   let best = null;
-  (DATA.faq||[]).forEach((f,i)=>{ const s = scoreText(tok, norm(f.q), norm(f.a.join(" ")), norm(f.tip||"")); if (s > 0 && (!best || s > best.s)) best = {i, s}; });
+  const has = (t, w) => t.includes(w) || (w.length > 3 && w.endsWith("s") && t.includes(w.slice(0,-1)));
+  (DATA.faq||[]).forEach((f,i)=>{
+    const qt = norm(f.q), all = qt + " " + norm(f.a.join(" ")) + " " + norm(f.tip||"");
+    // a common question only counts if the user's own words (not just synonyms) are in it
+    if (!tok.base.some(w=>has(qt, w))) return;
+    const bw = tok.base.filter(w=>!["have","has","had","got"].includes(w)), need = bw.length <= 2 ? 1 : Math.ceil(bw.length*0.6);
+    if (bw.filter(w=>has(all, w)).length < need) return;
+    const s = scoreText(tok, qt, norm(f.a.join(" ")), norm(f.tip||"")); if (s > 0 && (!best || s > best.s)) best = {i, s}; });
   return best && best.s >= 14 ? DATA.faq[best.i] : null;
 }
 
