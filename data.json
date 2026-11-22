@@ -19,7 +19,9 @@
     "Copilot split into three levels across the site: Basic (free Copilot Chat), Premium (Microsoft 365 Copilot licence) and Full (Premium plus Copilot in Power BI and Fabric). Every Copilot card, common question, button-guide entry and Handbook page now shows its level, and a new \"My Copilot level\" picker marks what you can use.",
     "Handbook: Copilot is now three subjects, Copilot Basic, Copilot Premium and Copilot Full (Power BI & Fabric), with new pages on Copilot in Power BI reports, switching it on, and Copilot in other Fabric tools (Microsoft Learn: Overview of Copilot for Power BI; Overview of Copilot in Fabric; Enable Copilot in Fabric; Fabric Copilot capacity).",
     "Correction: Copilot in Power BI needs a paid Fabric capacity F2 or larger or Power BI Premium P1 or larger, not F64; trial capacity and Pro or PPU alone are not enough (Microsoft Learn: Overview of Copilot for Power BI).",
-    "New cards: Fabric Copilot capacity, and Copilot in Fabric tools (notebooks, Data Factory, warehouse). New common questions: what Basic, Premium and Full mean, and why Copilot doesn't show in Power BI (Microsoft Learn)."
+    "New cards: Fabric Copilot capacity, and Copilot in Fabric tools (notebooks, Data Factory, warehouse). New common questions: what Basic, Premium and Full mean, and why Copilot doesn't show in Power BI (Microsoft Learn).",
+    "Copilot in each app: new cards for Word, Excel, PowerPoint, OneNote, Loop, Forms (Premium) and Power Automate cloud flows, Power Automate for desktop, Power Apps (Basic: no Microsoft 365 Copilot licence listed); two new common questions; four new Handbook pages (Microsoft Support: Welcome to Copilot in Word, PowerPoint, OneNote, Loop, Forms; Get started with Copilot in Excel; Microsoft Learn: Copilot in Power Automate, Power Automate for desktop, Power Apps).",
+    "New: Copilot sharing session, a video walkthrough of Copilot in each app (see the Copilot sharing session section)."
    ]
   },
   {
@@ -392,6 +394,54 @@
   [
    "Fabric Copilot capacity (Microsoft Learn)",
    "https://learn.microsoft.com/en-us/fabric/enterprise/fabric-copilot-capacity"
+  ],
+  [
+   "Welcome to Copilot in Word (Microsoft Support)",
+   "https://support.microsoft.com/en-us/word/welcome-to-copilot-in-word"
+  ],
+  [
+   "Get started with Copilot in Excel (Microsoft Support)",
+   "https://support.microsoft.com/en-us/excel/copilot/get-started-with-copilot-in-excel"
+  ],
+  [
+   "What is Copilot in Excel? FAQ (Microsoft Support)",
+   "https://support.microsoft.com/excel/copilot/frequently-asked-questions-about-copilot-in-excel"
+  ],
+  [
+   "Welcome to Copilot in PowerPoint (Microsoft Support)",
+   "https://support.microsoft.com/en-us/powerpoint/welcome-to-copilot-in-powerpoint"
+  ],
+  [
+   "Welcome to Copilot in OneNote (Microsoft Support)",
+   "https://support.microsoft.com/en-us/onenote/welcome-to-copilot-in-onenote"
+  ],
+  [
+   "Welcome to Copilot in Loop (Microsoft Support)",
+   "https://support.microsoft.com/en-us/Loop/welcome-to-copilot-in-loop"
+  ],
+  [
+   "Frequently asked questions about Copilot in Loop (Microsoft Support)",
+   "https://support.microsoft.com/en-us/loop/frequently-asked-questions-about-copilot-in-loop"
+  ],
+  [
+   "Welcome to Copilot in Forms (Microsoft Support)",
+   "https://support.microsoft.com/en-us/forms/welcome-to-copilot-in-forms"
+  ],
+  [
+   "Copilot in Power Automate (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/power-automate/copilot-overview"
+  ],
+  [
+   "Create your first cloud flow using Copilot (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/power-automate/create-cloud-flow-using-copilot"
+  ],
+  [
+   "Get started with Copilot in Power Automate for desktop (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/power-automate/desktop-flows/copilot-in-power-automate-for-desktop"
+  ],
+  [
+   "Build apps through conversation with Copilot (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/ai-conversations-create-app"
   ]
  ],
  "apps": [
@@ -6621,7 +6671,7 @@
    "level": "I",
    "core": false,
    "what": "Copilot in a side pane inside the app: ask about the file, summarise, rewrite, draft, find trends in a table.",
-   "use": "Turn closing notes into a first-draft memo; first-draft deck from a Word report.",
+   "use": "Turn closing notes into a first-draft memo; first-draft deck from a Word report. See the separate cards for Copilot in Word, Excel, PowerPoint and OneNote.",
    "version": "365",
    "it": "IT decides who gets the licence.",
    "licence": "Depends on the label under your name. M365 Copilot (Premium): full Copilot. M365 Copilot (Basic): limited Copilot Chat in the apps. Copilot Chat (Basic): no Copilot in these apps. Premium is about $30/user/month.",
@@ -8274,6 +8324,310 @@
     [
      "Overview of Copilot for Power BI (Microsoft Learn)",
      "https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-introduction"
+    ]
+   ]
+  },
+  {
+   "app": "c",
+   "core": false,
+   "oldVersion": "",
+   "minv": "cloud",
+   "updated": "2026-11-22",
+   "id": "FEAT-COPILOT-018",
+   "cp": "premium",
+   "name": "Copilot in Word",
+   "level": "B",
+   "what": "Draft from a prompt, notes or another file; rewrite or shorten text; summarise a document and ask questions about it; let Copilot edit the file with changes you review.",
+   "use": "Draft a variance memo from closing notes; turn a long audit letter into five bullets.",
+   "version": "Microsoft 365 (Windows, Mac, web)",
+   "it": "Your organisation's settings can turn it off.",
+   "licence": "Full Copilot needs the Microsoft 365 Copilot licence (Premium). Accounts labelled M365 Copilot (Basic) get standard or limited Copilot in the app. Copilot Chat (Basic) alone: no Copilot in the app.",
+   "where": "Copilot button in the corner of the document (or Copilot on the Home tab)",
+   "steps": [
+    "Open the document and select the Copilot button",
+    "Ask, e.g. \"Summarize this document in five bullets\"",
+    "To change text: select it, choose Edit with Copilot, then a preset such as Rewrite",
+    "Choose Chat only if you just want answers without changing the file",
+    "Type / in the chat to point Copilot at another file, email or meeting"
+   ],
+   "plain": "Copilot writes, rewrites and summarises inside your Word document.",
+   "example": "\"Make this section more concise without changing the meaning\" gives a shorter paragraph to accept or reject.",
+   "watch": "Copilot supports fewer languages than Word. In shared documents its edits show as a preview first; check figures and names before you accept.",
+   "src": [
+    [
+     "Welcome to Copilot in Word (Microsoft Support)",
+     "https://support.microsoft.com/en-us/word/welcome-to-copilot-in-word"
+    ]
+   ]
+  },
+  {
+   "app": "c",
+   "core": false,
+   "oldVersion": "",
+   "minv": "cloud",
+   "updated": "2026-11-22",
+   "id": "FEAT-COPILOT-019",
+   "cp": "premium",
+   "name": "Copilot in Excel",
+   "level": "B",
+   "what": "Ask questions about your data, create formulas, charts and PivotTables, highlight, sort and filter, clean data, and let Copilot edit the workbook for you.",
+   "use": "\"Which customers are over 90 days?\" on an AR ageing sheet; a PivotTable of expenses by cost centre.",
+   "version": "Microsoft 365 (Windows, Mac, web; chat only on iPhone and Android)",
+   "it": "Your organisation's settings can turn it off.",
+   "licence": "Full Copilot needs the Microsoft 365 Copilot licence (Premium). Accounts labelled M365 Copilot (Basic) get standard or limited Copilot in the app. Copilot Chat (Basic) alone: no Copilot in the app.",
+   "where": "Copilot icon in the lower-right corner of Excel",
+   "steps": [
+    "Select the Copilot icon in the lower-right corner",
+    "Pick a mode: Allow editing (changes the sheet), Plan, or Chat only",
+    "Ask, e.g. \"Add a column with days overdue\" or \"Show total by month as a chart\"",
+    "Use @clean-data to find extra spaces, mixed formats and duplicates",
+    "Check every new formula on a few rows you know"
+   ],
+   "plain": "Copilot analyses and changes your spreadsheet from plain-English requests.",
+   "example": "\"Highlight invoices over RM 10,000\" applies conditional formatting to the amount column.",
+   "watch": "Editing only works when Formulas › Calculation Options is Automatic. If your SharePoint site needs check-out, use Excel for the web. Save changes only after checking them: anyone with access sees them.",
+   "src": [
+    [
+     "Get started with Copilot in Excel (Microsoft Support)",
+     "https://support.microsoft.com/en-us/excel/copilot/get-started-with-copilot-in-excel"
+    ],
+    [
+     "What is Copilot in Excel? FAQ (Microsoft Support)",
+     "https://support.microsoft.com/excel/copilot/frequently-asked-questions-about-copilot-in-excel"
+    ]
+   ]
+  },
+  {
+   "app": "c",
+   "core": false,
+   "oldVersion": "",
+   "minv": "cloud",
+   "updated": "2026-11-22",
+   "id": "FEAT-COPILOT-020",
+   "cp": "premium",
+   "name": "Copilot in PowerPoint",
+   "level": "B",
+   "what": "Create a deck from a prompt or from a Word document, add slides or images, try a new design, and summarise a presentation.",
+   "use": "First draft of the month-end results deck from the Word commentary.",
+   "version": "Microsoft 365 (Windows, Mac, web)",
+   "it": "Your organisation's settings can turn it off.",
+   "licence": "Full Copilot needs the Microsoft 365 Copilot licence (Premium). Accounts labelled M365 Copilot (Basic) get standard or limited Copilot in the app. Copilot Chat (Basic) alone: no Copilot in the app. Creating a deck from a Word file needs the Microsoft 365 Copilot (work) licence.",
+   "where": "Copilot on the Home tab of the ribbon (or the Copilot button above the slide)",
+   "steps": [
+    "Select Copilot on the Home tab",
+    "Ask, e.g. \"Create a presentation from this file\" and pick the Word document",
+    "Or \"Add a slide about cash flow\" or \"Summarize this presentation\"",
+    "Review every slide, number and image before sharing"
+   ],
+   "plain": "Copilot builds and tidies slides for you.",
+   "example": "\"Summarize this presentation\" gives the key points as bullets for an email.",
+   "watch": "Content can be wrong or unexpected; check numbers against the source report.",
+   "src": [
+    [
+     "Welcome to Copilot in PowerPoint (Microsoft Support)",
+     "https://support.microsoft.com/en-us/powerpoint/welcome-to-copilot-in-powerpoint"
+    ]
+   ]
+  },
+  {
+   "app": "c",
+   "core": false,
+   "oldVersion": "",
+   "minv": "cloud",
+   "updated": "2026-11-22",
+   "id": "FEAT-COPILOT-021",
+   "cp": "premium",
+   "name": "Copilot in OneNote",
+   "level": "B",
+   "what": "Summarise a page or section, turn notes into a task list, rewrite notes, and draft agendas or plans.",
+   "use": "Turn messy month-end meeting notes into a to-do list with owners.",
+   "version": "Microsoft 365 (Windows, Mac, iPad, web)",
+   "it": "Not available when Windows Information Protection is on.",
+   "licence": "Microsoft says it needs a Microsoft Copilot (work) licence. Some Microsoft 365 subscriptions get it in OneNote for Windows only.",
+   "where": "Home tab › Copilot (opens the Copilot pane)",
+   "steps": [
+    "Open the page and select Home › Copilot",
+    "Ask, e.g. \"Summarize this page\" or \"Create a to-do list from these notes\"",
+    "Select Copy and paste the result into your page",
+    "Check names and dates"
+   ],
+   "plain": "Copilot reads your notes and summarises or reorganises them.",
+   "example": "\"Create a to-do list from these notes\" lists each action and who said they would do it.",
+   "watch": "Copilot doesn't write into the page for you; copy the answer in.",
+   "src": [
+    [
+     "Welcome to Copilot in OneNote (Microsoft Support)",
+     "https://support.microsoft.com/en-us/onenote/welcome-to-copilot-in-onenote"
+    ]
+   ]
+  },
+  {
+   "app": "c",
+   "core": false,
+   "oldVersion": "",
+   "minv": "cloud",
+   "updated": "2026-11-22",
+   "id": "FEAT-COPILOT-022",
+   "cp": "premium",
+   "name": "Copilot in Loop",
+   "level": "I",
+   "what": "In a Loop workspace or page, Copilot drafts, brainstorms, outlines and explains, and the whole team can build on the same prompt.",
+   "use": "Draft a close checklist together in a shared Loop page.",
+   "version": "Loop (web, Teams, Outlook)",
+   "it": "Loop must be enabled by IT.",
+   "licence": "Microsoft says Copilot in Loop needs a Microsoft Copilot licence. Colleagues without one can view and edit what Copilot made, but can't open Copilot.",
+   "where": "In a Loop page type / then choose Copilot",
+   "steps": [
+    "Open a Loop workspace and page",
+    "Type / and choose Copilot",
+    "Pick Create, Brainstorm, Blueprint or Describe, or write your own prompt",
+    "Refine the result (shorter, as a table), then check it"
+   ],
+   "plain": "Copilot inside a shared Loop page, so the team drafts with AI together.",
+   "example": "\"Create an outline for the year-end audit plan\" gives headings the team can fill in.",
+   "watch": "AI content can be wrong or sensitive; check it and its sources.",
+   "src": [
+    [
+     "Welcome to Copilot in Loop (Microsoft Support)",
+     "https://support.microsoft.com/en-us/Loop/welcome-to-copilot-in-loop"
+    ],
+    [
+     "Frequently asked questions about Copilot in Loop (Microsoft Support)",
+     "https://support.microsoft.com/en-us/loop/frequently-asked-questions-about-copilot-in-loop"
+    ]
+   ]
+  },
+  {
+   "app": "c",
+   "core": false,
+   "oldVersion": "",
+   "minv": "cloud",
+   "updated": "2026-11-22",
+   "id": "FEAT-COPILOT-023",
+   "cp": "premium",
+   "name": "Copilot in Forms",
+   "level": "B",
+   "what": "Draft a form or survey from a description, suggest and rewrite questions, write quiz answer explanations, draft invitations and reminders, and summarise responses.",
+   "use": "Build a quick staff survey on the new claims process and summarise the answers.",
+   "version": "Forms (web)",
+   "it": "",
+   "licence": "Microsoft says you need a Microsoft 365 account and a Copilot licence; the Copilot chat in Forms is for commercial Copilot-licensed users.",
+   "where": "Forms › New form › describe it › Generate · Results: View responses › Copilot",
+   "steps": [
+    "Create a new form and describe what you need",
+    "Select Generate and review the draft",
+    "Use Rewrite with Copilot or Add with Copilot on a question",
+    "After replies come in, go to View responses and open Copilot for a summary"
+   ],
+   "plain": "Copilot drafts your survey and summarises the answers.",
+   "example": "\"Event feedback survey\" gives a title, description and ready questions to edit.",
+   "watch": "Check the wording of every question before you send the form.",
+   "src": [
+    [
+     "Welcome to Copilot in Forms (Microsoft Support)",
+     "https://support.microsoft.com/en-us/forms/welcome-to-copilot-in-forms"
+    ]
+   ]
+  },
+  {
+   "app": "c",
+   "core": false,
+   "oldVersion": "",
+   "minv": "cloud",
+   "updated": "2026-11-22",
+   "id": "FEAT-COPILOT-024",
+   "cp": "basic",
+   "name": "Copilot in Power Automate (cloud flows)",
+   "level": "I",
+   "what": "Describe a flow in plain English and Copilot builds it, sets up connections, edits steps on request and explains what a flow does.",
+   "use": "\"When an email with an invoice arrives, save the attachment to SharePoint and post in Teams.\"",
+   "version": "Power Automate (web, new designer)",
+   "it": "On by default in supported regions; admins can turn it off for the whole tenant.",
+   "licence": "No Microsoft 365 Copilot licence is mentioned by Microsoft; it comes with the app where available. Region and admin settings decide whether you see it.",
+   "where": "make.powerautomate.com › Home › Create with Copilot",
+   "steps": [
+    "Go to make.powerautomate.com and select Create with Copilot",
+    "Describe it as \"When X happens, do Y\"",
+    "Check the connections (green tick), then Keep it and continue › Create flow",
+    "Save, then test the flow with a real example",
+    "To change an existing flow: My flows › ⋮ › Edit, then ask Copilot"
+   ],
+   "plain": "Tell Copilot what you want automated and it builds the flow.",
+   "example": "\"When an item is created in SharePoint, send me a mobile notification.\"",
+   "watch": "Works best in English. Only in the new designer. Always test before you rely on the flow.",
+   "src": [
+    [
+     "Create your first cloud flow using Copilot (Microsoft Learn)",
+     "https://learn.microsoft.com/en-us/power-automate/create-cloud-flow-using-copilot"
+    ],
+    [
+     "Copilot in Power Automate (Microsoft Learn)",
+     "https://learn.microsoft.com/en-us/power-automate/copilot-overview"
+    ]
+   ]
+  },
+  {
+   "app": "c",
+   "core": false,
+   "oldVersion": "",
+   "minv": "cloud",
+   "updated": "2026-11-22",
+   "id": "FEAT-COPILOT-025",
+   "cp": "basic",
+   "name": "Copilot in Power Automate for desktop (PAD)",
+   "level": "I",
+   "what": "Ask product questions, summarise a desktop flow, and (preview, US only) create a desktop flow or add steps from a prompt.",
+   "use": "Ask \"How do I read data from an Excel file?\" while building a bank-file download bot.",
+   "version": "Power Automate for desktop (Windows)",
+   "it": "Admins can turn parts of it off in the Power Platform admin center.",
+   "licence": "No Microsoft 365 Copilot licence is mentioned by Microsoft; it comes with the app where available. Region and admin settings decide whether you see it. Work or school account only.",
+   "where": "Power Automate for desktop › Copilot button (top right of the console, or the right-hand menu in the designer)",
+   "steps": [
+    "Open Power Automate for desktop with your work account",
+    "Select Copilot",
+    "Ask a product question, or use Help me understand on a flow",
+    "Where available, describe a step, e.g. \"Open data.xlsx and delete column B\"",
+    "Review every action Copilot adds before running"
+   ],
+   "plain": "Copilot helps you build and understand desktop bots.",
+   "example": "\"How do I run a PowerShell script?\" gives the actions to use.",
+   "watch": "English only. Creating flows from a prompt is preview and only in the US. It supports only some action groups; missing details give empty actions with errors.",
+   "src": [
+    [
+     "Get started with Copilot in Power Automate for desktop (Microsoft Learn)",
+     "https://learn.microsoft.com/en-us/power-automate/desktop-flows/copilot-in-power-automate-for-desktop"
+    ]
+   ]
+  },
+  {
+   "app": "c",
+   "core": false,
+   "oldVersion": "",
+   "minv": "cloud",
+   "updated": "2026-11-22",
+   "id": "FEAT-COPILOT-026",
+   "cp": "basic",
+   "name": "Copilot in Power Apps",
+   "level": "I",
+   "what": "Describe the app you need and Copilot creates the Dataverse tables, columns and relationships, then builds a canvas app you can edit.",
+   "use": "An expense claim tracker with claim, staff and status tables.",
+   "version": "Power Apps (web)",
+   "it": "Needs a Dataverse environment and the system customizer role; cross-region data movement may need to be allowed.",
+   "licence": "No Microsoft 365 Copilot licence is mentioned by Microsoft; it comes with the app where available. Region and admin settings decide whether you see it. Apps that use Dataverse need Power Apps Premium to share (see the licence table).",
+   "where": "make.powerapps.com › Start with data › Create new data (Copilot panel on the right)",
+   "steps": [
+    "Go to make.powerapps.com and select Start with data › Create new data",
+    "Describe the tables in the Copilot panel",
+    "Ask for changes, e.g. \"Add columns to track start and end time\"",
+    "Select Save and open app, then test it"
+   ],
+   "plain": "Copilot designs the tables behind a Power App from your description.",
+   "example": "\"Create tables to track hotel housekeeping tasks including room numbers, task types, staff assignments, and task status.\"",
+   "watch": "Some Copilot features in Power Apps are preview and availability varies by region.",
+   "src": [
+    [
+     "Build apps through conversation with Copilot (Microsoft Learn)",
+     "https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/ai-conversations-create-app"
     ]
    ]
   }
@@ -10484,6 +10838,30 @@
    ],
    "tip": "Start small: ask Copilot to summarise a long email thread or a meeting you missed, then check it against the source.",
    "cp": "premium"
+  },
+  {
+   "app": "c",
+   "cp": "premium",
+   "q": "Where is Copilot in Word, Excel and PowerPoint?",
+   "a": [
+    "Word: the Copilot button in the corner of the document, or Home › Copilot",
+    "Excel: the Copilot icon in the lower-right corner",
+    "PowerPoint: Home › Copilot, or the Copilot button above the slide",
+    "No button? Check the label under your name; full Copilot in these apps needs Premium"
+   ],
+   "tip": "In Excel pick Chat only when you just want answers and don't want the sheet changed."
+  },
+  {
+   "app": "c",
+   "cp": "basic",
+   "q": "Can Copilot build a Power Automate flow for me?",
+   "a": [
+    "Go to make.powerautomate.com › Create with Copilot",
+    "Describe it as \"When X happens, do Y\"",
+    "Check the connections, then Create flow and Save",
+    "Test it with a real example before you rely on it"
+   ],
+   "tip": "Microsoft doesn't list a Microsoft 365 Copilot licence for this; it depends on your region and admin settings."
   },
   {
    "app": "c",
