@@ -1,7 +1,7 @@
 {
  "title": "M365 & Power Platform Notes",
  "owner": "KieraKama",
- "lastChecked": "2026-11-13",
+ "lastChecked": "2026-11-22",
  "comments": {
   "form": "https://docs.google.com/forms/d/e/1FAIpQLSdtIgut17BVFtAITvMYYZnwiQdvjVV7Ump489MsSoJRyP9weQ/formResponse",
   "name": "entry.2035312363",
@@ -9,6 +9,15 @@
   "csv": ""
  },
  "changes": [
+  {
+   "date": "2026-11-22",
+   "items": [
+    "Excel =COPILOT() function retired on 14 Sep 2026: card marked retired with steps to keep old results as values and use Copilot in Excel instead; removed from the Copilot Premium licence list, the Premium common question, the Copilot Handbook table, the Copilot ribbon guide and Excel formulas (Microsoft Support: COPILOT function; Microsoft 365 message center MC1454373, public copy at mc.merill.net).",
+    "Copilot in Power BI card: Microsoft plans to end standalone Copilot (web, Teams, mobile) by end of January 2027 and app-scoped Copilot in January 2027; Copilot inside reports stays (Microsoft Learn: What's new in Power BI, November 2026).",
+    "Copilot inside Word/Excel/PowerPoint/OneNote card: added the new @clean-data skill in Excel (Excel Blog: What's New in Excel, October 2026).",
+    "PivotTable Auto Refresh checked: still Microsoft 365 Insider only, no change (Microsoft Support: Refresh PivotTable data)."
+   ]
+  },
   {
    "date": "2026-11-16",
    "items": [
@@ -347,6 +356,22 @@
   [
    "Microsoft 365 service status (Microsoft)",
    "https://status.cloud.microsoft"
+  ],
+  [
+   "COPILOT function (Microsoft Support)",
+   "https://support.microsoft.com/en-us/excel/functions/copilot-function"
+  ],
+  [
+   "MC1454373 Frontier =COPILOT function in Excel will no longer be available (Microsoft 365 message center, public copy at mc.merill.net)",
+   "https://mc.merill.net/message/MC1454373"
+  ],
+  [
+   "What's new in Power BI, November 2026 (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/power-bi/fundamentals/whats-new"
+  ],
+  [
+   "What's New in Excel (October 2026) (Excel Blog)",
+   "https://techcommunity.microsoft.com/blog/excelblog/whats-new-in-excel-october-2026/4549758"
   ]
  ],
  "apps": [
@@ -2004,7 +2029,13 @@
      ]
     ]
    },
-   "updated": "2026-11-04"
+   "updated": "2026-11-04",
+   "src": [
+    [
+     "Refresh PivotTable data (Microsoft Support)",
+     "https://support.microsoft.com/en-us/excel/refresh-pivottable-data"
+    ]
+   ]
   },
   {
    "id": "FEAT-EXCEL-022",
@@ -6570,9 +6601,15 @@
    ],
    "plain": "AI working directly inside your document, spreadsheet or deck. The full version needs the Premium licence.",
    "example": "'Create 8 slides from this Word report' gives a first-draft deck in a minute.",
-   "watch": "It drafts; you still own accuracy.",
+   "watch": "It drafts; you still own accuracy. In Excel, typing @clean-data in the Copilot pane finds extra spaces, mixed formats, duplicates and wrong data types and suggests fixes (rolling out to all platforms from Oct 2026).",
    "minv": "cloud",
-   "updated": "2026-11-11"
+   "updated": "2026-11-22",
+   "src": [
+    [
+     "What's New in Excel (October 2026) (Excel Blog)",
+     "https://techcommunity.microsoft.com/blog/excelblog/whats-new-in-excel-october-2026/4549758"
+    ]
+   ]
   },
   {
    "id": "FEAT-COPILOT-008",
@@ -6607,24 +6644,25 @@
   {
    "id": "FEAT-COPILOT-009",
    "app": "c",
-   "name": "=COPILOT() function in Excel",
+   "name": "=COPILOT() function in Excel (retired)",
    "level": "I",
    "core": false,
-   "what": "Use AI inside a formula to classify or summarise text in cells.",
-   "use": "Classify expense descriptions into categories; sentiment of customer feedback.",
+   "what": "Retired. Was a preview formula that used AI to classify or summarise text in cells. Since 14 Sep 2026 it is no longer available in Excel.",
+   "use": "Instead: open Copilot in Excel and ask it to classify expense descriptions or summarise feedback in a column.",
    "version": "365",
-   "it": "Needs admin enablement.",
+   "it": "Was only for Insider and Frontier preview users. No admin action needed for the removal.",
    "licence": "Microsoft 365 Copilot licence (Premium).",
-   "oldVersion": "Other users see #NAME? or stored values.",
-   "where": "Type in a cell (if licensed)",
+   "oldVersion": "Workbooks that still contain =COPILOT() show #NAME? when the cell recalculates; already-calculated results stay as stored values until then.",
+   "where": "Removed. Use the Copilot button in Excel instead (if licensed)",
    "steps": [
-    "=COPILOT(\"Classify into Travel, Utilities, Repairs\", A2)",
-    "Fill down",
-    "Spot-check results"
+    "Find cells that still use =COPILOT() (Ctrl+F, search =COPILOT)",
+    "Copy them and Paste Values to keep the current results",
+    "For new work, open Copilot in Excel and describe the task, e.g. \"Classify A2:A50 into Travel, Utilities, Repairs\"",
+    "Spot-check the results"
    ],
-   "plain": "An Excel formula that asks AI to classify or summarise text in cells.",
+   "plain": "An old preview Excel formula that asked AI to classify or summarise text. Microsoft removed it on 14 Sep 2026. Use Copilot in Excel instead.",
    "example": "'Grab taxi to client' → Travel. 'TNB bill Oct' → Utilities.",
-   "watch": "Results can change when recalculated. Paste as values when final.",
+   "watch": "New =COPILOT() formulas cannot be made after 14 Sep 2026. Paste old results as values before they turn into #NAME?.",
    "minv": "cloud",
    "pic": {
     "k": "sheet",
@@ -6649,7 +6687,17 @@
      ]
     ]
    },
-   "updated": "2026-11-11"
+   "updated": "2026-11-22",
+   "src": [
+    [
+     "COPILOT function (Microsoft Support)",
+     "https://support.microsoft.com/en-us/excel/functions/copilot-function"
+    ],
+    [
+     "MC1454373 Frontier =COPILOT function in Excel will no longer be available (Microsoft 365 message center, public copy at mc.merill.net)",
+     "https://mc.merill.net/message/MC1454373"
+    ]
+   ]
   },
   {
    "id": "FEAT-COPILOT-010",
@@ -6671,9 +6719,15 @@
    ],
    "plain": "AI that helps write measures, build pages, and summarise reports.",
    "example": "'Summarise this page' gives 3 sentences on the main movements.",
-   "watch": "Needs special capacity. Most Pro-only setups won't have it.",
+   "watch": "Needs special capacity. Most Pro-only setups won't have it. Microsoft plans to end the standalone Copilot (on the web, in Teams and in the mobile app) by the end of January 2027, and Copilot inside workspace apps in January 2027; Copilot inside reports stays. Dates are plans and can move.",
    "minv": "cloud",
-   "updated": "2026-11-04"
+   "updated": "2026-11-22",
+   "src": [
+    [
+     "What's new in Power BI, November 2026 (Microsoft Learn)",
+     "https://learn.microsoft.com/en-us/power-bi/fundamentals/whats-new"
+    ]
+   ]
   },
   {
    "id": "FEAT-COPILOT-011",
@@ -9784,7 +9838,7 @@
     "Shows as 'M365 Copilot (Premium)' under your name",
     "Copilot inside Word, Excel, PowerPoint, Outlook, OneNote, Teams",
     "Chat that uses your work emails, meetings, chats and files",
-    "Edit with Copilot, =COPILOT() function, agents (Researcher, Analyst)",
+    "Edit with Copilot, agents (Researcher, Analyst)",
     "Priority access at busy times"
    ],
    "highlight": false
@@ -10279,7 +10333,7 @@
     "Use full Copilot inside Word, Excel, PowerPoint, OneNote and Teams",
     "Ask Copilot Chat about your own emails, meetings, chats and files",
     "Let Copilot change the file for you: Tools › Edit with Copilot",
-    "Use the Researcher and Analyst agents, and the =COPILOT() function in Excel",
+    "Use the Researcher and Analyst agents",
     "Get faster answers at busy times (priority access)"
    ],
    "tip": "Start small: ask Copilot to summarise a long email thread or a meeting you missed, then check it against the source."
