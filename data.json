@@ -15,7 +15,11 @@
     "Excel =COPILOT() function retired on 14 Sep 2026: card marked retired with steps to keep old results as values and use Copilot in Excel instead; removed from the Copilot Premium licence list, the Premium common question, the Copilot Handbook table, the Copilot ribbon guide and Excel formulas (Microsoft Support: COPILOT function; Microsoft 365 message center MC1454373, public copy at mc.merill.net).",
     "Copilot in Power BI card: Microsoft plans to end standalone Copilot (web, Teams, mobile) by end of January 2027 and app-scoped Copilot in January 2027; Copilot inside reports stays (Microsoft Learn: What's new in Power BI, November 2026).",
     "Copilot inside Word/Excel/PowerPoint/OneNote card: added the new @clean-data skill in Excel (Excel Blog: What's New in Excel, October 2026).",
-    "PivotTable Auto Refresh checked: still Microsoft 365 Insider only, no change (Microsoft Support: Refresh PivotTable data)."
+    "PivotTable Auto Refresh checked: still Microsoft 365 Insider only, no change (Microsoft Support: Refresh PivotTable data).",
+    "Copilot split into three levels across the site: Basic (free Copilot Chat), Premium (Microsoft 365 Copilot licence) and Full (Premium plus Copilot in Power BI and Fabric). Every Copilot card, common question, button-guide entry and Handbook page now shows its level, and a new \"My Copilot level\" picker marks what you can use.",
+    "Handbook: Copilot is now three subjects, Copilot Basic, Copilot Premium and Copilot Full (Power BI & Fabric), with new pages on Copilot in Power BI reports, switching it on, and Copilot in other Fabric tools (Microsoft Learn: Overview of Copilot for Power BI; Overview of Copilot in Fabric; Enable Copilot in Fabric; Fabric Copilot capacity).",
+    "Correction: Copilot in Power BI needs a paid Fabric capacity F2 or larger or Power BI Premium P1 or larger, not F64; trial capacity and Pro or PPU alone are not enough (Microsoft Learn: Overview of Copilot for Power BI).",
+    "New cards: Fabric Copilot capacity, and Copilot in Fabric tools (notebooks, Data Factory, warehouse). New common questions: what Basic, Premium and Full mean, and why Copilot doesn't show in Power BI (Microsoft Learn)."
    ]
   },
   {
@@ -372,6 +376,22 @@
   [
    "What's New in Excel (October 2026) (Excel Blog)",
    "https://techcommunity.microsoft.com/blog/excelblog/whats-new-in-excel-october-2026/4549758"
+  ],
+  [
+   "Overview of Copilot in Fabric (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/fabric/fundamentals/copilot-fabric-overview"
+  ],
+  [
+   "Overview of Copilot for Power BI (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-introduction"
+  ],
+  [
+   "Enable Copilot in Fabric (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/fabric/fundamentals/copilot-enable-fabric"
+  ],
+  [
+   "Fabric Copilot capacity (Microsoft Learn)",
+   "https://learn.microsoft.com/en-us/fabric/enterprise/fabric-copilot-capacity"
   ]
  ],
  "apps": [
@@ -485,7 +505,7 @@
    "name": "Copilot",
    "t": "Cp",
    "c": "--a-c",
-   "sub": "AI assistant. Basic (free) vs Premium (paid licence)"
+   "sub": "AI assistant. Basic (free), Premium (paid licence), Full (Premium + Power BI/Fabric capacity)"
   },
   {
    "id": "win",
@@ -6359,8 +6379,8 @@
    "oldVersion": "",
    "minv": "cloud",
    "app": "c",
-   "name": "Which Copilot do I have? Basic or Premium",
-   "what": "Your work account shows one of three labels: Copilot Chat (Basic), M365 Copilot (Basic) or M365 Copilot (Premium). The label tells you what Copilot can do for you.",
+   "name": "Which Copilot do I have? Basic, Premium or Full",
+   "what": "Your work account shows one of three labels: Copilot Chat (Basic), M365 Copilot (Basic) or M365 Copilot (Premium). This site groups Copilot into Basic, Premium and Full (Premium plus Copilot in Power BI and Fabric).",
    "use": "Check before following a how-to: many Copilot steps only work with Premium.",
    "licence": "Premium = the paid Microsoft 365 Copilot add-on licence (about $30/user/month).",
    "where": "microsoft365.com › bottom of the home page › under your name",
@@ -6368,13 +6388,14 @@
     "Sign in to Copilot at microsoft365.com with your work account",
     "Scroll to the bottom of the home page to see your account",
     "Read the label under your name",
-    "Copilot Chat (Basic): chat only, no Copilot inside Word, Excel, PowerPoint, OneNote",
-    "M365 Copilot (Basic): limited Copilot Chat inside the apps",
-    "M365 Copilot (Premium): full Copilot in the apps, your work data, Researcher and Analyst"
+    "Copilot Chat (Basic) or M365 Copilot (Basic): this site's Basic level",
+    "M365 Copilot (Premium): this site's Premium level",
+    "Full: Copilot also shows in your Power BI reports, because IT has a paid Fabric or Premium capacity with Copilot turned on",
+    "Pick your level in \"My Copilot level\" at the top of the site"
    ],
-   "plain": "A label under your name says Basic or Premium. Premium is the full, paid Copilot.",
+   "plain": "A label under your name says Basic or Premium. Full is this site's name for Premium plus Copilot in Power BI and Fabric, which the company pays for as capacity.",
    "example": "Label says M365 Copilot (Premium): the Copilot button in Excel now does the full job.",
-   "watch": "The Copilot app is changing (a new Home screen is rolling out), so your screen may look a little different.",
+   "watch": "The Copilot app is changing (a new Home screen is rolling out), so your screen may look a little different. Copilot in Power BI follows the capacity your reports sit on, not the label under your name.",
    "pic": {
     "k": "list",
     "title": "Label under your name",
@@ -6396,7 +6417,14 @@
      ]
     ]
    },
-   "updated": "2026-11-11"
+   "updated": "2026-11-22",
+   "cp": "basic",
+   "src": [
+    [
+     "Overview of Copilot for Power BI (Microsoft Learn)",
+     "https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-introduction"
+    ]
+   ]
   },
   {
    "id": "FEAT-COPILOT-002",
@@ -6425,7 +6453,8 @@
     "q": "Explain =SUMIFS(D:D,A:A,\"1000\")",
     "a": "It adds column D only where column A is 1000."
    },
-   "updated": "2026-11-11"
+   "updated": "2026-11-11",
+   "cp": "basic"
   },
   {
    "id": "FEAT-COPILOT-003",
@@ -6455,7 +6484,8 @@
     "q": "What did ABC agree about INV-889?",
     "a": "Credit note RM300, balance paid by 15 Nov (source: email 3 Nov)"
    },
-   "updated": "2026-11-12"
+   "updated": "2026-11-12",
+   "cp": "premium"
   },
   {
    "id": "FEAT-COPILOT-004",
@@ -6497,7 +6527,8 @@
      ]
     ]
    },
-   "updated": "2026-11-12"
+   "updated": "2026-11-12",
+   "cp": "premium"
   },
   {
    "id": "FEAT-COPILOT-005",
@@ -6549,7 +6580,8 @@
      ]
     ]
    },
-   "updated": "2026-11-12"
+   "updated": "2026-11-12",
+   "cp": "basic"
   },
   {
    "id": "FEAT-COPILOT-006",
@@ -6579,7 +6611,8 @@
     "q": "Summarise this thread",
     "a": "• ABC disputes INV-889 • Agreed credit note RM300 • Pay balance by 15 Nov"
    },
-   "updated": "2026-11-11"
+   "updated": "2026-11-11",
+   "cp": "basic"
   },
   {
    "id": "FEAT-COPILOT-007",
@@ -6609,7 +6642,8 @@
      "What's New in Excel (October 2026) (Excel Blog)",
      "https://techcommunity.microsoft.com/blog/excelblog/whats-new-in-excel-october-2026/4549758"
     ]
-   ]
+   ],
+   "cp": "premium"
   },
   {
    "id": "FEAT-COPILOT-008",
@@ -6639,7 +6673,8 @@
     "q": "Add a summary by cost centre with a chart",
     "a": "Done: new sheet 'Summary', SUMIFS totals, bar chart. Review changes."
    },
-   "updated": "2026-11-11"
+   "updated": "2026-11-11",
+   "cp": "premium"
   },
   {
    "id": "FEAT-COPILOT-009",
@@ -6697,7 +6732,8 @@
      "MC1454373 Frontier =COPILOT function in Excel will no longer be available (Microsoft 365 message center, public copy at mc.merill.net)",
      "https://mc.merill.net/message/MC1454373"
     ]
-   ]
+   ],
+   "cp": "premium"
   },
   {
    "id": "FEAT-COPILOT-010",
@@ -6705,29 +6741,43 @@
    "name": "Copilot in Power BI",
    "level": "I",
    "core": false,
-   "what": "Create report pages, write DAX, summarise a page in words.",
+   "what": "Summarise a report or page, answer questions about the open report, create or edit report pages, write DAX queries and measure descriptions.",
    "use": "Draft narrative under the DSO dashboard; suggest a measure.",
    "version": "Service & Desktop",
-   "it": "Tenant setting controlled by admin.",
-   "licence": "Needs Fabric capacity F64+ or a Copilot capacity set up by IT. Pro alone doesn't unlock it.",
+   "it": "Admin turns on the Copilot tenant settings in the Fabric admin portal and can limit them to chosen groups. Outside the US and EU (for example Southeast Asia) Copilot is processed in the US, so IT must also allow processing outside the region.",
+   "licence": "Copilot Full. Needs a paid Fabric capacity F2 or larger, or Power BI Premium P1 or larger. Trial and free capacities don't work. A Pro or PPU licence alone isn't enough; IT can add you to a Fabric Copilot capacity instead. It does not need the Microsoft 365 Copilot licence.",
    "oldVersion": "",
-   "where": "Copilot button in Desktop or Service (if capacity is enabled)",
+   "where": "Power BI service: Copilot pane on the right of a report. Desktop: Copilot on the Home tab (the workspace you publish to must be on capacity)",
    "steps": [
-    "Open Copilot",
-    "Ask 'Summarise this page'",
-    "Check numbers against the visuals"
+    "Open a report in the Power BI service",
+    "Open the Copilot pane on the right",
+    "Ask \"Summarise this page\" or a question about the report",
+    "Check every number against the visuals"
    ],
    "plain": "AI that helps write measures, build pages, and summarise reports.",
    "example": "'Summarise this page' gives 3 sentences on the main movements.",
-   "watch": "Needs special capacity. Most Pro-only setups won't have it. Microsoft plans to end the standalone Copilot (on the web, in Teams and in the mobile app) by the end of January 2027, and Copilot inside workspace apps in January 2027; Copilot inside reports stays. Dates are plans and can move.",
+   "watch": "Microsoft plans to end the standalone Copilot (on the web, in Teams and in the mobile app) by the end of January 2027, and Copilot inside workspace apps in January 2027; Copilot inside reports stays. After IT buys or changes capacity, Copilot can take up to 24 hours to appear.",
    "minv": "cloud",
    "updated": "2026-11-22",
    "src": [
     [
      "What's new in Power BI, November 2026 (Microsoft Learn)",
      "https://learn.microsoft.com/en-us/power-bi/fundamentals/whats-new"
+    ],
+    [
+     "Overview of Copilot for Power BI (Microsoft Learn)",
+     "https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-introduction"
+    ],
+    [
+     "Enable Copilot in Fabric (Microsoft Learn)",
+     "https://learn.microsoft.com/en-us/fabric/fundamentals/copilot-enable-fabric"
+    ],
+    [
+     "Overview of Copilot in Fabric (Microsoft Learn)",
+     "https://learn.microsoft.com/en-us/fabric/fundamentals/copilot-fabric-overview"
     ]
-   ]
+   ],
+   "cp": "full"
   },
   {
    "id": "FEAT-COPILOT-011",
@@ -6753,7 +6803,8 @@
    "example": "Analyst finds the 20 most unusual journal entries in a 100k-row file.",
    "watch": "Premium licence only. Researcher takes longer than normal chat. Verify findings before acting.",
    "minv": "cloud",
-   "updated": "2026-11-11"
+   "updated": "2026-11-11",
+   "cp": "premium"
   },
   {
    "id": "FEAT-COPILOT-012",
@@ -6784,7 +6835,8 @@
     "q": "What is the mileage claim rate?",
     "a": "Per the Claims Policy (section 4): see the rate table. Source: Claims Policy.pdf"
    },
-   "updated": "2026-11-12"
+   "updated": "2026-11-12",
+   "cp": "full"
   },
   {
    "id": "FEAT-COPILOT-013",
@@ -6814,7 +6866,8 @@
     "q": "What are the action items?",
     "a": "• Aminah: post accrual reversal • Ali: send aging by Fri"
    },
-   "updated": "2026-11-11"
+   "updated": "2026-11-11",
+   "cp": "premium"
   },
   {
    "id": "FEAT-COPILOT-014",
@@ -6860,7 +6913,8 @@
      ]
     ]
    },
-   "updated": "2026-11-11"
+   "updated": "2026-11-11",
+   "cp": "basic"
   },
   {
    "id": "FEAT-COPILOT-015",
@@ -6886,7 +6940,8 @@
     "Share it",
     "Find it again under Library in the left menu"
    ],
-   "updated": "2026-11-13"
+   "updated": "2026-11-13",
+   "cp": "basic"
   },
   {
    "id": "FEAT-APPS-004",
@@ -7970,7 +8025,8 @@
      ]
     ]
    },
-   "updated": "2026-11-12"
+   "updated": "2026-11-12",
+   "cp": "basic"
   },
   {
    "id": "FEAT-MORE-015",
@@ -8148,6 +8204,78 @@
     "If your company uses it, IT or the system owner gives you access and training"
    ],
    "updated": "2026-11-13"
+  },
+  {
+   "id": "FEAT-COPILOT-016",
+   "app": "c",
+   "cp": "full",
+   "name": "Fabric Copilot capacity: who pays for Copilot in Power BI",
+   "level": "A",
+   "core": false,
+   "what": "IT can mark one Fabric capacity as a Copilot capacity and add people to it. Their Copilot use in Power BI and Fabric is then billed to that capacity, even for reports in Pro or PPU workspaces.",
+   "use": "Let the finance team use Copilot on reports in a Pro workspace without moving the workspace to a bigger capacity.",
+   "version": "Power BI service / Fabric",
+   "it": "The Fabric admin turns Copilot on and lets capacity admins choose a Copilot capacity; the capacity admin adds the users.",
+   "licence": "Paid Fabric capacity F2 or larger, or Power BI Premium P1 or larger. Trial capacity does not work.",
+   "oldVersion": "",
+   "where": "Ask IT (set up by the Fabric admin and the capacity admin)",
+   "steps": [
+    "Ask IT whether the company has a Fabric capacity (F2 or larger) or Premium (P1 or larger)",
+    "Ask IT to add you as a Fabric Copilot capacity user",
+    "Open a report in the Power BI service and look for the Copilot pane on the right",
+    "If it doesn't show, wait up to 24 hours after IT's change, then check with IT"
+   ],
+   "plain": "A shared Copilot budget that IT sets up so named people can use Copilot in Power BI and Fabric.",
+   "example": "Your reports stay in a Pro workspace. IT adds you to the Copilot capacity, and the Copilot pane now works on those reports.",
+   "watch": "It must be in the company's home region. One Copilot capacity per person. Not for embedded reports. Copilot use counts against that capacity, so heavy use can slow it for others.",
+   "minv": "cloud",
+   "updated": "2026-11-22",
+   "src": [
+    [
+     "Fabric Copilot capacity (Microsoft Learn)",
+     "https://learn.microsoft.com/en-us/fabric/enterprise/fabric-copilot-capacity"
+    ],
+    [
+     "Overview of Copilot for Power BI (Microsoft Learn)",
+     "https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-introduction"
+    ]
+   ]
+  },
+  {
+   "id": "FEAT-COPILOT-017",
+   "app": "c",
+   "cp": "full",
+   "name": "Copilot in Fabric tools: notebooks, Data Factory, warehouse",
+   "level": "A",
+   "core": false,
+   "what": "In Fabric, Copilot helps write and explain code in notebooks, Data Factory, Data Warehouse and SQL database, and turns plain English into KQL in Real-Time Intelligence.",
+   "use": "Ask Copilot in a notebook to explain, or fix, a failed cell that loads the GL extract.",
+   "version": "Fabric (preview in most tools)",
+   "it": "Uses the same Copilot tenant settings as Power BI; IT can turn it on for chosen groups.",
+   "licence": "Paid Fabric capacity F2 or larger, or Power BI Premium P1 or larger. Not on trial capacity.",
+   "oldVersion": "",
+   "where": "Fabric › open a notebook, pipeline or warehouse › Copilot (if IT has turned it on)",
+   "steps": [
+    "Open the notebook, pipeline or warehouse in Fabric",
+    "Open Copilot",
+    "Ask in plain words, e.g. \"Explain this code\" or \"Total amount by month\"",
+    "Run the result on test data first and check it"
+   ],
+   "plain": "Copilot for the data team's tools in Fabric. Report readers don't need it.",
+   "example": "A notebook cell fails; Fix with Copilot (preview) suggests a corrected line for you to check.",
+   "watch": "Microsoft lists Copilot for Data Factory, Data Engineering, Data Science, Data Warehouse and Real-Time Intelligence as preview. Check every line of code it writes.",
+   "minv": "cloud",
+   "updated": "2026-11-22",
+   "src": [
+    [
+     "Overview of Copilot in Fabric (Microsoft Learn)",
+     "https://learn.microsoft.com/en-us/fabric/fundamentals/copilot-fabric-overview"
+    ],
+    [
+     "Overview of Copilot for Power BI (Microsoft Learn)",
+     "https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-introduction"
+    ]
+   ]
   }
  ],
  "tasks": [
@@ -9231,7 +9359,8 @@
     "Copilot Chat (Basic, free)",
     "Formula auditing & Evaluate Formula",
     "Agents: Researcher & Analyst"
-   ]
+   ],
+   "cp": "basic"
   },
   {
    "task": "Family / household budget",
@@ -9808,7 +9937,7 @@
    "price": "From ~$5,000/month (F64)",
    "items": [
     "Company-wide: free viewers from F64",
-    "Copilot in Power BI, Dataflows Gen2, Direct Lake"
+    "Copilot in Power BI and Fabric (F2 or larger, not trial), Dataflows Gen2, Direct Lake"
    ],
    "highlight": false
   },
@@ -10275,13 +10404,26 @@
   },
   {
    "app": "c",
+   "cp": "basic",
+   "q": "What do Copilot Basic, Premium and Full mean on this site?",
+   "a": [
+    "Basic: the free Copilot Chat with a work account (label Copilot Chat (Basic) or M365 Copilot (Basic))",
+    "Premium: the paid Microsoft 365 Copilot licence (label M365 Copilot (Premium))",
+    "Full: Premium plus Copilot in Power BI and Fabric, which needs a paid Fabric (F2 or larger) or Power BI Premium (P1 or larger) capacity set up by IT",
+    "Choose your level in \"My Copilot level\" at the top, and the site marks what you can use"
+   ],
+   "tip": "\"Full\" is this site's name, not Microsoft's. Copilot in Power BI is paid through the company's capacity, not through the Microsoft 365 Copilot licence."
+  },
+  {
+   "app": "c",
    "q": "I'm new to Copilot. Where do I start?",
    "a": [
     "Open the Handbook tab and choose Copilot",
     "Read 'Copilot at a glance', then 'Your first 10 minutes (Basic)'",
     "Try one small job a day: explain a formula, shorten an email, summarise a document"
    ],
-   "tip": "Everything in the first four Handbook pages works with the free Copilot Chat (Basic)."
+   "tip": "Everything in the first four Handbook pages works with the free Copilot Chat (Basic).",
+   "cp": "basic"
   },
   {
    "app": "c",
@@ -10292,7 +10434,8 @@
     "Some accounts show M365 Copilot (Basic): limited Copilot Chat inside the apps",
     "Check the label under your name, or ask IT"
    ],
-   "tip": "Microsoft Support: What Copilot license do I have."
+   "tip": "Microsoft Support: What Copilot license do I have.",
+   "cp": "basic"
   },
   {
    "app": "c",
@@ -10302,7 +10445,8 @@
     "Scroll to the bottom of the home page",
     "Read the label under your name: Copilot Chat (Basic), M365 Copilot (Basic) or M365 Copilot (Premium)"
    ],
-   "tip": "Premium means you have the paid Microsoft 365 Copilot add-on licence."
+   "tip": "Premium means you have the paid Microsoft 365 Copilot add-on licence.",
+   "cp": "basic"
   },
   {
    "app": "c",
@@ -10313,7 +10457,8 @@
     "Off: Copilot uses only the web and files you attach",
     "It needs the Microsoft 365 Copilot licence (Premium) and is on by default"
    ],
-   "tip": "Turn it off for general questions so work files don't mix into the answer."
+   "tip": "Turn it off for general questions so work files don't mix into the answer.",
+   "cp": "premium"
   },
   {
    "app": "c",
@@ -10324,7 +10469,8 @@
     "Think deeper: harder questions with several steps; it is slower",
     "Claude or GPT: pick a specific model if you want to compare answers"
    ],
-   "tip": "Microsoft says no single model suits every task. If an answer is weak, try Think deeper or the other model and compare."
+   "tip": "Microsoft says no single model suits every task. If an answer is weak, try Think deeper or the other model and compare.",
+   "cp": "basic"
   },
   {
    "app": "c",
@@ -10336,7 +10482,21 @@
     "Use the Researcher and Analyst agents",
     "Get faster answers at busy times (priority access)"
    ],
-   "tip": "Start small: ask Copilot to summarise a long email thread or a meeting you missed, then check it against the source."
+   "tip": "Start small: ask Copilot to summarise a long email thread or a meeting you missed, then check it against the source.",
+   "cp": "premium"
+  },
+  {
+   "app": "c",
+   "cp": "full",
+   "q": "Why can't I see Copilot in Power BI?",
+   "a": [
+    "Copilot in Power BI needs a paid capacity: Fabric F2 or larger, or Power BI Premium P1 or larger",
+    "Trial capacity, or a Pro or PPU licence on its own, is not enough",
+    "The report must be in a workspace on that capacity, or IT adds you to a Fabric Copilot capacity",
+    "IT must turn on the Copilot tenant setting; outside the US and EU they must also allow processing outside the region",
+    "After a capacity change it can take up to 24 hours to appear"
+   ],
+   "tip": "Send IT the report name and workspace so they can check which capacity it sits on."
   },
   {
    "app": "win",
