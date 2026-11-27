@@ -1,7 +1,7 @@
 {
  "title": "M365 & Power Platform Notes",
  "owner": "KieraKama",
- "lastChecked": "2026-11-22",
+ "lastChecked": "2026-11-27",
  "comments": {
   "form": "https://docs.google.com/forms/d/e/1FAIpQLSdtIgut17BVFtAITvMYYZnwiQdvjVV7Ump489MsSoJRyP9weQ/formResponse",
   "name": "entry.2035312363",
@@ -9,6 +9,12 @@
   "csv": ""
  },
  "changes": [
+  {
+   "date": "2026-11-27",
+   "items": [
+    "New cards for the Copilot app left menu: Search, Library, and the Agents menu (find, add and share agents); Notebooks card updated; new common question \"What does each item in the Copilot left menu do?\"; new \"Left menu\" tab in the Copilot button guide and a Handbook page (Microsoft Support: Get started with the Microsoft Copilot app; Search; Library; Agents; Get more agents; Agents built by Microsoft)."
+   ]
+  },
   {
    "date": "2026-11-22",
    "items": [
@@ -442,6 +448,34 @@
   [
    "Build apps through conversation with Copilot (Microsoft Learn)",
    "https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/ai-conversations-create-app"
+  ],
+  [
+   "Get started with the Microsoft Copilot app (Microsoft Support)",
+   "https://support.microsoft.com/en-us/microsoft-365-copilot/what-is-microsoft-copilot-app"
+  ],
+  [
+   "Get started with Search in the Microsoft Copilot app (Microsoft Support)",
+   "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-search-in-the-microsoft-365-copilot-app"
+  ],
+  [
+   "Get started with Microsoft Copilot Library (Microsoft Support)",
+   "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-library"
+  ],
+  [
+   "Frequently asked questions about Copilot Library (Microsoft Support)",
+   "https://support.microsoft.com/en-us/microsoft-365-copilot/frequently-asked-questions-about-microsoft-365-copilot-library"
+  ],
+  [
+   "Get started with agents in the Microsoft Copilot app (Microsoft Support)",
+   "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-agents-in-the-microsoft-365-copilot-app"
+  ],
+  [
+   "Get more agents in the Microsoft Copilot app (Microsoft Support)",
+   "https://support.microsoft.com/en-us/microsoft-365-copilot/get-more-agents-in-the-microsoft-365-copilot-app"
+  ],
+  [
+   "Agents built by Microsoft (Microsoft Support)",
+   "https://support.microsoft.com/en-us/microsoft-365-copilot/agents-built-by-microsoft"
   ]
  ],
  "apps": [
@@ -6941,7 +6975,7 @@
    ],
    "plain": "A folder of references with an AI that answers from those references only.",
    "example": "Notebook 'FY2026 audit': add the audit plan, PBC list and key emails, then ask 'What is still outstanding?'",
-   "watch": "The same notebook also opens in OneNote. Share it only with people allowed to see the references.",
+   "watch": "The same notebook also opens in OneNote. Share it only with people allowed to see the references. Notebooks are not part of Library; open them from the left menu.",
    "pic": {
     "k": "list",
     "title": "Notebook: FY2026 audit",
@@ -6963,8 +6997,14 @@
      ]
     ]
    },
-   "updated": "2026-11-11",
-   "cp": "basic"
+   "updated": "2026-11-27",
+   "cp": "basic",
+   "src": [
+    [
+     "Frequently asked questions about Copilot Library (Microsoft Support)",
+     "https://support.microsoft.com/en-us/microsoft-365-copilot/frequently-asked-questions-about-microsoft-365-copilot-library"
+    ]
+   ]
   },
   {
    "id": "FEAT-COPILOT-015",
@@ -8628,6 +8668,119 @@
     [
      "Build apps through conversation with Copilot (Microsoft Learn)",
      "https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/ai-conversations-create-app"
+    ]
+   ]
+  },
+  {
+   "app": "c",
+   "core": false,
+   "oldVersion": "",
+   "minv": "cloud",
+   "updated": "2026-11-27",
+   "version": "Copilot app (web, Windows, Mac, mobile)",
+   "id": "FEAT-COPILOT-027",
+   "cp": "basic",
+   "level": "B",
+   "name": "Search in the Copilot app",
+   "what": "One search box for people, chats, meetings, files, images, messages and SharePoint sites. It also shows recommended files and meeting recaps, and your Recent, Shared and Favorites files.",
+   "use": "Find last month's accruals file that a colleague shared, without remembering which Teams chat it was in.",
+   "it": "Results only include what you already have permission to open.",
+   "licence": "Microsoft's page doesn't name a Copilot licence; it searches with your work account.",
+   "where": "Copilot app › left menu › Search",
+   "steps": [
+    "Select Search in the left menu",
+    "Type what you remember, e.g. a file name, a person or a topic",
+    "Select a result, or the arrow (Search) for more results",
+    "Under Quick access use Recent, Shared or Favorites",
+    "Narrow results with filters: + New › Location, Shared by or Owned by"
+   ],
+   "plain": "A search box for everything at work: files, people, chats and meetings.",
+   "example": "Search \"PBC list\" shows the file, who shared it and the chat it came from.",
+   "watch": "The app's new Home screen is still rolling out, so Search may look a little different on your screen.",
+   "src": [
+    [
+     "Get started with Search in the Microsoft Copilot app (Microsoft Support)",
+     "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-search-in-the-microsoft-365-copilot-app"
+    ],
+    [
+     "Get started with the Microsoft Copilot app (Microsoft Support)",
+     "https://support.microsoft.com/en-us/microsoft-365-copilot/what-is-microsoft-copilot-app"
+    ]
+   ]
+  },
+  {
+   "app": "c",
+   "core": false,
+   "oldVersion": "",
+   "minv": "cloud",
+   "updated": "2026-11-27",
+   "version": "Copilot app (web, Windows, Mac, mobile)",
+   "id": "FEAT-COPILOT-028",
+   "cp": "basic",
+   "level": "B",
+   "name": "Library in the Copilot app",
+   "what": "One place for what Copilot made for you: Images (from Create or Copilot Chat) and Pages, plus pages shared with you.",
+   "use": "Reopen the Copilot Page with last week's month-end checklist.",
+   "it": "",
+   "licence": "Microsoft says you need Copilot Chat eligibility, not necessarily a Microsoft Copilot licence.",
+   "where": "Copilot app › left menu › Library",
+   "steps": [
+    "Select Library in the left menu",
+    "Choose Images or Pages (use the All types drop-down to filter)",
+    "Pages: sorted by last modified, and you can search by title; use the filter for pages shared with you",
+    "Images: download as .jpeg"
+   ],
+   "plain": "Your shelf of everything Copilot created: pages and pictures.",
+   "example": "Library › Pages › \"Close checklist Oct\" opens the page you made from a chat answer.",
+   "watch": "Library is a view, not extra storage: deleting the page itself removes it. Notebooks are separate (left menu › Notebooks).",
+   "src": [
+    [
+     "Get started with Microsoft Copilot Library (Microsoft Support)",
+     "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-library"
+    ],
+    [
+     "Frequently asked questions about Copilot Library (Microsoft Support)",
+     "https://support.microsoft.com/en-us/microsoft-365-copilot/frequently-asked-questions-about-microsoft-365-copilot-library"
+    ]
+   ]
+  },
+  {
+   "app": "c",
+   "core": false,
+   "oldVersion": "",
+   "minv": "cloud",
+   "updated": "2026-11-27",
+   "version": "Copilot app (web, Windows, Mac, mobile)",
+   "id": "FEAT-COPILOT-029",
+   "cp": "premium",
+   "level": "I",
+   "name": "Agents menu: find, add and share agents",
+   "what": "Agents are Copilot helpers for one kind of job. Researcher, Analyst and Visual Creator show in the left menu; more (Idea Coach, Writing Coach, Prompt Coach, Learning Coach, Career Coach) are added from All agents.",
+   "use": "Add Writing Coach to check the tone of an audit query email; use Analyst on an AR extract.",
+   "it": "Some agents need IT approval: the button says Request approval instead of Add.",
+   "licence": "Microsoft says its agents come with your Microsoft Copilot subscription and availability depends on your subscription and organisation settings. Without the licence you may not see an agent or may get an error.",
+   "where": "Copilot app › left menu › Agents · more: All agents",
+   "steps": [
+    "Select Agents in the left menu and pick an agent",
+    "To get more: select All agents, pick one to see its details, then Add",
+    "If it says Request approval, IT must approve it first",
+    "To share: hover over the agent › More (…) › Share (the link is copied)"
+   ],
+   "plain": "A list of ready-made Copilot helpers, each built for one kind of job.",
+   "example": "All agents › Prompt Coach › Add, then ask it to improve your prompt for a variance summary.",
+   "watch": "Microsoft's pages say the menu may be called Plugins on some accounts while the new Home screen rolls out.",
+   "src": [
+    [
+     "Agents built by Microsoft (Microsoft Support)",
+     "https://support.microsoft.com/en-us/microsoft-365-copilot/agents-built-by-microsoft"
+    ],
+    [
+     "Get more agents in the Microsoft Copilot app (Microsoft Support)",
+     "https://support.microsoft.com/en-us/microsoft-365-copilot/get-more-agents-in-the-microsoft-365-copilot-app"
+    ],
+    [
+     "Get started with agents in the Microsoft Copilot app (Microsoft Support)",
+     "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-agents-in-the-microsoft-365-copilot-app"
     ]
    ]
   }
@@ -10767,6 +10920,20 @@
     "Choose your level in \"My Copilot level\" at the top, and the site marks what you can use"
    ],
    "tip": "\"Full\" is this site's name, not Microsoft's. Copilot in Power BI is paid through the company's capacity, not through the Microsoft 365 Copilot licence."
+  },
+  {
+   "app": "c",
+   "cp": "basic",
+   "q": "What does each item in the Copilot left menu do?",
+   "a": [
+    "New chat: start a fresh conversation (card: Copilot Chat)",
+    "Search: find people, chats, meetings and files (card: Search in the Copilot app)",
+    "Library: images and pages Copilot made for you (card: Library in the Copilot app)",
+    "Agents: Researcher, Analyst and more; All agents to add others (card: Agents menu)",
+    "Notebooks: a workspace of references for one topic (card: Copilot Notebooks)",
+    "The grid (waffle) at the top opens Outlook, Word, Excel, PowerPoint, Teams and other apps"
+   ],
+   "tip": "Your menu can differ: Microsoft says it may also show Plugins or Automations, and the new Home screen is still rolling out. You can pin agents and chats you use often to the menu."
   },
   {
    "app": "c",
