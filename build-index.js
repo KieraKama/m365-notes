@@ -19,6 +19,8 @@ h += '<section><h3>Handbook</h3>' + hb.subjects.map((s, si) => `<p><b>${esc(s.na
 h += '<section><h3>Excel formulas</h3><p><b>New functions:</b> ' + fx.fns.map(f => `<a href="#formulas" data-sifx="${esc(f[0])}">${esc(f[0])}</a>`).join(' · ') + '</p>';
 h += '<p><b>Old → new:</b> ' + fx.swaps.map(s => `<a href="#formulas" data-sifx="${esc(s[1].split(' ')[0])}">${esc(s[0])} → ${esc(s[1])}</a>`).join(' · ') + '</p></section>';
 h += '<section><h3>Start here: basics (button guide)</h3><p>' + rb.apps.map(a => `<a href="#basics">${esc(a.name)}</a> (${a.tabs.map(t => esc(t.name)).join(', ')})`).join(' · ') + '</p></section>';
+h += '<section><h3>Learning paths</h3><p>' + (d.paths||[]).map(p => `<a href="#paths">${esc(p.name)}</a>`).join(' · ') + ' · <a href="#finance">Recommended for Finance &amp; Accounts</a></p></section>';
+h += '<section><h3>Guidance</h3><p><a href="#compat">Compatibility notes</a> · <a href="#share-files">Sharing files in Finance</a> · <a href="#lic-check">Can I use it? Six checks</a> · <a href="#lic-who">Who needs which licence</a> · <a href="#copilot-check">Copilot: what can I use?</a> · <a href="#safety">Finance data safety</a> · <a href="#cycle">The learning cycle</a></p></section>';
 h += '<section><h3>Which tool for the job?</h3><p>' + d.tasks.map(t => `<a href="#tools">${esc(t.task)}</a>`).join(' · ') + '</p></section>';
 h += '<section><h3>Save as types</h3>' + Object.entries(ft.apps).map(([k, rows]) => `<p><b>${esc(apps[k] || k)}:</b> ${rows.map(r => esc(r[0].replace(' ★','') + ' ' + r[1])).join(' · ')}</p>`).join('') + '</section>';
 h += '</div></details>';
